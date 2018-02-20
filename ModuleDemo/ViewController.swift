@@ -13,6 +13,10 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 添加输出功能
+        
+        print("实现了项目信息输出功能")
+        
         // Do any additional setup after loading the view.
     }
 
