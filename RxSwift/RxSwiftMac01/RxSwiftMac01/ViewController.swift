@@ -14,18 +14,56 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        example(of: "just,of,fromm") {
+        example(of: "just,of,from") {
             let one = 1
             let two = 2
             let three = 3
+            /** observable method : just, of, from
+             *  observable subscribe
+             */
             let observable = Observable.of(one,two,three)
             _ = observable.subscribe(onNext: { (element) in
                 print(element)
             })
-            
-            
         }
-        // Do any additional setup after loading the view.
+        /** empty observable */
+        
+        example(of: "Empty") {
+            let emptyObservable = Observable<Void>.empty()
+            _ =  emptyObservable.subscribe(onNext: { (element) in
+                print("on next \(element)")
+            }, onError: { (error) in
+                print("\(error.localizedDescription)")
+            }, onCompleted: {
+                print("compeleted....")
+            }, onDisposed: nil)
+        }
+        
+        
+        
+        example(of: "Range") {
+            let observable = Observable<Int>.range(start: 1, count: 10)
+             _ = observable.subscribe(onNext: { (element) in
+                let n = Double(element)
+                let fibonacci = Int(((pow(1.61803, n) - pow(0.61803, n)) / 2.23606 ).rounded())
+                print(fibonacci)
+            })
+        }
+        
+        example(of: "dispose") {
+            let observable = Observable.of("a","b","c")
+            let subscription = observable.subscribe({ (event) in
+                print(event)
+            })
+            subscription.dispose()
+        }
+        
+        example(of: "disposeBag") {
+            let disposeBag = DisposeBag()
+            Observable.of("a","b","c","d").subscribe{
+                print($0)
+            }.disposed(by: disposeBag)
+        }
     }
 
     override var representedObject: Any? {
