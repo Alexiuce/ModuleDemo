@@ -7,12 +7,24 @@
 //
 
 import Cocoa
+import RxSwift
 
 class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        example(of: "just,of,fromm") {
+            let one = 1
+            let two = 2
+            let three = 3
+            let observable = Observable.of(one,two,three)
+            _ = observable.subscribe(onNext: { (element) in
+                print(element)
+            })
+            
+            
+        }
         // Do any additional setup after loading the view.
     }
 
