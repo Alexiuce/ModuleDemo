@@ -14,6 +14,26 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        example(of: "never") {
+            let disposeBag = DisposeBag()
+            Observable<String>.never().do(onNext: { (text) in
+                
+            }, onError: { (error) in
+                print("error")
+            }, onCompleted: {
+                print("complete")
+            }, onSubscribe: {
+                print("subscribe")
+            }, onSubscribed: {
+                print("subscribed ....")
+            }, onDispose: {
+                print("dispose....")
+            }).subscribe({ (event) in
+                print(event)
+            }).disposed(by: disposeBag)
+        }
+        
+        
         example(of: "just,of,from") {
             let one = 1
             let two = 2
@@ -68,20 +88,83 @@ class ViewController: NSViewController {
         example(of: "create") {
             let disposeBag = DisposeBag()
             
+            enum MyError: Error {
+                case myError
+            }
+            
             Observable<String>.create({ (observer) -> Disposable in
                 observer.onNext("01")
+                observer.onError(MyError.myError)
                 observer.onCompleted()
                 return Disposables.create()
             }).subscribe(onNext: { (value) in
                 print(value)
             }, onError: { (error) in
-                print(error.localizedDescription)
+                print("error ~~~")
             }, onCompleted: {
                 print("complete")
-            }, onDisposed: {
+            },onDisposed: {
                 print("disposed")
             }).disposed(by: disposeBag)
             
+        }
+        
+        example(of: "deferred") {
+            let disposeBag = DisposeBag()
+            var flip = false
+            let factory: Observable<Int> = Observable.deferred{
+                flip = !flip
+                if flip {
+                    return Observable.of(1,2,3)
+                }else{
+                    return Observable.of(4,5,6)
+                }
+            }
+            
+            for _ in 0...3 {
+                factory.subscribe(onNext: { (value) in
+                    print(value, terminator: "")
+                }).disposed(by: disposeBag)
+                print()
+            }
+        }
+        
+        example(of: "Single") {
+            let disposeBag = DisposeBag()
+            enum FileReadError: Error {
+                case fileNotFound,unreadable,encodingFailed
+            }
+            
+            func loadText(from name: String) ->Single<String> {
+                return Single.create { single in
+                    let disposable = Disposables.create()
+                    guard let path = Bundle.main.path(forResource: name, ofType: "txt") else{
+                        single(.error(FileReadError.fileNotFound))
+                        return disposable
+                    }
+                    guard let data = FileManager.default.contents(atPath: path) else{
+                        single(.error(FileReadError.unreadable))
+                        return disposable
+                    }
+                    guard let contents = String(data: data, encoding: String.Encoding.utf8) else{
+                        single(.error(FileReadError.encodingFailed))
+                        return disposable
+                    }
+                    
+                    single(.success(contents))
+                    return disposable
+                }
+            }
+            
+            
+            loadText(from: "Copyright").subscribe{
+                switch $0 {
+                case .success(let text):
+                    print(text)
+                case .error(let error):
+                    print(error)
+                }
+            }.disposed(by: disposeBag)
         }
         
         
