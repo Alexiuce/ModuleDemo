@@ -64,6 +64,27 @@ class ViewController: NSViewController {
                 print($0)
             }.disposed(by: disposeBag)
         }
+        
+        example(of: "create") {
+            let disposeBag = DisposeBag()
+            
+            Observable<String>.create({ (observer) -> Disposable in
+                observer.onNext("01")
+                observer.onCompleted()
+                return Disposables.create()
+            }).subscribe(onNext: { (value) in
+                print(value)
+            }, onError: { (error) in
+                print(error.localizedDescription)
+            }, onCompleted: {
+                print("complete")
+            }, onDisposed: {
+                print("disposed")
+            }).disposed(by: disposeBag)
+            
+        }
+        
+        
     }
 
     override var representedObject: Any? {
