@@ -13,8 +13,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
+       reduceDemo1()
         
     }
 
@@ -32,3 +31,32 @@ class ViewController: NSViewController {
     }
 }
 
+
+extension ViewController{
+    fileprivate func reduceDemo(){
+        func combinator(accumulator: Int, current: Int) -> Int {
+            print("accumulator=\(accumulator), current=\(current)")
+            return accumulator + current
+        }
+        let result = [1,2,3].reduce(0, combinator)
+        print(result)
+    }
+    
+    fileprivate func reduceDemo1(){
+        
+        func rmap(elements: [Int], transform: (Int)-> Int ) -> [Int] {
+    
+            return elements.reduce([Int](), {( array:[Int], number: Int) -> [Int] in
+                var temp = array
+                temp.append(transform(number))
+                return temp
+            })
+        }
+        
+    
+       let result = rmap(elements: [1,2,3,4], transform: {$0 * 2})
+        print(result)
+        
+      
+    }
+}
