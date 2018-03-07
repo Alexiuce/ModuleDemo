@@ -14,7 +14,10 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        demo2()
+//        demo1()
+//        demo2()
+        demo3()
+        
     }
     
     fileprivate func demo1(){
@@ -63,6 +66,31 @@ class ViewController: NSViewController {
         subject.onNext("???")
     }
 
+    fileprivate func demo3(){
+        
+        enum MyError: Error{
+            case anErro
+        }
+    
+        
+        example(of: "BehaviorSubject") {
+            let subject = BehaviorSubject(value: "init")
+            
+            let disposeBag = DisposeBag()
+            
+            subject.onNext("xx")
+            subject.subscribe({ (event) in
+                print("label 1",event.element ?? "null")
+            }).disposed(by: disposeBag)
+            subject.onError(MyError.anErro)
+            
+            subject.subscribe({ (event) in
+                print("label 2",event.element ?? "error")
+            }).disposed(by: disposeBag)
+        }
+        
+        
+    }
 }
 
 
