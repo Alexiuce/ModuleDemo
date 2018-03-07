@@ -13,7 +13,8 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         example(of: "never") {
             let disposeBag = DisposeBag()
             Observable<String>.never().do(onNext: { (text) in
