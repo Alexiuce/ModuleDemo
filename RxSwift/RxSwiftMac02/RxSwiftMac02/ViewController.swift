@@ -14,9 +14,10 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        demo1()
-//        demo2()
-        demo3()
+//        demo1()    // debug
+//        demo2()    // PublishSubject
+//        demo3()    // BehaviorSubject
+        demo4()    // ReplaySubject
         
     }
     
@@ -91,6 +92,32 @@ class ViewController: NSViewController {
         
         
     }
+    
+    fileprivate func demo4(){
+        example(of: "Replay Subject") {
+            let subject = ReplaySubject<String>.create(bufferSize: 2)
+            let disposeBag = DisposeBag()
+            subject.onNext("1")
+            subject.onNext("2")
+            subject.onNext("3")
+            subject.subscribe({ (event) in
+                print("lable1:==",event.element ?? "null")
+            }).disposed(by: disposeBag)
+            
+            subject.subscribe({ (event) in
+                print("label2:==", event.element ?? "label2 null")
+            }).disposed(by: disposeBag)
+            
+            
+            subject.onNext("4")
+            
+            subject.subscribe({ (event) in
+                print("label3:==",event.element ?? "label3 null")
+            }).disposed(by: disposeBag)
+        }
+    }
+
+
 }
 
 
