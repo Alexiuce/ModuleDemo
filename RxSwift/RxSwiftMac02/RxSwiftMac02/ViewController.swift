@@ -137,15 +137,11 @@ class ViewController: NSViewController {
             print("1):",event.element ?? "null")
         }.disposed(by: disposeBag)
         
-        
         variable.value = "1"
         variable.asObservable().subscribe { (envnt) in
             print("2):", envnt.element ?? "null")
         }.disposed(by: disposeBag)
         variable.value = "2"
-        
-        
-        
         
     }
 
