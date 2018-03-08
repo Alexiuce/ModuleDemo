@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		56327DF6204FA07C00B193C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56327DF5204FA07C00B193C6 /* AppDelegate.swift */; };
-		56327DF8204FA07C00B193C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56327DF7204FA07C00B193C6 /* ViewController.swift */; };
 		56327DFA204FA07C00B193C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56327DF9204FA07C00B193C6 /* Assets.xcassets */; };
 		56327DFD204FA07C00B193C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56327DFB204FA07C00B193C6 /* Main.storyboard */; };
+		563A277F2050C5DD00FAE438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563A277E2050C5DD00FAE438 /* ViewController.swift */; };
 		82B33CEE17965A20A6166611 /* Pods_RxSwiftMac02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9D668C6567C0B73EC6E46F /* Pods_RxSwiftMac02.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56327DF2204FA07C00B193C6 /* RxSwiftMac02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftMac02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56327DF5204FA07C00B193C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56327DF7204FA07C00B193C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56327DF9204FA07C00B193C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56327DFC204FA07C00B193C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56327DFE204FA07C00B193C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56327DFF204FA07C00B193C6 /* RxSwiftMac02.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RxSwiftMac02.entitlements; sourceTree = "<group>"; };
+		563A277E2050C5DD00FAE438 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8941B71CC2CE1CE53B642533 /* Pods-RxSwiftMac02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMac02.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftMac02/Pods-RxSwiftMac02.release.xcconfig"; sourceTree = "<group>"; };
 		B9C6047B6A262EE2415334CF /* Pods-RxSwiftMac02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMac02.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftMac02/Pods-RxSwiftMac02.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9D668C6567C0B73EC6E46F /* Pods_RxSwiftMac02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftMac02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				56327DF5204FA07C00B193C6 /* AppDelegate.swift */,
-				56327DF7204FA07C00B193C6 /* ViewController.swift */,
+				563A277E2050C5DD00FAE438 /* ViewController.swift */,
 				56327DF9204FA07C00B193C6 /* Assets.xcassets */,
 				56327DFB204FA07C00B193C6 /* Main.storyboard */,
 				56327DFE204FA07C00B193C6 /* Info.plist */,
@@ -217,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56327DF8204FA07C00B193C6 /* ViewController.swift in Sources */,
+				563A277F2050C5DD00FAE438 /* ViewController.swift in Sources */,
 				56327DF6204FA07C00B193C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

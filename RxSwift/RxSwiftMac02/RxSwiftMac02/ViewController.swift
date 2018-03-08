@@ -10,6 +10,10 @@ import Cocoa
 
 import RxSwift
 
+fileprivate enum MyError: Error{
+                case anErro
+            }
+
 class ViewController: NSViewController {
 
     override func viewDidLoad() {
@@ -17,7 +21,8 @@ class ViewController: NSViewController {
 //        demo1()    // debug
 //        demo2()    // PublishSubject
 //        demo3()    // BehaviorSubject
-        demo4()    // ReplaySubject
+//        demo4()    // ReplaySubject
+        demo5()    // VariableSubject
         
     }
     
@@ -69,9 +74,7 @@ class ViewController: NSViewController {
 
     fileprivate func demo3(){
         
-        enum MyError: Error{
-            case anErro
-        }
+       
     
         
         example(of: "BehaviorSubject") {
@@ -111,12 +114,40 @@ class ViewController: NSViewController {
             
             subject.onNext("4")
             
+            subject.onError(MyError.anErro)
+            subject.dispose()
             subject.subscribe({ (event) in
                 print("label3:==",event.element ?? "label3 null")
             }).disposed(by: disposeBag)
+            
+            subject.subscribe({ (event) in
+                print("label4:==",event.element ?? "label4 null")
+            }).disposed(by: disposeBag)
+            
         }
     }
 
+    fileprivate func demo5(){
+        /* Varibale : 需要初始值 不会发送error事件,自动发送complete事件 */
+        
+        let variable = Variable("init value")
+        let disposeBag = DisposeBag()
+        variable.value = "new value"
+        variable.asObservable().subscribe { (event) in
+            print("1):",event.element ?? "null")
+        }.disposed(by: disposeBag)
+        
+        
+        variable.value = "1"
+        variable.asObservable().subscribe { (envnt) in
+            print("2):", envnt.element ?? "null")
+        }.disposed(by: disposeBag)
+        variable.value = "2"
+        
+        
+        
+        
+    }
 
 }
 
