@@ -746,6 +746,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="yD1-xX-3Qv" id="zSf-4u-YR2"/>
                         <outlet property="imageView" destination="4Ad-Cq-MNi" id="XDd-oK-gpj"/>
                     </connections>
                 </viewController>
