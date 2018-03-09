@@ -724,6 +724,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="clearImage:" target="XfG-lQ-9wD" id="J3T-lW-f3d"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXJ-cp-gVp">
                                 <rect key="frame" x="273" y="56" width="81" height="32"/>
@@ -732,6 +735,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="updateImage:" target="XfG-lQ-9wD" id="wsY-Lf-Qds"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -739,6 +745,9 @@
                             <constraint firstItem="4Ad-Cq-MNi" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="29" id="S6J-Af-tcN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="4Ad-Cq-MNi" id="XDd-oK-gpj"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

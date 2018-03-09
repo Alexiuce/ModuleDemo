@@ -7,21 +7,42 @@
 //
 
 import Cocoa
+import RxSwift
 
 class ViewController: NSViewController {
 
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate let images = Variable<NSImage>(NSImage())
+    fileprivate var imageIndex = 1
+    
+    @IBOutlet weak var imageView: NSImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        images.asObservable().subscribe(onNext: { [weak self]  (photos) in
+            self?.imageView.image = photos
+        }).disposed(by: disposeBag)
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    @IBAction func updateImage(_ sender: NSButton) {
+        
+        if imageIndex > 5 { imageIndex = 1}
+        guard let image = NSImage(named: NSImage.Name("image0\(imageIndex)")) else {return}
+        images.value = image
+        imageIndex += 1
+        
     }
 
-
+    
+    @IBAction func clearImage(_ sender: Any) {
+        
+        images.value = NSImage()
+        
+    }
+    
+    
+    
+    
 }
 
