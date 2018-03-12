@@ -9,6 +9,7 @@
 import Cocoa
 import RxSwift
 import Quartz
+import AVFoundation
 
 class ViewController: NSViewController {
 
@@ -22,6 +23,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    
         images.asObservable().subscribe(onNext: { [weak self]  (photos) in
             self?.imageView.image = photos
             self?.clearButton.isEnabled = photos != nil
@@ -55,12 +57,12 @@ class ViewController: NSViewController {
 }
 
 //extension ViewController {
-//   
+//
 //     @objc func pictureTakerDidEnd(pictureTaker: IKPictureTaker, returnCode: Int, contextInfo: Any?)  {
 //        print("picture select end.....")
 //        images.value = pictureTaker.outputImage()
 //    }
-//    
+//
 //}
 
 
