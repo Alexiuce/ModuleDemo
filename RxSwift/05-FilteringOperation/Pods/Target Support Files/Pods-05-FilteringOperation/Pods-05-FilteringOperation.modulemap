@@ -1,0 +1,6 @@
+framework module Pods_05_FilteringOperation {
+  umbrella header "Pods-05-FilteringOperation-umbrella.h"
+
+  export *
+  module * { export * }
+}
