@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		568848B22058ECC4005FFD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568848B12058ECC4005FFD2A /* AppDelegate.swift */; };
+		568848B42058ECC4005FFD2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568848B32058ECC4005FFD2A /* ViewController.swift */; };
+		568848B72058ECC4005FFD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568848B52058ECC4005FFD2A /* Main.storyboard */; };
+		568848B92058ECC4005FFD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568848B82058ECC4005FFD2A /* Assets.xcassets */; };
+		568848BC2058ECC4005FFD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568848BA2058ECC4005FFD2A /* LaunchScreen.storyboard */; };
+		DD42DE5619E2FE1376F55644 /* Pods_XCWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6139C07412E24521D356DEA8 /* Pods_XCWeather.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		568848AE2058ECC4005FFD2A /* XCWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		568848B12058ECC4005FFD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		568848B32058ECC4005FFD2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		568848B62058ECC4005FFD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		568848B82058ECC4005FFD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		568848BB2058ECC4005FFD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		568848BD2058ECC4005FFD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6139C07412E24521D356DEA8 /* Pods_XCWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81FFE7BCF585C833E5A67B76 /* Pods-XCWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather.release.xcconfig"; sourceTree = "<group>"; };
+		AC93D73863F09F3BF9A171AF /* Pods-XCWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		568848AB2058ECC4005FFD2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD42DE5619E2FE1376F55644 /* Pods_XCWeather.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		568848A52058ECC4005FFD2A = {
+			isa = PBXGroup;
+			children = (
+				568848B02058ECC4005FFD2A /* XCWeather */,
+				568848AF2058ECC4005FFD2A /* Products */,
+				AE741F6A155C70D502304D52 /* Pods */,
+				8DD9AFFB278CAADD38770B3A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		568848AF2058ECC4005FFD2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				568848AE2058ECC4005FFD2A /* XCWeather.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		568848B02058ECC4005FFD2A /* XCWeather */ = {
+			isa = PBXGroup;
+			children = (
+				568848B12058ECC4005FFD2A /* AppDelegate.swift */,
+				568848B32058ECC4005FFD2A /* ViewController.swift */,
+				568848B52058ECC4005FFD2A /* Main.storyboard */,
+				568848B82058ECC4005FFD2A /* Assets.xcassets */,
+				568848BA2058ECC4005FFD2A /* LaunchScreen.storyboard */,
+				568848BD2058ECC4005FFD2A /* Info.plist */,
+			);
+			path = XCWeather;
+			sourceTree = "<group>";
+		};
+		8DD9AFFB278CAADD38770B3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6139C07412E24521D356DEA8 /* Pods_XCWeather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE741F6A155C70D502304D52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC93D73863F09F3BF9A171AF /* Pods-XCWeather.debug.xcconfig */,
+				81FFE7BCF585C833E5A67B76 /* Pods-XCWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		568848AD2058ECC4005FFD2A /* XCWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 568848C02058ECC4005FFD2A /* Build configuration list for PBXNativeTarget "XCWeather" */;
+			buildPhases = (
+				C5500526040D1AF1E3C82530 /* [CP] Check Pods Manifest.lock */,
+				568848AA2058ECC4005FFD2A /* Sources */,
+				568848AB2058ECC4005FFD2A /* Frameworks */,
+				568848AC2058ECC4005FFD2A /* Resources */,
+				1CD32D47C26F5DBF309160A0 /* [CP] Embed Pods Frameworks */,
+				8449E81143F98DF368958C23 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCWeather;
+			productName = XCWeather;
+			productReference = 568848AE2058ECC4005FFD2A /* XCWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		568848A62058ECC4005FFD2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = alexiuce.github.io;
+				TargetAttributes = {
+					568848AD2058ECC4005FFD2A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 568848A92058ECC4005FFD2A /* Build configuration list for PBXProject "XCWeather" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 568848A52058ECC4005FFD2A;
+			productRefGroup = 568848AF2058ECC4005FFD2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				568848AD2058ECC4005FFD2A /* XCWeather */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		568848AC2058ECC4005FFD2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568848BC2058ECC4005FFD2A /* LaunchScreen.storyboard in Resources */,
+				568848B92058ECC4005FFD2A /* Assets.xcassets in Resources */,
+				568848B72058ECC4005FFD2A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CD32D47C26F5DBF309160A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8449E81143F98DF368958C23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5500526040D1AF1E3C82530 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XCWeather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		568848AA2058ECC4005FFD2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568848B42058ECC4005FFD2A /* ViewController.swift in Sources */,
+				568848B22058ECC4005FFD2A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		568848B52058ECC4005FFD2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				568848B62058ECC4005FFD2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		568848BA2058ECC4005FFD2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				568848BB2058ECC4005FFD2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		568848BE2058ECC4005FFD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		568848BF2058ECC4005FFD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		568848C12058ECC4005FFD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC93D73863F09F3BF9A171AF /* Pods-XCWeather.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XCWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alexiuce.XCWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		568848C22058ECC4005FFD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81FFE7BCF585C833E5A67B76 /* Pods-XCWeather.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XCWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alexiuce.XCWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		568848A92058ECC4005FFD2A /* Build configuration list for PBXProject "XCWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568848BE2058ECC4005FFD2A /* Debug */,
+				568848BF2058ECC4005FFD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		568848C02058ECC4005FFD2A /* Build configuration list for PBXNativeTarget "XCWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568848C12058ECC4005FFD2A /* Debug */,
+				568848C22058ECC4005FFD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 568848A62058ECC4005FFD2A /* Project object */;
+}
