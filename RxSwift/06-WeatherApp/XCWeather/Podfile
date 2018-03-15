@@ -8,4 +8,5 @@ target 'XCWeather' do
   # Pods for XCWeather
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
 end

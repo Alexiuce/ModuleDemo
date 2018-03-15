@@ -12,6 +12,9 @@
 		568848B72058ECC4005FFD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568848B52058ECC4005FFD2A /* Main.storyboard */; };
 		568848B92058ECC4005FFD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568848B82058ECC4005FFD2A /* Assets.xcassets */; };
 		568848BC2058ECC4005FFD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568848BA2058ECC4005FFD2A /* LaunchScreen.storyboard */; };
+		568848C4205A1D6B005FFD2A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568848C3205A1D6B005FFD2A /* Person.swift */; };
+		568848C6205A2DD6005FFD2A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568848C5205A2DD6005FFD2A /* HomeCell.swift */; };
+		568848C8205A31C7005FFD2A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568848C7205A31C7005FFD2A /* ViewModel.swift */; };
 		DD42DE5619E2FE1376F55644 /* Pods_XCWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6139C07412E24521D356DEA8 /* Pods_XCWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		568848B82058ECC4005FFD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		568848BB2058ECC4005FFD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		568848BD2058ECC4005FFD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568848C3205A1D6B005FFD2A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		568848C5205A2DD6005FFD2A /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		568848C7205A31C7005FFD2A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6139C07412E24521D356DEA8 /* Pods_XCWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FFE7BCF585C833E5A67B76 /* Pods-XCWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather.release.xcconfig"; sourceTree = "<group>"; };
 		AC93D73863F09F3BF9A171AF /* Pods-XCWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 			children = (
 				568848B12058ECC4005FFD2A /* AppDelegate.swift */,
 				568848B32058ECC4005FFD2A /* ViewController.swift */,
+				568848C7205A31C7005FFD2A /* ViewModel.swift */,
+				568848C5205A2DD6005FFD2A /* HomeCell.swift */,
+				568848C3205A1D6B005FFD2A /* Person.swift */,
 				568848B52058ECC4005FFD2A /* Main.storyboard */,
 				568848B82058ECC4005FFD2A /* Assets.xcassets */,
 				568848BA2058ECC4005FFD2A /* LaunchScreen.storyboard */,
@@ -166,12 +175,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568848C8205A31C7005FFD2A /* ViewModel.swift in Sources */,
+				568848C4205A1D6B005FFD2A /* Person.swift in Sources */,
 				568848B42058ECC4005FFD2A /* ViewController.swift in Sources */,
+				568848C6205A2DD6005FFD2A /* HomeCell.swift in Sources */,
 				568848B22058ECC4005FFD2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
