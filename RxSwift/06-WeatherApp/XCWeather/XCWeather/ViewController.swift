@@ -50,9 +50,9 @@ class ViewController: UIViewController {
 //                print("$0 \($0)")
 //            }).disposed(by: disposeBag)
         
-//        tableView.rx.modelSelected(Person.self).subscribe(onNext: {
-//            print("select \($0.name)")
-//        }).disposed(by: disposeBag)
+        tableView.rx.modelSelected(Person.self).subscribe(onNext: {
+            print("select \($0.name)")
+        }).disposed(by: disposeBag)
       
     }
 
