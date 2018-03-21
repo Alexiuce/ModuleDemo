@@ -11,6 +11,9 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController {
+    
+    
+    
     @IBOutlet weak var cityLabel: UILabel!
     
     let disposeBag = DisposeBag()
@@ -28,10 +31,16 @@ class ViewController: UIViewController {
 //        cityName.asObservable().bind(to: cityLabel.rx.text).disposed(by: disposeBag)
 //        cityName.value = "Hangzhou"
         
-       let w = ApiController.share.currentWeather(city: "hc")
-        w.flatMap {
+       ApiController.share.currentWeather(city: "hc")
+        .flatMap {
            return Observable.of($0.cityName)
-        }.bind(to: cityLabel.rx.text).disposed(by: disposeBag)
+        }
+        .asDriver(onErrorJustReturn: "hz")
+        .drive(cityLabel.rx.text)
+        .disposed(by: disposeBag)
+        
+        
+        
     }
 
 
