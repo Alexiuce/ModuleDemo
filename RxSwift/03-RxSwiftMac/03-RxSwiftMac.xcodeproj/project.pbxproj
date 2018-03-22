@@ -11,6 +11,7 @@
 		563A278F2050E0EC00FAE438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563A278E2050E0EC00FAE438 /* ViewController.swift */; };
 		563A27912050E0EC00FAE438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563A27902050E0EC00FAE438 /* Assets.xcassets */; };
 		563A27942050E0EC00FAE438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563A27922050E0EC00FAE438 /* Main.storyboard */; };
+		564F67A72063472E00A9BCEB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F67A62063472E00A9BCEB /* Category.swift */; };
 		BDE4CEAC218560C87072F4AC /* Pods_03_RxSwiftMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6E1023958E2CD9F9AB2605 /* Pods_03_RxSwiftMac.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		563A27932050E0EC00FAE438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		563A27952050E0EC00FAE438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		563A27962050E0EC00FAE438 /* _3_RxSwiftMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _3_RxSwiftMac.entitlements; sourceTree = "<group>"; };
+		564F67A62063472E00A9BCEB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5D6E1023958E2CD9F9AB2605 /* Pods_03_RxSwiftMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_03_RxSwiftMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 			children = (
 				563A278C2050E0EC00FAE438 /* AppDelegate.swift */,
 				563A278E2050E0EC00FAE438 /* ViewController.swift */,
+				564F67A62063472E00A9BCEB /* Category.swift */,
 				563A27902050E0EC00FAE438 /* Assets.xcassets */,
 				563A27922050E0EC00FAE438 /* Main.storyboard */,
 				563A27952050E0EC00FAE438 /* Info.plist */,
@@ -219,6 +222,7 @@
 			files = (
 				563A278F2050E0EC00FAE438 /* ViewController.swift in Sources */,
 				563A278D2050E0EC00FAE438 /* AppDelegate.swift in Sources */,
+				564F67A72063472E00A9BCEB /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
