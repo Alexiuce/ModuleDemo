@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -40,8 +41,20 @@ class ViewController: UIViewController {
 //        .drive(cityLabel.rx.text)
 //        .disposed(by: disposeBag)
         
+//        let headers: HTTPHeaders = [
+//            "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
+//        ]
+//        Alamofire.request("http://ifconfig.me/ip",headers:headers).responseString { (response) in
+//
+//            print(response.result.value ?? "error")
+//        }
         
         
+        var des = "Version"
+        let startIndex = des.startIndex
+        des.insert("-", at: des.index(startIndex, offsetBy: 4))
+        des.insert(contentsOf: "hello", at: des.index(startIndex, offsetBy: 5))
+        print(des)
     }
 
 }

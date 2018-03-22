@@ -18,5 +18,7 @@ target '6.1Demo' do
     # Pods for XCWeather
     pod 'RxSwift'
     pod 'RxCocoa'
+
+    pod 'Alamofire'
     pod 'RxDataSources'
 end

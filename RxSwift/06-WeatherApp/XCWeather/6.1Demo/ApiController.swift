@@ -15,9 +15,6 @@ struct Weather {
     let temperature: Int
     let humidity: Int
     let icon: String
-    
-    
-    
 }
 
 class ApiController {
