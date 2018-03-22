@@ -23,21 +23,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-//        cityName.asObservable().subscribe(onNext: {[weak self] in
-//            print($0)
-//           self?.cityLabel.text = $0
-//        }).disposed(by: disposeBag)
+        cityName.asObservable().subscribe(onNext: {[weak self] in
+            guard let strongSelf = self else {return}
+            print($0)
+            strongSelf.cityLabel.text = $0
+        }).disposed(by: disposeBag)
         
-//        cityName.asObservable().bind(to: cityLabel.rx.text).disposed(by: disposeBag)
-//        cityName.value = "Hangzhou"
+        cityName.asObservable().bind(to: cityLabel.rx.text).disposed(by: disposeBag)
+        cityName.value = "Hangzhou"
         
-       ApiController.share.currentWeather(city: "hc")
-        .flatMap {
-           return Observable.of($0.cityName)
-        }
-        .asDriver(onErrorJustReturn: "hz")
-        .drive(cityLabel.rx.text)
-        .disposed(by: disposeBag)
+//       ApiController.share.currentWeather(city: "hc")
+//        .flatMap {
+//           return Observable.of($0.cityName)
+//        }
+//        .asDriver(onErrorJustReturn: "hz")
+//        .drive(cityLabel.rx.text)
+//        .disposed(by: disposeBag)
         
         
         
