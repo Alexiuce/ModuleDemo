@@ -10,13 +10,17 @@ import Cocoa
 import RxSwift
 import Quartz
 import AVFoundation
+import EventKit
 
 class ViewController: NSViewController {
 
+    
+    fileprivate let eventStore = EKEventStore()
+    fileprivate  var isAuthor = false
+    
     fileprivate let disposeBag = DisposeBag()
     fileprivate let images = Variable<NSImage?>(nil)
     fileprivate var imageIndex = 1
-    
     @IBOutlet weak var clearButton: NSButton!
     @IBOutlet weak var imageView: NSImageView!
     
@@ -30,6 +34,8 @@ class ViewController: NSViewController {
         }).disposed(by: disposeBag)
         
         
+        
+        
     }
 
     @IBAction func updateImage(_ sender: NSButton) {
@@ -39,10 +45,28 @@ class ViewController: NSViewController {
         images.value = image
         imageIndex += 1
         
+        
+        let speach = NSSpeechSynthesizer()
+        speach.delegate = self
+        let result = speach.setVoice(NSSpeechSynthesizer.VoiceName.init(rawValue: "com.apple.speech.synthesis.voice.damayanti"))
+        if result {
+            print("success")
+        }else{
+            print("failure")
+        }
+//        for voiceName in NSSpeechSynthesizer.availableVoices {
+//            print(voiceName)
+//        }
+        speach.startSpeaking("Hello world")
+        remindme()
+
+        
         /** 独立窗口   */
 //        IKPictureTaker.pictureTaker().begin(withDelegate: self, didEnd: #selector(pictureTakerDidEnd(pictureTaker:returnCode:contextInfo:)), contextInfo: nil)
         /** 嵌入在当前窗口  */
 //        IKPictureTaker.pictureTaker().beginSheet(for: view.window!, withDelegate: self, didEnd: #selector(pictureTakerDidEnd(pictureTaker:returnCode:contextInfo:)), contextInfo: nil)
+        
+       
         
         
     }
@@ -65,5 +89,65 @@ class ViewController: NSViewController {
 //
 //}
 
+
+extension ViewController{
+    fileprivate func remindme(){
+       
+        let authorStatus = EKEventStore.authorizationStatus(for: EKEntityType.reminder)
+       
+        switch authorStatus {
+        case .authorized:
+            isAuthor = true
+        case .notDetermined:
+            eventStore.requestAccess(to: .reminder, completion: { [weak self] (granted, error) in
+                guard let strongSelf = self else {return}
+                if granted {
+                    DispatchQueue.main.async {
+                        strongSelf.isAuthor = granted
+                        strongSelf.createRemind()
+                    }
+                }
+            })
+        case .denied,.restricted:
+            print("user deny ")
+        }
+        
+        if !isAuthor {return}
+        createRemind()
+    }
+    
+    fileprivate func createRemind(){
+        let reminder = EKReminder(eventStore: eventStore)
+        reminder.calendar = eventStore.defaultCalendarForNewReminders()
+        reminder.title = "remide title"
+        let alarmDate = Date(timeInterval: 15, since: Date())
+        let alarm = EKAlarm(absoluteDate: alarmDate)
+        reminder.addAlarm(alarm)
+        do {
+            try  eventStore.save(reminder, commit: true)
+        } catch  {
+            print("save failure: \(error.localizedDescription)")
+        }
+    }
+}
+
+
+extension ViewController: NSSpeechSynthesizerDelegate{
+    func speechSynthesizer(_ sender: NSSpeechSynthesizer, willSpeakWord characterRange: NSRange, of string: String) {
+        print("will speaKWord \(string) \(characterRange)")
+    }
+    func speechSynthesizer(_ sender: NSSpeechSynthesizer, willSpeakPhoneme phonemeOpcode: Int16) {
+        print("will speakPhoneme \(phonemeOpcode)")
+    }
+    func speechSynthesizer(_ sender: NSSpeechSynthesizer, didEncounterSyncMessage message: String) {
+        print("did encounter message \(message)")
+    }
+    func speechSynthesizer(_ sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
+        print("did finishedSpeaking ")
+    }
+    func speechSynthesizer(_ sender: NSSpeechSynthesizer, didEncounterErrorAt characterIndex: Int, of string: String, message: String) {
+        print("did error \(string)")
+    }
+}
 
 
