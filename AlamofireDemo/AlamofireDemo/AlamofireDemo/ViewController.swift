@@ -15,22 +15,28 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request("https://httpbin.org/get", method: .get, parameters: ["id":"100"], encoding: URLEncoding.default, headers: nil).validate(statusCode: [200]).responseJSON {
+        request("https://httpbin.org/get", method: .get, parameters: ["id":"100"], encoding: URLEncoding.default, headers: nil).validate(statusCode: [200]).responseJSON {
             guard let value = $0.value else {return}
             let json = JSON(value)
             print(json["args"]["id"].intValue)
         }
+    
         
+    }
+
+}
+
+extension ViewController{
+    fileprivate func af_upload(){
+        /** upload */
         
         let uploadURL = URL(fileURLWithPath: "")
         upload(multipartFormData: { (formData) in
-            
             formData.append(uploadURL, withName: "filem", fileName: "123.png", mimeType: "image/png")
-        }, usingThreshold: <#T##UInt64#>, to: "uploadURL", method: .post, headers: nil) { (encodingResult) in
+        }, to: "uploadURL", method: .post, headers: nil) { (encodingResult) in
             switch encodingResult {
-            case .success(let request, let streamingFromDisk, let streamFileURL):
+            case .success(let request, _, _):
                 print("success")
-            
                 request.uploadProgress(closure: { (progress) in
                     print("\(progress.fractionCompleted)")
                 })
@@ -38,10 +44,14 @@ class ViewController: NSViewController {
                 print("error")
             }
         }
-        
     }
-
-
-
+    fileprivate func af_download(){
+        /** download */
+        let downloader = download("url", to: DownloadRequest.suggestedDownloadDestination())
+        
+        if let downloadData = downloader.resumeData {
+            download(resumingWith:downloadData)
+        }
+    }
 }
 
