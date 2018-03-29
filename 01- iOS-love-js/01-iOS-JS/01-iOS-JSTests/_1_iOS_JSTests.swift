@@ -35,12 +35,14 @@ class _1_iOS_JSTests: XCTestCase {
     }
     
     func testJsDemo()  {
-        let context = JSContext()!
+        let context = JSContext(virtualMachine: JSVirtualMachine())
+        
         func sum(a: Int, b: Int) -> Int {
             return a + b
         }
+        
+        
        
-    
         context.setObject(sum, forKeyedSubscript: "mySum" as NSCopying & NSObjectProtocol)
         
         let s = context.evaluateScript("mySum(1,2)")
