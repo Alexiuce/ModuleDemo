@@ -40,11 +40,13 @@ class ViewController: NSViewController {
                          view.backgroundColor = UIColor.red
                          }
                  }
-         
-         
-         */
-    
         
+         */
+        
+        request("http://localhost:3333", method: .post, parameters: ["name":"alexiuce","level":12],encoding: JSONEncoding.default).responseString { (response) in
+            print(response.description)
+        }
+     
         
     }
 
@@ -55,8 +57,7 @@ extension ViewController{
     fileprivate func af_used(){
         request(WEB_URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Cookie":myCookie])
             .responseString { (response) in
-//                response.response?.allHeaderFields
-                print(response)
+                print(response.response?.allHeaderFields ?? "")
         }
     }
     
