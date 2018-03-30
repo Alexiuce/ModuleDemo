@@ -63,3 +63,11 @@ function isExistInArray(array,target) {
   }
   return false
 }
+
+
+let person = require('./Person')
+// console.log(person.country);
+// person.say();
+// person.student('alwx',20);
+let s = new person("alex",33)
+s.greet()
