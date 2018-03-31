@@ -1,0 +1,11 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "node api example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alexiuce",
+  "license": "MIT"
+}
