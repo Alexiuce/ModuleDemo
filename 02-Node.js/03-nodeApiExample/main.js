@@ -49,7 +49,7 @@ pet.speak.call(dog)
 
 /** apply demo*/
 
-function Pet(name) {
+/*function Pet(name) {
   this.name = name
   this.speak = function () {
     console.log(this.name);
@@ -62,4 +62,4 @@ function Dog(name) {
 }
 
 var dog = new Dog('xx')
-dog.speak()
+dog.speak()*/
