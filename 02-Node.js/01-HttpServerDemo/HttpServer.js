@@ -27,7 +27,6 @@ http_server.use(body_parser.json());
 http_server.use('/',function (request, response, next) {
   // console.log(request.query);  获取get请求参数
    console.log(request.body)  // 获取post请求参数
-
   next();
 });
 
@@ -38,36 +37,36 @@ http_server.post('/',function (request, response) {
 http_server.listen(3333);
 
 
+/** ||||基本语法练习|||||| */
+// let array = [1,2,3,4]
 
-let array = [1,2,3,4]
-
-let double_array = array.map(function (value,index) {
-  return value * 2
-});
-
-
-for (i = 0; i < double_array.length; i ++){
-  console.log(double_array[i]);
-}
-
-array.push(9)
-let result = isExistInArray(array,9)
-console.log(result);
-
-function isExistInArray(array,target) {
-  let count = array.length
-  for (i = 0; i < count; i++){
-    if (array[i] == target) {
-      return true
-    }
-  }
-  return false
-}
+// let double_array = array.map(function (value,index) {
+//   return value * 2
+// });
 
 
-let person = require('./Person')
+// for (i = 0; i < double_array.length; i ++){
+//   console.log(double_array[i]);
+// }
+
+// array.push(9)
+// let result = isExistInArray(array,9)
+// console.log(result);
+
+// function isExistInArray(array,target) {
+//   let count = array.length
+//   for (i = 0; i < count; i++){
+//     if (array[i] === target) {
+//       return true
+//     }
+//   }
+//   return false
+// }
+
+
+// let person = require('./Person');
 // console.log(person.country);
 // person.say();
 // person.student('alwx',20);
-let s = new person("alex",33)
-s.greet()
+// let s = new person("alex",33);
+// s.greet();
