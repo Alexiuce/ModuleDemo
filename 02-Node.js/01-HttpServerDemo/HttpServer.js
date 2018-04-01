@@ -18,21 +18,68 @@ let http_server = express();
 // http_server.use(body_parser.urlencoded({extended:true}));
 
 // post 请求方式: application/json
-http_server.use(body_parser.json());
+// http_server.use(body_parser.json());
 
-// http_server.get('/node',function (request,response) {
-//        response.send('node.js....')
+/**  会话管理 : cookie , session 等... */
+let cookieParser = require('cookie-parser')
+
+let session = require('express-session')
+
+http_server.use(cookieParser('session_test'))
+
+http_server.use(session({
+    secret: 'session_test',
+    resave: true,
+    saveUninitialized: true
+}))
+
+
+http_server.get('/',function (request,response) {
+    let user = {
+        name: 'alex',
+        age: 12,
+        address: 'hangzhou'
+    }
+    request.session.user = user
+
+    response.send('you has logined ... please visite /user get info')
+});
+http_server.get('/user', (request,response)=>{
+    if (request.session.user) {
+        let u = request.session.user
+        response.send("welcome you : " + u.name)
+    }else {
+        response.send('you need visite / for login')
+    }
+})
+
+/** 使用router 链式处理 */
+
+// http_server.route('/book')
+//     .get( (reqeust, response) => {
+//     response.send('give you a boook')
+// } ).post((request,response)=>{
+//     response.send('post you a book')
+// })
+
+
+/** 路径可以支持正则匹配*/
+
+// http_server.get('/ab?cd',(request, response) => {
+//     response.send('ab?cd')
+// })
+
+
+
+// http_server.use('/',function (request, response, next) {
+//   // console.log(request.query);  获取get请求参数
+//    console.log(request.body)  // 获取post请求参数
+//   next();
 // });
-
-http_server.use('/',function (request, response, next) {
-  // console.log(request.query);  获取get请求参数
-   console.log(request.body)  // 获取post请求参数
-  next();
-});
-
-http_server.post('/',function (request, response) {
-  response.send(request.body);
-});
+//
+// http_server.post('/',function (request, response) {
+//   response.send(request.body);
+// });
 
 http_server.listen(3333);
 
