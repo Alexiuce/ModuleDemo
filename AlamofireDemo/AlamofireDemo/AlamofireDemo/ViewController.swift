@@ -43,7 +43,7 @@ class ViewController: NSViewController {
         
          */
         
-        request("http://localhost:3333", method: .post, parameters: ["name":"alexiuce","level":12],encoding: JSONEncoding.default).responseString { (response) in
+        request("http://localhost:3333/book", method: .post, parameters: ["name":"alexiuce","level":12],encoding: JSONEncoding.default).responseString { (response) in
             print(response.description)
         }
      
