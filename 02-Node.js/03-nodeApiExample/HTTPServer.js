@@ -1,7 +1,22 @@
-let http = require('http')
+const http = require('http')
 
-let server = http.createServer(function (request, response) {
+const server = http.createServer( (request, response) => {
+
+  switch (request.url){
+    case '/home':
+      response.write("home...")
+      break
+    case '/index':
+      response.write("index...")
+      break
+    case 'node':
+      response.write("node...")
+      break
+    default:
+     response.write("default...")
+  }
+
   const s = "for my string"
-  response.end('hello node js ${s}')
+  response.end(`hello node js ${s}`)
 });
 server.listen(3333)
