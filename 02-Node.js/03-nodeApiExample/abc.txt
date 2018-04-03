@@ -1,0 +1,5 @@
+this is a demo for node js file system
+if you look the context
+that like success for your reading...
+
+* 文件结尾
