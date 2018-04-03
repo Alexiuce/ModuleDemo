@@ -57,8 +57,8 @@
       <file leaf-file-name="fs.js" pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/6.11.5/core-modules/fs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="310" column="39" lean-forward="true" selection-start-line="310" selection-start-column="39" selection-end-line="310" selection-end-column="39" />
+            <state relative-caret-position="318">
+              <caret line="314" column="28" lean-forward="true" selection-start-line="314" selection-start-column="28" selection-end-line="314" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -128,8 +128,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="342" />
-    <option name="y" value="96" />
+    <option name="x" value="562" />
+    <option name="y" value="136" />
     <option name="width" value="1548" />
     <option name="height" value="734" />
   </component>
@@ -249,12 +249,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522465706155</updated>
       <workItem from="1522465707331" duration="7569000" />
-      <workItem from="1522648108160" duration="4728000" />
+      <workItem from="1522648108160" duration="4754000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12297000" />
+    <option name="totallyTimeSpent" value="12323000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -266,7 +266,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="342" y="96" width="1548" height="734" extended-state="0" />
+    <frame x="562" y="136" width="1548" height="734" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22331369" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -405,8 +405,8 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/6.11.5/core-modules/fs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="310" column="39" lean-forward="true" selection-start-line="310" selection-start-column="39" selection-end-line="310" selection-end-column="39" />
+        <state relative-caret-position="318">
+          <caret line="314" column="28" lean-forward="true" selection-start-line="314" selection-start-column="28" selection-end-line="314" selection-end-column="28" />
           <folding />
         </state>
       </provider>
