@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DefineProperty</title>
+    <!--<script src="./node_modules/vue/dist/vue.js"></script>-->
+</head>
+<body>
+
+    <div id="app">
+
+        <!--{{msg}}-->
+        <input type="text" id="input">
+    </div>
+
+<script>
+//    const vm = new Vue({
+//        el: '#app',
+//        data: {
+//            msg: "hello"
+//        }
+//    })
+
+
+
+    let obj = {}
+    let temp = {}
+    Object.defineProperty(obj,'name',{
+//        configurable: true,   // 是否可删除此属性
+//        writable: true,  // 是否可以赋值此属性
+//        enumerable:false,   // 是否可枚举/遍历
+        get(){
+            return temp['name']
+        },
+        set(value){
+            temp['name'] = value
+            input.value = value
+        }
+    })
+
+    input.value = obj.name
+    input.addEventListener('input',()=>{
+        obj.name = this.value
+
+    })
+
+
+</script>
+
+</body>
+</html>
