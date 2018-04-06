@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BuyCar</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+
+<!-- 基于promise 独立于vue的库(网络请求) -->
+<!-- Promise : 用来解决回调问题
+     三个状态: 成功,失败,等待
+ -->
+
+<script src="./node_modules/axios/dist/axios.js"></script>
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+
+
+    let vm = new Vue({
+        el: '#app',
+
+        data: {
+            product: []
+        },
+//        在vue 实例 数据初始化后 会自动调用此方法,通常用来进行网络请求等相关操作
+        // 属于生命周期方法,也称作钩子函数
+
+        created() {
+            // 使用function 函数 时 成功回调中的this 指向的并不是vue实例,
+
+//            axios.get('./cars.json').then(function (res) {  // 请求成功回调
+//
+//                this.product = res.data
+//                console.log(res);
+//            },function (err) { // 请求失败回调
+//                console.log(err);
+//            })
+
+            // 可以使用箭头函数避免这个问题
+            axios.get('./cars.json').then((res)=>{ // 成功回调
+                this.product = res.data;
+            },(err)=>{
+                console.log(err);
+            })
+        }
+    })
+</script>
+
+</body>
+</html>
