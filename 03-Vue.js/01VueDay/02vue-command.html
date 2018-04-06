@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="app">
+
+
+        <!-- v-model : vue指令,将model于dom进行数据双向绑定 -->
+        <input type="text" v-model="msg">
+        <!-- v-text : 相当于{{}}  ,防止{{}}刷新时显示在页面中 -->
+        <div v-text="msg"></div>
+        <!-- v-once: 只绑定一次,当数据变化时,不会导致页面更新  -->
+        <div v-once>
+            {{msg}}
+        </div>
+        <!--v-html 将html字符串内容当作(dom )innerHtml 进行渲染 -->
+        <div v-html="p"></div>
+    </div>
+
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+
+    let vm = new Vue({
+        el: '#app',
+        data:{
+            msg: 'hello',
+            p:'<p>page</p>'
+        }
+    })
+
+
+</script>
+</body>
+</html>
