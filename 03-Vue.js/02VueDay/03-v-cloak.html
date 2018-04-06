@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radio</title>
+    <style>
+        /*<!-- 设置v-cloak 防止刷屏闪烁 -->*/
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+    <!-- v-cloak 防止刷新页面闪烁显示vue插值 需要配合设置style 中的display:none -->
+    <div id="app" v-cloak="">
+        <!--select 通过监听onchange事件获取选中option 的value -->
+        <select v-model="s">
+            <option value="" disabled>please select</option>
+            <!-- 如果value属性不写,则取option的值 -->
+            <option value="1">Hey</option>
+            <option value="2">Job</option>
+            <option value="3">Tom</option>
+            <option value="4">Jack</option>
+        </select>
+        {{s}}
+
+        <div>
+            <!-- 单选按钮 也需使用 value  -->
+            <input type="radio" v-model="r" value="m">Man
+            <input type="radio" v-model="r" value="w">Woman
+            <p>
+                {{r}}
+            </p>
+        </div>
+    </div>
+
+    <!--// vue 使用 v-model-->
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+//  <!-- 原生js方法 示例-->
+//    select.onchange = function () {
+//        console.log(this.value);
+//    }
+
+
+
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            s: '',
+            r: 'm'
+
+        }
+    })
+</script>
+
+
+</body>
+</html>
