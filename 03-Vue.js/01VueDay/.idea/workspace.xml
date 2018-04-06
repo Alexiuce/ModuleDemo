@@ -78,11 +78,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="02vue-command.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="02vue-command.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02vue-command.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
               <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="03-reactivityHtml.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03-reactivityHtml.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="04-v-for-example.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/04-v-for-example.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -115,6 +135,8 @@
         <option value="$PROJECT_DIR$/Hello.html" />
         <option value="$PROJECT_DIR$/01-defineProperty.html" />
         <option value="$PROJECT_DIR$/02vue-command.html" />
+        <option value="$PROJECT_DIR$/03-reactivityHtml.html" />
+        <option value="$PROJECT_DIR$/04-v-for-example.html" />
       </list>
     </option>
   </component>
@@ -219,12 +241,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522901038924</updated>
       <workItem from="1522901040897" duration="9016000" />
-      <workItem from="1522978617936" duration="1659000" />
+      <workItem from="1522978617936" duration="4744000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10675000" />
+    <option name="totallyTimeSpent" value="13760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="47" width="1343" height="755" extended-state="0" />
@@ -384,6 +406,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-reactivityHtml.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04-v-for-example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding />
         </state>
       </provider>

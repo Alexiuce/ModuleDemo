@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V-For</title>
+</head>
+<body>
+
+<!-- 以前: 拼接字符串 然后设置innerHtml (性能低,重新渲染dom)-->
+
+<!-- vue 提供了v-for 指令 更高效, 复用原有的结构 -->
+
+<div id="app">
+    <ul>
+        <li v-for="(item,index) in fruits">
+            {{item.name}} --- {{index}}
+        <ul>
+            <li v-for="p in item.price">price {{p}}</li>
+        </ul>
+        </li>
+    </ul>
+
+</div>
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            fruits:[
+                {
+                    name:'apple',
+                    price:[10,13,14]
+                },
+                {
+                    name:'banana',
+                    price:[1,3,5]
+                },
+                {
+                    name:'watermelon',
+                    price:[10,13,14]
+                },
+                {
+                    name:'orange',
+                    price:[4,6,9]
+                }
+                ]
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reactivity</title>
+</head>
+<body>
+
+    <div id="app">
+        {{a.school}}
+
+        <div>
+            {{b}}
+        </div>
+
+    </div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+//    <!-- vue 会循环遍历data中的数据(数据劫持),依次增加setter和getter方法 -->
+//    使用变量时,一定要先进行初始化,否则新增加的属性页面不会响应变化
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            a:{},
+            b:[1,2,3,4,5]
+        }
+    })
+
+//    vm.$set(vm.a,'school',123)   // 此方法是给对象数据添加新响应式数据
+//     替换原对象
+      vm.a = {school:'zdff',age:12,name:'job'}
+
+    // 改变数组中的某一项时也能被vue响应到页面的.
+    // 示例
+//    vm.b[0] = 100
+//    vm.b.length = 3
+    vm.b.reverse()
+</script>
+
+</body>
+</html>
