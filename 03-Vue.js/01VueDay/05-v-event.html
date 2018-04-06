@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Event</title>
+</head>
+<body>
+
+<div id="app">
+    <!--<div v-on:mousedown="fn">点我</div>-->
+    <!-- v-on: === @ 相同-->
+    <div @mousedown="fn">点我</div>
+    <!--默认会传递event参数到调用方法中,如果需要传参,需要使用$event传递事件到方法中.-->
+    <div @click="click($event,20)"> 传递参数</div>
+
+</div>
+
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+
+
+//    vue中 methods和data的数据都会放到vm上,并且如果存在同名(名字冲突)时会报错
+//      methods中的this 都指向的是实例  * 箭头函数的this除外 *
+    let vm = new Vue({   // vm也称为根实例
+        el: '#app',
+        data:{
+
+
+        },
+        methods:{
+            fn(){
+                alert(this)
+            },
+            click(event,a){
+                console.log(event);
+                console.log(a);
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
