@@ -17,7 +17,7 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="0">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
@@ -57,18 +57,8 @@
       <file leaf-file-name="04-car.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/04-car.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="05-promise.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05-promise.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+            <state relative-caret-position="351">
+              <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -77,8 +67,8 @@
       <file leaf-file-name="cars.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cars.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="57">
+              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -126,8 +116,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="43" />
-    <option name="y" value="153" />
+    <option name="x" value="491" />
+    <option name="y" value="115" />
     <option name="width" value="1343" />
     <option name="height" value="755" />
   </component>
@@ -208,18 +198,18 @@
       <option name="presentableId" value="Default" />
       <updated>1522995511196</updated>
       <workItem from="1522995512340" duration="8217000" />
-      <workItem from="1523077179995" duration="1970000" />
+      <workItem from="1523077179995" duration="4946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10187000" />
+    <option name="totallyTimeSpent" value="13163000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="153" width="1343" height="755" extended-state="0" />
+    <frame x="491" y="115" width="1343" height="755" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24944155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1816828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -329,17 +319,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cars.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="0">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
@@ -353,10 +335,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cars.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/04-car.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        <state relative-caret-position="351">
+          <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
           <folding />
         </state>
       </provider>
