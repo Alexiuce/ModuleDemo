@@ -57,9 +57,14 @@
       <file leaf-file-name="04-car.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/04-car.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="392">
+              <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+              <folding>
+                <element signature="e#2367#2741#0" expanded="false" />
+                <element signature="e#2425#2496#0" expanded="false" />
+                <element signature="e#2760#3215#0" expanded="false" />
+                <element signature="e#3233#3420#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,8 +72,8 @@
       <file leaf-file-name="cars.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cars.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="17" />
+            <state relative-caret-position="38">
+              <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -116,8 +121,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="491" />
-    <option name="y" value="115" />
+    <option name="x" value="176" />
+    <option name="y" value="42" />
     <option name="width" value="1343" />
     <option name="height" value="755" />
   </component>
@@ -198,15 +203,15 @@
       <option name="presentableId" value="Default" />
       <updated>1522995511196</updated>
       <workItem from="1522995512340" duration="8217000" />
-      <workItem from="1523077179995" duration="4946000" />
+      <workItem from="1523077179995" duration="7507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13163000" />
+    <option name="totallyTimeSpent" value="15724000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="491" y="115" width="1343" height="755" extended-state="0" />
+    <frame x="176" y="42" width="1343" height="755" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1816828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -275,7 +280,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#2367#2741#0" expanded="false" />
+            <element signature="e#2425#2496#0" expanded="false" />
+            <element signature="e#2760#3215#0" expanded="false" />
+            <element signature="e#3233#3420#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -337,17 +347,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cars.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="38">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/04-car.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="392">
+          <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+          <folding>
+            <element signature="e#2367#2741#0" expanded="false" />
+            <element signature="e#2425#2496#0" expanded="false" />
+            <element signature="e#2760#3215#0" expanded="false" />
+            <element signature="e#3233#3420#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

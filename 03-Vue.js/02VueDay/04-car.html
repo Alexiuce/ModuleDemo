@@ -16,7 +16,7 @@
             <table class="table table-bordered table-hover">
                 <caption class="h4 text-warning text-center"> 购物车</caption>
                 <tr>
-                    <th>全选 <input type="checkbox"></th>
+                    <th>全选 <input type="checkbox" v-model="checkAll"></th>
                     <td>商品</td>
                     <td>单价</td>
                     <td>数量</td>
@@ -45,6 +45,9 @@
                         {{item.productPrice * item.productCount | toMyFixed(2) }}
                     </td>
                     <td><button class="btn btn-danger" @click = "remove(index)">删除</button></td>
+                </tr>
+                <tr >
+                    <td colspan="6" >总价:{{sum | toMyFixed(2) }}</td>
                 </tr>
 
             </table>
@@ -113,6 +116,38 @@
             toMyFixed(input,param1){  // 在方法中,这里的this 是window
 
                 return input.toFixed(param1)
+            }
+        },
+        computed:{  // 这里的属性都会挂到vm上,所以不能同data和methods有重名的情况
+
+            checkAll:{  // get 和set 中的this都指向实例
+                get(){
+                    return this.product.every((item)=>{
+                        return item.isSelected
+                    })
+
+                },
+                set(newValue){
+                    this.product.forEach((item)=>{
+                        item.isSelected = newValue
+                    })
+                }
+
+            },
+            /*sum:{    // sum 结果会被缓存,若依赖的数据没有变化,不会重新计算
+                get(){
+                    return this.product.reduce((prev,next)=>{
+                       if (!next.isSelected) return prev;
+                       return prev + next.productCount * next.productPrice
+                    },0)
+                }
+            }*/
+            // 如果计算属性写成函数,则表示仅有get方法
+            sum(){
+                return this.product.reduce((prev,next)=>{
+                    if (!next.isSelected) return prev
+                    return prev + next.productCount * next.productPrice
+                },0)
             }
         }
 
