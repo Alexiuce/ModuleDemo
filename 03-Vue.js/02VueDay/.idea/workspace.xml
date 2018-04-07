@@ -18,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,17 +54,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="04-car.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="04-car.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/04-car.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+            <state relative-caret-position="240">
+              <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
               <folding>
                 <element signature="e#2367#2741#0" expanded="false" />
                 <element signature="e#2425#2496#0" expanded="false" />
                 <element signature="e#2760#3215#0" expanded="false" />
                 <element signature="e#3233#3420#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="06-transtion.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/06-transtion.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="07-animator.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/07-animator.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,8 +104,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -99,6 +119,8 @@
         <option value="$PROJECT_DIR$/cars.json" />
         <option value="$PROJECT_DIR$/05-promise.js" />
         <option value="$PROJECT_DIR$/04-car.html" />
+        <option value="$PROJECT_DIR$/06-transtion.html" />
+        <option value="$PROJECT_DIR$/07-animator.html" />
       </list>
     </option>
   </component>
@@ -121,7 +143,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="176" />
+    <option name="x" value="33" />
     <option name="y" value="42" />
     <option name="width" value="1343" />
     <option name="height" value="755" />
@@ -203,15 +225,15 @@
       <option name="presentableId" value="Default" />
       <updated>1522995511196</updated>
       <workItem from="1522995512340" duration="8217000" />
-      <workItem from="1523077179995" duration="7507000" />
+      <workItem from="1523077179995" duration="10791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15724000" />
+    <option name="totallyTimeSpent" value="19008000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="176" y="42" width="1343" height="755" extended-state="0" />
+    <frame x="33" y="42" width="1343" height="755" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1816828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -332,7 +354,7 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -355,14 +377,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/04-car.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+        <state relative-caret-position="240">
+          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
           <folding>
             <element signature="e#2367#2741#0" expanded="false" />
             <element signature="e#2425#2496#0" expanded="false" />
             <element signature="e#2760#3215#0" expanded="false" />
             <element signature="e#3233#3420#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-transtion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-animator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>

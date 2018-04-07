@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div div {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+        }
+        /*.v-enter{*/
+            /*opacity: 0;*/
+            /*transition: 1s linear;*/
+        /*}*/
+        /*.v-enter-active{*/
+            /*transition: 1s linear;*/
+        /*}*/
+        /*.v-leave-active{*/
+            /*opacity: 0;*/
+            /*transition: 1s linear;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <!-- v-if v-show  v-if操作的是dom ,v-show操作的是样式 -->
+
+
+    <button @click="flag=!flag">切换</button>
+    <transition >
+
+        <div v-show="flag">
+            v show
+        </div>
+    </transition>
+</div>
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+
+            flag: true
+        }
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animator</title>
+
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
+    <style>
+        div div {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <!-- v-if v-show  v-if操作的是dom ,v-show操作的是样式 -->
+
+
+    <button @click="flag=!flag">切换</button>
+    <input type="text" v-model="query">
+    <transition-group enter-active-class="animated bouceInLeft" leave-active-class="animated bounceOutLeft">
+        <div v-for="(item,index) in newArr" :key="index">{{item}}</div>
+    </transition-group>
+
+    <transition enter-active-class="animated bounceInLeft" leave-active-class="animated bounceOutLeft">
+
+        <div v-show="flag">
+            v show
+        </div>
+
+    </transition>
+</div>
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+
+            query:'',
+            arr: [1,2,3,4,5],
+            flag: true
+        },
+        computed:{
+            newArr(){
+                return this.arr.filter(item=>item==this.query)
+            }
+        }
+    })
+
+
+</script>
+</body>
+</html>
