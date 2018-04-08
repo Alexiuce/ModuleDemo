@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="app">
+    <input type="text" v-model="msg">
+    {{checkMsg}}
+</div>
+
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+    let vm = new Vue({
+      el: '#app',
+      data:{
+        msg:''
+      },
+      computed:{
+        checkMsg(){
+
+            let l = this.msg.length
+            if (l > 10){
+              return 'too lang ....'
+            }else {
+              return 'you hanv  ' + (10 - l)  +'world'
+            }
+        }
+      }
+    })
+</script>
+</body>
+</html>

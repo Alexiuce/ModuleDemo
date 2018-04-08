@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.WatchExample</title>
+</head>
+<body>
+
+
+<div id="app">
+
+    <input type="text" v-model="wm">
+    {{msg}}
+</div>
+
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '',
+        wm:''
+      },
+      watch:{   // 观察者模式 只有被观察者变化的时候才会触发,支持异步..
+        wm(newValue,oldValue){   // 名称需要与被观察者一致
+          console.log(newValue);
+          console.log(oldValue);
+        }
+
+      }
+    })
+</script>
+</body>
+</html>

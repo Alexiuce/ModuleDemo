@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify</title>
+</head>
+<body>
+
+<div id="app">
+    <!-- .capture (事件捕获) 与冒泡顺序相反的事件传递方式
+     事件自顶到底的传播顺序,冒泡是自底到顶的顺序
+         .stop (停止继续传递事件)
+         .once (仅执行一次)
+         .self (只有是自己时触发事件)
+     -->
+    <div @click="parent">parent
+        <div @click.self.stop = "child">child
+            <!-- 阻止事件冒泡传递-->
+            <div @click="grandson">grandson</div>
+        </div>
+    </div>
+    <!-- .prevent 阻止链接跳转 仅执行方法 -->
+    <a href="https://www.baiud.com" @click.prevent="parent">跳转链接</a>
+
+</div>
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+  let vm = new Vue({
+    el: '#app',
+    data: {},
+    methods:{
+      parent(){
+        alert('parent')
+
+      },
+      child(){
+
+        alert('child')
+      },
+      grandson(e){
+
+        console.log(e);
+        alert('grandson')
+//        e.stopPropagation()   // 阻止冒泡
+//        e.cancelBubble = true   // 同上
+//        在vue中,可以使用.stop修饰符达相同效果
+      },
+    }
+
+  })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filters</title>
+</head>
+<body>
+
+<div id="app">
+
+{{msg | myFilter}}
+
+</div>
+
+<div id="app1">
+{{msg | myFilter}}
+
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+    /* 定义全局过滤器,可以让过滤器通用(每个实例都可以使用) 类似于java的静态方法或者oc的类方法
+    *  第一个参数为过滤器名称,
+    *  第二个参数为过滤器方法的实现
+    * */
+
+    Vue.filter('myFilter',data => "new filter" + data);   // 添加自定义过滤器到全局Vue上,
+
+
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        msg: 'app'
+      },
+      /* 实例过滤器,仅当前实例可用 */
+      /*filters:{
+        myFilter1(input){
+          return "alx" + input
+        }
+      }*/
+    });
+
+    let vm1 = new Vue({
+      el: '#app1',
+      data: {
+        msg: 'app1'
+      }
+    })
+
+</script>
+
+</body>
+
+</html>
