@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.V-if-else</title>
+</head>
+<body>
+
+<div id="app">
+
+    <!-- template 是vue默认提供的,仅提供包裹中,无任何实际dom效果 -->
+    <!--v-show 不支持template -->
+
+
+
+
+    <template v-if="flag">
+        <div>very handsome</div>
+        <div>very handsome</div>
+        <div>very handsome</div>
+    </template>
+    <div v-else>def</div>
+
+    <template v-if="cut">
+        <label >注册</label>
+        <input type="text" >
+
+    </template>
+    <template v-else>
+        <label >登录</label>
+        <input type="text" >
+
+    </template>
+    <button @click="cut=!cut">切换</button>
+
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        flag: true,
+        cut: true
+      }
+    })
+
+</script>
+</body>
+</html>

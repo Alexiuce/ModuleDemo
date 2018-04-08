@@ -23,7 +23,7 @@
         msg: '',
         wm:''
       },
-      watch:{   // 观察者模式 只有被观察者变化的时候才会触发,支持异步..
+      watch:{   // 侦听属性:  观察者模式 只有被观察者变化的时候才会触发,支持异步..
         wm(newValue,oldValue){   // 名称需要与被观察者一致
           console.log(newValue);
           console.log(oldValue);
@@ -31,6 +31,13 @@
 
       }
     })
+
+//    也可以使用vm.$watch('被监听的属性',方法) 实现
+    vm.$watch('wm',(newValue,oldValue) => {   // 名称需要与被观察者一致
+      console.log(newValue);
+      console.log(oldValue);
+    })
+
 </script>
 </body>
 </html>

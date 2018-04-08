@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.V-bind</title>
+    <style>
+        .x{  background-color: gray;}
+        .y{font-size: 20px}
+        .z{
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div id="app">
+    <!--:class 动态绑定的 与class 不会冲突 -->
+    <!--方式1 {className:isActive}-->
+    <div class="x" :class="{y:cut,z:flag}">
+        class bind ...style
+    </div>
+    <!--方式2 [class1,class2]-->
+    <div class="x" :class="[clsy,clsz]">
+        class bind ...style
+    </div>
+
+    <div v-for="(item,index) in 10" :class="{z:index % 2}">{{item}}</div>
+
+
+    <hr>
+
+    <!-- style 动态绑定 与动态绑定类方式相同: 数组或者对象 -->
+
+    <div style="font-size: 30px" :style="[sty1,sty2,{width:'100px'}]">style bind </div>
+
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      flag:false,
+      cut: false,
+      clsy: 'y',
+      clsz: 'z',
+      sty1:{fontSize:'50px'},
+      sty2: {color:'red'}
+    }
+  })
+
+</script>
+
+
+</body>
+</html>
