@@ -15,11 +15,18 @@ const vm = new Vue({
         isSelected:false,
         title: '准流程'
       }
+
     ]
   },
+  watch:{
 
-
-
+    todos: {
+      handler(){
+       alert('hel');
+      },
+      deep:true
+    }
+  },
   methods:{
     addList(){
         if (this.newTodo.length < 1){return}
@@ -41,14 +48,6 @@ const vm = new Vue({
       },0)
     }
   },
-  watch: {
-    todos: {
-      handler(){
-        alert('hel');
-      },
-      deep:true
-    }
-  }
 
 
 });
