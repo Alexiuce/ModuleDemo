@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+
+<div id="app">
+    <!--这个div会被data中的template 替换-->
+    <p ref="mmp">
+        {{msg}}
+    </p>
+
+    组件分类:
+    1. 基础组件(复用)
+    2. 页面组件
+    ------
+    组建名不支持大写(首字母除外),多个单词用中划线分割
+    html采用中划线,js使用驼峰对应
+    组件中的data 必须是函数类型,返回类型为对象(作为组件的数据)
+    组件中也有生命周期方法
+    组件独立,数据作用域仅限制本组件内
+
+    ------
+    <my-m1> </my-m1>
+    <jbview></jbview>
+    <bgview></bgview>
+    _____
+    全局组件: 插件
+    局部组件
+
+<parent></parent>
+
+
+</div>
+
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+
+
+<script>
+
+    /** 生命周期方法(共八个)
+     *
+     *   beforeCreated  created(dom 尚未完成创建)
+     *   beforeMount    mounted  (dom 已经创建完成,可以进行操作dom)
+     *   beforeUpdate ( 数据更新前)
+     *   updated (数据更新后)
+     *   beforeDestroy  destroyed  // 清除定时器 解绑事件
+     * */
+
+
+
+    // 全局组件
+    Vue.component('my-m1',{
+        template:'<div> my template -- {{name}}   </div>',
+        data(){
+            return {name:'temp'}
+        }
+    })
+
+
+
+    /* this.$data   // vm的数据
+    *  this.$watch  // 监听
+    *  this.$el    // 当前el元素
+    *  this.$set   // set方法,实现响应式变化
+    *  this.$options  // vm的所有属性
+    *  this.$refs   // 如果dom元素不是v-for循环出来的,仅能获取一个
+    *  this.$nextTick()  // 异步方法,等待dom完成渲染后执行  dom渲染是异步的
+    *  */
+
+
+
+    // 局部组件 : 1. 创建  2.注册 3.使用
+
+    // 1创建局部组件
+    let jbview = {template:'<div> 局部..组件 </div>'}
+
+
+    let bgview = {template:'<div>2222222</div>'}
+    let grandson = {template:'<div> grandson </div>'}
+
+    let son = {template:'<div> son <grandson></grandson> </div>',
+        components:{
+        grandson
+        }
+    }
+
+    let parent = {
+        template:'<div> parent <son></son></div>',
+        components:{
+            son
+        }
+    }
+
+    let vm = new Vue({
+
+        // 2.注册
+        components:{
+            jbview,bgview,parent
+        },
+
+        el: '#app',
+        data: {
+            msg: 'template'
+        },
+        mounted() {
+
+           // let text = document.getElementsByTagName('p')[0].innerHTML;
+           //  console.log(text);
+
+            // 效果同上
+
+
+        //    获取dom 通常会使用nextTick
+            this.$nextTick(()=>{
+                let t = this.$refs.mmp.innerHTML;
+                console.log(t);
+
+            })
+
+
+        },
+        // template: '<p>{{msg}} </p>'   // 会替换掉outerHtml
+    })
+
+</script>
+
+</body>
+</html>
