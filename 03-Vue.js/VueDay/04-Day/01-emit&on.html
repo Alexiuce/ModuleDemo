@@ -10,7 +10,8 @@
 <div id="app">
 
     {{money}}
-    <child :m="money" @update-m="childUpdate"></child>
+    <!--.sync 是一个语法糖来实现数据双向流动 在子组件中,修改m希望影响到父组件, 需要手动调用$emit(update:m)-->
+    <child :m.sync="money"></child>
 
 </div>
 
@@ -25,7 +26,8 @@
         props:['m'],
         methods:{
             update(){
-                this.$emit('update-m',234.56)
+                // this.m = 222.23  // 这种方式不会将数据变化反应到父组件中
+                this.$emit('update:m',234.56)   // 父组件会更新数据变化
             }
         }
     }
@@ -38,11 +40,12 @@
         components:{
             child
         },
-        methods:{
-            childUpdate(v){
-                this.money = v
-            }
-        }
+
+        // methods:{
+        //     childUpdate(v){
+        //         this.money = v
+        //     }
+        // }
     })
 </script>
 
