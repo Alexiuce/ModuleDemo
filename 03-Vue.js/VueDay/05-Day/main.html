@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+
+<div id="app">
+    <!--若模版中在这使用的变量或者方法,都是父级的-->
+    <v1 ref="child">
+        <!--ref 如果放在组件上,表示的这个组件实例,并不是dom 可以用这个方式来实现父级调用子级的方法 -->
+        <p slot="head"> Hello</p>
+        <span slot="body"> wR</span>
+    </v1>
+
+    <!-- 父级调用子组件内的方法 -->
+     <button @click="test"> 点击调用子级方法unloading...</button>
+</div>
+
+<!-- 模版中只能有一个根元素 -->
+<!--slot 中可以放置默认内容,如果传递内容,则会替换默认内容 ,可以根据name进行对应位置-->
+<template id="first">
+    <div>
+        <h1 v-show="flag">Loading......</h1>
+        <slot> 这是默认slot</slot>
+        <slot name="head">默认header</slot>
+        <slot name="body">默认header</slot>
+    </div>
+
+</template>
+
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+    let v1 = {
+        template: '#first',
+        data() {
+            return {
+                flag: true
+            }
+        },
+        methods: {
+            unloading() {
+                this.flag = false
+            }
+        }
+    }
+
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        components: {
+            v1
+        },
+        methods:{
+            test(){
+                console.log(this.$refs);
+                this.$refs.child.unloading()
+            }
+        }
+    })
+
+
+</script>
+
+</body>
+</html>

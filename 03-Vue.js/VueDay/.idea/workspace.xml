@@ -50,11 +50,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="02-Dialog.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="02-Dialog.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/04-Day/02-Dialog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="178">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/05-Day/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -104,6 +113,7 @@
         <option value="$PROJECT_DIR$/04-Day/01-emit&amp;on.html" />
         <option value="$PROJECT_DIR$/04-Day/ASDF.html" />
         <option value="$PROJECT_DIR$/04-Day/02-Dialog.html" />
+        <option value="$PROJECT_DIR$/05-Day/main.html" />
       </list>
     </option>
   </component>
@@ -147,7 +157,7 @@
             <path>
               <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
               <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-              <item name="04-Day" type="462c0819:PsiDirectoryNode" />
+              <item name="05-Day" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,7 +177,7 @@
     <property name="node.js.selected.package.prettier" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -209,12 +219,12 @@
       <workItem from="1522978617936" duration="8190000" />
       <workItem from="1523258913694" duration="533000" />
       <workItem from="1523260703224" duration="5716000" />
-      <workItem from="1523320425076" duration="6321000" />
+      <workItem from="1523320425076" duration="8965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29776000" />
+    <option name="totallyTimeSpent" value="32420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2048" height="1152" extended-state="0" />
@@ -379,8 +389,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/04-Day/02-Dialog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="178">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05-Day/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
         </state>
       </provider>
     </entry>
