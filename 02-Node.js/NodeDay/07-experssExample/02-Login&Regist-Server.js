@@ -1,10 +1,5 @@
 const express = require('express');
-const experssStatic = require('express-static');
-
-
-
-
-
+const expressStatic = require('express-static');
 
 const server = express();
 
@@ -12,7 +7,6 @@ let users = {
   'zhangsan':'123',
   'lisi':'345'
 };
-
 
 server.get('/login',(req,res)=>{
 
@@ -32,10 +26,6 @@ server.get('/login',(req,res)=>{
 
 });
 
-
-
-server.use(experssStatic('./www'));
-
-
+server.use(expressStatic('./www'));
 
 server.listen(9090);

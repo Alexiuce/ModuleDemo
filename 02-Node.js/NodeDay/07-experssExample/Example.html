@@ -6,12 +6,17 @@
 </head>
 <body>
 <form action="http://localhost:8899" method="get">
-    username:<input type="text">
+    username:<input type="text" name="user"><br>
+    password:<input type="text" name="password"><br>
     <input type="submit" value="Get">
 
 </form>
+<hr>
 <form action="http://localhost:8899" method="post">
-    username:<input type="text">
+    username:<input type="text" name="user">
+    <br>
+    password:<input type="text" name="pass"><br>
+
     <input type="submit" value="Post">
 
 </form>
