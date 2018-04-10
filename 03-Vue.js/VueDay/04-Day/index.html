@@ -83,14 +83,23 @@
     let bgview = {template:'<div>2222222</div>'}
     let grandson = {template:'<div> grandson </div>'}
 
-    let son = {template:'<div> son <grandson></grandson> </div>',
+    let son = {template:'<div> son : $ {{m}}<grandson></grandson> </div>',
+        props:{
+        m:{
+        }
+        },
         components:{
         grandson
         }
     }
 
     let parent = {
-        template:'<div> parent <son></son></div>',
+        template:'<div> parent : $ {{money}} <son :m="money"></son></div>',
+        data(){
+            return {
+                money: 15.56
+            }
+        },
         components:{
             son
         }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emit&On</title>
+</head>
+<body>
+
+
+<div id="app">
+
+    {{money}}
+    <child :m="money" @update-m="childUpdate"></child>
+
+</div>
+
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+
+
+<script>
+
+    let child = {
+        template:'<div>child: money== {{m}} <button @click="update">Buy</button> </div>',
+        props:['m'],
+        methods:{
+            update(){
+                this.$emit('update-m',234.56)
+            }
+        }
+    }
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            money: 123.45
+        },
+        components:{
+            child
+        },
+        methods:{
+            childUpdate(v){
+                this.money = v
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>
