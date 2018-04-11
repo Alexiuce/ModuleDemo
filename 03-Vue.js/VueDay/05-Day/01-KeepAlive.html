@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-KeepAlive</title>
+</head>
+<body>
+
+<div id="app">
+    <!--// 使用组件-->
+    <!-- keep-alvie 一般用于缓存,这样组件不会被销毁 ,否则频繁切换都会创建和销毁组件  路由时非常重要 -->
+    <keep-alive>
+        <component :is="cur" ref="child1"></component>
+    </keep-alive>
+    <input type="radio" v-model="cur" value="homeview">Home
+    <input type="radio" v-model="cur" value="indexview">Index
+
+    <!-- 子组件和父组件同时使用mounted方法,会先执行子组件的方法再执行父组件的mounted -->
+
+</div>
+
+
+<template id="home">
+    <div>Home view
+        <ul>
+            <li v-for="item in arr">{{item}}</li>
+        </ul>
+    </div>
+</template>
+<template id="index">
+    <div>Index view</div>
+</template>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+
+    // 1.声明组件
+    let homeview = {
+        template: '#home',
+        data() {
+            return {
+                arr: [1, 2, 3]
+            }
+        },
+        mounted() {
+            this.arr = [4, 5, 6]
+        }
+    };
+    let indexview = {
+        template: '#index'
+    }
+
+
+    let vm = new Vue({
+        el: '#app',
+        mounted() {
+            /* 获取或者操作dom 为了保证可能存在异步数据的情况,推荐使用nextTick方式*/
+            this.$nextTick(() => {
+                console.log(this.$refs.child1.$el.innerHTML);
+
+            })
+        },
+        data: {
+            cur: 'homeview',
+        },
+        // 2.注册组件
+
+        components: {
+            homeview, indexview
+        }
+    })
+
+
+</script>
+
+</body>
+</html>

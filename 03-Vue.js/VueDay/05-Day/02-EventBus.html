@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-EventBus</title>
+</head>
+<body>
+<!-- EventBus(了解,实际项目中基本不用) : 发布订阅模式 ,组件件通讯 -->
+
+<div id="app">
+    <child1></child1>
+    <hr>
+    <child2></child2>
+</div>
+
+<template id="c1">
+
+    <div>
+        <div>{{color}}
+            <button @click="click1">改变下面的颜色</button>
+        </div>
+    </div>
+</template>
+
+<template id="c2">
+    <div>
+        <div> {{color}}
+            <button @click="click2">改变上面的颜色</button>
+        </div>
+    </div>
+</template>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+
+    let EventBus = new Vue;   // 仅用来提供事件的统一发布与订阅
+
+
+
+    let child1 = {
+        template:'#c1',
+        data(){
+          return {
+              color: '红',
+              old: '黑'
+          }
+        },
+        created(){
+            EventBus.$on('ch1',(val)=>{
+                this.color = val
+            })
+        },
+        methods:{
+            click1(){
+                EventBus.$emit('ch2',this.old)
+            }
+        }
+    };
+    let child2 = {
+        template:'#c2',
+        data(){
+            return {
+                color: '绿',
+                old: '蓝'
+            }
+        },
+        created(){
+          EventBus.$on('ch2',(v)=>{
+              this.color = v
+          })
+        },
+        methods:{
+            click2(){
+                EventBus.$emit('ch1',this.old)
+            }
+        }
+    };
+
+    let vm = new Vue({
+        el: '#app',
+        data:{
+
+        },
+        components:{
+            child1,child2
+        }
+    })
+</script>
+
+</body>
+</html>
