@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-Router</title>
+</head>
+<body>
+
+
+<div id="app">
+      <!--SPA : 单页面应用 single page application-->
+    <!-- 页面跳转方式 :
+      1. hash : 开发时用,不会导致刷新时404
+      2. history:  发布时用  history.pushState()-->
+
+    <!-- router-view 是vue的全局组件 -->
+    <h1>Hello App!</h1>
+    <p>
+        <!-- 使用 router-link 组件来导航. -->
+        <!-- 通过传入 `to` 属性指定链接. -->
+        <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+        <router-link to="/home">Go to Foo</router-link>
+        <router-link to="/me">Go to Bar</router-link>
+    </p>
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
+
+
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script>
+
+    // 0. 如果使用模块化机制编程，导入Vue和VueRouter，要调用 Vue.use(VueRouter)
+
+    // 1. 定义（路由）组件。
+    // 可以从其他文件 import 进来
+    // const Foo = { template: '<div>foo</div>' }
+    // const Bar = { template: '<div>bar</div>' }
+    let home1 = {
+        template:'<div>Home</div>'
+    };
+    let me1 = {
+        template:'<div>Me</div>'
+    };
+    // 2. 定义路由
+    // 每个路由应该映射一个组件。 其中"component" 可以是
+    // 通过 Vue.extend() 创建的组件构造器，
+    // 或者，只是一个组件配置对象。
+    // 我们晚点再讨论嵌套路由。
+    const routes = [
+        { path: '/home', component: home1 },
+        { path: '/me', component: me1 }
+    ]
+    // 3. 创建 router 实例，然后传 `routes` 配置
+    // 你还可以传别的配置参数, 不过先这么简单着吧。
+    const router = new VueRouter({
+        // model:'history',  // 默认是hash
+        routes, // （缩写）相当于 routes: routes
+        // linkActiveClass:'',  // 更改默认激活类名
+    })
+    // // 路由映射表: 配置路由和组件的关系
+    // let routers = [
+    //     {path: '/home', component: home1},
+    //     {path:'/me', component: me1 }
+    // ];
+
+    // let router = new VueRouter({
+    //     routers
+    // });
+
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        router
+    })
+</script>
+
+</body>
+</html>
