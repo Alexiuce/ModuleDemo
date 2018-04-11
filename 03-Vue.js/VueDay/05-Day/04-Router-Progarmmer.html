@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-Router-Programmer</title>
+</head>
+<body>
+
+
+<div id="app">
+
+    <router-link to="/home" tag="button">to Home</router-link>
+    <router-link to="/dis" tag="button">to Discovery</router-link>
+
+    <!--路由匹配到的组件将渲染在这里-->
+    <router-view></router-view>
+</div>
+
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+
+<script>
+
+
+    // 1. 定义组件
+    const home = {
+        template:'<div>This is Home Page.... <button @click="goDis"> 跳转发现页</button></div>',
+        methods:{
+            goDis(){
+
+                this.$router.push('/dis');  // 强制跳转路径
+                // this.$router.replace('/dis'); // 替换当前历史记录项替换掉
+
+            }
+        }
+    };
+
+    const discovery = {
+        template:'<div>This is Discovery Page ....<button @click="back">返回Home页</button></div>',
+        methods:{
+            back(){
+
+                this.$router.go(-1);  // 返回上一级
+            }
+        }
+    };
+
+    // 2. 定义路由表: 映射路径与组件的关系
+    const routes = [
+        {path:'/home',component:home},
+        {path:'/dis', component:discovery}
+    ]
+
+
+    // 3. 定义路由实例
+    const router = new VueRouter({
+        routes // 设置路由表 : routes = routes
+    })
+
+    // 4. 注册路由
+    const vm = new Vue({
+        el: '#app',
+        data:{
+
+        },
+        router,  // 每个组件都有一个$router属性(里面都是方法)和一个$route属性(里面都是属性)
+    })
+
+
+
+</script>
+
+</body>
+</html>
