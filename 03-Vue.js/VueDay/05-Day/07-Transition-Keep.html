@@ -3,8 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>07-Transition-Keep</title>
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
 </head>
 <body>
 
+
+<div id="app">
+
+
+    <router-link to="/home">首页</router-link>
+    <router-link to="/list">列表</router-link>
+
+
+    <!--mode: 动画模式 -->
+    <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in">
+
+
+        <!-- 需要缓存那个,就用keep-alive -->
+        <keep-alive>
+
+            <router-view></router-view>
+        </keep-alive>
+
+    </transition>
+
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+
+<script>
+
+
+    // 1. 定义组件
+
+    const home = {
+
+        template: '<div>Home</div>'
+
+    };
+    const list = {
+        template: '<div>List</div>'
+    }
+    // 2. 路由表
+
+    const routes = [
+        {
+            // path:'/article/:c',  // 使用冒号: 接收路由参数 会存到this.$route.params 对象中
+            path: '/home',
+            component: home,
+
+        },
+        {
+            path: '/list',
+            component: list
+        }
+    ];
+
+    // 3. 路由
+
+    const router = new VueRouter({
+        routes
+    });
+
+    const vm = new Vue({
+        el: '#app',
+        data: {},
+        router,
+        // 4. 注册路由
+    })
+</script>
+
 </body>
+
 </html>

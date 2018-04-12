@@ -17,38 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="03-Router.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05-Day/03-Router.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="53" selection-start-line="21" selection-start-column="7" selection-end-line="22" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="04-Router-Progarmmer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05-Day/04-Router-Progarmmer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="05-Route-Multi.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05-Day/05-Route-Multi.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="06-Router-Paramer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="06-Router-Paramer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05-Day/06-Router-Paramer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+            <state relative-caret-position="840">
+              <caret line="74" selection-start-line="34" selection-end-line="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="07-Transition-Keep.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/05-Day/07-Transition-Keep.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -87,6 +69,7 @@
         <option value="$PROJECT_DIR$/05-Day/01-KeepAlive.html" />
         <option value="$PROJECT_DIR$/05-Day/05-Route-Multi.html" />
         <option value="$PROJECT_DIR$/05-Day/06-Router-Paramer.html" />
+        <option value="$PROJECT_DIR$/05-Day/07-Transition-Keep.html" />
       </list>
     </option>
   </component>
@@ -194,12 +177,12 @@
       <workItem from="1523260703224" duration="5716000" />
       <workItem from="1523320425076" duration="9146000" />
       <workItem from="1523408406118" duration="10687000" />
-      <workItem from="1523495046086" duration="3874000" />
+      <workItem from="1523495046086" duration="5010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47162000" />
+    <option name="totallyTimeSpent" value="48298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2048" height="1152" extended-state="0" />
@@ -440,13 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05-Day/03-Router.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="53" selection-start-line="21" selection-start-column="7" selection-end-line="22" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05-Day/01-KeepAlive.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -461,13 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05-Day/04-Router-Progarmmer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05-Day/05-Route-Multi.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -475,10 +444,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/05-Day/04-Router-Progarmmer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05-Day/03-Router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="22" column="53" selection-start-line="21" selection-start-column="7" selection-end-line="22" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/05-Day/06-Router-Paramer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+        <state relative-caret-position="840">
+          <caret line="74" selection-start-line="34" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05-Day/07-Transition-Keep.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
