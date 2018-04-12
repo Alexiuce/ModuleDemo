@@ -12,7 +12,10 @@
     <keep-alive>
         <component :is="cur" ref="child1"></component>
     </keep-alive>
+
+
     <input type="radio" v-model="cur" value="homeview">Home
+
     <input type="radio" v-model="cur" value="indexview">Index
 
     <!-- 子组件和父组件同时使用mounted方法,会先执行子组件的方法再执行父组件的mounted -->

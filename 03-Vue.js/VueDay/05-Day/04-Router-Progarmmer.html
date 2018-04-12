@@ -48,8 +48,12 @@
 
     // 2. 定义路由表: 映射路径与组件的关系
     const routes = [
+
+        {path:'',component:home},   // 默认路由
         {path:'/home',component:home},
-        {path:'/dis', component:discovery}
+        {path:'/dis', component:discovery},
+        // {path:'*',component:discovery},  // 未匹配到的结果都调转到这个组件显示 ,但是url的路径不会变化
+        {path:'*',redirect:'/home'},   //  未匹配到url时,重定向到指定页面 url会显示定位后的路径. 404 时用的比较多
     ]
 
 

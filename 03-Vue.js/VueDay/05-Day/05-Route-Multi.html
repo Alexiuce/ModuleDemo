@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-Route-Multi</title>
+</head>
+<body>
+
+
+<div id="app">
+
+
+    <router-link to="/home">首页</router-link>
+    <router-link to="/detail">详情</router-link>
+    <router-view></router-view>
+
+</div>
+
+
+<template id="detail">
+
+    <div>
+        <div>Detail Page...</div>
+
+        <router-link to="/detail/profile">我的</router-link>
+        <router-link to="/detail/aboutme">关于</router-link>
+        <router-view></router-view>
+    </div>
+
+</template>
+
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+
+
+<script>
+
+    // 定义组件
+    const home = {template: '<div>Home Page...</div>'};
+    const detail = {template: '#detail'};
+    const profile = {template: '<div>Profile Page...</div>'};
+    const aboutme = {template: '<div>About me Page..</div>'};
+
+
+    const routes = [
+        {path: '/home', component: home},
+        {
+            path: '/detail',
+            component: detail,
+            children: [   // 子路由中不能使用斜杠开头
+                {path: 'profile', component: profile},
+                {path: 'aboutme', component: aboutme}
+            ],
+        }
+    ];
+
+    const router = new VueRouter({
+        routes
+    })
+
+    const vm = new Vue({
+        el: '#app',
+        router,
+        data: {},
+
+    })
+
+
+</script>
+
+
+</body>
+</html>
