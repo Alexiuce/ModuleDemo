@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-Router-Paramer</title>
+</head>
+<body>
+
+
+<div id="app">
+
+
+    <!--<router-link to="/article/1">文章1</router-link>-->
+
+    <!--如果用对象作为to的属性,并且使用了参数,则必须给路由一个名称,并使用名称来跳转-->
+    <router-link :to="{name:'art',params:{c:1}}">文章1</router-link>
+    <router-link to="/article/2">文章2</router-link>
+    <router-link to="/article/3">文章3</router-link>
+
+    <router-view></router-view>
+
+</div>
+
+
+
+<template id="article">
+
+    <div>
+        第 {{$route.params.c}} 篇 文章
+    </div>
+
+</template>
+
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+
+
+<script>
+
+
+    // 1. 定义组件
+    const article = {
+        template:'#article',
+        // 监控路径参数变化,发送网络请求
+        watch:{
+          $route(){
+              // 发送网络请求..请求数据
+              console.log('request for data');
+          }
+        },
+    };
+    // 2. 路由表
+
+    const routes = [
+        {
+            path:'/article/:c',  // 使用冒号: 接收路由参数 会存到this.$route.params 对象中
+            component:article,
+            name:'art',
+        }
+    ];
+
+    // 3. 路由
+
+    const router = new VueRouter({
+        routes
+    });
+
+    const vm = new Vue({
+        el:'#app',
+        data:{},
+        router,
+        // 4. 注册路由
+    })
+
+</script>
+
+</body>
+</html>
