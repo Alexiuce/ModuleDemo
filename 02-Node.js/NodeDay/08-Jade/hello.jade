@@ -4,10 +4,17 @@ html
         script
             | let a = 10
     body
-        div.
+        div
            | abc
            | ccc
            | ddd
-           my name is #{name}
+           | my name is #{name}
+           - let w = 10
+           - let z = 20
+           div w+z 的结果是#{w+z}
+               span #{name}
+               //span=name
+               // 与span=name 等效
+
         script
             include world.js

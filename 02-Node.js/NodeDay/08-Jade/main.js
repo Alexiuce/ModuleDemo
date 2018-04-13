@@ -19,8 +19,11 @@ const ejs = require('ejs');
     // 标签后面使用点,表示此标签下面的任何子内容都使用原样输出
     // 也可以使用include 来引用js文件
     // 引用参数时,使用#{参数名}
+    // - 表示这是一行代码 并且此行之下的行如果有代码,则都可以省略-
 
-let str = jade.renderFile('./hello.jade',{pretty: true,name:'alb'});
+    // != 用在标签上,表示不需要转译html内容
+
+let str = jade.renderFile('./forloop.jade',{pretty: true,arr:[1,2,3,4,5,6],ccc:'<div>this is ccc</div>'});
 
 console.log(str);
 //  ejs.renderFile('./home.ejs',{name:'alex'},(err,data)=>{
