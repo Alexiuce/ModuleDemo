@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+
+/* 在js中使用图片,需要使用import导入或者引用一个线上url */
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
