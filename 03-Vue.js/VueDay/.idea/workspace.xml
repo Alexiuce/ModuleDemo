@@ -20,8 +20,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="76">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -29,26 +29,26 @@
       <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            <state relative-caret-position="285">
+              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Collection.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Collection.vue">
+      <file leaf-file-name="TabBar.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/TabBar.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="908">
+              <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Detail.vue">
+      <file leaf-file-name="NavHeader.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="95">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -57,16 +57,7 @@
         <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="List.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/List.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -118,16 +109,18 @@
         <option value="$PROJECT_DIR$/05-Day/home.js" />
         <option value="$PROJECT_DIR$/05-Day/profile.js" />
         <option value="$PROJECT_DIR$/05-Day/main.js" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/App.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/main.js" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/add.vue" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/router/index.js" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Add.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Collection.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Detail.vue" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Home.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/List.vue" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/router/index.js" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/App.vue" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/TabBar.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/index.html" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Home.vue" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue" />
       </list>
     </option>
   </component>
@@ -190,6 +183,14 @@
               <item name="06-Day" type="462c0819:PsiDirectoryNode" />
               <item name="wbp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VueDay" type="462c0819:PsiDirectoryNode" />
+              <item name="06-Day" type="462c0819:PsiDirectoryNode" />
+              <item name="wbp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
@@ -267,12 +268,12 @@
       <workItem from="1523708457255" duration="13000" />
       <workItem from="1523709582707" duration="23000" />
       <workItem from="1523754666992" duration="936000" />
-      <workItem from="1523840037422" duration="1820000" />
+      <workItem from="1523840037422" duration="5448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58824000" />
+    <option name="totallyTimeSpent" value="62452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2048" height="1152" extended-state="0" />
@@ -305,14 +306,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01Day.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hello.html" />
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -536,31 +529,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="76">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        <state relative-caret-position="285">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Collection.vue">
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/List.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -571,17 +557,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Home.vue">
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Collection.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/List.vue">
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="95">
+          <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/TabBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="908">
+          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
