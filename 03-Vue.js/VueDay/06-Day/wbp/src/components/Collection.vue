@@ -1,5 +1,8 @@
 <template>
-  Collection
+  <div>
+    Collection Page....
+
+  </div>
 </template>
 
 <script>

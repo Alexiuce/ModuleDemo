@@ -1,5 +1,7 @@
 <template>
-  List
+  <div>
+    List Page
+  </div>
 </template>
 
 <script>

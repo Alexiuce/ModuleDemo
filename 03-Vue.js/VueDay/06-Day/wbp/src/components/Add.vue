@@ -1,5 +1,9 @@
 <template>
-  Add
+
+  <div>
+    Add Page....
+  </div>
+
 </template>
 
 <script>
