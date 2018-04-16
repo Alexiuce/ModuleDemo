@@ -1,0 +1,1 @@
+a.txt is a demo for ejs
