@@ -17,8 +17,8 @@
       <file leaf-file-name="01.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/09-Ejs/01.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="627">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -178,12 +178,12 @@
       <workItem from="1523338443731" duration="6193000" />
       <workItem from="1523427274173" duration="2008000" />
       <workItem from="1523509306541" duration="2432000" />
-      <workItem from="1523847707084" duration="1919000" />
+      <workItem from="1523847707084" duration="2534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12552000" />
+    <option name="totallyTimeSpent" value="13167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2048" height="1152" extended-state="0" />
@@ -193,7 +193,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3797586" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3797586" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -439,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/09-Ejs/01.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="627">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
         </state>
       </provider>
     </entry>
