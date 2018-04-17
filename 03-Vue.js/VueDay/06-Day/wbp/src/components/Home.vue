@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavHeader :back="false">首页</NavHeader>
-    Home Page...
+    <div class="content">
+      <ScrollView></ScrollView>
+    </div>
   </div>
 </template>
 
@@ -9,10 +11,13 @@
 
   import NavHeader from '../Base/NavHeader'
 
+  import ScrollView from '../Base/ScrollView'
+
   export default {
     name: "Home",
-    components:{
-      NavHeader
+    components: {
+      NavHeader,
+      ScrollView
     }
   }
 </script>

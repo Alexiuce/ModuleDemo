@@ -35,6 +35,13 @@
     -webkit-appearance: none
   }
 
+  .content{
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    bottom: 50px;
+    overflow: auto;
+  }
   /*#app {*/
   /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
   /*-webkit-font-smoothing: antialiased;*/
