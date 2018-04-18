@@ -26,11 +26,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavHeader.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NavHeader.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/06-Day/wbp/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -95,7 +113,6 @@
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Add.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Collection.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Detail.vue" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/router/index.js" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/TabBar.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/index.html" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/App.vue" />
@@ -109,6 +126,8 @@
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Home.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/List.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/router/index.js" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/README.md" />
       </list>
     </option>
   </component>
@@ -164,29 +183,6 @@
               <item name="VueDay" type="462c0819:PsiDirectoryNode" />
               <item name="06-Day" type="462c0819:PsiDirectoryNode" />
               <item name="wbp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-              <item name="06-Day" type="462c0819:PsiDirectoryNode" />
-              <item name="wbp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-              <item name="06-Day" type="462c0819:PsiDirectoryNode" />
-              <item name="wbp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-              <item name="06-Day" type="462c0819:PsiDirectoryNode" />
-              <item name="wbp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -262,12 +258,12 @@
       <workItem from="1523754666992" duration="936000" />
       <workItem from="1523840037422" duration="5669000" />
       <workItem from="1523925863375" duration="9209000" />
-      <workItem from="1524012416645" duration="5092000" />
+      <workItem from="1524012416645" duration="5323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76974000" />
+    <option name="totallyTimeSpent" value="77205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2048" height="1152" extended-state="0" />
@@ -473,24 +469,10 @@
         <state relative-caret-position="-2102" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Add.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -612,6 +594,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
