@@ -43,6 +43,7 @@ const server = http.createServer((req,res)=>{
       case 'DELETE':
         console.log(bookID);
         books = books.filter((item)=>item.bookId != bookID)
+        return res.end(JSON.stringify({}));
         break;
 
     }

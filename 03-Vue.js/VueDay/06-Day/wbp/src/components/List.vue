@@ -38,6 +38,7 @@
       },
       async remove(bid){
          await deleteBook(bid)
+         this.allBooks = this.allBooks.filter((item)=>item.bookId != bid)
       }
     },
     data(){
