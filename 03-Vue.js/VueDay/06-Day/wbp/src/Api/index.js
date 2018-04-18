@@ -15,7 +15,16 @@ export const getSliders = ()=>{
   return axios.get('/sliders')
 };
 
-/* 获取热门图书*/
+/* 获取热门图书 */
 export const getHotBook = ()=>{
   return axios.get('/hot')
+}
+
+/* 获取所有图书 */
+export const getAllBooks = ()=>{
+  return axios.get('/book')
+}
+/* 删除指定id的图书 */
+export const deleteBook = (id)=>{
+  return axios.delete(`/book?id=${id}`)
 }

@@ -26,5 +26,40 @@
   "bookPrice":"￥28.40",
   "bookName":"Vue.js前端开发快速入门与专业应用 " ,
   "bookId":"4"
+  },
+  {
+  "bookCover":"https://img12.360buyimg.com/n1/s200x200_jfs/t14902/277/1121356869/281121/860a378c/5a45eb3cNa31e22cb.jpg",
+  "bookInfo":"包邮前端工程师技能,区域包邮正版书籍",
+  "bookPrice":"￥154.50",
+  "bookName":" Vue移动开发实战技巧+深入浅出Webpack+前端工程化  " ,
+  "bookId":"5"
+  },
+  {
+  "bookCover":"https://img13.360buyimg.com/n1/s200x200_jfs/t13543/126/1377736759/247106/88585939/5a45a1beN826f1e48.jpg",
+  "bookInfo":"前端工程师技能 vue2.0教程 vue2编程教程书籍",
+  "bookPrice":"￥41.50",
+  "bookName":" Vue移动开发实战技巧" ,
+  "bookId":"6"
+  },
+  {
+  "bookCover":"https://img14.360buyimg.com/n1/s200x200_jfs/t4405/82/1844685456/295947/1a7996df/5916733aN646a4528.jpg",
+  "bookInfo":"快速入门与专业应用 2本",
+  "bookPrice":"￥66.50",
+  "bookName":"前端架构设计+Vue.js 前端开发  " ,
+  "bookId":"7"
+  },
+  {
+  "bookCover":"https://img13.360buyimg.com/n1/s200x200_jfs/t14821/144/2152220063/244882/34c3d621/5a6ef184N440c3641.jpg",
+  "bookInfo":"全栈 Vue.js 2  ",
+  "bookPrice":"￥173.16",
+  "bookName":"Full-Stack Vue.js 2 and Laravel 5" ,
+  "bookId":"8"
+  },
+  {
+  "bookCover":"https://img13.360buyimg.com/n1/s200x200_jfs/t10546/364/1241822563/45074/1af1684a/59decc9aN878f0dd1.jpg",
+  "bookInfo":"英文学习 Vue.js 2 ",
+  "bookPrice":"￥136.19",
+  "bookName":"Learning Vue.js 2 " ,
+  "bookId":"9"
   }
 ]
