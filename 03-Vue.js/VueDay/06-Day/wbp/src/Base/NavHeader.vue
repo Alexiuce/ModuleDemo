@@ -2,7 +2,9 @@
 
   <div class="header">
 
+    <h3>
     <slot></slot>
+    </h3>
     <i v-if="back" class="iconfont icon-fanhui" @click="goback"></i>
   </div>
 
@@ -37,6 +39,7 @@
     height: 40px;
     text-align: center;
     line-height: 40px;
+
   }
 
   i {

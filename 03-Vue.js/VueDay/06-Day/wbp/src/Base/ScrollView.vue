@@ -18,9 +18,13 @@
       return {
         swiperOption: {
           autoplay: 3000,
+          speed:400,
+          loop: true,
           setSwiperSize: true,
-          pagination: '.swiper-pagination',
-          observeParents: true
+          pagination:{el:'.swiper-pagination'},
+          observeParents: true,
+          autoplayDisableOnInteraction: false,
+          observer:true
         },
       }
     },
@@ -29,8 +33,8 @@
 </script>
 
 <style scoped>
-   img{
-     width: 100%;
-   }
+  img {
+    width: 100%;
+  }
 
 </style>

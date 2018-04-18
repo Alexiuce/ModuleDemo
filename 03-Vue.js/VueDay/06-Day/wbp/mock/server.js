@@ -4,6 +4,8 @@ const url = require('url');
 
 const sliders = require('./sliders');
 
+const books = require('./book.json');
+
 const server = http.createServer((req,res)=>{
 
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -15,9 +17,16 @@ const server = http.createServer((req,res)=>{
   const {pathname,query} = url.parse(req.url);
 
   if (pathname === '/sliders'){
-    console.log(JSON.stringify(sliders));
-    res.end(JSON.stringify(sliders))
+    return res.end(JSON.stringify(sliders))
+  }
+
+  if (pathname === '/hot'){
+       return res.end(JSON.stringify(books))
   }
 
 });
 server.listen(3456);
+
+
+
+
