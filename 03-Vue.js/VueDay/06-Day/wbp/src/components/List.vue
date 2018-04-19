@@ -4,15 +4,15 @@
 
     <div class="content">
       <ul>
-        <li v-for="book in allBooks">
+        <router-link v-for="(book,index) in allBooks" :to="{name:'detail',params:{tid:book.bookId}}" :key="index" tag="li">
           <img :src="book.bookCover" alt="">
           <div>
             <h4>{{book.bookName}}</h4>
             <p>{{book.bookInfo}}</p>
             <b>{{book.bookPrice}}</b>
-            <button @click="remove(book.bookId)">删除</button>
+            <button @click.stop="remove(book.bookId)">删除</button>
           </div>
-        </li>
+        </router-link>
       </ul>
     </div>
   </div>

@@ -31,9 +31,11 @@ const server = http.createServer((req,res)=>{
     const bookID = parseInt(query.id)
     switch (req.method){
       case 'GET':
-        if (bookID){  // 查询id图书
-          const b = books.filter((item) =>{return parseInt(item.bookId) == bookID})
-          return res.end(JSON.stringify(b))
+        if (bookID >= 0 ){  // 查询id图书
+          console.log(bookID);
+          const b = books.filter((item) =>{return parseInt(item.bookId) == bookID });
+          console.log(b);
+          return res.end(JSON.stringify(b[0] || {}))
         }else {   // 返回所有图书
            return res.end(JSON.stringify(books))
         }

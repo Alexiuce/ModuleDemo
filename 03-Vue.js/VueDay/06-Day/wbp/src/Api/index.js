@@ -28,3 +28,15 @@ export const getAllBooks = ()=>{
 export const deleteBook = (id)=>{
   return axios.delete(`/book?id=${id}`)
 }
+
+/* 获取指定id的图书信息*/
+export const getBookInfo = (id)=>{
+  return axios.get(`/book?id=${id}`)
+}
+
+/* 更新指定id的图书信息
+* data: 请求体对象,需要修改的信息
+* */
+export const updateBookInfo = (id,data)=>{
+  return axios.put(`/book?id=${id}`,data)
+}

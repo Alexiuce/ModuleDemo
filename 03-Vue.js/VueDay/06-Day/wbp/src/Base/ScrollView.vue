@@ -19,7 +19,7 @@
         swiperOption: {
           autoplay: 3000,
           speed:400,
-          loop: true,
+          // loop: true,
           setSwiperSize: true,
           pagination:{el:'.swiper-pagination'},
           observeParents: true,

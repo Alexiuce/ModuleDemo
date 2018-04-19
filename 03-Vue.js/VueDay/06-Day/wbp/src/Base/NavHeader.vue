@@ -31,10 +31,10 @@
 <style scoped>
 
   .header {
-    /*position: fixed;*/
-    /*left: 0px;*/
-    /*top: 0px;*/
-    /*width: 100%;*/
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
     background-color: #afd9ee;
     height: 40px;
     text-align: center;
@@ -44,6 +44,7 @@
 
   i {
     position: absolute;
+    top: 0px;
     left: 10px;
   }
 </style>
