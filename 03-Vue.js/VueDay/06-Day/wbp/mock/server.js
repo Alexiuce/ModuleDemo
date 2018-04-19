@@ -32,15 +32,32 @@ const server = http.createServer((req,res)=>{
     switch (req.method){
       case 'GET':
         if (bookID >= 0 ){  // 查询id图书
-          console.log(bookID);
           const b = books.filter((item) =>{return parseInt(item.bookId) == bookID });
-          console.log(b);
           return res.end(JSON.stringify(b[0] || {}))
         }else {   // 返回所有图书
            return res.end(JSON.stringify(books))
         }
         break;
       case 'POST':
+        break;
+      case 'PUT':
+        if (bookID >= 0){
+          let str = ''
+          req.on('data',(data)=>{
+            str += data
+          })
+          req.on('end',()=>{
+            const book = JSON.parse(str)
+            books = books.map((item)=>{
+              if (item.bookId == book.bookId) return book
+              return item
+            })
+            return res.end(JSON.stringify(book))
+          })
+
+        } else {
+
+        }
         break;
       case 'DELETE':
         console.log(bookID);

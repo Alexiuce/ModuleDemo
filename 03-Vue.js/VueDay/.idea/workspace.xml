@@ -16,42 +16,24 @@
     <favorites_list name="VueDay" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Api/index.js">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/06-Day/wbp/mock/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="List.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/List.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="399">
+              <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
               <folding>
-                <element signature="e#99#116#0" expanded="true" />
+                <element signature="e#1296#1458#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/06-Day/wbp/mock/server.js">
+      <file leaf-file-name="Add.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Add.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="book.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/06-Day/wbp/mock/book.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
+            <state relative-caret-position="57">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -106,22 +88,22 @@
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/add.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Add.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Collection.vue" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Detail.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/TabBar.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/index.html" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/App.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/mock/sliders.js" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/main.js" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/ScrollView.vue" />
         <option value="$PROJECT_DIR$/06-Day/wbp/build/webpack.base.conf.js" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Home.vue" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/router/index.js" />
         <option value="$PROJECT_DIR$/06-Day/wbp/README.md" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/src/Api/index.js" />
         <option value="$PROJECT_DIR$/06-Day/wbp/mock/book.json" />
-        <option value="$PROJECT_DIR$/06-Day/wbp/mock/server.js" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/router/index.js" />
         <option value="$PROJECT_DIR$/06-Day/wbp/src/components/List.vue" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/Base/ScrollView.vue" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/Api/index.js" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/src/components/Detail.vue" />
+        <option value="$PROJECT_DIR$/06-Day/wbp/mock/server.js" />
       </list>
     </option>
   </component>
@@ -299,23 +281,24 @@
       <workItem from="1523840037422" duration="5669000" />
       <workItem from="1523925863375" duration="9209000" />
       <workItem from="1524012416645" duration="10505000" />
+      <workItem from="1524099209191" duration="5699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82387000" />
+    <option name="totallyTimeSpent" value="88086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2048" height="1152" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16082881" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16082881" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41132775" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2506964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -334,6 +317,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/02vue-command.html" />
@@ -509,20 +497,6 @@
         <state relative-caret-position="-2102" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Add.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Collection.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -565,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/ScrollView.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -595,24 +562,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/06-Day/wbp/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/mock/book.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/ScrollView.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -625,32 +592,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="221">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/mock/book.json">
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
+        <state relative-caret-position="228">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06-Day/wbp/mock/server.js">
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/Base/NavHeader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        <state relative-caret-position="323">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+          <folding>
+            <element signature="e#496#538#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/List.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        <state relative-caret-position="532">
+          <caret line="85" column="9" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="85" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/mock/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
           <folding>
-            <element signature="e#99#116#0" expanded="true" />
+            <element signature="e#1296#1458#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-Day/wbp/src/components/Add.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>
