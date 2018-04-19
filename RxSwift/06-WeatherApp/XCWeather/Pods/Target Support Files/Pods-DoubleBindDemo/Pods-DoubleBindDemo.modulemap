@@ -1,0 +1,6 @@
+framework module Pods_DoubleBindDemo {
+  umbrella header "Pods-DoubleBindDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

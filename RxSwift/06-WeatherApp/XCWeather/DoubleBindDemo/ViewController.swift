@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mySwitch: UISwitch!
+    
+    lazy var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        mySwitch.rx.isOn.subscribe {
+            print("\($0)")
+        }.disposed(by: disposeBag)
+ 
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

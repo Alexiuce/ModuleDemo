@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11118B29281347218ED52C99 /* Pods_DoubleBindDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BF1D530BFA9BED8979249A /* Pods_DoubleBindDemo.framework */; };
 		564F67952061035900A9BCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F67942061035900A9BCEB /* AppDelegate.swift */; };
 		564F67972061035900A9BCEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F67962061035900A9BCEB /* ViewController.swift */; };
 		564F679A2061035900A9BCEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564F67982061035900A9BCEB /* Main.storyboard */; };
@@ -58,9 +59,12 @@
 		56D51420205F624800CB52F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6139C07412E24521D356DEA8 /* Pods_XCWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FFE7BCF585C833E5A67B76 /* Pods-XCWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather.release.xcconfig"; sourceTree = "<group>"; };
+		94BF1D530BFA9BED8979249A /* Pods_DoubleBindDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoubleBindDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		952B9B93EA99B52CE45A1381 /* Pods-6.1Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6.1Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-6.1Demo/Pods-6.1Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		9AB5B4313D23A3D4BF041FE6 /* Pods-DoubleBindDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubleBindDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoubleBindDemo/Pods-DoubleBindDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AC93D73863F09F3BF9A171AF /* Pods-XCWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		BDD34790C6EC6046B5889CE0 /* Pods_6_1Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6_1Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF2BC60033C9083C3AF366A2 /* Pods-DoubleBindDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubleBindDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubleBindDemo/Pods-DoubleBindDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E70EEE6D3B1FFB713A0D7464 /* Pods-6.1Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6.1Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-6.1Demo/Pods-6.1Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11118B29281347218ED52C99 /* Pods_DoubleBindDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +166,7 @@
 			children = (
 				6139C07412E24521D356DEA8 /* Pods_XCWeather.framework */,
 				BDD34790C6EC6046B5889CE0 /* Pods_6_1Demo.framework */,
+				94BF1D530BFA9BED8979249A /* Pods_DoubleBindDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,6 +178,8 @@
 				81FFE7BCF585C833E5A67B76 /* Pods-XCWeather.release.xcconfig */,
 				952B9B93EA99B52CE45A1381 /* Pods-6.1Demo.debug.xcconfig */,
 				E70EEE6D3B1FFB713A0D7464 /* Pods-6.1Demo.release.xcconfig */,
+				9AB5B4313D23A3D4BF041FE6 /* Pods-DoubleBindDemo.debug.xcconfig */,
+				BF2BC60033C9083C3AF366A2 /* Pods-DoubleBindDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -223,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56D51423205F624800CB52F5 /* Build configuration list for PBXNativeTarget "DoubleBindDemo" */;
 			buildPhases = (
+				2307A03D9EC2E754CFA04D28 /* [CP] Check Pods Manifest.lock */,
 				56D5140E205F624800CB52F5 /* Sources */,
 				56D5140F205F624800CB52F5 /* Frameworks */,
 				56D51410205F624800CB52F5 /* Resources */,
+				6DB9449BE41F5507B8D9EED8 /* [CP] Embed Pods Frameworks */,
+				ED344243A335BCADAD1023CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -338,6 +349,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XCWeather/Pods-XCWeather-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2307A03D9EC2E754CFA04D28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoubleBindDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DB9449BE41F5507B8D9EED8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DoubleBindDemo/Pods-DoubleBindDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoubleBindDemo/Pods-DoubleBindDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		724F634EE0A33B14F1B66165 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +477,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED344243A335BCADAD1023CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoubleBindDemo/Pods-DoubleBindDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -687,6 +751,7 @@
 		};
 		56D51421205F624800CB52F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB5B4313D23A3D4BF041FE6 /* Pods-DoubleBindDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -701,6 +766,7 @@
 		};
 		56D51422205F624800CB52F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF2BC60033C9083C3AF366A2 /* Pods-DoubleBindDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
