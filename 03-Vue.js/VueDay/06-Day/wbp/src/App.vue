@@ -3,12 +3,18 @@
 
 
     <!--需要缓存的页面 : 页面组件的路由中,设置了meta:{keepAlive:true}-->
-    <keep-alive>
-    <router-view v-if="$route.meta.keepAlive"/>
-    </keep-alive>
+    <transition name="fade">
+
+      <keep-alive>
+        <router-view v-if="$route.meta.keepAlive"/>
+      </keep-alive>
+    </transition>
 
     <!-- 不需要缓存的页面-->
-    <router-view v-if="!$route.meta.keepAlive"/>
+    <transition name="fade">
+
+      <router-view v-if="!$route.meta.keepAlive"/>
+    </transition>
 
     <TabBar></TabBar>
   </div>
@@ -43,13 +49,21 @@
     -webkit-appearance: none
   }
 
-  .content{
+  .content {
     position: fixed;
     width: 100%;
     top: 40px;
     bottom: 50px;
     overflow: auto;
   }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
+
   /*#app {*/
   /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
   /*-webkit-font-smoothing: antialiased;*/
