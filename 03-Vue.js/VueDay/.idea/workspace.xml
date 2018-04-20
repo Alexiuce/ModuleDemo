@@ -158,7 +158,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/06-Day/wbp/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
@@ -183,32 +182,6 @@
             <path>
               <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
               <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-              <item name="06-Day" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-              <item name="06-Day" type="462c0819:PsiDirectoryNode" />
-              <item name="wbp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-              <item name="06-Day" type="462c0819:PsiDirectoryNode" />
-              <item name="wbp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VueDay" type="462c0819:PsiDirectoryNode" />
-              <item name="06-Day" type="462c0819:PsiDirectoryNode" />
-              <item name="wbp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,12 +250,12 @@
       <workItem from="1523665990847" duration="3368000" />
       <workItem from="1523708457255" duration="13000" />
       <workItem from="1523709582707" duration="23000" />
-      <workItem from="1523754666992" duration="936000" />
+      <workItem from="1523754666992" duration="1389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57004000" />
+    <option name="totallyTimeSpent" value="57457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
