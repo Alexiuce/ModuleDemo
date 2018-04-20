@@ -1,7 +1,15 @@
 <template>
   <div id="app">
 
-    <router-view/>
+
+    <!--需要缓存的页面 : 页面组件的路由中,设置了meta:{keepAlive:true}-->
+    <keep-alive>
+    <router-view v-if="$route.meta.keepAlive"/>
+    </keep-alive>
+
+    <!-- 不需要缓存的页面-->
+    <router-view v-if="!$route.meta.keepAlive"/>
+
     <TabBar></TabBar>
   </div>
 </template>
