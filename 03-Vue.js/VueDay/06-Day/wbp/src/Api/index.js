@@ -40,3 +40,13 @@ export const getBookInfo = (id)=>{
 export const updateBookInfo = (id,data)=>{
   return axios.put(`/book?id=${id}`,data)
 }
+
+/* 添加图书*/
+export const addNewBook = (data)=>{
+  return axios.post('/book',data)
+}
+
+/* 获取轮播数据和热门图书 */
+export const getHomeData = ()=>{
+  return axios.all([getSliders(),getHotBook()])
+}

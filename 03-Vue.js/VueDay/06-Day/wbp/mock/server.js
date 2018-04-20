@@ -23,7 +23,9 @@ const server = http.createServer((req,res)=>{
 
   /*热门图书*/
   if (pathname === '/hot'){
+    setTimeout(()=>{
        return res.end(JSON.stringify(books))
+    },3000)
   }
 
   /*图书的操作: 增删改查 */
