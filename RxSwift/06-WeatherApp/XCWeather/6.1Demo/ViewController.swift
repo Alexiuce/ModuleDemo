@@ -25,11 +25,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cityName.asObservable().subscribe(onNext: {[weak self] in
-            guard let strongSelf = self else {return}
-            print($0)
-            strongSelf.cityLabel.text = $0
-        }).disposed(by: disposeBag)
+//        cityName.asObservable().subscribe(onNext: {[weak self] in
+//            guard let strongSelf = self else {return}
+//            print($0)
+//            strongSelf.cityLabel.text = $0
+//        }).disposed(by: disposeBag)
         cityName.asObservable().bind(to: cityLabel.rx.text).disposed(by: disposeBag)
         cityName.value = "Hangzhou"
         

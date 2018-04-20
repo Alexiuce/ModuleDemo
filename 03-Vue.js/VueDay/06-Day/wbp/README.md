@@ -18,4 +18,16 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### 08Day
+* 添加热门图书
+* 添加Less
+* 重构axios ,添加响应拦截器,处理数据
+
+
+### 09Day
+* 添加Loading 效果 (重构api ,合并多个请求)
+* 分页面缓存 : 路由元信息
+* 下拉加载 :   /page
+   默认每次请求5条数据, 后端需要告知是否有更多数据hasMore
+
+

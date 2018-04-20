@@ -1,0 +1,39 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+<div>
+
+    ejs...
+
+    <!-- ejs的解构赋值方式: = 表示转义输出, - 表示不转义 -->
+
+    <%=name%>
+
+
+    <%
+    var str = '<div>ssss</div>'
+    %>
+
+    <%- str %>
+
+    <!--从对象中获取数据-->
+    <%=json.name%>
+    <!--循环-->
+
+    <% for(let i = 0; i < json.favs.length; i++){ %>
+
+    <div>favs:<%=json.favs[i]%></div>
+
+
+    <% }%>
+
+    <!--文件引用: include 不能跟变量-->
+    <% include a.txt%>
+
+</div>
+</body>
+</html>

@@ -10,14 +10,23 @@ import Collection from '../components/Collection'
 
 
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
-    {path:'/home',component:Home},
+    {
+      path:'/',redirect:'/home'
+    },
+    {
+      path:'/home',
+      component:Home,
+      meta:{
+        keepAlive:true
+      }
+    },
     {path:'/add',component:Add},
     {path:'/list',component:List},
-    {path:'/detail',component:Detail},
+    {path:'/detail/:tid',component:Detail, name:"detail"},
     {path:'/collection',component:Collection},
 
   ]
