@@ -6,7 +6,7 @@
       <ul>
         <router-link v-for="(book,index) in allBooks" :to="{name:'detail',params:{tid:book.bookId}}" :key="index"
                      tag="li">
-          <img :src="book.bookCover" alt="">
+          <img v-lazy="book.bookCover">
           <div>
             <h4>{{book.bookName}}</h4>
             <p>{{book.bookInfo}}</p>
