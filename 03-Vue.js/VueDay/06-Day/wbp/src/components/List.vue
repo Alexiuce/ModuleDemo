@@ -41,6 +41,9 @@
       console.log(top);
       // 添加事件监听
       scroll.addEventListener('touchstart', (e) => {
+        //
+        if (scroll.scrollTop != 0 || scroll.offsetTop != top) return;
+
         // 获取触摸y值
         const touchY = e.touches[0].pageY;
         console.log(touchY);
@@ -65,13 +68,16 @@
         };
 
         const endFun = (e) => {
+          clearTimeout(this.timer1) /** 先清理之前的定时器 */
           // 恢复下拉前位置
-          this.timer = setInterval(() => {
+          this.timer1 = setInterval(() => {
             detalY --;
             scroll.style.top = top + detalY + 'px';
             if (detalY <= 0){
               detalY = 0;
-              clearTimeout(this.timer)
+              clearTimeout(this.timer1)
+              scroll.removeEventListener('touchmove', moveFun);
+              scroll.removeEventListener('touchend', endFun);
             }
 
           }, 1);
