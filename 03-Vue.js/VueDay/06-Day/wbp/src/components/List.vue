@@ -34,13 +34,57 @@
     components: {
       HeaderView
     },
-    mounted(){
+    mounted() {
       const scroll = this.$refs.scroll // 获取拖拽元素
       const top = scroll.offsetTop   // 顶部偏移
-       // 添加事件监听
-      scroll.addEventListener('touchStart',(e)=>{
+      let detalY = 0  // 设置y值变化量,默认0
+      console.log(top);
+      // 添加事件监听
+      scroll.addEventListener('touchstart', (e) => {
         // 获取触摸y值
-        const touchY = e.touches[0].pageY
+        const touchY = e.touches[0].pageY;
+        console.log(touchY);
+
+        const moveFun = (e) => {
+          const moveCurentY = e.touches[0].pageY
+          detalY = moveCurentY - touchY;  // 移动距离
+
+          if (detalY > 0) {  // 向下拖动
+            if (detalY <= 50) {
+              scroll.style.top = detalY + top + 'px';
+            } else {
+              detalY = 50;
+              scroll.style.top = top + 50 + 'px';
+            }
+
+          } else {
+            scroll.removeEventListener('touchMove', moveFun)
+            scroll.removeEventListener('touchEnd', endFun)
+          }
+
+        };
+
+        const endFun = (e) => {
+          // 恢复下拉前位置
+          this.timer = setInterval(() => {
+            detalY --;
+            scroll.style.top = top + detalY + 'px';
+            if (detalY <= 0){
+              detalY = 0;
+              clearTimeout(this.timer)
+            }
+
+          }, 1);
+          // 判断是否需要加载数据
+          if (detalY == 50) {
+            // 请求数据
+          }
+
+        };
+
+
+        scroll.addEventListener('touchmove', moveFun);
+        scroll.addEventListener('touchend', endFun);
 
 
       })
