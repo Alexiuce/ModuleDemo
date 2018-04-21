@@ -34,6 +34,17 @@
     components: {
       HeaderView
     },
+    mounted(){
+      const scroll = this.$refs.scroll // 获取拖拽元素
+      const top = scroll.offsetTop   // 顶部偏移
+       // 添加事件监听
+      scroll.addEventListener('touchStart',(e)=>{
+        // 获取触摸y值
+        const touchY = e.touches[0].pageY
+
+
+      })
+    },
     methods: {
 
       /* 自动加载更多*/
