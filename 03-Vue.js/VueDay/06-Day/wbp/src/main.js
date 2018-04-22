@@ -24,6 +24,8 @@ Vue.use(VueSwiper);
 
 Vue.config.productionTip = false
 
+vue
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

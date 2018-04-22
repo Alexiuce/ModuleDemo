@@ -23,7 +23,8 @@ export default new Router({
       // component:Home,  // 静态使用组件
       component:()=>import('../components/Home.vue'),
       meta:{
-        keepAlive:true
+        keepAlive:true,
+        title:'首页'
       }
     },
     {
