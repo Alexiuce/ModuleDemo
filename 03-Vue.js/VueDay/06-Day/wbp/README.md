@@ -31,5 +31,9 @@ npm run build --report
    默认每次请求5条数据, 后端需要告知是否有更多数据hasMore
 * vue-lazyload : 图片懒加载
 
-* 代码分隔:
+* 代码分隔:   component:()=>import('../base/Home')
+
+
+### 10Day
+* vuex : 平级组件交互
 
