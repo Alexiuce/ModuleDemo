@@ -38,10 +38,11 @@
       <file leaf-file-name="ObserverHello.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Hello/ObserverHello.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="65">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#example#0;class#ObserverHello#0" />
               </folding>
             </state>
           </provider>
@@ -575,12 +576,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524384493018</updated>
-      <workItem from="1524384494958" duration="2587000" />
+      <workItem from="1524384494958" duration="3276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2587000" />
+    <option name="totallyTimeSpent" value="3276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -682,10 +683,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Hello/ObserverHello.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="65">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#example#0;class#ObserverHello#0" />
           </folding>
         </state>
       </provider>
