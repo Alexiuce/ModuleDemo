@@ -29,5 +29,11 @@ npm run build --report
 * 分页面缓存 : 路由元信息
 * 下拉加载 :   /page
    默认每次请求5条数据, 后端需要告知是否有更多数据hasMore
+* vue-lazyload : 图片懒加载
 
+* 代码分隔:   component:()=>import('../base/Home')
+
+
+### 10Day
+* vuex : 平级组件交互
 

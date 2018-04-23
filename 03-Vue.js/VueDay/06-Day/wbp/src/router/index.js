@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-
-import Home from '../components/Home'
-import List from '../components/List'
-import Detail from '../components/Detail'
-import Add from '../components/Add'
-import Collection from '../components/Collection'
+// 静态导入组件
+// import Home from '../components/Home'
+// import List from '../components/List'
+// import Detail from '../components/Detail'
+// import Add from '../components/Add'
+// import Collection from '../components/Collection'
 
 
 
@@ -19,15 +19,31 @@ export default new Router({
     },
     {
       path:'/home',
-      component:Home,
+
+      // component:Home,  // 静态使用组件
+      component:()=>import('../components/Home.vue'),
       meta:{
-        keepAlive:true
+        keepAlive:true,
+        title:'首页'
       }
     },
-    {path:'/add',component:Add},
-    {path:'/list',component:List},
-    {path:'/detail/:tid',component:Detail, name:"detail"},
-    {path:'/collection',component:Collection},
+    {
+      path:'/add',
+      component:()=> import('../components/Add.vue'),
+    },
+    {
+      path:'/list',
+      component:()=> import('../components/List.vue'),
+    },
+    {
+      path:'/detail/:tid',
+      component:()=> import('../components/Detail.vue'),
+      name:"detail"
+    },
+    {
+      path:'/collection',
+      component:()=> import('../components/Collection.vue'),
+    },
 
   ]
 })

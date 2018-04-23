@@ -154,7 +154,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/06-Day/wbp/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
@@ -180,6 +179,8 @@
               <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
               <item name="VueDay" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
             <path>
               <item name="VueDay" type="b2602c69:ProjectViewProjectNode" />
               <item name="VueDay" type="462c0819:PsiDirectoryNode" />
@@ -237,6 +238,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
+>>>>>>> fd45746ae41691c1aab480a2c7b6a9fa14a01c42
           </expand>
           <select />
         </subPane>
@@ -308,17 +310,25 @@
       <workItem from="1523665990847" duration="3368000" />
       <workItem from="1523708457255" duration="13000" />
       <workItem from="1523709582707" duration="23000" />
+<<<<<<< HEAD
+      <workItem from="1523754666992" duration="1389000" />
+=======
       <workItem from="1523754666992" duration="936000" />
       <workItem from="1523840037422" duration="5669000" />
       <workItem from="1523925863375" duration="9209000" />
       <workItem from="1524012416645" duration="10505000" />
       <workItem from="1524099209191" duration="6155000" />
       <workItem from="1524185217431" duration="7342000" />
+>>>>>>> fd45746ae41691c1aab480a2c7b6a9fa14a01c42
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="57457000" />
+=======
     <option name="totallyTimeSpent" value="95884000" />
+>>>>>>> fd45746ae41691c1aab480a2c7b6a9fa14a01c42
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2048" height="1130" extended-state="0" />
