@@ -35,5 +35,6 @@ npm run build --report
 
 
 ### 10Day
-* vuex : 平级组件交互
+* vuex : 平级组件交互, 跨组件交互 借鉴了 flux redux, vuex只能在vue中使用,可以统一状态数据管理
+
 
