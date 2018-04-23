@@ -20,11 +20,18 @@ Vue.use(VueLazyLoad, {
 
 Vue.use(VueSwiper);
 
+/* 钩子方法: 在进入路由之前,每一次都会执行这个方法,通常用于统一设置或拦截处理 */
+router.beforeEach((to,from,next)=>{
+
+  document.title = to.meta.title
+  next()
+
+});
+
 /* 在js中使用图片,需要使用import导入或者引用一个线上url */
 
 Vue.config.productionTip = false
 
-vue
 
 /* eslint-disable no-new */
 new Vue({

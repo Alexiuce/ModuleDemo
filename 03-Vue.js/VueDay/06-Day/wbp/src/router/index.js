@@ -30,20 +30,34 @@ export default new Router({
     {
       path:'/add',
       component:()=> import('../components/Add.vue'),
+      meta:{
+        title:'添加'
+      }
     },
     {
       path:'/list',
       component:()=> import('../components/List.vue'),
+      meta:{
+        title:'列表'
+      }
     },
     {
       path:'/detail/:tid',
       component:()=> import('../components/Detail.vue'),
-      name:"detail"
+      name:"detail",
+      meta:{
+        title:'详情'
+      },
+
     },
     {
       path:'/collection',
       component:()=> import('../components/Collection.vue'),
+      meta:{
+        title:'收藏'
+      },
     },
+
 
   ]
 })
