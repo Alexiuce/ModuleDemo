@@ -11,7 +11,11 @@
             <h4>{{book.bookName}}</h4>
             <p>{{book.bookInfo}}</p>
             <b>{{book.bookPrice}}</b>
-            <button @click.stop="remove(book.bookId)">删除</button>
+            <div class="btn-list">
+
+              <button @click.stop="remove(book.bookId)">删除</button>
+              <button @click.stop="">添加</button>
+            </div>
           </div>
         </router-link>
       </ul>
@@ -68,12 +72,13 @@
         };
 
         const endFun = (e) => {
-          clearTimeout(this.timer1) /** 先清理之前的定时器 */
+          clearTimeout(this.timer1)
+          /** 先清理之前的定时器 */
           // 恢复下拉前位置
           this.timer1 = setInterval(() => {
-            detalY --;
+            detalY--;
             scroll.style.top = top + detalY + 'px';
-            if (detalY <= 0){
+            if (detalY <= 0) {
               detalY = 0;
               clearTimeout(this.timer1)
               scroll.removeEventListener('touchmove', moveFun);
@@ -165,6 +170,13 @@
         b {
           color: red;
         }
+
+        .btn-list{
+          display: flex;
+          justify-content: start;
+
+        }
+
         button {
           display: block;
           width: 60px;
