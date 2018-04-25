@@ -34,6 +34,7 @@ extension ViewController{
     fileprivate func getApi() -> Promise<String> {
         
         return Promise{ cb in
+            
             cb.fulfill("result======")
             }
         
@@ -87,7 +88,7 @@ extension ViewController{
                 print(fulfill)
             }.catch { (e) in
                 print(e.localizedDescription)
-        }
+            }
         
     }
     
@@ -99,7 +100,10 @@ extension ViewController{
                 return self.getWeather(latitude: 23, longitude: 333.5)
             }.done(on: DispatchQueue.global(), { (s) in
                 print("\(s) : \(Thread.current)")
-            }).catch { (e) in
+            }).ensure({
+                print("ensure")
+            })
+            .catch { (e) in
                 print(e.localizedDescription)
         }
     }
