@@ -14,7 +14,9 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        example3()
+        example4()
+        
+       
         
     }
     
@@ -108,5 +110,25 @@ extension ViewController{
         }
     }
     
-    
+    fileprivate func example4(){
+        firstly {
+            //           when(fulfilled: getApi(),getWeather(latitude: 33, longitude: 23423))
+            when(resolved: getWeather(latitude: 33, longitude: 23),getApi())
+            }.done { (res) in
+                
+                res.forEach({ (item) in
+                    switch item {
+                    case .fulfilled(let s):
+                        print(s)
+                    case .rejected(let e):
+                        print("\(e)")
+                    }
+                })
+                
+                
+                
+                
+        }
+        
+    }
 }
