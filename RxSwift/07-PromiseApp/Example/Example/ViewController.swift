@@ -14,20 +14,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        firstly {
-            getApi()
-            }.then { (apiResult) -> Promise<String> in
-                print(apiResult)
-                return self.getWeather(latitude: 23.0, longitude: 33.5)
-            }.done { (fulfill) in
-                print(fulfill)
-            }.catch { (e) in
-                print(e.localizedDescription)
-        }
-        
-        
+        example3()
         
     }
     
@@ -38,20 +25,6 @@ class ViewController: NSViewController {
     }
     
     
-    fileprivate func example1(){
-        getApi()
-            .then { apiResult -> Promise<String> in
-                print(apiResult)
-                return self.getWeather(latitude: 23.3, longitude: 33.2)
-            }
-            .done {
-                print($0)
-            }.catch { (e) in
-                print(e.localizedDescription)
-            
-        }
-
-    }
     
     
 }
@@ -87,6 +60,47 @@ extension ViewController{
                 }
             }
             dataTask.resume()
+        }
+    }
+    
+    
+    fileprivate func example1(){
+        getApi()
+            .then { apiResult -> Promise<String> in
+                print(apiResult)
+                return self.getWeather(latitude: 23.3, longitude: 33.2)
+            }
+            .done {
+                print($0)
+            }.catch { (e) in
+                print(e.localizedDescription)
+        }
+    }
+    
+    fileprivate func example2(){
+        firstly {
+            getApi()
+            }.then { (apiResult) -> Promise<String> in
+                print(apiResult)
+                return self.getWeather(latitude: 23.0, longitude: 33.5)
+            }.done { (fulfill) in
+                print(fulfill)
+            }.catch { (e) in
+                print(e.localizedDescription)
+        }
+        
+    }
+    
+    fileprivate func example3(){
+        firstly {
+            getApi()
+            }.then(on: DispatchQueue.global()) { (apiResult) -> Promise<String> in
+                print(Thread.current)
+                return self.getWeather(latitude: 23, longitude: 333.5)
+            }.done(on: DispatchQueue.global(), { (s) in
+                print("\(s) : \(Thread.current)")
+            }).catch { (e) in
+                print(e.localizedDescription)
         }
     }
     
