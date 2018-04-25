@@ -7,17 +7,16 @@
 //
 
 import Cocoa
-import PromiseKit
 
+import PromiseKit
 
 class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getApi().then { (s) -> Thenable in
-            
-            } as! (_) -> _
+        
+      
         
         // Do any additional setup after loading the view.
     }
