@@ -10,13 +10,16 @@ import Cocoa
 import PromiseKit
 
 
+
+
+
 class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         example4()
         
-       
+        
         
     }
     
@@ -117,18 +120,22 @@ extension ViewController{
             }.done { (res) in
                 
                 res.forEach({ (item) in
-                    switch item {
-                    case .fulfilled(let s):
+                
+                    if case let Result.fulfilled(s) = item {
                         print(s)
-                    case .rejected(let e):
-                        print("\(e)")
                     }
+                
+//                    switch item {
+//                    case let .fulfilled(s):
+//                        print(s)
+//                    case let .rejected(e):
+//                        print("\(e)")
+//                    }
                 })
-                
-                
-                
-                
         }
         
     }
 }
+
+
+
