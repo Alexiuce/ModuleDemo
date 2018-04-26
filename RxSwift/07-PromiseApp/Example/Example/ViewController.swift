@@ -19,6 +19,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 //        example4()
 //        example5()
+        example7()
         
         
     }
@@ -47,6 +48,12 @@ extension ViewController{
             cb.fulfill("result======")
             }
         
+    }
+    
+    fileprivate func getUserAge() -> Promise<Int>{
+        return Promise{
+            $0.fulfill(20)
+        }
     }
     
     func getWeather(latitude: Double, longitude: Double) -> Promise<String> {
@@ -163,7 +170,7 @@ extension ViewController{
        
         promisFetch().get{
             print("before ...")
-         after(seconds: 2)
+//         after(seconds: 2)
          print("get \($0)")
         }.done { (result) in
             print(result)
@@ -180,6 +187,24 @@ extension ViewController{
                 print(result)
             }.catch { (e) in
                 print(e.localizedDescription)
+        }
+    }
+    
+    fileprivate func example7(){
+        firstly {
+            getApi()
+            }.then { (str) -> Promise<Int> in
+                print("srt == \(str)")
+                return self.getUserAge()
+            }.map{
+                return $0 * 2
+            }.compactMap({
+                return $0 - 3
+            })
+            .done { (result) in
+                print(result)
+            }.catch {
+                print($0.localizedDescription)
         }
     }
     
