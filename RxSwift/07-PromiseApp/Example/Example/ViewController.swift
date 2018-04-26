@@ -17,8 +17,8 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        example4()
-        
+//        example4()
+//        example5()
         
         
     }
@@ -30,6 +30,10 @@ class ViewController: NSViewController {
     }
     
     
+    @IBAction func clickButton(_ sender: Any) {
+        
+        example5()
+    }
     
     
 }
@@ -135,6 +139,50 @@ extension ViewController{
         }
         
     }
+    
+    fileprivate func fetch(completion: (String?, Error?) -> Void){
+        completion("ok, fetch success",nil)
+    }
+    fileprivate func promisFetch() -> Promise<String>{
+        
+//        return Promise{fetch(completion: $0.resolve)}
+        
+        
+        return Promise{ cb in
+            fetch(completion: { (res, err) in
+                if err == nil{
+                    cb.fulfill(res!)
+                }else{
+                    cb.reject(err!)
+                }
+            })
+        }
+    }
+    
+    fileprivate func example5() {
+       
+        promisFetch().get{
+            print("before ...")
+         after(seconds: 2)
+         print("get \($0)")
+        }.done { (result) in
+            print(result)
+            }.catch {
+                print("\($0)")
+            }
+        
+    }
+    
+    fileprivate func example6(){
+        firstly {
+            promisFetch()
+            }.done { (result) in
+                print(result)
+            }.catch { (e) in
+                print(e.localizedDescription)
+        }
+    }
+    
 }
 
 
