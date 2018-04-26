@@ -7,8 +7,8 @@
 //
 
 import Cocoa
-import PromiseKit
 
+import PromiseKit
 
 
 
@@ -21,6 +21,7 @@ class ViewController: NSViewController {
 //        example5()
         example7()
         
+
         
     }
     
