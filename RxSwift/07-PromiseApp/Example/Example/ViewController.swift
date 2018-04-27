@@ -15,10 +15,12 @@ import PromiseKit
 
 class ViewController: NSViewController {
     
+    
+    lazy var photes = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-            gcd_example2()
+        gcd_example4()
          
     }
     
@@ -31,7 +33,7 @@ class ViewController: NSViewController {
     
     @IBAction func clickButton(_ sender: Any) {
         
-        example5()
+        print(photes)
     }
     
     
@@ -234,6 +236,90 @@ extension ViewController{
             print("hello")
         }
     }
+
+    fileprivate func gcd_example3(){
+        let globle_queue = DispatchQueue.global()    // 并发全局队列
+        
+        globle_queue.async {
+            print("\(Thread.current)")
+        }
+        
+    }
+
+
+    fileprivate func gcd_example4(){
+
+        
+        let queue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
+        
+        
+//        queue.async {
+//            print("Login()")
+//        }
+//        queue.async {
+//            print("CheckName()")
+//        }
+//        queue.async {
+//            print("PayMoney()")
+//        }
+//        queue.async {
+//            print("GetInfo()")
+//        }
+        
+        
+        
+        let globle_queue = DispatchQueue(label: "conqueue", attributes: .concurrent)
+        for i  in 0...10 {
+            //DispatchQueue.global()    /** 全局并发队列 不支持barrier */
+    
+            
+            
+            globle_queue.async {
+                print("asy \(i)")
+            }
+            globle_queue.sync(flags:.barrier) {
+                print("syn \(i) \(Thread.current)")
+            }
+            
+            
+            globle_queue.async {
+                print("after 1")
+            }
+            globle_queue.async {
+                print("after 2")
+            }
+            globle_queue.async {
+                print("after 3")
+            }
+            
+            /**  没有.barrier的效果
+            globle_queue.sync {
+                print("syn \(i) \(Thread.current)")
+            }
+             */
+            
+            
+        }
+        
+        
+        for i in 0..<10 {
+            queue.async {
+                print("\(i) \(Thread.current)")
+            }
+            
+            queue.sync(flags:.barrier , execute: {
+                 self.photes.append("\(i)")
+            })
+
+            
+            
+        }
+        
+      
+        
+    }
+
+    
 }
 
 
