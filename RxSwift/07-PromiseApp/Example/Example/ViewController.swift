@@ -20,7 +20,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gcd_example4()
+        gcd_example5()
          
     }
     
@@ -319,6 +319,13 @@ extension ViewController{
         
     }
 
+    fileprivate func gcd_example5(){
+      
+        DispatchQueue.global().asyncAfter(deadline:.now() + 3) {
+            print("after....")
+        }
+        
+    }
     
 }
 
