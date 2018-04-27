@@ -18,9 +18,11 @@ class ViewController: NSViewController {
     
     lazy var photes = [String]()
     
+    var t: DispatchSourceTimer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        gcd_example5()
+       
          
     }
     
@@ -33,7 +35,7 @@ class ViewController: NSViewController {
     
     @IBAction func clickButton(_ sender: Any) {
         
-        print(photes)
+       gcd_example9()
     }
     
     
@@ -326,7 +328,104 @@ extension ViewController{
         }
         
     }
+
+    fileprivate func gcd_example6() {
+        
+        
+        
+        let queue = DispatchQueue.global()
+        
+        let group = DispatchGroup()
+        
+        queue.async(group: group, qos: .default, flags: []) {
+            print("one")
+        }
+        queue.async(group: group, qos: .default, flags:[]) {
+            print("two")
+        }
+        queue.async(group: group, qos: .default, flags: []) {
+            print("three")
+        }
+        queue.async(group: group, qos: .default, flags: []) {
+            print("four")
+        }
+        group.notify(queue: queue) {
+            
+            print("finished \(Thread.current)")
+        }
     
+    }
+
+    fileprivate func gcd_example7(){  /** 手动计数  每个任务并不是顺序完成的..*/
+        let queue = DispatchQueue.global()
+        let group = DispatchGroup()
+        group.enter()
+        queue.async(group: group, qos: .default, flags: []) {
+            print("one...")
+            group.leave()
+        }
+        group.enter()
+        queue.async(group: group, qos: .default, flags: []) {
+            print("two...")
+            group.leave()
+        }
+
+        group.enter()
+        queue.async(group: group, qos: .default, flags: []) {
+            print("three...")
+            group.leave()
+        }
+
+        group.enter()
+        queue.async(group: group, qos: .default, flags: []) {
+            print("four...")
+            group.leave()
+        }
+        group.notify(queue: .main) {
+            print("\(Thread.current) over")
+        }
+
+        
+    }
+
+
+    fileprivate func gcd_example8(){
+        
+        let queue = DispatchQueue.global()
+        let semaphore = DispatchSemaphore(value: 3)   /* 初始化信号计量 */
+        
+        for i in 0...10 {
+            print("====\(i)")
+            semaphore.wait()    /* 当前信号计量-1 ,如果为0 ,则阻塞当前线程 */
+            
+            queue.async {
+                print("\(i)")
+                sleep(3)
+                semaphore.signal()  /* 信号计量+1 */
+            }
+            
+            
+        }
+        
+    }
+
+    fileprivate func gcd_example9(){
+        
+        let queue = DispatchQueue.global()
+        t = DispatchSource.makeTimerSource(flags: [], queue: queue)
+    
+        /* leeway : 时间误差容忍度, 例如  +100 ~ -100 */
+        t.schedule(deadline:.now(), repeating:DispatchTimeInterval.seconds(1), leeway: DispatchTimeInterval.milliseconds(100))
+        
+        
+        t.setEventHandler {
+            print("tim....er....")
+        }
+        
+        t.resume()
+    }
+
+
 }
 
 
