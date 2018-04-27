@@ -17,12 +17,9 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        example4()
-//        example5()
-        example7()
-        
 
-        
+            gcd_example2()
+         
     }
     
     override var representedObject: Any? {
@@ -41,6 +38,7 @@ class ViewController: NSViewController {
 }
 
 
+// MARK: - Promise Example
 extension ViewController{
     fileprivate func getApi() -> Promise<String> {
         
@@ -169,15 +167,14 @@ extension ViewController{
     
     fileprivate func example5() {
        
+        /** get as a done that returns the value fed to get. */
         promisFetch().get{
-            print("before ...")
-//         after(seconds: 2)
-         print("get \($0)")
+            print("get \($0)")
         }.done { (result) in
             print(result)
-            }.catch {
-                print("\($0)")
-            }
+        }.catch {
+            print("\($0)")
+        }
         
     }
     
@@ -208,7 +205,35 @@ extension ViewController{
                 print($0.localizedDescription)
         }
     }
+
     
+}
+
+// MARK: - GCD Example
+
+extension ViewController{
+    fileprivate func gcd_example1(){
+
+       let serial_queue = DispatchQueue(label: "serial_xxx")
+        
+        for i in 0...6 {
+            
+            serial_queue.async {
+                print("\(i): \(Thread.current)")
+            }
+        }
+        print("end ....")
+        
+    }
+    
+    
+    fileprivate func gcd_example2(){
+        /* 主线程 同步 会死锁 */
+        let main_queue = DispatchQueue.main
+        main_queue.sync {
+            print("hello")
+        }
+    }
 }
 
 
