@@ -27,19 +27,21 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-         
-    }
-    
-    override var representedObject: Any? {
-        didSet {
-            // Update the view, if already loaded.
-        }
+        let op = XCOperation()
+       
+        op.resultPromise?.done({ (s) in
+            print("\(s)")
+        }).catch({ (e) in
+            print(e.localizedDescription)
+        })
+        globeOperationQueue.addOperation(op)
+        
     }
     
     
     @IBAction func clickButton(_ sender: Any) {
         
-       opExample1()
+//       opExample1()
     }
     
     
