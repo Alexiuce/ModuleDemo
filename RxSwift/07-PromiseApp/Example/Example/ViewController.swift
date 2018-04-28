@@ -28,12 +28,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
        
         let op = XCOperation()
-       
-        op.resultPromise?.done({ (s) in
-            print("\(s)")
-        }).catch({ (e) in
-            print(e.localizedDescription)
-        })
+        
         globeOperationQueue.addOperation(op)
         
     }

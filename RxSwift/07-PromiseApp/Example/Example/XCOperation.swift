@@ -13,18 +13,13 @@ import PromiseKit
 class XCOperation: Operation {
 
     
-
-    var resultPromise: Promise<String>?
-    
-    
     override func main() {
         
+    
         
         autoreleasepool {
             print("long time ... after")
-            resultPromise = Promise{
-                $0.fulfill("good ...answer..")
-            }
+            
             
         }
         

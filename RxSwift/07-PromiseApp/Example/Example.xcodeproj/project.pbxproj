@@ -12,6 +12,7 @@
 		5632B78D208F1EE8004FFD32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5632B78C208F1EE8004FFD32 /* Assets.xcassets */; };
 		5632B790208F1EE8004FFD32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5632B78E208F1EE8004FFD32 /* Main.storyboard */; };
 		5636D89D2094419A00DE84D1 /* XCOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636D89C2094419A00DE84D1 /* XCOperation.swift */; };
+		5636D89F209451F100DE84D1 /* XCQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636D89E209451F100DE84D1 /* XCQueue.swift */; };
 		B478A716D4B726B1BA95898F /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350AD2CFEF3ABE11FAF779D7 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		5632B791208F1EE8004FFD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5632B792208F1EE8004FFD32 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		5636D89C2094419A00DE84D1 /* XCOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCOperation.swift; sourceTree = "<group>"; };
+		5636D89E209451F100DE84D1 /* XCQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCQueue.swift; sourceTree = "<group>"; };
 		D9D57E6629BCF5AB8E8E3216 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 			children = (
 				5632B788208F1EE8004FFD32 /* AppDelegate.swift */,
 				5632B78A208F1EE8004FFD32 /* ViewController.swift */,
+				5636D89E209451F100DE84D1 /* XCQueue.swift */,
 				5636D89C2094419A00DE84D1 /* XCOperation.swift */,
 				5632B78C208F1EE8004FFD32 /* Assets.xcassets */,
 				5632B78E208F1EE8004FFD32 /* Main.storyboard */,
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5636D89F209451F100DE84D1 /* XCQueue.swift in Sources */,
 				5636D89D2094419A00DE84D1 /* XCOperation.swift in Sources */,
 				5632B78B208F1EE8004FFD32 /* ViewController.swift in Sources */,
 				5632B789208F1EE8004FFD32 /* AppDelegate.swift in Sources */,
