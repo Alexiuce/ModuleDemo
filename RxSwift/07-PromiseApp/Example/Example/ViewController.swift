@@ -16,6 +16,10 @@ import PromiseKit
 class ViewController: NSViewController {
     
     
+    lazy var globeOperationQueue: OperationQueue = {
+        return OperationQueue()
+    }()
+    
     lazy var photes = [String]()
     
     var t: DispatchSourceTimer!
@@ -35,7 +39,7 @@ class ViewController: NSViewController {
     
     @IBAction func clickButton(_ sender: Any) {
         
-       gcd_example9()
+       opExample1()
     }
     
     
@@ -156,8 +160,7 @@ extension ViewController{
     fileprivate func promisFetch() -> Promise<String>{
         
 //        return Promise{fetch(completion: $0.resolve)}
-        
-        
+        /* 效果与上一行相同 */
         return Promise{ cb in
             fetch(completion: { (res, err) in
                 if err == nil{
@@ -219,7 +222,7 @@ extension ViewController{
     fileprivate func gcd_example1(){
 
        let serial_queue = DispatchQueue(label: "serial_xxx")
-        
+    
         for i in 0...6 {
             
             serial_queue.async {
@@ -428,5 +431,34 @@ extension ViewController{
 
 }
 
-
+// MARK : NSOperater Example
+extension ViewController{
+    fileprivate func opExample1(){
+        // 创建操作
+       let op1 = BlockOperation {
+            print("downloading...")
+        }
+    
+        let op2 = BlockOperation {
+            print("unzip....")
+        }
+        let op3 = BlockOperation{
+            print("fininshed...")
+        }
+        
+        
+        /* 设置依赖*/
+        
+        op3.addDependency(op2)
+        op2.addDependency(op1)
+        
+//        globeOperationQueue.addOperation(op1)
+//        globeOperationQueue.addOperation(op2)
+//        globeOperationQueue.addOperation(op3)
+        /* 添加操作到队列 */
+        globeOperationQueue.addOperations([op1,op3,op2], waitUntilFinished: false)
+        
+        
+    }
+}
 
