@@ -35,8 +35,7 @@ class ViewController: NSViewController {
     
     
     @IBAction func clickButton(_ sender: Any) {
-        
-//       opExample1()
+        gcd_example10()
     }
     
     
@@ -423,6 +422,26 @@ extension ViewController{
         }
         
         t.resume()
+    }
+    
+    fileprivate func gcd_example10(){
+        
+        let queue = DispatchQueue.global()
+    
+        queue.async {
+            
+            /** dispatch_apply example */
+            DispatchQueue.concurrentPerform(iterations: 6) { (index) in
+                print("\(index)  \(Thread.current)")
+            }
+        }
+        
+        
+        
+        
+    
+        
+        
     }
 
 
