@@ -7,10 +7,10 @@ let arr = [1,2,3,4,5,56];
 // }
 
 /** 支持return  */
-// arr.forEach((item)=>{
-//
-//     console.log(item);
-// });
+arr.forEach((item)=>{
+
+    console.log(item);
+});
 /** 不仅遍历数组内容,同时遍历数组属性 */
 // for (item in arr){
 //     console.log(item);
