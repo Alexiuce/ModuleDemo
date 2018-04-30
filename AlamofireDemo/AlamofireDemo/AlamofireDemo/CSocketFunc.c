@@ -30,8 +30,5 @@ int socket_connect(const char * host,int port){
     sa.sin_family = ht->h_addrtype;
     sa.sin_port = htons(port);
     socketfd = socket(ht->h_addrtype, SOCK_STREAM, IPPROTO_TCP);
-    int result = connect(socketfd, (struct sockaddr *)&sa, sizeof(sa));
-    
-    printf("%d",result);
-    return result;
+    return connect(socketfd, (struct sockaddr *)&sa, sizeof(sa));
 }
