@@ -15,6 +15,9 @@ import SwiftyJSON
 fileprivate let WEB_URL: String = "http://192.168.0.201:3000/projects/app/issues"
 
 
+@_silgen_name("test") func swift_test()
+
+
 class ViewController: NSViewController {
     
 
@@ -26,49 +29,70 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         
-        
-        let session1 = URLSession.shared
        
-        let url = URL(string: "http://www.baidu.com")!
-        
-        let request = URLRequest(url: url)
-        session1.dataTask(with:  request) { (body, res, err) in
-            
-            guard let body = body else{return}
-            
-            print("body:\(body)")
-        }.resume()
-        
-        
-        /** Swift 关键字
-         @discardableResult  : 表示可以不使用一个方法的返回值 而不会提示警告信息
-         internal(set)  : 表示set方法的访问级别是internal
-         associatedtype : 在协议中用来表示一个范型 ,在协议的具体实现中才会确定数据的具体类型(相当于在协议中的一个类型的占位符)
-         协议扩展的作用:  1.为协议中的方法提供一个默认的实现 , 2.添加额外的实现
-         
-         mutating :用来修饰协议中的方法. Swift中的协议不仅可以被class实现,也可以被struce和enmu实现,使用mutating关键字是为了能够让struc或者enum可以在被修饰的方法中修改自己的变量,这个关键字对class是透明的(因为class可以随意修改自身的属性)
-         
-         where : 在协议扩展中,用来限制协议仅仅能够被某个类(或其子类)遵守. 例下:
-                 extension YourProcotol where Self : UIViewController {    // 仅仅能够被UIViewController 实现
-                         func yourFunc() {
-                         view.backgroundColor = UIColor.red
-                         }
-                 }
-        
-         */
-        /*
-        
-        request("http://localhost:3333/book", method: .post, parameters: ["name":"alexiuce","level":12],encoding: JSONEncoding.default).responseString { (response) in
-            print(response.description)
-        }
-         */
+        swift_test()
+      
      
         
     }
 
 }
 
+
+/** Swift 关键字
+ @discardableResult  : 表示可以不使用一个方法的返回值 而不会提示警告信息
+ internal(set)  : 表示set方法的访问级别是internal
+ associatedtype : 在协议中用来表示一个范型 ,在协议的具体实现中才会确定数据的具体类型(相当于在协议中的一个类型的占位符)
+ 协议扩展的作用:  1.为协议中的方法提供一个默认的实现 , 2.添加额外的实现
+ 
+ mutating :用来修饰协议中的方法. Swift中的协议不仅可以被class实现,也可以被struce和enmu实现,使用mutating关键字是为了能够让struc或者enum可以在被修饰的方法中修改自己的变量,这个关键字对class是透明的(因为class可以随意修改自身的属性)
+ 
+ where : 在协议扩展中,用来限制协议仅仅能够被某个类(或其子类)遵守. 例下:
+ extension YourProcotol where Self : UIViewController {    // 仅仅能够被UIViewController 实现
+ func yourFunc() {
+ view.backgroundColor = UIColor.red
+ }
+ }
+ 
+ */
+/*
+ 
+ request("http://localhost:3333/book", method: .post, parameters: ["name":"alexiuce","level":12],encoding: JSONEncoding.default).responseString { (response) in
+ print(response.description)
+ }
+ */
+
 extension ViewController{
+    fileprivate func urlsessionExample(){
+        
+        let session1 = URLSession.shared
+        
+        let url = URL(string: "http://www.baidu.com")!
+        
+        let request = URLRequest(url: url)
+        session1.dataTask(with:  request) { (body, res, err) in
+            
+            guard let body = body else{return}
+            let str = String(data: body, encoding: .utf8)!
+            print("body:\(str)")
+            }.resume()
+    }
+    
+    fileprivate func socketExample(){
+        let clientSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+        
+        var serverInfo = sockaddr_in()
+        serverInfo.sin_family = sa_family_t(AF_INET)
+        serverInfo.sin_addr.s_addr = inet_addr("127.0.0.1")
+        
+      
+       
+        
+//        let c = connect(clientSocket,&serverInfo ,socklen_t(MemoryLayout<sockaddr>.size))
+        
+    
+    }
+    
     
     fileprivate func af_used(){
         request(WEB_URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Cookie":myCookie])
