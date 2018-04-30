@@ -17,6 +17,8 @@ fileprivate let WEB_URL: String = "http://192.168.0.201:3000/projects/app/issues
 
 @_silgen_name("test") func swift_test()
 
+@_silgen_name("socket_connect") func swift_connect(host:UnsafePointer<Int8>,port:Int) -> Int
+
 
 class ViewController: NSViewController {
     
@@ -27,13 +29,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-       
-        swift_test()
-      
-     
-        
+        socketExample()
     }
 
 }
@@ -79,14 +75,10 @@ extension ViewController{
     }
     
     fileprivate func socketExample(){
-        let clientSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
-        
-        var serverInfo = sockaddr_in()
-        serverInfo.sin_family = sa_family_t(AF_INET)
-        serverInfo.sin_addr.s_addr = inet_addr("127.0.0.1")
-        
-      
        
+//        swift_test()
+        let result = swift_connect(host: "127.0.0.1", port: 12345)
+        print("result = \(result)")
         
 //        let c = connect(clientSocket,&serverInfo ,socklen_t(MemoryLayout<sockaddr>.size))
         
