@@ -15,9 +15,10 @@ import SwiftyJSON
 fileprivate let WEB_URL: String = "http://192.168.0.201:3000/projects/app/issues"
 
 
-@_silgen_name("test") func swift_test()
 
-@_silgen_name("socket_connect") func swift_connect(host:UnsafePointer<Int8>,port:Int) -> Int
+@_silgen_name("socket_connect") func swift_connect(host:UnsafePointer<Int8>,port:Int32) -> Int32
+
+@_silgen_name("send") func swift_send(socket: Int32,data:UnsafePointer<Int8>,dataLength:size_t,flag:Int32) -> Int32
 
 
 class ViewController: NSViewController {
@@ -76,9 +77,15 @@ extension ViewController{
     
     fileprivate func socketExample(){
        
-//        swift_test()
-        let result = swift_connect(host: "127.0.0.1", port: 12345)
-        print("result = \(result)")
+
+        let socketId = swift_connect(host: "127.0.0.1", port: 12345)
+        print("socket id = \(socketId)")
+        if socketId != -1 {
+            let sendText = "this is a test from swift"
+            let sendCount = swift_send(socket: socketId, data: sendText, dataLength: strlen(sendText), flag: 0)
+        
+            print(sendCount)
+        }
         
 //        let c = connect(clientSocket,&serverInfo ,socklen_t(MemoryLayout<sockaddr>.size))
         
