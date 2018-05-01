@@ -31,6 +31,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         socketExample()
+        
+        
     }
 
 }
@@ -77,7 +79,7 @@ extension ViewController{
     
     fileprivate func socketExample(){
        
-
+        /**
         let socketId = swift_connect(host: "127.0.0.1", port: 12345)
         print("socket id = \(socketId)")
         if socketId != -1 {
@@ -86,8 +88,28 @@ extension ViewController{
         
             print(sendCount)
         }
+         */
         
-//        let c = connect(clientSocket,&serverInfo ,socklen_t(MemoryLayout<sockaddr>.size))
+        
+        let clientSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+        var server = sockaddr_in()
+        server.sin_family = sa_family_t(AF_INET)
+        let port : UInt16 = 12345
+        server.sin_port = port.bigEndian //CFSwapInt16BigToHost(port)
+        server.sin_addr.s_addr = inet_addr("127.0.0.1")
+        
+        withUnsafePointer(to: &server) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1, { serptr in
+               let result = connect(clientSocket, UnsafePointer(serptr), socklen_t(MemoryLayout<sockaddr_in>.size))
+                print(result)
+                
+                let text = "hello..."
+                let sendCount = send(clientSocket, text, strlen(text), 0)
+                print(sendCount)
+            })
+        }
+        
+        
         
     
     }
