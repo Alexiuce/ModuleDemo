@@ -104,8 +104,16 @@ extension ViewController{
                 print(result)
                 
                 let text = "hello..."
-                let sendCount = send(clientSocket, text, strlen(text), 0)
+                let sendCount = send(clientSocket, text, text.count, 0)
                 print(sendCount)
+                var buffer: [UInt8] = [UInt8](repeating: 0, count: 4096)
+    
+                let recvCount = recv(clientSocket, &buffer, 4096, 0)
+                
+                let data = Data(bytes: buffer, count: recvCount)
+                let recvText = String(data: data, encoding: .utf8)!
+                print("receive \(recvText)")
+                close(clientSocket)
             })
         }
         
