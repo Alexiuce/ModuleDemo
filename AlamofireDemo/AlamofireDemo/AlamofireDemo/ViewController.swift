@@ -31,34 +31,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let clientSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
-        var server = sockaddr_in()
-        server.sin_family = sa_family_t(AF_INET)
-        server.sin_addr.s_addr = inet_addr("192.168.0.133")
-        server.sin_port = UInt16(49152).bigEndian
-        
-        withUnsafePointer(to: &server) {
-            $0.withMemoryRebound(to: sockaddr.self, capacity: 1, {
-                let connectResult = connect(clientSocket, UnsafePointer($0), socklen_t(MemoryLayout<sockaddr>.size))
-                
-                print(connectResult)
-                let sendText = "Hello..."
-                var buffer: [UInt8] = [UInt8](repeating:0, count: 1024)
-                DispatchQueue.global().async(execute: {
-                    let recvCount = recv(clientSocket, &buffer, 1024, 0)
-                    print(recvCount)
-                    
-                })
-                let sendCount = send(clientSocket, sendText, sendText.count, 0)
-                print(sendCount)
-            })
-        }
-        
-        
+        requestExample()
        
-        
-        
     }
 
 }
@@ -142,6 +116,31 @@ extension ViewController{
             })
         }
     }
+    fileprivate func socketExample3(){
+        let clientSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+        var server = sockaddr_in()
+        server.sin_family = sa_family_t(AF_INET)
+        server.sin_addr.s_addr = inet_addr("192.168.0.133")
+        server.sin_port = UInt16(49152).bigEndian
+        
+        withUnsafePointer(to: &server) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1, {
+                let connectResult = connect(clientSocket, UnsafePointer($0), socklen_t(MemoryLayout<sockaddr>.size))
+                
+                print(connectResult)
+                let sendText = "Hello..."
+                var buffer: [UInt8] = [UInt8](repeating:0, count: 1024)
+                DispatchQueue.global().async(execute: {
+                    let recvCount = recv(clientSocket, &buffer, 1024, 0)
+                    print(recvCount)
+                    
+                })
+                let sendCount = send(clientSocket, sendText, sendText.count, 0)
+                print(sendCount)
+            })
+        }
+        
+    }
     
     fileprivate func af_used(){
         request(WEB_URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Cookie":myCookie])
@@ -209,8 +208,6 @@ extension ViewController{
              .allowFragments :  允许不是json格式的数据
              */
             guard let json = try? JSONSerialization.jsonObject(with: data, options:.allowFragments) else {return}
-            
-           
             
             
             print( type(of: json))
