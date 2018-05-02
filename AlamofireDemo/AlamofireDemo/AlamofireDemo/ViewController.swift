@@ -31,6 +31,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        requestExample()
         
         
     }
@@ -106,10 +107,9 @@ extension ViewController{
                 let text = "hello..."
                 let sendCount = send(clientSocket, text, text.count, 0)
                 print(sendCount)
+                
                 var buffer: [UInt8] = [UInt8](repeating: 0, count: 4096)
-                
                 let recvCount = recv(clientSocket, &buffer, 4096, 0)
-                
                 let data = Data(bytes: buffer, count: recvCount)
                 let recvText = String(data: data, encoding: .utf8)!
                 print("receive \(recvText)")
@@ -117,7 +117,6 @@ extension ViewController{
             })
         }
     }
-    
     
     fileprivate func af_used(){
         request(WEB_URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Cookie":myCookie])
@@ -160,5 +159,40 @@ extension ViewController{
             download(resumingWith:downloadData)
         }
     }
+
+    fileprivate func requestExample(){
+        
+        let url = URL(string: "http://www.httpbin.org/get")!
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 7)
+        request.addValue("def", forHTTPHeaderField: "abc")
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (body, res, err) in
+            /*
+            guard let response = res as? HTTPURLResponse else {return}
+            print(response.allHeaderFields)
+             */
+            
+            guard let data = body , let result = String(data: data, encoding: .utf8) else {return}
+            
+            print(result)
+            
+            
+            /**
+             .mutableLeaves  : 容器可变类型
+             .mutableContainers : 对象内部可以变 iOS7 后无效
+             .allowFragments :  允许不是json格式的数据
+             */
+            guard let json = try? JSONSerialization.jsonObject(with: data, options:.allowFragments) else {return}
+            
+           
+            
+            
+            print( type(of: json))
+            
+        }.resume()
+        
+    }
+
 }
 
