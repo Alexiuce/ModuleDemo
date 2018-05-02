@@ -12,6 +12,7 @@
 		567024EB206B278500A293C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567024EA206B278500A293C2 /* Assets.xcassets */; };
 		567024EE206B278500A293C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567024EC206B278500A293C2 /* Main.storyboard */; };
 		C664F7836FE0791B1A8BD271 /* Pods_AlamofireDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048F5096E6D959726170B4F2 /* Pods_AlamofireDemo.framework */; };
+		D83787962096F3DA000105F1 /* CSocketFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = D83787952096F3DA000105F1 /* CSocketFunc.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		567024EF206B278500A293C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		567024F0206B278500A293C2 /* AlamofireDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlamofireDemo.entitlements; sourceTree = "<group>"; };
 		B9D2B42E08488A21BEED4D63 /* Pods-AlamofireDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D83787952096F3DA000105F1 /* CSocketFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CSocketFunc.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				567024E6206B278500A293C2 /* AppDelegate.swift */,
 				567024E8206B278500A293C2 /* ViewController.swift */,
+				D83787952096F3DA000105F1 /* CSocketFunc.c */,
 				567024EA206B278500A293C2 /* Assets.xcassets */,
 				567024EC206B278500A293C2 /* Main.storyboard */,
 				567024EF206B278500A293C2 /* Info.plist */,
@@ -122,6 +125,7 @@
 				TargetAttributes = {
 					567024E2206B278500A293C2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -222,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83787962096F3DA000105F1 /* CSocketFunc.c in Sources */,
 				567024E9206B278500A293C2 /* ViewController.swift in Sources */,
 				567024E7206B278500A293C2 /* AppDelegate.swift in Sources */,
 			);
@@ -352,6 +357,7 @@
 			baseConfigurationReference = B9D2B42E08488A21BEED4D63 /* Pods-AlamofireDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AlamofireDemo/AlamofireDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -359,6 +365,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alexiuce.AlamofireDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -368,6 +375,7 @@
 			baseConfigurationReference = 3C8DEE6B8CF6ECA7CD739E26 /* Pods-AlamofireDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AlamofireDemo/AlamofireDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
