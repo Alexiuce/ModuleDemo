@@ -20,7 +20,7 @@ class ViewController: NSViewController {
     let subject = PublishSubject<String>()
     let behaviorSubject = BehaviorSubject(value: "God")
     let replaySubject = ReplaySubject<String>.create(bufferSize: 2)
-    let variableSubject = Variable("Good")
+    let variableSubject = Variable(["Good"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,16 @@ class ViewController: NSViewController {
     }
     @IBAction func clickButton(_ sender: NSButton) {
         
-        variableSubject.value = "evening"
+        /* 向数组中添加元素会触发onNext */
+       
+        variableSubject.value.append("Alex")
         
+    
+        /* 修改数组中的值也会触发 onNext */
+        
+        variableSubject.value[0] = "world"
+        
+ 
         /*
         replaySubject.onError(MYError.myFault)
         replaySubject.dispose()
@@ -232,7 +240,6 @@ extension ViewController{
     }
     fileprivate func subject3(){
         
-    
         replaySubject.onNext("first")
         replaySubject.onNext("two")
         replaySubject.onNext("three")
@@ -245,19 +252,12 @@ extension ViewController{
             print("2: \($0)")
         }.disposed(by: disposeBag)
         
-       
-        
-      
     }
     fileprivate func subject4(){
         
         variableSubject.asObservable().subscribe {
             print($0)
         }.disposed(by: disposeBag)
-        
-        
-        
-        
     }
 
 
