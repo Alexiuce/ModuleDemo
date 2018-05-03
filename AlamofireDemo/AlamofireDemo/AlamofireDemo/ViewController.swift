@@ -209,8 +209,14 @@ extension ViewController{
              */
             guard let json = try? JSONSerialization.jsonObject(with: data, options:.allowFragments) else {return}
             
-            
             print( type(of: json))
+            /**
+             
+             PropertyListSerialization  : 解析plist 文件的类
+             
+             */
+            
+            
             
         }.resume()
         
