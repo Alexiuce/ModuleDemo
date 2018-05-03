@@ -186,16 +186,17 @@ extension ViewController{
 
     fileprivate func requestExample(){
         
+        let urlString = "http://www.httpbin.org/post?id=123&name=alex"
         /** 自定义url 转码字符集 : 对url中#符号进行转码 ,若为空,则仅对中文进行转码
          * 注意要取反.inverted ,否则会对字符集之外的所有字符进行转码
          标准转码
          
          所有类型的URL中,"-_.~"都不应该被转码
-         */
         let myCharacterSet = CharacterSet(charactersIn: "#").inverted
         
         let urlString = "http://www.httpbin.org/get李?id-_~=%100&name=章bb###<>[]{}".addingPercentEncoding(withAllowedCharacters:myCharacterSet)!
         
+         */
         /*
          * CharacterSet.urlHostAllowed: 被转义的字符有  "#%/<>?@\^`\{\|\}
          * CharacterSet.urlPathAllowed: 被转义的字符有  "#%;<>?[\]^`\{\|\}
@@ -205,8 +206,15 @@ extension ViewController{
          */
         let url = URL(string: urlString)!
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 7)
-        request.addValue("def", forHTTPHeaderField: "abc")
+        /**
+        application/x-www-form-urlencoded : 提交的数据存储在服务器端的表单字段中,
+        application/json  application/xml  text/xml 等... post请求是,数据都是存储在服务器端的data字段中
+         */
         
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let body = "hello from outside"
+        request.httpBody = body.data(using: .utf8)
         let session = URLSession.shared
         session.dataTask(with: request) { (body, res, err) in
             /*
