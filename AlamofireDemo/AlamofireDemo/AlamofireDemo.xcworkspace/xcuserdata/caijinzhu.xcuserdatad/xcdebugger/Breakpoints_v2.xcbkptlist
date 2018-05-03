@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlamofireDemo/ViewController.swift"
-            timestampString = "547007672.748822"
+            timestampString = "547010700.840755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "requestExample()"
             landmarkType = "7">
          </BreakpointContent>

@@ -188,10 +188,13 @@ extension ViewController{
         
         /** 自定义url 转码字符集 : 对url中#符号进行转码 ,若为空,则仅对中文进行转码
          * 注意要取反.inverted ,否则会对字符集之外的所有字符进行转码
+         标准转码
+         
+         所有类型的URL中,"-_.~"都不应该被转码
          */
         let myCharacterSet = CharacterSet(charactersIn: "#").inverted
         
-        let urlString = "http://www.httpbin.org/get李?id=%100&name=章bb###<>[]{}".addingPercentEncoding(withAllowedCharacters:myCharacterSet)!
+        let urlString = "http://www.httpbin.org/get李?id-_~=%100&name=章bb###<>[]{}".addingPercentEncoding(withAllowedCharacters:myCharacterSet)!
         
         /*
          * CharacterSet.urlHostAllowed: 被转义的字符有  "#%/<>?@\^`\{\|\}
