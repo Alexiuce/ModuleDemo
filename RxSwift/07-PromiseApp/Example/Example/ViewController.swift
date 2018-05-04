@@ -10,8 +10,11 @@ import Cocoa
 
 import PromiseKit
 
-
-
+/* 线程状态
+ * 新建  - 就绪  - 执行  - 阻塞 - 终止(死亡)
+ * 终止后的线程不能被再次调用,(再次调用会crash)
+ * 可调度线程池(系统)
+ */
 
 
 class ViewController: NSViewController {
@@ -31,12 +34,6 @@ class ViewController: NSViewController {
         let op = XCOperation()
         
         globeOperationQueue.addOperation(op)
-        
-        
-        
-       
-        
-      
         
     }
     
