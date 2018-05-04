@@ -17,8 +17,6 @@ class XCOperation: Operation {
         
         autoreleasepool {
             print("long time ... after")
-            
-            
             assert(true, "error....test")   /* 条件不成立,提示错误信息*/
         }
         
