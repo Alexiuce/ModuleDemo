@@ -6,15 +6,19 @@ let arr = [1,2,3,4,5,56];
 //     console.log(arr[i])
 // }
 
-/** 支持return  */
-arr.forEach((item)=>{
+/** 不支持return
+arr.forEach((item,index)=>{
+    // console.log(item);
+    console.log(index);
 
-    console.log(item);
 });
-/** 不仅遍历数组内容,同时遍历数组属性 */
-// for (item in arr){
-//     console.log(item);
-// }
+ *  */
+/** 不仅遍历数组内容,同时遍历数组属性
+for (let key in arr){
+    console.log( key);
+
+}
+ * */
 /** 不能遍历对象,只支持数组 支持return */
 // for (let val of arr){
 //
@@ -28,13 +32,12 @@ arr.forEach((item)=>{
 //     console.log(val);
 // }
 
-/** filter 方法 example */
+/** filter 方法 example
 
-// let filterArray = arr.filter((item)=>{
-//     return item < 3;
-// })
-//
-// console.log(filterArray);
+let filterArray = arr.filter((item)=>item < 3)
+
+console.log(filterArray);
+ * */
 
 /** map 方法 example */
 
@@ -56,10 +59,10 @@ arr.forEach((item)=>{
 // console.log(findResult || "no result");
 
 /** some 方法: 返回布尔值, 找到后停止 */
-// let someResult = arr.some((it,index)=>{
-//     return it.toString().indexOf('5') > -1
-// })
-// console.log(someResult);
+let someResult = arr.some((it,index)=>{
+    return it.toString().indexOf('5') > -1
+})
+console.log(someResult);
 
 /** every 方法: 返回布尔值, 结果为false时停止,并返回false */
 // let everyResult = arr.every((item,index) =>{
@@ -108,7 +111,9 @@ arr.forEach((item)=>{
 //
 // let result = f3(3)(3)
 // console.log(result);
+/**
 let f4 = a => b => b + a;  // 对于f3的简化写法
 
 let s = f4(12)(10)
 console.log(s);
+ *  */

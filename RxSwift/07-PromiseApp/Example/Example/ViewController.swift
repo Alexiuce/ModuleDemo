@@ -10,7 +10,11 @@ import Cocoa
 
 import PromiseKit
 
-
+/* 线程状态
+ * 新建  - 就绪  - 执行  - 阻塞 - 终止(死亡)
+ * 终止后的线程不能被再次调用,(再次调用会crash)
+ * 可调度线程池(系统)
+ */
 
 
 class ViewController: NSViewController {
@@ -35,7 +39,7 @@ class ViewController: NSViewController {
     
     
     @IBAction func clickButton(_ sender: Any) {
-        gcd_example10()
+        gcd_example1()
     }
     
     
@@ -215,18 +219,26 @@ extension ViewController{
 // MARK: - GCD Example
 
 extension ViewController{
-    fileprivate func gcd_example1(){
-
-       let serial_queue = DispatchQueue(label: "serial_xxx")
     
+    fileprivate func pthread_example(){
+        /** pthread example **/
+        
+         var thread : pthread_t?
+         pthread_create(&thread, nil, { _ in
+         print("\(Thread.current)")
+         return nil
+         }, nil)
+    
+    }
+    
+    fileprivate func gcd_example1(){
+        let serial_queue = DispatchQueue(label: "serial_xxx")
         for i in 0...6 {
-            
             serial_queue.async {
                 print("\(i): \(Thread.current)")
             }
         }
         print("end ....")
-        
     }
     
     
@@ -272,17 +284,15 @@ extension ViewController{
         let globle_queue = DispatchQueue(label: "conqueue", attributes: .concurrent)
         for i  in 0...10 {
             //DispatchQueue.global()    /** 全局并发队列 不支持barrier */
-    
-            
-            
             globle_queue.async {
                 print("asy \(i)")
             }
+           
+            
             globle_queue.sync(flags:.barrier) {
                 print("syn \(i) \(Thread.current)")
             }
-            
-            
+    
             globle_queue.async {
                 print("after 1")
             }
@@ -435,16 +445,7 @@ extension ViewController{
                 print("\(index)  \(Thread.current)")
             }
         }
-        
-        
-        
-        
-    
-        
-        
     }
-
-
 }
 
 // MARK : NSOperater Example

@@ -31,8 +31,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+        requestExample()
+       
     }
 
 }
@@ -106,10 +106,9 @@ extension ViewController{
                 let text = "hello..."
                 let sendCount = send(clientSocket, text, text.count, 0)
                 print(sendCount)
+                
                 var buffer: [UInt8] = [UInt8](repeating: 0, count: 4096)
-                
                 let recvCount = recv(clientSocket, &buffer, 4096, 0)
-                
                 let data = Data(bytes: buffer, count: recvCount)
                 let recvText = String(data: data, encoding: .utf8)!
                 print("receive \(recvText)")
@@ -117,7 +116,31 @@ extension ViewController{
             })
         }
     }
-    
+    fileprivate func socketExample3(){
+        let clientSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+        var server = sockaddr_in()
+        server.sin_family = sa_family_t(AF_INET)
+        server.sin_addr.s_addr = inet_addr("192.168.0.133")
+        server.sin_port = UInt16(49152).bigEndian
+        
+        withUnsafePointer(to: &server) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1, {
+                let connectResult = connect(clientSocket, UnsafePointer($0), socklen_t(MemoryLayout<sockaddr>.size))
+                
+                print(connectResult)
+                let sendText = "Hello..."
+                var buffer: [UInt8] = [UInt8](repeating:0, count: 1024)
+                DispatchQueue.global().async(execute: {
+                    let recvCount = recv(clientSocket, &buffer, 1024, 0)
+                    print(recvCount)
+                    
+                })
+                let sendCount = send(clientSocket, sendText, sendText.count, 0)
+                print(sendCount)
+            })
+        }
+        
+    }
     
     fileprivate func af_used(){
         request(WEB_URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Cookie":myCookie])
@@ -160,5 +183,69 @@ extension ViewController{
             download(resumingWith:downloadData)
         }
     }
+
+    fileprivate func requestExample(){
+        
+        let urlString = "http://www.httpbin.org/post?id=123&name=alex"
+        /** 自定义url 转码字符集 : 对url中#符号进行转码 ,若为空,则仅对中文进行转码
+         * 注意要取反.inverted ,否则会对字符集之外的所有字符进行转码
+         标准转码
+         
+         所有类型的URL中,"-_.~"都不应该被转码
+        let myCharacterSet = CharacterSet(charactersIn: "#").inverted
+        
+        let urlString = "http://www.httpbin.org/get李?id-_~=%100&name=章bb###<>[]{}".addingPercentEncoding(withAllowedCharacters:myCharacterSet)!
+        
+         */
+        /*
+         * CharacterSet.urlHostAllowed: 被转义的字符有  "#%/<>?@\^`\{\|\}
+         * CharacterSet.urlPathAllowed: 被转义的字符有  "#%;<>?[\]^`\{\|\}
+         * CharacterSet.urlUserAllowed: 被转义的字符有   #%/<>?@\^`\{\|\}
+         * CharacterSet.urlQueryAllowed: 被转义的字符有  "#%<>[\]^`\{\|\}
+         * CharacterSet.urlPasswordAllowed 被转义的字符有 "#%/:<>?@[\]^`\{\|\}
+         */
+        let url = URL(string: urlString)!
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 7)
+        /**
+        application/x-www-form-urlencoded : 提交的数据存储在服务器端的表单字段中,
+        application/json  application/xml  text/xml 等... post请求是,数据都是存储在服务器端的data字段中
+         */
+        
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let body = "hello from outside"
+        request.httpBody = body.data(using: .utf8)
+        let session = URLSession.shared
+        session.dataTask(with: request) { (body, res, err) in
+            /*
+            guard let response = res as? HTTPURLResponse else {return}
+            print(response.allHeaderFields)
+             */
+            
+            guard let data = body , let result = String(data: data, encoding: .utf8) else {return}
+            
+            print(result)
+            
+            
+            /**
+             .mutableLeaves  : 容器可变类型
+             .mutableContainers : 对象内部可以变 iOS7 后无效
+             .allowFragments :  允许不是json格式的数据
+             */
+            guard let json = try? JSONSerialization.jsonObject(with: data, options:.allowFragments) else {return}
+            
+            print( type(of: json))
+            /**
+             
+             PropertyListSerialization  : 解析plist 文件的类
+             
+             */
+            
+            
+            
+        }.resume()
+        
+    }
+
 }
 
