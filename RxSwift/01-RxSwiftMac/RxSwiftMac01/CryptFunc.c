@@ -23,3 +23,9 @@ char * md5(char * text){
     return swift_md5;
 }
 
+/*
+char *sha1(char * text){
+ 
+}
+ */
+
