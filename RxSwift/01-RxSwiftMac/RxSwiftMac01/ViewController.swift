@@ -126,7 +126,7 @@ extension ViewController{
     }
     fileprivate func example6(){
         example(of: "disposeBag") {
-            let disposeBag = DisposeBag()
+           
             Observable.of("a","b","c","d").subscribe{
                 print($0)
                 }.disposed(by: disposeBag)
@@ -134,8 +134,8 @@ extension ViewController{
     }
     fileprivate func example7(){
         example(of: "create") {
-            let disposeBag = DisposeBag()
-            
+           
+        
             enum MyError: Error {
                 case myError
             }
