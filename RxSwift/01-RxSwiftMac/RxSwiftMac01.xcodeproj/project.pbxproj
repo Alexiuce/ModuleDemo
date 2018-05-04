@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561BA02A209C1F6000D64E3B /* CryptFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 561BA029209C1F6000D64E3B /* CryptFunc.c */; };
 		564A8329204D031100088E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A8328204D031100088E60 /* AppDelegate.swift */; };
 		564A832B204D031100088E60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A832A204D031100088E60 /* ViewController.swift */; };
 		564A832D204D031100088E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564A832C204D031100088E60 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		0A21F4630CB0231B8486CF34 /* Pods-RxSwiftMac01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMac01.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftMac01/Pods-RxSwiftMac01.release.xcconfig"; sourceTree = "<group>"; };
 		21C6CE903838CF859513F785 /* Pods_RxSwiftMac01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftMac01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6F9E414DE445568E0CE28E /* Pods-RxSwiftMac01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMac01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftMac01/Pods-RxSwiftMac01.debug.xcconfig"; sourceTree = "<group>"; };
+		561BA029209C1F6000D64E3B /* CryptFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CryptFunc.c; sourceTree = "<group>"; };
 		564A8325204D031100088E60 /* RxSwiftMac01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftMac01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564A8328204D031100088E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564A832A204D031100088E60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				564A8328204D031100088E60 /* AppDelegate.swift */,
 				564A832A204D031100088E60 /* ViewController.swift */,
+				561BA029209C1F6000D64E3B /* CryptFunc.c */,
 				564A832C204D031100088E60 /* Assets.xcassets */,
 				564A832E204D031100088E60 /* Main.storyboard */,
 				564A8331204D031100088E60 /* Info.plist */,
@@ -124,6 +127,7 @@
 				TargetAttributes = {
 					564A8324204D031100088E60 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -206,6 +210,7 @@
 			files = (
 				564A832B204D031100088E60 /* ViewController.swift in Sources */,
 				564A8329204D031100088E60 /* AppDelegate.swift in Sources */,
+				561BA02A209C1F6000D64E3B /* CryptFunc.c in Sources */,
 				564A8339204D041700088E60 /* SupportCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +340,7 @@
 			baseConfigurationReference = 3A6F9E414DE445568E0CE28E /* Pods-RxSwiftMac01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RxSwiftMac01/RxSwiftMac01.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -342,6 +348,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alexiuce.RxSwiftMac01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -351,6 +358,7 @@
 			baseConfigurationReference = 0A21F4630CB0231B8486CF34 /* Pods-RxSwiftMac01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RxSwiftMac01/RxSwiftMac01.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

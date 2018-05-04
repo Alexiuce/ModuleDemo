@@ -9,6 +9,7 @@
 import Cocoa
 import RxSwift
 
+@_silgen_name("md5") func swift_md5(str: String) -> UnsafePointer<UInt8>
 
 enum MYError: Error {
     case myFault
@@ -24,7 +25,8 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        subject4()
+//        subject4()
+      md5_example1()
         
     }
     @IBAction func clickButton(_ sender: NSButton) {
@@ -262,4 +264,18 @@ extension ViewController{
 
 
 }
+
+
+// MARK: - MD5 Example
+extension ViewController{
+    fileprivate func md5_example1(){
+        let text = "abc"
+        let s = String(cString: swift_md5(str: text))
+        print(s)
+        
+    }
+}
+
+
+
 
