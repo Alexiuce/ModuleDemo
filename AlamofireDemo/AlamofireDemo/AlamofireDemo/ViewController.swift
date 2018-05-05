@@ -30,11 +30,13 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        requestExample()
        
     }
 
+    @IBAction func clickButton(_ sender: Any) {
+        request_example()
+        
+    }
 }
 
 
@@ -116,27 +118,30 @@ extension ViewController{
             })
         }
     }
-    fileprivate func socketExample3(){
-        let clientSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+    fileprivate func socketExample3(){    /* 203.107.6.88 daytime server */
+        let clientSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)
         var server = sockaddr_in()
         server.sin_family = sa_family_t(AF_INET)
-        server.sin_addr.s_addr = inet_addr("192.168.0.133")
-        server.sin_port = UInt16(49152).bigEndian
+        server.sin_addr.s_addr = inet_addr("203.107.6.88")
+        server.sin_port = UInt16(123).bigEndian
         
         withUnsafePointer(to: &server) {
             $0.withMemoryRebound(to: sockaddr.self, capacity: 1, {
                 let connectResult = connect(clientSocket, UnsafePointer($0), socklen_t(MemoryLayout<sockaddr>.size))
                 
                 print(connectResult)
-                let sendText = "Hello..."
-                var buffer: [UInt8] = [UInt8](repeating:0, count: 1024)
+//                let sendText = "Hello..."
+                
                 DispatchQueue.global().async(execute: {
+                    print("start...")
+                    var buffer: [UInt8] = [UInt8](repeating:0, count: 1024)
                     let recvCount = recv(clientSocket, &buffer, 1024, 0)
+                    print("waiting.....")
                     print(recvCount)
-                    
+
                 })
-                let sendCount = send(clientSocket, sendText, sendText.count, 0)
-                print(sendCount)
+//                let sendCount = send(clientSocket, sendText, sendText.count, 0)
+//                print(sendCount)
             })
         }
         
@@ -247,5 +252,12 @@ extension ViewController{
         
     }
 
+}
+
+// MARK: - Request Example
+extension ViewController{
+    fileprivate func request_example(){
+        
+    }
 }
 
