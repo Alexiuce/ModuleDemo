@@ -10,60 +10,73 @@ import Cocoa
 import RxSwift
 
 class ViewController: NSViewController {
-
+    
     fileprivate let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        demo1()
-//        demo2()
-//        demo3()
-//        demo4()
-//        demo5()
-        demo6()
-       
+        
     }
-       fileprivate func demo1() {
-        
-            example(of: "ignoreElements") {
-                let strikes = PublishSubject<String>()
-                let bag = DisposeBag()
-                /* 忽略所有onNext事件 */
-                strikes.ignoreElements().subscribe { (_) in
-                    print("you're out")
-                    }.disposed(by: bag)
-                strikes.onNext("hello")
-                strikes.onNext("world")
-                strikes.onNext("yep")
-            }
-        
-            example(of: "elementAt") {
-                let strikes = PublishSubject<String>()
-                let bag = DisposeBag()
-                /* 仅仅响应指定位置onNext的消息*/
-                strikes.elementAt(2).subscribe(onNext: { (el) in
-                    print("element is \(el)")
-                }).disposed(by: bag)
-                strikes.onNext("hello")
-                strikes.onNext("world")
-                strikes.onNext("yep1")
-                strikes.onNext("yep2")
-                strikes.onNext("yep3")
-                strikes.onNext("yep4")
-            }
+    
+    
+    @IBAction func clickIgnore(_ sender: NSButton) {
+        example(of: "ignoreElements") {
+            let strikes = PublishSubject<String>()
+            let bag = DisposeBag()
+            /* 忽略所有onNext事件 */
+            strikes.ignoreElements().subscribe {
+                print($0)
+                print("you're out")
+                }.disposed(by: bag)
+            strikes.onNext("hello")
+            strikes.onNext("world")
+            strikes.onNext("yep")
         }
-   
+    }
+    
+    
+    @IBAction func clickElementAt(_ sender: Any) {
+        demo1()
+    }
+    
+    
+    @IBAction func clickFilter(_ sender: NSButton) {
+        demo2()
+    }
+    
+    @IBAction func clickSkip(_ sender: NSButton) {
+        demo3()
+    }
+    
+    fileprivate func demo1() {
+        
+        example(of: "elementAt") {
+            let strikes = PublishSubject<String>()
+            let bag = DisposeBag()
+            /* 仅仅响应指定位置onNext的消息*/
+            strikes.elementAt(2).subscribe(onNext: { (el) in
+                print("element is \(el)")
+            }).disposed(by: bag)
+            strikes.onNext("hello")
+            strikes.onNext("world")
+            strikes.onNext("yep1")
+            strikes.onNext("yep2")
+            strikes.onNext("yep3")
+            strikes.onNext("yep4")
+        }
+    }
+    
     fileprivate func demo2(){
         example(of: "Filter") {
             /*过滤掉不符合条件的内容*/
-            Observable.of(1,2,3,4,5,6,7,8).filter({ (number) -> Bool in
-                number % 2 == 0
-            }).subscribe(onNext: {
-                print("filter after \($0)")
-            }).disposed(by: bag)
+            Observable.of(1,2,3,4,5,6,7,8).filter{
+                $0 % 2 == 0
+                }.subscribe(onNext: {
+                    print("filter after \($0)")
+                }).disposed(by: bag)
         }
     }
-
+    
     
     fileprivate func demo3(){
         example(of: "Skip") {
@@ -105,42 +118,42 @@ class ViewController: NSViewController {
     
     fileprivate func demo6(){
         /* take 操作与skip相反,take(3)表示取前面三个订阅; skip(3)指忽略前面3个 订阅 */
-//        Observable.of(1,2,3,4,5,6).take(3).subscribe(onNext: { (number) in
-//            print(number)
-//        }).disposed(by: bag)
+        //        Observable.of(1,2,3,4,5,6).take(3).subscribe(onNext: { (number) in
+        //            print(number)
+        //        }).disposed(by: bag)
         /* 与skipWhile 相反 一旦条件不满足,则不再接收后续的onNext */
-//        Observable.of(1,2,3,4,5,6).takeWhile {
-//            $0 > 4
-//        }.subscribe(onNext: {
-//            print($0)
-//        }).disposed(by: bag)
+        //        Observable.of(1,2,3,4,5,6).takeWhile {
+        //            $0 > 4
+        //        }.subscribe(onNext: {
+        //            print($0)
+        //        }).disposed(by: bag)
         
-//        example(of: "enumerated") {
-//            Observable.of(2,2,4,4,6,6).enumerated().takeWhile({ (index ,element) -> Bool in
-//                element % 2 == 0 && index < 3
-//            }).map{$0.element}.subscribe(onNext: {
-//                print($0)
-//            }).disposed(by: bag)
-//        }
+        //        example(of: "enumerated") {
+        //            Observable.of(2,2,4,4,6,6).enumerated().takeWhile({ (index ,element) -> Bool in
+        //                element % 2 == 0 && index < 3
+        //            }).map{$0.element}.subscribe(onNext: {
+        //                print($0)
+        //            }).disposed(by: bag)
+        //        }
         
         /* 与skipUntil 相反 一旦trigger触发,则不再接收*/
-//        example(of: "takeUntil") {
-//
-//            let subject = PublishSubject<String>()
-//            let trigger = PublishSubject<String>()
-//            subject.takeUntil(trigger).subscribe(onNext: {
-//                print($0)
-//            }).disposed(by: bag)
-//            subject.onNext("1")
-//            subject.onNext("2")
-//            trigger.onNext("x")
-//            subject.onNext("3")
-//        }
+        //        example(of: "takeUntil") {
+        //
+        //            let subject = PublishSubject<String>()
+        //            let trigger = PublishSubject<String>()
+        //            subject.takeUntil(trigger).subscribe(onNext: {
+        //                print($0)
+        //            }).disposed(by: bag)
+        //            subject.onNext("1")
+        //            subject.onNext("2")
+        //            trigger.onNext("x")
+        //            subject.onNext("3")
+        //        }
         
         example(of: "distinctUntilChanged") {
-//            Observable.of(1,2,2,4,4,5,6).distinctUntilChanged().subscribe(onNext: {
-//                print($0)
-//            }).disposed(by: bag)
+            //            Observable.of(1,2,2,4,4,5,6).distinctUntilChanged().subscribe(onNext: {
+            //                print($0)
+            //            }).disposed(by: bag)
             Observable.of(1,2,2,4,4,5,6).distinctUntilChanged({ (a, b) -> Bool in
                 print("a= \(a) b = \(b)")
                 return a == b
@@ -155,7 +168,7 @@ class ViewController: NSViewController {
             print("words = \(words)")
         }
     }
-
+    
 }
 
 extension ViewController{
