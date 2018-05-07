@@ -293,7 +293,7 @@ extension ViewController{
                 print("asy \(i)")
             }
            
-            
+        
             globle_queue.sync(flags:.barrier) {
                 print("syn \(i) \(Thread.current)")
             }
