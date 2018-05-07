@@ -24,7 +24,8 @@ fileprivate let Boundary = "postBoundary"
 class ViewController: NSViewController {
     
 
-
+    @IBOutlet weak var textLabel: NSTextField!
+    
     var myCookie = " _redmine_session=BAh7DCIKY3RpbWVsKwd%2FLLtaIg9zZXNzaW9uX2lkIiU0ZmE5ODA5M2ZjN2RhOTViZDEzMzA2MWVkZTg2M2FhYSIKcXVlcnl7CToPcHJvamVjdF9pZGkPOhFjb2x1bW5fbmFtZXMwOg1ncm91cF9ieSIAOgxmaWx0ZXJzewciE2Fzc2lnbmVkX3RvX2lkewc6C3ZhbHVlc1sGIgdtZToNb3BlcmF0b3IiBj0iDnN0YXR1c19pZHsHOwlbBiIAOwoiBm8iEF9jc3JmX3Rva2VuIjFUeGF0Umg0clFIaTNmemd2Und6VGl3VHdRb1YrQ0MzdE5GZ0FaL2hVVGlnPSIMdXNlcl9pZGk7IhZpc3N1ZXNfaW5kZXhfc29ydCIMaWQ6ZGVzYyIKYXRpbWVsKweJW7xa--11a8b0abbb6817896aca3e9b4ee5d63e6943a033"
     
     
@@ -269,7 +270,9 @@ extension ViewController{
         
         bodyData.append(contentText.data(using: .utf8)!)
         
-        requet.httpBody = nil  /* 需要根据http协议拼接 二进制的body数据*/
+      
+        
+        requet.httpBody = bodyData  /* 需要根据http协议拼接 二进制的body数据*/
         URLSession.shared.dataTask(with: requet) { (data, res, err) in
             
         }.resume()
