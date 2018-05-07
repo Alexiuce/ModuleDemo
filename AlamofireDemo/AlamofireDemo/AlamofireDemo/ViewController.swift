@@ -14,7 +14,7 @@ import SwiftyJSON
 
 fileprivate let WEB_URL: String = "http://192.168.0.201:3000/projects/app/issues"
 
-
+fileprivate let Boundary = "postBoundary"
 
 @_silgen_name("socket_connect") func swift_connect(host:UnsafePointer<Int8>,port:Int32) -> Int32
 
@@ -258,6 +258,62 @@ extension ViewController{
 extension ViewController{
     fileprivate func request_example(){
         
+        let postUrl = URL(string: WEB_URL)!
+        var requet = URLRequest(url: postUrl)
+        requet.httpMethod = "POST"
+        requet.setValue("multipart/form-data;boundary=\(Boundary)", forHTTPHeaderField: "Content-Type")
+        
+        var bodyData = Data()
+        var contentText = "--\(Boundary)\r\n"
+        contentText += "Content-Disposition: form-data; name=\"userfile\" "
+        
+        bodyData.append(contentText.data(using: .utf8)!)
+        
+        requet.httpBody = nil  /* 需要根据http协议拼接 二进制的body数据*/
+        URLSession.shared.dataTask(with: requet) { (data, res, err) in
+            
+        }.resume()
+        
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

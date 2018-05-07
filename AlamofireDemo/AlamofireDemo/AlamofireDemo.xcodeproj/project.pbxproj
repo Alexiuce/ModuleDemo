@@ -25,6 +25,7 @@
 		567024ED206B278500A293C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		567024EF206B278500A293C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		567024F0206B278500A293C2 /* AlamofireDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlamofireDemo.entitlements; sourceTree = "<group>"; };
+		56B50572209FD99C00F7E7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B9D2B42E08488A21BEED4D63 /* Pods-AlamofireDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D83787952096F3DA000105F1 /* CSocketFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CSocketFunc.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +79,7 @@
 				567024EC206B278500A293C2 /* Main.storyboard */,
 				567024EF206B278500A293C2 /* Info.plist */,
 				567024F0206B278500A293C2 /* AlamofireDemo.entitlements */,
+				56B50572209FD99C00F7E7BE /* README.md */,
 			);
 			path = AlamofireDemo;
 			sourceTree = "<group>";
