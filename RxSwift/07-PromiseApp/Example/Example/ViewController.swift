@@ -236,6 +236,11 @@ extension ViewController{
         for i in 0...6 {
             serial_queue.async {
                 print("\(i): \(Thread.current)")
+                
+                /**互斥锁
+                 objc_sync_enter(self)
+                 objc_sync_exit(self)
+                 */
             }
         }
         print("end ....")
@@ -266,18 +271,18 @@ extension ViewController{
         let queue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
         
         
-//        queue.async {
-//            print("Login()")
-//        }
-//        queue.async {
-//            print("CheckName()")
-//        }
-//        queue.async {
-//            print("PayMoney()")
-//        }
-//        queue.async {
-//            print("GetInfo()")
-//        }
+        queue.async {
+            print("Login()")
+        }
+        queue.async {
+            print("CheckName()")
+        }
+        queue.async {
+            print("PayMoney()")
+        }
+        queue.async {
+            print("GetInfo()")
+        }
         
         
         
@@ -362,6 +367,7 @@ extension ViewController{
             
             print("finished \(Thread.current)")
         }
+       
     
     }
 
@@ -426,7 +432,7 @@ extension ViewController{
         /* leeway : 时间误差容忍度, 例如  +100 ~ -100 */
         t.schedule(deadline:.now(), repeating:DispatchTimeInterval.seconds(1), leeway: DispatchTimeInterval.milliseconds(100))
         
-        
+    
         t.setEventHandler {
             print("tim....er....")
         }

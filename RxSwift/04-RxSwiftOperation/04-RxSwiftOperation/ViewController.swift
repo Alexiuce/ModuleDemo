@@ -105,7 +105,6 @@ class ViewController: NSViewController {
         }
     }
     
-    
     fileprivate func demo3(){
         example(of: "Skip") {
             /** 忽略指定前面的元素*/
@@ -223,4 +222,6 @@ extension ViewController{
     }
     
 }
+
+
 
