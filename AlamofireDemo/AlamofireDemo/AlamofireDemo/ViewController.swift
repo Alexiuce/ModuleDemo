@@ -285,10 +285,12 @@ extension ViewController{
         p.name = "alex"
         p.age = 20
         p.work = "dev"
-//        let n = p.value(forKey: "name")
-//        print(n)
+
         let pd = p.dictionaryWithValues(forKeys: ["name","age","work"])
         print(pd)
+        print(p)
+       
+        print(String(format: "%0x", p.hash))
         
         /** */
         let jst = ["name":"tom", "age":18, "friends":["jobs","steven","gates","philer"]] as [String : Any]
@@ -298,7 +300,7 @@ extension ViewController{
         print(jsr ?? "")
      
         /** */
-        let urlString = "http://www.httpbin.org/get"
+        let urlString = "http://www.httpbin.org/headers"
         let url = URL(string: urlString)!
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { (data, res, err) in
