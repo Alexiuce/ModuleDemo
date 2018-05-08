@@ -36,7 +36,8 @@ class ViewController: NSViewController {
     
     
     @IBAction func clickElementAt(_ sender: Any) {
-        demo1()
+//        demo1()
+        shareDemo()
     }
     
     
@@ -74,6 +75,9 @@ class ViewController: NSViewController {
     
     @IBAction func clickDistinctUntilChanged(_ sender: NSButton) {
         demo6()
+        
+        
+        
     }
     
     fileprivate func demo1() {
@@ -85,12 +89,17 @@ class ViewController: NSViewController {
             strikes.elementAt(2).subscribe(onNext: { (el) in
                 print("element is \(el)")
             }).disposed(by: bag)
+
+            
             strikes.onNext("hello")
             strikes.onNext("world")
             strikes.onNext("yep1")
             strikes.onNext("yep2")
             strikes.onNext("yep3")
             strikes.onNext("yep4")
+            
+            
+            
         }
     }
     
@@ -218,6 +227,39 @@ extension ViewController{
         guard let words = formatter.string(from: 12320) else{ return }
         print("words = \(words)")
         
+        
+    }
+    fileprivate func shareDemo(){
+        
+        var n = 0
+        
+        let numbers = Observable<Int>.create { (observer) -> Disposable in
+            n += 1
+            observer.onNext(n)
+            observer.onNext(n + 1)
+            observer.onNext(n + 2)
+            observer.onNext(n + 3)
+            
+            return Disposables.create()
+        }.share()
+        
+        numbers.subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        
+        numbers.subscribe(onNext: {
+            print("a) \($0)")
+        }).disposed(by: bag)
+       
+        numbers.filter{
+         $0 < 2
+        }.subscribe(onNext: {
+            print("share1 \($0)")
+        }).disposed(by: bag)
+        
+        numbers.subscribe(onNext: {
+            print("share2 \($0)")
+        }).disposed(by: bag)
         
     }
     
