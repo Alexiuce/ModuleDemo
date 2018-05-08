@@ -35,7 +35,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func clickButton(_ sender: Any) {
-        request_example()
+        jsonSerizalition_example()
         
     }
 }
@@ -274,6 +274,37 @@ extension ViewController{
         
         requet.httpBody = bodyData  /* 需要根据http协议拼接 二进制的body数据*/
         URLSession.shared.dataTask(with: requet) { (data, res, err) in
+            
+        }.resume()
+        
+    }
+    fileprivate func jsonSerizalition_example(){
+        
+        /** */
+        let p = Person()
+        p.name = "alex"
+        p.age = 20
+        p.work = "dev"
+//        let n = p.value(forKey: "name")
+//        print(n)
+        let pd = p.dictionaryWithValues(forKeys: ["name","age","work"])
+        print(pd)
+        
+        /** */
+        let jst = ["name":"tom", "age":18, "friends":["jobs","steven","gates","philer"]] as [String : Any]
+        let jsd = try? JSONSerialization.data(withJSONObject: jst, options:.init(rawValue: 0))
+        guard let jd = jsd else { return  }
+        let jsr = String(data: jd, encoding:.utf8)
+        print(jsr ?? "")
+     
+        /** */
+        let urlString = "http://www.httpbin.org/get"
+        let url = URL(string: urlString)!
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { (data, res, err) in
+            guard  let data = data, let result = String(data: data, encoding: .utf8)  else {return}
+            
+            print(result)
             
         }.resume()
         
