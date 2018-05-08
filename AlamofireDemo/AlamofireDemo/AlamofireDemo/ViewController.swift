@@ -35,7 +35,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func clickButton(_ sender: Any) {
-        jsonSerizalition_example()
+       redmineTest()
         
     }
 }
@@ -309,6 +309,23 @@ extension ViewController{
             print(result)
             
         }.resume()
+        
+    }
+    fileprivate func redmineTest(){
+        let urlString = "http://192.168.0.201:3000/issues.json"
+        
+        request(urlString).responseData { (response) in
+            guard let data = response.data, let result = String(data: data, encoding: .utf8) else {return}
+            print(result)
+        }
+//
+        
+//        request(urlString, method: .post, parameters: ["username":"caijinzhu","password":"123456","key":"9DiysILYt90HSWfGs3FsLpjVPrmRGwQ3cpWb8KgUgDs="], encoding: URLEncoding.default).responseString { (respone) in
+//            print(respone.description)
+//        }
+        
+        
+        
         
     }
 }
