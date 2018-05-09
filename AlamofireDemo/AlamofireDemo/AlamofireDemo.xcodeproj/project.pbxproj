@@ -12,6 +12,7 @@
 		567024EB206B278500A293C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567024EA206B278500A293C2 /* Assets.xcassets */; };
 		567024EE206B278500A293C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567024EC206B278500A293C2 /* Main.storyboard */; };
 		56D37BE720A135A80022E4B6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D37BE620A135A80022E4B6 /* Person.swift */; };
+		56D37BE920A27CF10022E4B6 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D37BE820A27CF10022E4B6 /* Downloader.swift */; };
 		C664F7836FE0791B1A8BD271 /* Pods_AlamofireDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048F5096E6D959726170B4F2 /* Pods_AlamofireDemo.framework */; };
 		D83787962096F3DA000105F1 /* CSocketFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = D83787952096F3DA000105F1 /* CSocketFunc.c */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		567024F0206B278500A293C2 /* AlamofireDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlamofireDemo.entitlements; sourceTree = "<group>"; };
 		56B50572209FD99C00F7E7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		56D37BE620A135A80022E4B6 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		56D37BE820A27CF10022E4B6 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		B9D2B42E08488A21BEED4D63 /* Pods-AlamofireDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D83787952096F3DA000105F1 /* CSocketFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CSocketFunc.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 			children = (
 				567024E6206B278500A293C2 /* AppDelegate.swift */,
 				567024E8206B278500A293C2 /* ViewController.swift */,
+				56D37BE820A27CF10022E4B6 /* Downloader.swift */,
 				56D37BE620A135A80022E4B6 /* Person.swift */,
 				D83787952096F3DA000105F1 /* CSocketFunc.c */,
 				567024EA206B278500A293C2 /* Assets.xcassets */,
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D37BE920A27CF10022E4B6 /* Downloader.swift in Sources */,
 				D83787962096F3DA000105F1 /* CSocketFunc.c in Sources */,
 				567024E9206B278500A293C2 /* ViewController.swift in Sources */,
 				56D37BE720A135A80022E4B6 /* Person.swift in Sources */,

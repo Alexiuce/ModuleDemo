@@ -318,15 +318,6 @@ extension ViewController{
             guard let data = response.data, let result = String(data: data, encoding: .utf8) else {return}
             print(result)
         }
-//
-        
-//        request(urlString, method: .post, parameters: ["username":"caijinzhu","password":"123456","key":"9DiysILYt90HSWfGs3FsLpjVPrmRGwQ3cpWb8KgUgDs="], encoding: URLEncoding.default).responseString { (respone) in
-//            print(respone.description)
-//        }
-        
-        
-        
-        
     }
 }
 
