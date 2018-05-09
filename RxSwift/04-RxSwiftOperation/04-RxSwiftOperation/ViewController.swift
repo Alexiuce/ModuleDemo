@@ -235,14 +235,17 @@ extension ViewController{
         
         let numbers = Observable<Int>.create { (observer) -> Disposable in
             n += 1
+            print("----create---\(n)")
             observer.onNext(n)
             observer.onNext(n + 1)
             observer.onNext(n + 2)
             observer.onNext(n + 3)
             
             return Disposables.create()
-        }.share()
+        }.share(replay: 2, scope: SubjectLifetimeScope.whileConnected)
         
+        
+    
         numbers.subscribe(onNext: {
             print($0)
         }).disposed(by: bag)
@@ -251,15 +254,23 @@ extension ViewController{
             print("a) \($0)")
         }).disposed(by: bag)
        
-        numbers.filter{
-         $0 < 2
-        }.subscribe(onNext: {
-            print("share1 \($0)")
-        }).disposed(by: bag)
         
         numbers.subscribe(onNext: {
             print("share2 \($0)")
         }).disposed(by: bag)
+        
+        
+        let p = PublishSubject<String>()
+        
+        p.share().subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        p.share().subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        p.onNext("ssss")
+        
+       
         
     }
     
