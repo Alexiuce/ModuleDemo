@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
     }
     
@@ -42,7 +43,8 @@ class ViewController: NSViewController {
     
     
     @IBAction func clickFilter(_ sender: NSButton) {
-        demo2()
+//        demo2()
+        toArrayExample()
     }
     
     @IBAction func clickSkip(_ sender: NSButton) {
@@ -269,8 +271,24 @@ extension ViewController{
             print($0)
         }).disposed(by: bag)
         p.onNext("ssss")
+    }
+    
+    fileprivate func toArrayExample(){
         
-       
+        Observable.of("1","2","3").toArray().subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        
+        
+        
+        
+        let subject = PublishSubject<String>()
+        
+        subject.subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        subject.onNext("10")
+        subject.onNext("20")
         
     }
     
