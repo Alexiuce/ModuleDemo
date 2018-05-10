@@ -35,7 +35,8 @@ class ViewController: NSViewController {
     }
 
     @IBAction func clickButton(_ sender: Any) {
-       redmineTest()
+       jsonSerizalition_example()
+    
         
     }
 }
@@ -300,12 +301,15 @@ extension ViewController{
         print(jsr ?? "")
      
         /** */
-        let urlString = "http://www.httpbin.org/headers"
+        let urlString = "http://www.httpbin.org/get"
         let url = URL(string: urlString)!
         let request = URLRequest(url: url)
+//        request.httpMethod = "post"
+//        request.addValue("bytes=2-10", forHTTPHeaderField: "Range")
+        
         URLSession.shared.dataTask(with: request) { (data, res, err) in
             guard  let data = data, let result = String(data: data, encoding: .utf8)  else {return}
-            
+            print("=======")
             print(result)
             
         }.resume()
