@@ -76,8 +76,8 @@ class ViewController: NSViewController {
     
     
     @IBAction func clickDistinctUntilChanged(_ sender: NSButton) {
-        demo6()
-        
+//        demo6()
+        obsFlatmapExample()
         
         
     }
@@ -280,15 +280,29 @@ extension ViewController{
         }).disposed(by: bag)
         
         
-        
-        
         let subject = PublishSubject<String>()
         
-        subject.subscribe(onNext: {
+        subject.asObservable().toArray().subscribe(onNext: {
             print($0)
         }).disposed(by: bag)
         subject.onNext("10")
         subject.onNext("20")
+        
+    }
+    
+    fileprivate func obsFlatmapExample(){
+        
+        let ryan = Student(score: BehaviorSubject(value: 80))
+        let charlotter = Student(score: BehaviorSubject(value: 70))
+        let student = PublishSubject<Student>()
+        
+        student.flatMap {
+            $0.score
+            }.subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
+        student.onNext(ryan)
+        student.onNext(charlotter)
         
     }
     

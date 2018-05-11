@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56ADDD2020A51F64009BCEFC /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ADDD1F20A51F64009BCEFC /* Student.swift */; };
 		56E202F2205610C200C5FF29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E202F1205610C200C5FF29 /* AppDelegate.swift */; };
 		56E202F4205610C200C5FF29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E202F3205610C200C5FF29 /* ViewController.swift */; };
 		56E202F6205610C200C5FF29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E202F5205610C200C5FF29 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		01D56F1FD5F0DE1F405DB7B0 /* Pods_04_RxSwiftOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_04_RxSwiftOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56ADDD1F20A51F64009BCEFC /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		56E202EE205610C200C5FF29 /* 04-RxSwiftOperation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04-RxSwiftOperation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E202F1205610C200C5FF29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56E202F3205610C200C5FF29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				56E202F1205610C200C5FF29 /* AppDelegate.swift */,
 				56E202F3205610C200C5FF29 /* ViewController.swift */,
+				56ADDD1F20A51F64009BCEFC /* Student.swift */,
 				56E202F5205610C200C5FF29 /* Assets.xcassets */,
 				56E202F7205610C200C5FF29 /* Main.storyboard */,
 				56E202FA205610C200C5FF29 /* Info.plist */,
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E202F4205610C200C5FF29 /* ViewController.swift in Sources */,
+				56ADDD2020A51F64009BCEFC /* Student.swift in Sources */,
 				56E202F2205610C200C5FF29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
