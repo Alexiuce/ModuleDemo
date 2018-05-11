@@ -37,7 +37,7 @@ class ViewController: NSViewController {
 
     @IBAction func clickButton(_ sender: Any) {
         
-        showProcess()
+        
         
     }
 }
