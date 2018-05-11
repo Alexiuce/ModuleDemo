@@ -71,7 +71,8 @@ class ViewController: NSViewController {
     
     
     @IBAction func clickTakeUntil(_ sender: NSButton) {
-        takeUntilDemo()
+//        takeUntilDemo()
+        flatmapLastExample()
     }
     
     
@@ -317,6 +318,26 @@ extension ViewController{
         ryan.score.onNext(85)
         student.onNext(charlotter)
         charlotter.score.onNext(95)
+        ryan.score.onNext(99)
+        
+    }
+    
+    fileprivate func flatmapLastExample(){
+        let ryan = Student(score: BehaviorSubject(value: 80))
+        let charlotter = Student(score: BehaviorSubject(value: 70))
+        let student = PublishSubject<Student>()
+        student.flatMapLatest {
+            $0.score
+            }.subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
+        
+        student.onNext(ryan)
+        ryan.score.onNext(91)
+        student.onNext(charlotter)
+        charlotter.score.onNext(92)
+        ryan.score.onNext(93)
+        charlotter.score.onNext(94)
         
     }
     
