@@ -14,6 +14,7 @@
 		5670250C206B7FFF00A293C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5670250B206B7FFF00A293C2 /* Assets.xcassets */; };
 		5670250F206B7FFF00A293C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5670250D206B7FFF00A293C2 /* LaunchScreen.storyboard */; };
 		56702518206B80F300A293C2 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56702517206B80F300A293C2 /* JavaScriptCore.framework */; };
+		56B68BD520A57873004F67D9 /* BLTServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B68BD420A57873004F67D9 /* BLTServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5670250E206B7FFF00A293C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56702510206B7FFF00A293C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56702517206B80F300A293C2 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		56B68BD420A57873004F67D9 /* BLTServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				56702504206B7FFF00A293C2 /* AppDelegate.swift */,
 				56702506206B7FFF00A293C2 /* ViewController.swift */,
+				56B68BD320A57835004F67D9 /* Bluetooth */,
 				56702508206B7FFF00A293C2 /* Main.storyboard */,
 				5670250B206B7FFF00A293C2 /* Assets.xcassets */,
 				5670250D206B7FFF00A293C2 /* LaunchScreen.storyboard */,
@@ -106,6 +109,14 @@
 				56702517206B80F300A293C2 /* JavaScriptCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56B68BD320A57835004F67D9 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				56B68BD420A57873004F67D9 /* BLTServer.swift */,
+			);
+			path = Bluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 			files = (
 				56702507206B7FFF00A293C2 /* ViewController.swift in Sources */,
 				56702505206B7FFF00A293C2 /* AppDelegate.swift in Sources */,
+				56B68BD520A57873004F67D9 /* BLTServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

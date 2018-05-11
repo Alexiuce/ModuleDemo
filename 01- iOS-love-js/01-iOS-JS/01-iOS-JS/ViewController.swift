@@ -12,12 +12,16 @@ import JavaScriptCore
 
 
 class ViewController: UIViewController {
+    
+    let server = BLTServer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
     }
 
+    @IBAction func scan(_ sender: UIButton) {
+        server.starScan()
+    }
 }
 
