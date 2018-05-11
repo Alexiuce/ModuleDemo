@@ -23,7 +23,8 @@ fileprivate let Boundary = "postBoundary"
 
 class ViewController: NSViewController {
     
-
+    @IBOutlet weak var pv: XCProcessView!
+    
     @IBOutlet weak var textLabel: NSTextField!
     
     var myCookie = " _redmine_session=BAh7DCIKY3RpbWVsKwd%2FLLtaIg9zZXNzaW9uX2lkIiU0ZmE5ODA5M2ZjN2RhOTViZDEzMzA2MWVkZTg2M2FhYSIKcXVlcnl7CToPcHJvamVjdF9pZGkPOhFjb2x1bW5fbmFtZXMwOg1ncm91cF9ieSIAOgxmaWx0ZXJzewciE2Fzc2lnbmVkX3RvX2lkewc6C3ZhbHVlc1sGIgdtZToNb3BlcmF0b3IiBj0iDnN0YXR1c19pZHsHOwlbBiIAOwoiBm8iEF9jc3JmX3Rva2VuIjFUeGF0Umg0clFIaTNmemd2Und6VGl3VHdRb1YrQ0MzdE5GZ0FaL2hVVGlnPSIMdXNlcl9pZGk7IhZpc3N1ZXNfaW5kZXhfc29ydCIMaWQ6ZGVzYyIKYXRpbWVsKweJW7xa--11a8b0abbb6817896aca3e9b4ee5d63e6943a033"
@@ -35,12 +36,21 @@ class ViewController: NSViewController {
     }
 
     @IBAction func clickButton(_ sender: Any) {
-       jsonSerizalition_example()
-    
+        
+        showProcess()
         
     }
 }
 
+// MARK: - UI function
+extension ViewController{
+    fileprivate func showProcess(){
+        
+        pv.process += 10
+        
+    }
+    
+}
 
 /** Swift 关键字
  @discardableResult  : 表示可以不使用一个方法的返回值 而不会提示警告信息
@@ -315,6 +325,7 @@ extension ViewController{
         }.resume()
         
     }
+    
     fileprivate func redmineTest(){
         let urlString = "http://192.168.0.201:3000/issues.json"
         

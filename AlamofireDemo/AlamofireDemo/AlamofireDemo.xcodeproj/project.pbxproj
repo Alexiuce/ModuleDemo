@@ -11,6 +11,7 @@
 		567024E9206B278500A293C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567024E8206B278500A293C2 /* ViewController.swift */; };
 		567024EB206B278500A293C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567024EA206B278500A293C2 /* Assets.xcassets */; };
 		567024EE206B278500A293C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567024EC206B278500A293C2 /* Main.storyboard */; };
+		56ADDD2220A52CF9009BCEFC /* XCProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ADDD2120A52CF9009BCEFC /* XCProcessView.swift */; };
 		56D37BE720A135A80022E4B6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D37BE620A135A80022E4B6 /* Person.swift */; };
 		56D37BE920A27CF10022E4B6 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D37BE820A27CF10022E4B6 /* Downloader.swift */; };
 		C664F7836FE0791B1A8BD271 /* Pods_AlamofireDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048F5096E6D959726170B4F2 /* Pods_AlamofireDemo.framework */; };
@@ -27,6 +28,7 @@
 		567024ED206B278500A293C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		567024EF206B278500A293C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		567024F0206B278500A293C2 /* AlamofireDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlamofireDemo.entitlements; sourceTree = "<group>"; };
+		56ADDD2120A52CF9009BCEFC /* XCProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCProcessView.swift; sourceTree = "<group>"; };
 		56B50572209FD99C00F7E7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		56D37BE620A135A80022E4B6 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		56D37BE820A27CF10022E4B6 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				567024E6206B278500A293C2 /* AppDelegate.swift */,
 				567024E8206B278500A293C2 /* ViewController.swift */,
+				56ADDD2120A52CF9009BCEFC /* XCProcessView.swift */,
 				56D37BE820A27CF10022E4B6 /* Downloader.swift */,
 				56D37BE620A135A80022E4B6 /* Person.swift */,
 				D83787952096F3DA000105F1 /* CSocketFunc.c */,
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D37BE920A27CF10022E4B6 /* Downloader.swift in Sources */,
+				56ADDD2220A52CF9009BCEFC /* XCProcessView.swift in Sources */,
 				D83787962096F3DA000105F1 /* CSocketFunc.c in Sources */,
 				567024E9206B278500A293C2 /* ViewController.swift in Sources */,
 				56D37BE720A135A80022E4B6 /* Person.swift in Sources */,
