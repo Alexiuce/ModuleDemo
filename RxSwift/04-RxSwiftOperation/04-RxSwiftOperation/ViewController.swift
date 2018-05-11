@@ -296,13 +296,27 @@ extension ViewController{
         let charlotter = Student(score: BehaviorSubject(value: 70))
         let student = PublishSubject<Student>()
         
+        
+        /**
+        student.map{
+            $0.score
+            }.subscribe(onNext: {
+                let r = try? $0.value()
+                print(r ?? "o")
+            }).disposed(by: bag)
+         */
+ 
+        
+        
         student.flatMap {
             $0.score
             }.subscribe(onNext: {
                 print($0)
             }).disposed(by: bag)
         student.onNext(ryan)
+        ryan.score.onNext(85)
         student.onNext(charlotter)
+        charlotter.score.onNext(95)
         
     }
     
