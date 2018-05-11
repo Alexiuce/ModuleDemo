@@ -9,6 +9,11 @@
 import Cocoa
 import RxSwift
 
+enum MyError: Error {
+    case cerror
+}
+
+
 class ViewController: NSViewController {
     
     fileprivate let bag = DisposeBag()
@@ -327,19 +332,24 @@ extension ViewController{
         let charlotter = Student(score: BehaviorSubject(value: 70))
         let student = PublishSubject<Student>()
         student.flatMapLatest {
-            $0.score
+            $0.score.materialize()  /**meterialize 将流信息封装为一个事件对象, 这样一个错误或者完成事件发生时,也会被封装为另一个对象发送,而不会停止被观察的流*/
             }.subscribe(onNext: {
+                print($0)
+            }, onError:{
                 print($0)
             }).disposed(by: bag)
         
         student.onNext(ryan)
         ryan.score.onNext(91)
+        ryan.score.onError(MyError.cerror)    /** error event 之后, 将不会在发送 后续的数据,observable 已经停止 */
         student.onNext(charlotter)
         charlotter.score.onNext(92)
-        ryan.score.onNext(93)
+        ryan.score.onNext(93)          /** flatmaplast 仅会跟踪处理最新的数据 */
         charlotter.score.onNext(94)
         
     }
+    
+   
     
 }
 
