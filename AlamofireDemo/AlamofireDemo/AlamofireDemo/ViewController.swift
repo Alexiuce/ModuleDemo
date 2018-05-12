@@ -37,7 +37,7 @@ class ViewController: NSViewController {
 
     @IBAction func clickButton(_ sender: Any) {
         
-        
+        session_example()
         
     }
 }
@@ -286,9 +286,10 @@ extension ViewController{
         requet.httpBody = bodyData  /* 需要根据http协议拼接 二进制的body数据*/
         URLSession.shared.dataTask(with: requet) { (data, res, err) in
             
-        }.resume()
+            }.resume()
         
     }
+    
     fileprivate func jsonSerizalition_example(){
         
         /** */
@@ -334,6 +335,20 @@ extension ViewController{
             print(result)
         }
     }
+    fileprivate func session_example(){
+        
+        let url = URL(string: "http://www.httpbin.org/get")!
+        
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: url) { (data, response, error) in
+            guard let d = data , let result = String(data: d, encoding: .utf8) else {return}
+            print(result)
+        }
+        dataTask.resume()
+    }
+    
+    
 }
 
 
