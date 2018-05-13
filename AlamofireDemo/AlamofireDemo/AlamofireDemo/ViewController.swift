@@ -37,7 +37,7 @@ class ViewController: NSViewController {
 
     @IBAction func clickButton(_ sender: Any) {
         
-        session_example()
+        session_downloadTask()
         
     }
 }
@@ -348,6 +348,21 @@ extension ViewController{
         dataTask.resume()
     }
     
+    fileprivate func session_downloadTask(){
+        
+        let url = URL(string: "http://www.httpbin.org/image/png")!
+        
+        let session = URLSession.shared
+        let downloadTask = session.downloadTask(with: url) { (location, response, error) in
+            print(location ?? "no ..")
+            /** 下载后会保存为临时文件 ,并自动删除, 下载未完成,文件不会被删除
+             获取下载进度需要使用delegate, 可以指定delegate的执行线程
+             如果设置delegate 则session 不能使用回调block方式
+             */
+            
+        }
+        downloadTask.resume()
+    }
     
 }
 
