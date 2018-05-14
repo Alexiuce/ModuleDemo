@@ -368,10 +368,16 @@ extension ViewController{
         downloadTask.resume()
     }
     fileprivate func session_uploadTask(){
+        /** URLSession 对delegate 强引用
+         调用   session.invalidateAndCancel()  取消时 session将不能再使用,否则会crash
+         session.finishTasksAndInvalidate()  : 等待任务完成后使session无效
+         */
+        
         let url = URL(string: "http://www.httpbin.org/put")!
         var request = URLRequest(url: url)
         request.httpMethod = "put"
         let session = URLSession(configuration:.default)
+       
         let up_data = "Test ok".data(using: .utf8)
         let uploadTask = session.uploadTask(with: request, from: up_data) { (data, response, error) in
             guard let d = data, let result = String(data: d, encoding:.utf8) else {return}
