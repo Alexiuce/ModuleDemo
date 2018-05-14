@@ -8,6 +8,7 @@
 
 import Cocoa
 import RxSwift
+import RxCocoa
 
 enum MyError: Error {
     case cerror
@@ -71,7 +72,8 @@ class ViewController: NSViewController {
     }
     
     @IBAction func clickTakeWhile(_ sender: NSButton){
-        takeWhileDemo()
+//        takeWhileDemo()
+        request_example()
     }
     
     
@@ -349,6 +351,28 @@ extension ViewController{
         
     }
     
+    fileprivate func request_example(){
+        
+        let url = URL(string: "http://www.httpbin.org/get")
+        let obserable = url.map {
+             URLRequest(url: $0)
+            }.flatMap {
+             URLSession.shared.rx.response(request: $0)
+            }?.share(replay: 1, scope:.whileConnected)
+        
+        obserable?.subscribe(onNext: { (response) in
+            print(String(data: response.data, encoding: .utf8) ?? "s e")
+            
+        }, onError: {
+            print($0.localizedDescription)
+        }, onCompleted: {
+            print("completed...")
+        }, onDisposed: {
+            print("disposed...")
+        }).disposed(by: bag)
+        
+        
+    }
    
     
 }
