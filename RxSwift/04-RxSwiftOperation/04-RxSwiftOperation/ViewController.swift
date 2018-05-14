@@ -370,8 +370,6 @@ extension ViewController{
         }, onDisposed: {
             print("disposed...")
         }).disposed(by: bag)
-        
-        
     }
    
     
