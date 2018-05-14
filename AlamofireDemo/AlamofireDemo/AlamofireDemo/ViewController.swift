@@ -373,17 +373,23 @@ extension ViewController{
          session.finishTasksAndInvalidate()  : 等待任务完成后使session无效
          */
         
-        let url = URL(string: "http://www.httpbin.org/put")!
+        let url = URL(string: "http://www.httpbin.org/post")!
         var request = URLRequest(url: url)
-        request.httpMethod = "put"
+        request.httpMethod = "post"
+        request.httpBody = "Test ok".data(using: .utf8)
+       /**
         let session = URLSession(configuration:.default)
        
-        let up_data = "Test ok".data(using: .utf8)
         let uploadTask = session.uploadTask(with: request, from: up_data) { (data, response, error) in
             guard let d = data, let result = String(data: d, encoding:.utf8) else {return}
             print(result)
         }
-        uploadTask.resume()
+         */
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let body = data , let result = String(data: body, encoding: .utf8) else {return}
+            print(result)
+        }
+        task.resume()
         
     }
     
