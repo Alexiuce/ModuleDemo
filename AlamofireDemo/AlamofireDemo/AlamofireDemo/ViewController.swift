@@ -37,7 +37,7 @@ class ViewController: NSViewController {
 
     @IBAction func clickButton(_ sender: Any) {
         
-        session_downloadTask()
+        session_uploadTask()
         
     }
 }
@@ -365,9 +365,20 @@ extension ViewController{
             
         }
         
-        
-        
         downloadTask.resume()
+    }
+    fileprivate func session_uploadTask(){
+        let url = URL(string: "http://www.httpbin.org/put")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "put"
+        let session = URLSession(configuration:.default)
+        let up_data = "Test ok".data(using: .utf8)
+        let uploadTask = session.uploadTask(with: request, from: up_data) { (data, response, error) in
+            guard let d = data, let result = String(data: d, encoding:.utf8) else {return}
+            print(result)
+        }
+        uploadTask.resume()
+        
     }
     
 }
