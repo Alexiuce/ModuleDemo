@@ -27,6 +27,15 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var textLabel: NSTextField!
     
+    
+    lazy var url_session : URLSession = {
+        let c = URLSessionConfiguration.default
+        /** 统一设置请求头/请求缓存/最大连接数/超时 */
+        c.httpAdditionalHeaders = ["ua":"hello~"]
+        let s = URLSession(configuration: c, delegate: self, delegateQueue: OperationQueue.main)
+        return s
+    }()
+    
     var myCookie = " _redmine_session=BAh7DCIKY3RpbWVsKwd%2FLLtaIg9zZXNzaW9uX2lkIiU0ZmE5ODA5M2ZjN2RhOTViZDEzMzA2MWVkZTg2M2FhYSIKcXVlcnl7CToPcHJvamVjdF9pZGkPOhFjb2x1bW5fbmFtZXMwOg1ncm91cF9ieSIAOgxmaWx0ZXJzewciE2Fzc2lnbmVkX3RvX2lkewc6C3ZhbHVlc1sGIgdtZToNb3BlcmF0b3IiBj0iDnN0YXR1c19pZHsHOwlbBiIAOwoiBm8iEF9jc3JmX3Rva2VuIjFUeGF0Umg0clFIaTNmemd2Und6VGl3VHdRb1YrQ0MzdE5GZ0FaL2hVVGlnPSIMdXNlcl9pZGk7IhZpc3N1ZXNfaW5kZXhfc29ydCIMaWQ6ZGVzYyIKYXRpbWVsKweJW7xa--11a8b0abbb6817896aca3e9b4ee5d63e6943a033"
     
     
@@ -37,7 +46,7 @@ class ViewController: NSViewController {
 
     @IBAction func clickButton(_ sender: Any) {
         
-        session_uploadTask()
+        session_https()
         
     }
 }
@@ -75,6 +84,7 @@ extension ViewController{
  }
  */
 
+// MARK: - Session & Socket
 extension ViewController{
     fileprivate func urlsessionExample(){
         
@@ -373,7 +383,7 @@ extension ViewController{
          session.finishTasksAndInvalidate()  : 等待任务完成后使session无效
          */
         
-        let url = URL(string: "http://www.httpbin.org/post")!
+        let url = URL(string: "https://www.httpbin.org/post")!
         var request = URLRequest(url: url)
         request.httpMethod = "post"
         request.httpBody = "Test ok".data(using: .utf8)
@@ -393,11 +403,35 @@ extension ViewController{
         
     }
     
+    fileprivate func session_https(){
+        let url = URL(string: "https://www.httpbin.org/post")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "post"
+        request.httpBody = "Test ok".data(using: .utf8)
+        
+        let task = url_session.dataTask(with: request) { (body, response, error) in
+            guard let d = body , let result = String(data: d, encoding: .utf8) else {return}
+            print(result)
+        }
+        task.resume()
+    }
+    
 }
 
 
 
-
+extension ViewController: URLSessionTaskDelegate{
+    
+    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        
+        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+            let credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
+            completionHandler(.useCredential,credential)
+        }
+        
+        
+    }
+}
 
 
 
