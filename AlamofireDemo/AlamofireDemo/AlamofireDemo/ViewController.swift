@@ -41,7 +41,17 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        /** array slice */
+        ["a","b","c","d","c","1","3"].prefix(3).forEach { (r) in
+            print(r)
+        }
+        
+        let a = Locale.preferredLanguages.prefix(6)
+            .enumerated().map { index, languageCode in
+            let quality = 1.0 - (Double(index) * 0.1)
+            return "\(languageCode);q=\(quality)"
+            }.joined(separator: ", ")
+       print(a)
     }
 
     @IBAction func clickButton(_ sender: Any) {
