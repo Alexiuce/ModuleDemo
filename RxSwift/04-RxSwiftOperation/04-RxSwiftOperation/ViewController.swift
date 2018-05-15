@@ -23,6 +23,9 @@ class ViewController: NSViewController {
         super.viewDidLoad()
     
         
+        let isInclude = 200 ..< 300 ~= 290
+        print(isInclude)
+        
     }
     
     
