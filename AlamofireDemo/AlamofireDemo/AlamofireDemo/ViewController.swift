@@ -205,6 +205,7 @@ extension ViewController{
             print("request: \(String(describing: response.request))")
             print("response: \(String(describing: response.response))")
             print("result: \(response.result)")
+            print("error: \(response.error?.localizedDescription ?? "no error" )")
             
             if let json = response.result.value {
                 print("JSON: \(json)")
