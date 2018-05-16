@@ -184,6 +184,20 @@ extension ViewController{
     }
     
     fileprivate func af_example1(){
+        
+        
+        /** base url */
+        let host = "https://httpbin.org/v1/test/"        /** 如果有path 则必须以 / 结尾,否则baseurl不会记录最后的path路径 */
+        let baseUrl = URL(string: host)
+        let url = URL(string: "get", relativeTo: baseUrl)     /** url = https://httpbin.org/v1/test/get */
+        print("URL : \(url?.absoluteString ?? "")")
+        let url1 = URL(string: "/get", relativeTo: baseUrl)   /** url1 = https://httpbin.org/get */
+        print("URL1 : \(url1?.absoluteString ?? "")")
+        let url2 = URL(string: "https://www.baidu.com/", relativeTo: baseUrl)  /** url2 = https://www.baidu.com/ */
+        print("URL2 : \(url2?.absoluteString ?? "")")
+        
+        /** Alamofire request have five response handle */
+        
         let request = Alamofire.request("https://httpbin.org/get")
         request.responseJSON { (response) in
            
@@ -200,9 +214,11 @@ extension ViewController{
             }
         }
         
+        /**
         request.responseJSON(queue: DispatchQueue.main, options:.mutableLeaves) { (response) in
-            
+         
         }
+         */
         
         
     }
