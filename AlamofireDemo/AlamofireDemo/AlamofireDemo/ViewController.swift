@@ -41,10 +41,14 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         /** array slice */
-        ["a","b","c","d","c","1","3"].prefix(3).forEach { (r) in
+        let arr = ["a","b","c","d","c","1","3"]
+        arr.prefix(3).forEach { (r) in
             print(r)
         }
+        let ja = arr.joined(separator: "!")
+        print(ja)
         
         let a = Locale.preferredLanguages.prefix(6)
             .enumerated().map { index, languageCode in
@@ -56,7 +60,7 @@ class ViewController: NSViewController {
 
     @IBAction func clickButton(_ sender: Any) {
         
-        session_https()
+        af_example1()
         
     }
 }
@@ -179,8 +183,32 @@ extension ViewController{
         
     }
     
+    fileprivate func af_example1(){
+        let request = Alamofire.request("https://httpbin.org/get")
+        request.responseJSON { (response) in
+           
+            print("Thread: \(Thread.current)")
+            print("request: \(String(describing: response.request))")
+            print("response: \(String(describing: response.response))")
+            print("result: \(response.result)")
+            
+            if let json = response.result.value {
+                print("JSON: \(json)")
+            }
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8){
+                print("utf8Text: \(utf8Text)")
+            }
+        }
+        
+        request.responseJSON(queue: DispatchQueue.main, options:.mutableLeaves) { (response) in
+            
+        }
+        
+        
+    }
+    
     fileprivate func af_used(){
-        request(WEB_URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Cookie":myCookie])
+       Alamofire.request(WEB_URL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Cookie":myCookie])
             .responseString { (response) in
                 print(response.response?.allHeaderFields ?? "")
         }
