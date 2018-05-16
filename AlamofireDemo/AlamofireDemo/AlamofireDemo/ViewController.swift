@@ -158,7 +158,7 @@ extension ViewController{
         let clientSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)
         var server = sockaddr_in()
         server.sin_family = sa_family_t(AF_INET)
-        server.sin_addr.s_addr = inet_addr("203.107.6.88")
+        server.sin_addr.s_addr =   inet_addr("203.107.6.88")   /** 若服务器使用bind时,可以使用INADDR_ANY 来通配多ip */
         server.sin_port = UInt16(123).bigEndian
         
         withUnsafePointer(to: &server) {
