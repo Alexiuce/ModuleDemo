@@ -47,7 +47,7 @@ class ViewController: NSViewController {
         arr.prefix(3).forEach { (r) in
             print(r)
         }
-        let ja = arr.joined(separator: "!")
+        let ja = arr.joined(separator: "!")    /** 拼接数组内容 */
         print(ja)
         
         let a = Locale.preferredLanguages.prefix(6)
@@ -58,12 +58,15 @@ class ViewController: NSViewController {
        print(a)
         
         /** 字典枚举器 */
-        let dict = ["footerline":"end","headline":"news","age":"23","abode":"te"] as NSDictionary
-        let key = dict.keyEnumerator().nextObject()
-      
+        let dict = ["footerline":"end","headline":"news","age":"23","abode":"te"]
+        let d = dict as NSDictionary
+        let key = d.keyEnumerator().nextObject()
         print(key)
-    
         
+        dict.enumerated().forEach { (offset, element) in
+            print(offset)
+            print(element)
+        }
     }
 
     @IBAction func clickButton(_ sender: Any) {
