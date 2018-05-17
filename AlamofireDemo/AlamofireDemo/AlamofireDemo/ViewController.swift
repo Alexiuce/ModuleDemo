@@ -56,6 +56,14 @@ class ViewController: NSViewController {
             return "\(languageCode);q=\(quality)"
             }.joined(separator: ", ")
        print(a)
+        
+        /** 字典枚举器 */
+        let dict = ["footerline":"end","headline":"news","age":"23","abode":"te"] as NSDictionary
+        let key = dict.keyEnumerator().nextObject()
+      
+        print(key)
+    
+        
     }
 
     @IBAction func clickButton(_ sender: Any) {
