@@ -63,8 +63,8 @@ class ViewController: NSViewController {
         /** 字典枚举器 */
         let dict = ["footerline":"end","headline":"news","age":"23","abode":"te"]
         let d = dict as NSDictionary
-        let key = d.keyEnumerator().nextObject()
-        print(key ?? "")
+        let key = d.keyEnumerator().nextObject()!
+        print(key)
         
         dict.enumerated().forEach { (offset, element) in
             print(offset)
@@ -200,7 +200,7 @@ extension ViewController{
     fileprivate func af_example1(){
         
         
-        /** base url */
+        /** base url
         let host = "https://httpbin.org/v1/test/"        /** 如果有path 则必须以 / 结尾,否则baseurl不会记录最后的path路径 */
         let baseUrl = URL(string: host)
         let url = URL(string: "get", relativeTo: baseUrl)     /** url = https://httpbin.org/v1/test/get */
@@ -209,17 +209,21 @@ extension ViewController{
         print("URL1 : \(url1?.absoluteString ?? "")")
         let url2 = URL(string: "https://www.baidu.com/", relativeTo: baseUrl)  /** url2 = https://www.baidu.com/ */
         print("URL2 : \(url2?.absoluteString ?? "")")
+         */
         
         /** Alamofire request have five response handle */
         
         let request = Alamofire.request("https://httpbin.org/get")
         request.responseJSON { (response) in
-           
+            print(response.metrics!)
+            /**
+             print(response.timeline)
             print("Thread: \(Thread.current)")
             print("request: \(String(describing: response.request))")
             print("response: \(String(describing: response.response))")
             print("result: \(response.result)")
             print("error: \(response.error?.localizedDescription ?? "no error" )")
+             */
             
             if let json = response.result.value {
                 print("JSON: \(json)")
