@@ -42,6 +42,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /** 模运算的正负仅与模数相关,与被模数无关 */
+        print("-1 % -4 = \(-1 % 4)")
+        
         /** array slice */
         let arr = ["a","b","c","d","c","1","3"]
         arr.prefix(3).forEach { (r) in
@@ -61,7 +64,7 @@ class ViewController: NSViewController {
         let dict = ["footerline":"end","headline":"news","age":"23","abode":"te"]
         let d = dict as NSDictionary
         let key = d.keyEnumerator().nextObject()
-        print(key)
+        print(key ?? "")
         
         dict.enumerated().forEach { (offset, element) in
             print(offset)
