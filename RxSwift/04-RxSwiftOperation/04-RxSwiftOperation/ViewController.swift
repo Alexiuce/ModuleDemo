@@ -59,6 +59,7 @@ class ViewController: NSViewController {
     
     @IBAction func clickSkip(_ sender: NSButton) {
         demo3()
+        startWithExample()
     }
     
     
@@ -354,6 +355,15 @@ extension ViewController{
         charlotter.score.onNext(94)
         
     }
+    
+    fileprivate func startWithExample(){
+        let numbers = Observable.of(2,3,4)
+        numbers.startWith(1).subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        
+    }
+    
     
     fileprivate func request_example(){
         
