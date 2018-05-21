@@ -59,6 +59,13 @@ class ViewController: NSViewController {
             return "\(languageCode);q=\(quality)"
             }.joined(separator: ", ")
        print(a)
+        print("==========sort========")
+        /** 数组排序 */
+        let sorta = arr.sorted { (s1, s2) -> Bool in
+            return s1 > s2
+        }
+        print(sorta)
+        print("==========sort========")
         
         /** 字典枚举器 */
         let dict = ["footerline":"end","headline":"news","age":"23","abode":"te"]
