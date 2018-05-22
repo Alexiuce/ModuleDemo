@@ -68,7 +68,8 @@ class ViewController: NSViewController {
     }
     
     @IBAction func clickSkitUntil(_ sender: NSButton) {
-        demo5()
+//        demo5()
+        mergeExample()
     }
     
     
@@ -401,6 +402,36 @@ extension ViewController{
         
         
     }
+    
+    fileprivate func mergeExample(){
+        let left = PublishSubject<String>()
+        let right = PublishSubject<String>()
+        
+        let source = Observable.of(left.asObserver(),right.asObserver())
+        let obs = source.merge()
+        obs.subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        
+        var leftValues = ["a","b","c"]
+        var rightValues = ["1","2","3"]
+        
+        repeat{
+            if arc4random_uniform(2) == 0 {
+                if !leftValues.isEmpty{
+                    left.onNext("Left:" + leftValues.removeFirst())
+                }
+            }else{
+                if !rightValues.isEmpty{
+                    right.onNext("Right:" + rightValues.removeFirst())
+                }
+                
+            }
+            
+        }while !leftValues.isEmpty || !rightValues.isEmpty
+        
+    }
+    
     
     fileprivate func request_example(){
         
