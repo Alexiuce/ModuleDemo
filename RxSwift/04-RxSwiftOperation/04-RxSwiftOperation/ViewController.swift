@@ -73,7 +73,8 @@ class ViewController: NSViewController {
     
     
     @IBAction func clickTake(_ sender: NSButton) {
-        takeDemo()
+//        takeDemo()
+        contactExample()
     }
     
     @IBAction func clickTakeWhile(_ sender: NSButton){
@@ -364,6 +365,42 @@ extension ViewController{
         
     }
     
+    fileprivate func contactExample(){
+        let ob1 = Observable.of(1,2,3)
+        let ob2 = Observable.of(4,5,6)
+        /** 使用Obserable.concat 类方法合并两个observable
+        let ob = Observable.concat([ob1,ob2])
+        ob.subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+         */
+        /** 使用concat 实例方法合并Observable*/
+        let ob = ob1.concat(ob2)
+        ob.subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        /** !important: concat 只能合并elemet类型相同的observable */
+        
+        /** concatMap: 与flatMap很像, concatMap可以确保 闭包中的observable按顺序的被订阅 */
+        
+        let sequeces = ["China":Observable.of("Beijing","Tianjin","Hangzhou"), "American":Observable.of("NewYork","Yusemiti","Tiger")]
+        
+        let ct = Observable.of("China","American")
+        
+        ct.concatMap {
+            sequeces[$0] ?? Observable.empty()
+            }.subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
+        print("====================")
+        ct.flatMap {    /** flatMap 不能保证按事件的按顺序被订阅 */
+            sequeces[$0] ?? Observable.empty()
+            }.subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
+        
+        
+    }
     
     fileprivate func request_example(){
         
