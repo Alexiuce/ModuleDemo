@@ -64,7 +64,8 @@ class ViewController: NSViewController {
     
     
     @IBAction func clickSkipWhile(_ sender: NSButton) {
-        demo4()
+//        demo4()
+        combineLastExample()
     }
     
     @IBAction func clickSkitUntil(_ sender: NSButton) {
@@ -407,7 +408,7 @@ extension ViewController{
         let left = PublishSubject<String>()
         let right = PublishSubject<String>()
         
-        let source = Observable.of(left.asObserver(),right.asObserver())
+        let source = Observable.of(left,right)
         let obs = source.merge()
         obs.subscribe(onNext: {
             print($0)
@@ -429,6 +430,18 @@ extension ViewController{
             }
             
         }while !leftValues.isEmpty || !rightValues.isEmpty
+        
+    }
+    
+    fileprivate func combineLastExample(){
+        let left = PublishSubject<String>()
+        let right = PublishSubject<String>()
+        
+        Observable.combineLatest(left,right) { (lastLeft,lastRight) in
+            "\(lastLeft)\(lastRight)"
+            }.subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
         
     }
     
