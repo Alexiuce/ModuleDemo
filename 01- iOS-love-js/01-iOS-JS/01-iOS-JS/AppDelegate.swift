@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  01-iOS-JS
 //
-//  Created by caijinzhu on 2018/3/28.
+//  Created by alexiuce on 2018/3/28.
 //  Copyright © 2018年 alexiuce.github.io. All rights reserved.
 //
 

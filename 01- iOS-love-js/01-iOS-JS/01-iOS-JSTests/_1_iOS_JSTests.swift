@@ -2,7 +2,7 @@
 //  _1_iOS_JSTests.swift
 //  01-iOS-JSTests
 //
-//  Created by caijinzhu on 2018/3/28.
+//  Created by alexiuce on 2018/3/28.
 //  Copyright © 2018年 alexiuce.github.io. All rights reserved.
 //
 

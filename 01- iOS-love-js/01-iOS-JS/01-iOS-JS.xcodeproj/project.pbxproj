@@ -15,6 +15,7 @@
 		5670250F206B7FFF00A293C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5670250D206B7FFF00A293C2 /* LaunchScreen.storyboard */; };
 		56702518206B80F300A293C2 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56702517206B80F300A293C2 /* JavaScriptCore.framework */; };
 		56B68BD520A57873004F67D9 /* BLTServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B68BD420A57873004F67D9 /* BLTServer.swift */; };
+		56EDAEC320B4F93500602C13 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EDAEC220B4F93500602C13 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		56702510206B7FFF00A293C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56702517206B80F300A293C2 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		56B68BD420A57873004F67D9 /* BLTServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTServer.swift; sourceTree = "<group>"; };
+		56EDAEC220B4F93500602C13 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				56702506206B7FFF00A293C2 /* ViewController.swift */,
 				56B68BD320A57835004F67D9 /* Bluetooth */,
 				56702508206B7FFF00A293C2 /* Main.storyboard */,
+				56EDAEC220B4F93500602C13 /* Home.storyboard */,
 				5670250B206B7FFF00A293C2 /* Assets.xcassets */,
 				5670250D206B7FFF00A293C2 /* LaunchScreen.storyboard */,
 				56702510206B7FFF00A293C2 /* Info.plist */,
@@ -212,6 +215,7 @@
 				5670250F206B7FFF00A293C2 /* LaunchScreen.storyboard in Resources */,
 				5670250C206B7FFF00A293C2 /* Assets.xcassets in Resources */,
 				5670250A206B7FFF00A293C2 /* Main.storyboard in Resources */,
+				56EDAEC320B4F93500602C13 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

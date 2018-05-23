@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  01-iOS-JS
 //
-//  Created by caijinzhu on 2018/3/28.
+//  Created by alexiuce on 2018/3/28.
 //  Copyright © 2018年 alexiuce.github.io. All rights reserved.
 //
 
@@ -12,6 +12,9 @@ import JavaScriptCore
 
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var webView: UIWebView!
+    
     
     let server = BLTServer()
 
@@ -25,3 +28,9 @@ class ViewController: UIViewController {
     }
 }
 
+
+extension ViewController: UIWebViewDelegate{
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        
+    }
+}
