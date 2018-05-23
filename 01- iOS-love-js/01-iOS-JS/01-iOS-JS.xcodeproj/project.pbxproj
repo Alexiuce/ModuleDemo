@@ -16,6 +16,7 @@
 		56702518206B80F300A293C2 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56702517206B80F300A293C2 /* JavaScriptCore.framework */; };
 		56B68BD520A57873004F67D9 /* BLTServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B68BD420A57873004F67D9 /* BLTServer.swift */; };
 		56EDAEC320B4F93500602C13 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EDAEC220B4F93500602C13 /* Home.storyboard */; };
+		56EDAEC520B4FAA500602C13 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDAEC420B4FAA500602C13 /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		56702517206B80F300A293C2 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		56B68BD420A57873004F67D9 /* BLTServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTServer.swift; sourceTree = "<group>"; };
 		56EDAEC220B4F93500602C13 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		56EDAEC420B4FAA500602C13 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				56702504206B7FFF00A293C2 /* AppDelegate.swift */,
 				56702506206B7FFF00A293C2 /* ViewController.swift */,
+				56EDAEC420B4FAA500602C13 /* HomeController.swift */,
 				56B68BD320A57835004F67D9 /* Bluetooth */,
 				56702508206B7FFF00A293C2 /* Main.storyboard */,
 				56EDAEC220B4F93500602C13 /* Home.storyboard */,
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EDAEC520B4FAA500602C13 /* HomeController.swift in Sources */,
 				56702507206B7FFF00A293C2 /* ViewController.swift in Sources */,
 				56702505206B7FFF00A293C2 /* AppDelegate.swift in Sources */,
 				56B68BD520A57873004F67D9 /* BLTServer.swift in Sources */,
@@ -275,6 +279,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6P4JKNFHR;
 				INFOPLIST_FILE = "01-iOS-JSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "alexiuce.-1-iOS-JSTests";
@@ -290,6 +295,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6P4JKNFHR;
 				INFOPLIST_FILE = "01-iOS-JSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "alexiuce.-1-iOS-JSTests";
@@ -348,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -399,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
