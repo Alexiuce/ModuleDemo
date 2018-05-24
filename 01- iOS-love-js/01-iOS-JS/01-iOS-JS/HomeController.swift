@@ -19,11 +19,18 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let webConfiguration = WKWebViewConfiguration()
+        let userContent = WKUserContentController()
+        userContent.add(self, name: "HFApp")
+        /** 可以add 多个 js 交互对象名称, 实现js 对象名称与原生对象之间的映射关系 */
+        //userContent.add(self, name: "AAA")
+        
+        webConfiguration.userContentController = userContent
+        
         webView = WKWebView(frame: view.bounds, configuration: webConfiguration)
 //        webView.uiDelegate = self
         webView.navigationDelegate = self
         webView.backgroundColor = UIColor.darkGray
-        view.addSubview(webView)
+        view.insertSubview(webView, at: 0)
         
         let url = URL(string: "https://www.baidu.com")!
         let request = URLRequest(url: url)
@@ -32,7 +39,20 @@ class HomeController: UIViewController {
         
     }
     
-
+    @IBAction func execJSfunction(_ sender: Any) {
+//         webView.evaluateJavaScript("console.log(123)", completionHandler: nil)
+        
+        webView.evaluateJavaScript("console.log('hello js')") { (result, error) in
+            print("=====begin complete ======")
+            if let err = error {
+                print("\(err.localizedDescription)")
+            }
+            if let res = result  {
+                print(res)
+            }
+        }
+    }
+    
 }
 
 extension HomeController: WKNavigationDelegate{
@@ -64,6 +84,8 @@ extension HomeController: WKNavigationDelegate{
     /** webView 已经完成数据内容的加载 */
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("did finish")
+        
+       
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
@@ -77,6 +99,7 @@ extension HomeController: WKNavigationDelegate{
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         print("did receive server redirect" + navigation.description)
     }
+    
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         print("did content process did terminate")
         
@@ -94,6 +117,16 @@ extension HomeController: WKNavigationDelegate{
         completionHandler(.useCredential, credential)
     }
     
+}
+
+
+/** JS 调用原生方法时 会执行这个代理方法 */
+extension HomeController: WKScriptMessageHandler{
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print(message.name)   /** js 与 原生交互时的中间对象名称 也就是 WKUserContentController add(obj, name: String) 中的name 参数值 */
+        print(message.body)   /** 通常这个js传递来的参数用来进行操作区分以及携带相关数据 */
+        
+    }
 }
 
 
