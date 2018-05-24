@@ -451,8 +451,11 @@ extension ViewController{
             }).disposed(by: bag)
         
         left.onNext("Left: one")
+        print("------1")
         right.onNext("Right: 1")
+        print("------2")
         right.onNext("Right: 2")
+        print("------3")
         left.onNext("Left: two")
         
     }
