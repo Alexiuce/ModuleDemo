@@ -28,6 +28,7 @@ class HomeController: UIViewController {
         let url = URL(string: "https://www.baidu.com")!
         let request = URLRequest(url: url)
         webView.load(request)
+        print("\(#file):\(#function)")
         
     }
     
