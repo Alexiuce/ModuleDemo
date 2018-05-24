@@ -30,6 +30,13 @@ class ViewController: NSViewController {
     }
     
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        view.window?.center()
+      
+    }
+    
     @IBAction func clickIgnore(_ sender: NSButton) {
         example(of: "ignoreElements") {
             let strikes = PublishSubject<String>()
