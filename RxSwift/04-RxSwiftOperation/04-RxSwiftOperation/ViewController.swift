@@ -21,8 +21,6 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        
         
         let isInclude = 200 ..< 300 ~= 290
         print(isInclude)
@@ -433,10 +431,12 @@ extension ViewController{
                 if !rightValues.isEmpty{
                     right.onNext("Right:" + rightValues.removeFirst())
                 }
-                
             }
             
         }while !leftValues.isEmpty || !rightValues.isEmpty
+        
+       
+        
         
     }
     
@@ -449,6 +449,11 @@ extension ViewController{
             }.subscribe(onNext: {
                 print($0)
             }).disposed(by: bag)
+        
+        left.onNext("Left: one")
+        right.onNext("Right: 1")
+        right.onNext("Right: 2")
+        left.onNext("Left: two")
         
     }
     
