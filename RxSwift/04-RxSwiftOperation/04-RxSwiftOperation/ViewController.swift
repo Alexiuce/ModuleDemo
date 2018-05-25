@@ -405,8 +405,6 @@ extension ViewController{
             }.subscribe(onNext: {
                 print($0)
             }).disposed(by: bag)
-        
-        
     }
     
     fileprivate func mergeExample(){
@@ -432,11 +430,7 @@ extension ViewController{
                     right.onNext("Right:" + rightValues.removeFirst())
                 }
             }
-            
         }while !leftValues.isEmpty || !rightValues.isEmpty
-        
-       
-        
         
     }
     
@@ -489,7 +483,7 @@ extension ViewController{
             }?.share(replay: 1, scope:.whileConnected)
         
         obserable?.subscribe(onNext: { (response) in
-            print(String(data: response.data, encoding: .utf8) ?? "s e")
+            print(String(data: response.data, encoding: .utf8) ?? "")
             
         }, onError: {
             print($0.localizedDescription)
