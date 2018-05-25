@@ -12,6 +12,7 @@
 		56E202F4205610C200C5FF29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E202F3205610C200C5FF29 /* ViewController.swift */; };
 		56E202F6205610C200C5FF29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E202F5205610C200C5FF29 /* Assets.xcassets */; };
 		56E202F9205610C200C5FF29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E202F7205610C200C5FF29 /* Main.storyboard */; };
+		56EDAEC720B7E7C000602C13 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDAEC620B7E7C000602C13 /* HomeController.swift */; };
 		6FA4CB6567F1820C881358FB /* Pods_04_RxSwiftOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D56F1FD5F0DE1F405DB7B0 /* Pods_04_RxSwiftOperation.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		56E202F8205610C200C5FF29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56E202FA205610C200C5FF29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E202FB205610C200C5FF29 /* _4_RxSwiftOperation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _4_RxSwiftOperation.entitlements; sourceTree = "<group>"; };
+		56EDAEC620B7E7C000602C13 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		778AE8E0026BF1D6C14EDA01 /* Pods-04-RxSwiftOperation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-04-RxSwiftOperation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-04-RxSwiftOperation/Pods-04-RxSwiftOperation.debug.xcconfig"; sourceTree = "<group>"; };
 		AF78BA8AC4A9A1AFD7B29DD4 /* Pods-04-RxSwiftOperation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-04-RxSwiftOperation.release.xcconfig"; path = "Pods/Target Support Files/Pods-04-RxSwiftOperation/Pods-04-RxSwiftOperation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 			children = (
 				56E202F1205610C200C5FF29 /* AppDelegate.swift */,
 				56E202F3205610C200C5FF29 /* ViewController.swift */,
+				56EDAEC620B7E7C000602C13 /* HomeController.swift */,
 				56ADDD1F20A51F64009BCEFC /* Student.swift */,
 				56E202F5205610C200C5FF29 /* Assets.xcassets */,
 				56E202F7205610C200C5FF29 /* Main.storyboard */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EDAEC720B7E7C000602C13 /* HomeController.swift in Sources */,
 				56E202F4205610C200C5FF29 /* ViewController.swift in Sources */,
 				56ADDD2020A51F64009BCEFC /* Student.swift in Sources */,
 				56E202F2205610C200C5FF29 /* AppDelegate.swift in Sources */,

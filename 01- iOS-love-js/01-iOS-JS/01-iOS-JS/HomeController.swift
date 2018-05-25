@@ -32,7 +32,7 @@ class HomeController: UIViewController {
         webView.backgroundColor = UIColor.darkGray
         view.insertSubview(webView, at: 0)
         
-        let url = URL(string: "https://www.baidu.com")!
+        let url = URL(string: "https://www.baidu123.com")!
         let request = URLRequest(url: url)
         webView.load(request)
         print("\(#file):\(#function)")
@@ -75,7 +75,7 @@ extension HomeController: WKNavigationDelegate{
     }
     /** webView 开始向服务器请求获取需要加载页面内容 */
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print("did start provision navigation")
+        print("did start provision navigation \(navigation.debugDescription)")
     }
     /** webView 已经获得服务器返回的数据内容 */
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
@@ -84,18 +84,17 @@ extension HomeController: WKNavigationDelegate{
     /** webView 已经完成数据内容的加载 */
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("did finish")
-        
-       
     }
     
+    /** webView 获取服务器url数据出错误, 调用这个代理方法: 比如加载网络错误,服务器不可达或url信息错误 */
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        print("did fail provision " + error.localizedDescription)
-        
+         print("did fail provision " + error.localizedDescription)
     }
+    /** 当webView加载数据内容时发生错误, 通过这个代理方法告知app */
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        print("didFail" + error.localizedDescription)
+          print("didFail" + error.localizedDescription)
     }
-    
+    /** 接收到服务器重定向url时, 调用代理的这个方法 */
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         print("did receive server redirect" + navigation.description)
     }
