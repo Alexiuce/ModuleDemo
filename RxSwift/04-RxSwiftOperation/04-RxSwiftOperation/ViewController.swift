@@ -63,7 +63,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func clickSkip(_ sender: NSButton) {
-        demo3()
+//        demo3()
         startWithExample()
     }
     
@@ -98,8 +98,8 @@ class ViewController: NSViewController {
     
     @IBAction func clickDistinctUntilChanged(_ sender: NSButton) {
 //        demo6()
-        obsFlatmapExample()
-        
+//        obsFlatmapExample()
+        combineLastExammple1()
         
     }
     
@@ -108,7 +108,7 @@ class ViewController: NSViewController {
         example(of: "elementAt") {
             let strikes = PublishSubject<String>()
             let bag = DisposeBag()
-            /* 仅仅响应指定位置onNext的消息*/
+            /** 仅仅响应指定位置onNext的消息*/
             strikes.elementAt(2).subscribe(onNext: { (el) in
                 print("element is \(el)")
             }).disposed(by: bag)
@@ -443,7 +443,8 @@ extension ViewController{
     fileprivate func combineLastExample(){
         let left = PublishSubject<String>()
         let right = PublishSubject<String>()
-        
+        /** combineLatest 只有当所有的observable都停止后,才会停止发送合并到信息,
+         如果其中某个observable停止,combineLatest 仍旧会停止前的最新值与其他observable的最新值进行合并后,继续发送...*/
         Observable.combineLatest(left,right) { (lastLeft,lastRight) in
             "\(lastLeft)\(lastRight)"
             }.subscribe(onNext: {
@@ -452,11 +453,28 @@ extension ViewController{
         
         left.onNext("Left: one")
         print("------1")
-        right.onNext("Right: 1")
+        right.onNext(" Right: 1")
         print("------2")
-        right.onNext("Right: 2")
+        right.onNext(" Right: 2")
         print("------3")
         left.onNext("Left: two")
+        
+        left.onCompleted()
+        right.onNext(" Right: 3")
+        right.onNext(" Right: 4")
+        
+    }
+    
+    fileprivate func combineLastExammple1(){
+        let choice: Observable<DateFormatter.Style> = Observable.of(.short, .long)
+        let dates = Observable.of(Date())
+        Observable.combineLatest(choice,dates) { (fomate, when)  in
+            let formatter = DateFormatter()
+            formatter.dateStyle = fomate
+            return formatter.string(from: when)
+            }.subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
         
     }
     
