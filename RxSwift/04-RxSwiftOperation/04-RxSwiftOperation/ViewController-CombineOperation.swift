@@ -27,4 +27,29 @@ extension ViewController{
         
     }
     
+    
+    func lastFromExample(){
+        let button = PublishSubject<Void>()
+        let textfield = PublishSubject<String>()
+        
+//        let obs = button.withLatestFrom(textfield)
+//        _ = obs.subscribe(onNext: {
+//            print($0)
+//        })
+        
+        let obs1 = textfield.sample(button)
+        _ = obs1.subscribe(onNext: {
+            print("------")
+            print($0)
+            
+        })
+        
+        textfield.onNext("a")
+        textfield.onNext("b")
+        textfield.onNext("c")
+        button.onNext(())
+        button.onNext(())
+        
+    }
+    
 }

@@ -56,6 +56,7 @@ class ViewController: NSViewController {
             strikes.onNext("world")
             strikes.onNext("yep")
         }
+        lastFromExample()
     }
     
     
