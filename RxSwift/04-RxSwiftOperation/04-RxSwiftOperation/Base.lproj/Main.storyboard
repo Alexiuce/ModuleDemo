@@ -819,8 +819,16 @@
                                     <action selector="clickDistinctUntilChanged:" target="XfG-lQ-9wD" id="BHE-1J-MlX"/>
                                 </connections>
                             </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AbK-8K-GKq">
+                                <rect key="frame" x="338" y="11" width="129" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="wdF-F9-zAs"/>
+                            </imageView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="AbK-8K-GKq" id="eHp-Tf-NT0"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

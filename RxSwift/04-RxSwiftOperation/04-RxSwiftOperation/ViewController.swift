@@ -18,6 +18,9 @@ enum MyError: Error {
 class ViewController: NSViewController {
     
     fileprivate let bag = DisposeBag()
+    var img: NSImage = NSImage(named: NSImage.Name.init("youwin"))!
+    
+    @IBOutlet weak var imageView: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,12 @@ class ViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        
+
+        img.delegate = self
+       
+        img = NSImage(named: NSImage.Name(rawValue: "gameover"))!
+        imageView.image = img
+        print(img)
         view.window?.center()
       
     }
@@ -496,6 +504,21 @@ extension ViewController{
    
     
 }
-
+// MARK: - NSImageDelegate
+extension ViewController: NSImageDelegate{
+    func image(_ image: NSImage, willLoadRepresentation rep: NSImageRep) {
+        print("\(#function) ++++")
+    }
+    func image(_ image: NSImage, didLoadRepresentationHeader rep: NSImageRep) {
+         print("\(#function)")
+    }
+    func image(_ image: NSImage, didLoadRepresentation rep: NSImageRep, with status: NSImage.LoadStatus) {
+         print("\(#function)")
+    }
+    func image(_ image: NSImage, didLoadPartOfRepresentation rep: NSImageRep, withValidRows rows: Int) {
+         print("\(#function)")
+    }
+    
+}
 
 
