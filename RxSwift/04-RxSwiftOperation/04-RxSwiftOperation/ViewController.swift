@@ -61,7 +61,8 @@ class ViewController: NSViewController {
     
     @IBAction func clickElementAt(_ sender: Any) {
 //        demo1()
-        shareDemo()
+//        shareDemo()
+        zipExample()
     }
     
     
@@ -479,6 +480,9 @@ extension ViewController{
             }).disposed(by: bag)
         
     }
+    
+    
+    
     
     
     fileprivate func request_example(){
