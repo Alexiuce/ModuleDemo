@@ -88,7 +88,8 @@ class ViewController: NSViewController {
     
     @IBAction func clickSkip(_ sender: NSButton) {
 //        demo3()
-        startWithExample()
+//        startWithExample()
+        switchLastExample()
     }
     
     
@@ -172,7 +173,7 @@ class ViewController: NSViewController {
     
     
     fileprivate func demo4(){
-        example(of: "skitWhile") {
+        example(of: "skipWhile") {
             /** 当某个条件不满足时 开始监听后续所有的onNext事件*/
             Observable.of(1,2,2,3,4,4,4,4,5,4,9,8,6).skipWhile{
                $0 < 5

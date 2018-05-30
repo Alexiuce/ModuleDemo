@@ -12,6 +12,43 @@ import RxSwift
 // MARK:- Combine Operation
 extension ViewController{
     
+    func switchLastExample(){
+        let one = PublishSubject<String>()
+        let two = PublishSubject<String>()
+        let three = PublishSubject<String>()
+        
+        let source = PublishSubject<Observable<String>>()
+        /**
+         switchLatest():仅会获取observable最新的流
+         
+         与flatMapLatest():先将一个latest value转换为observable 然后subscribes
+         */
+        let obs = source.switchLatest()
+        _ = obs.subscribe(onNext: {
+            print($0)
+        })
+        source.onNext(one)
+        one.onNext("text from one")
+        two.onNext("text from two")
+        
+        source.onNext(two)
+        two.onNext("more text from two")
+        one.onNext("more text from one")
+        
+        source.onNext(three)
+        two.onNext("why from two")
+        one.onNext("why from one")
+        three.onNext("why from three")
+        three.onNext("i win form three")
+        
+        source.onNext(one)
+        one.onNext("it's me ...")
+        
+        
+        
+        
+    }
+    
     
     func ambExample(){
         /** amb(): 两者取其一, 一旦收到某个obs的流之后,就会忽略另一个, 仅接收最先开始的那个observable */
@@ -56,13 +93,14 @@ extension ViewController{
             print("========")
             print($0)
         })
-        
+        /** sample 与withLatestFrom 作用相同,只是 sample的参数是触发者, 而withLatestFrom的参数是数据发出者
         let obs1 = textfield.sample(button)
         _ = obs1.subscribe(onNext: {
             print("------")
             print($0)
-            
+         
         })
+         */
         
         textfield.onNext("a")
         textfield.onNext("b")
