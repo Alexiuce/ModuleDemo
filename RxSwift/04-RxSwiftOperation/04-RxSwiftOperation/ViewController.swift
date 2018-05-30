@@ -29,7 +29,8 @@ class ViewController: NSViewController {
         print(isInclude)
         let size = NSMakeSize(400, 100)
 //        let rect = NSMakeRect(0, 0, size.width, size.height)
-        let imgUrl = URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527584559321&di=5c4eec8c29d71280c0a345847053da58&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F010df8570e526c32f8751b3fe67d5e.png")!
+        
+        let imgUrl = URL(string: "https://img.zcool.cn/community/010cc7579819120000018c1bd69629.png@1280w_1l_2o_100sh.png")!
         let imgData = try? Data(contentsOf: imgUrl)
         guard let data = imgData else {
             return
@@ -40,8 +41,7 @@ class ViewController: NSViewController {
         img.delegate = self
         img.addRepresentation(imgRep!)
         
-        
-        
+    
         imageView.image = img
         print(img)
         
@@ -82,7 +82,8 @@ class ViewController: NSViewController {
     
     @IBAction func clickFilter(_ sender: NSButton) {
 //        demo2()
-        toArrayExample()
+//        toArrayExample()
+        ambExample()
     }
     
     @IBAction func clickSkip(_ sender: NSButton) {

@@ -12,6 +12,25 @@ import RxSwift
 // MARK:- Combine Operation
 extension ViewController{
     
+    
+    func ambExample(){
+        /** amb(): 两者取其一, 一旦收到某个obs的流之后,就会忽略另一个, 仅接收最先开始的那个observable */
+        let left = PublishSubject<String>()
+        let right = PublishSubject<String>()
+        let obs = left.amb(right)
+        _ = obs.subscribe(onNext: {
+            print($0)
+        })
+        
+        right.onNext("Parise")
+        left.onNext("Lisbon")
+        right.onNext("Copenhagen")
+        left.onNext("London")
+        left.onNext("Madrid")
+        right.onNext("Vienna")
+    }
+    
+    
     func zipExample(){
         enum Wether{
             case cloudy
