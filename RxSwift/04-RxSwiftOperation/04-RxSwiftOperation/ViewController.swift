@@ -44,6 +44,11 @@ class ViewController: NSViewController {
     
         imageView.image = img
         print(img)
+        let img1 = NSImage(named: NSImage.Name.init("youwin"))!
+        let img2 = NSImage(named: NSImage.Name.init("youwin"))!
+        
+        print(img1)
+        print(img2)
         
     }
     
