@@ -12,6 +12,28 @@ import RxSwift
 // MARK:- Combine Operation
 extension ViewController{
     
+    
+    func scanExample(){
+        let source = Observable.of(1,2,3)
+        let obs = source.scan(0, accumulator: +)
+        _ = obs.subscribe(onNext: {
+            print($0)  // 1   3   6
+        })
+        
+    }
+    
+    func reduceExample(){
+        let source = Observable.of(1,2,3,4,5,6)
+        /** reduce 只会等到observable complete时才会执行block中的代码 */
+        let obs = source.reduce(0, accumulator: +)
+        _ = obs.subscribe(onNext: {
+            print($0)    //  21
+        })
+        
+        
+    }
+    
+    
     func switchLastExample(){
         let one = PublishSubject<String>()
         let two = PublishSubject<String>()

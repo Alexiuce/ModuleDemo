@@ -43,12 +43,14 @@ class ViewController: NSViewController {
         
     
         imageView.image = img
+        /*
         print(img)
         let img1 = NSImage(named: NSImage.Name.init("youwin"))!
         let img2 = NSImage(named: NSImage.Name.init("youwin"))!
         
         print(img1)
         print(img2)
+         */
         
     }
     
@@ -100,12 +102,14 @@ class ViewController: NSViewController {
     
     @IBAction func clickSkipWhile(_ sender: NSButton) {
 //        demo4()
-        combineLastExample()
+//        combineLastExample()
+        reduceExample()
     }
     
     @IBAction func clickSkitUntil(_ sender: NSButton) {
 //        demo5()
-        mergeExample()
+//        mergeExample()
+     scanExample()
     }
     
     
