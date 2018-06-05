@@ -41,7 +41,7 @@ extension ViewController{
         
         let source = PublishSubject<Observable<String>>()
         /**
-         switchLatest():仅会获取observable最新的流
+         switchLatest():仅会获取observable最新的流,根据当前的switch切换的observable sequence 获取最新的value内容
          
          与flatMapLatest():先将一个latest value转换为observable 然后subscribes
          */
@@ -65,15 +65,13 @@ extension ViewController{
         
         source.onNext(one)
         one.onNext("it's me ...")
-        
-        
-        
-        
     }
     
     
     func ambExample(){
-        /** amb(): 两者取其一, 一旦收到某个obs的流之后,就会忽略另一个, 仅接收最先开始的那个observable */
+        /** amb(): 两者取其一, 一旦收到某个obs的流之后,就会忽略另一个, 仅接收最先开始的那个observable
+          * observable 的类型需要相同
+          */
         let left = PublishSubject<String>()
         let right = PublishSubject<String>()
         let obs = left.amb(right)
@@ -87,6 +85,7 @@ extension ViewController{
         left.onNext("London")
         left.onNext("Madrid")
         right.onNext("Vienna")
+    
     }
     
     
