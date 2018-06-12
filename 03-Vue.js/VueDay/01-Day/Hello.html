@@ -16,7 +16,13 @@
         <!-- vue 指令,只是dom上的行间属性 -->
 
         <!-- v-model 会将数据和视图进行双向绑定  -->
-       <input type="text" v-model="msg">
+
+        <input type="text" v-model="msg" placeholder="edit me">
+        <input type="checkbox" v-model="check">
+        <span>{{check}}</span>
+
+
+
     </div>
 
 
@@ -24,7 +30,9 @@
     let vm = new Vue({
         el:'#app',   // Vue管理的dom,使用querySelector
         data:{     // data中的数据会被vm所代理,用来实现数据绑定
-            msg: 'hello '
+            msg: 'hello ',
+            check:true,
+
         }
     })
 
