@@ -10,13 +10,12 @@
     <div id="app">
 
 
-        <!-- keydown 在vue中可以使用修饰符来指定具体按键触发响应 -->
-        <input type="text" v-model="msg" @keydown.enter="updateTodo">
-
+        <input type="text" v-model="msg" @keydown.enter="addTodos" >
+        <span>{{msg}}</span>
         <ul>
-            <li v-for="(item,index) in todos">
-                {{item}}
-                <button @click="deleteItem(index)">delete</button>
+            <li v-for="(it,index) in todos">
+                {{it}}
+                <button @click="removeTodos(index)">delete</button>
             </li>
         </ul>
 
@@ -28,29 +27,31 @@
 
 
 
-<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue/dist/vue.js"></script>
 
 
 <script>
+
     let vm = new Vue({
-        el: '#app',
-        data: {
+        el:'#app',
+        data:{
             msg:'',
-            todos:[]
+            todos:[],
         },
         methods:{
-            updateTodo(){
-                    this.todos.unshift(this.msg)
-                    this.msg = ''
-
+            addTodos(){
+                this.todos.unshift(this.msg)
+                this.msg = ''
             },
-            deleteItem(arg){
-                console.log(arg);
-                this.todos.splice(arg,1)
+            removeTodos(it){
+                console.log(it);
+                this.todos.splice(it,1)
+
             }
 
         }
     })
+
 </script>
 </body>
 </html>
