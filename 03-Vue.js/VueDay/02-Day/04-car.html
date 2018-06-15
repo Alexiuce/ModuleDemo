@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>BuyCar</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
 
@@ -64,10 +64,10 @@
      三个状态: 成功,失败,等待
  -->
 
-<script src="./node_modules/axios/dist/axios.js"></script>
+<script src="../node_modules/axios/dist/axios.js"></script>
 
 
-<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue/dist/vue.js"></script>
 <script>
 
 
@@ -96,9 +96,9 @@
         },
         methods: {
             getData() {
-                axios.get('./cars.json').then((res) => { // 成功回调
+                axios.get('./cars.json').then(res => { // 成功回调
                     this.product = res.data;
-                }, (err) => {
+                }, err => {
                     console.log(err);
                 })
             },

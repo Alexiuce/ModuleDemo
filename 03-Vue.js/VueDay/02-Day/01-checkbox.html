@@ -11,15 +11,15 @@
 <!-- v-model 用于表单元素 -->
     <div id="app">
         <!--如果是一个复选框, 会把绑定的值转为布尔类型 : true 选中,false 取消 -->
-        <input type="checkbox" v-model="check" > checkbox <br>
+        <input type="checkbox" v-model="check" > checkbox <span>{{check}}</span><br>
 
         <!-- 如果多个复选框 要增加value属性,并且绑定类型为数组 -->
-        <input type="checkbox" v-model="selects" value="First"> 第一
-        <input type="checkbox" v-model="selects" value="Second"> 第二
-        <input type="checkbox" v-model="selects" value="Third"> 第三
-        <input type="checkbox" v-model="selects" value="Fourth"> 第四
+        <input type="checkbox" v-model="orders" value="First"> 第一
+        <input type="checkbox" v-model="orders" value="Second"> 第二
+        <input type="checkbox" v-model="orders" value="Third"> 第三
+        <input type="checkbox" v-model="orders" value="Fourth"> 第四
         <div>
-            {{selects}}
+            {{orders}}
         </div>
 
     </div>
@@ -31,7 +31,7 @@
         el: '#app',
         data: {
             check:1,
-            selects: []
+            orders: []
 
         },
         methods:{
