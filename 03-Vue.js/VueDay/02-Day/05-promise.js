@@ -12,6 +12,12 @@ let p = new Promise((resolve,reject)=>{
 });
 
 // promise 实例有个then方法,有两个参数,分别对应resolve,和reject
+/** Promise
+ *  JS 原生提供
+ *  
+ * */
+
+
 p.then(()=>{
 
 },()=>{
