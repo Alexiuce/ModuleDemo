@@ -25,8 +25,24 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        /*
         let isInclude = 200 ..< 300 ~= 290
         print(isInclude)
+         */
+        /* 开区间 */
+        let array = stride(from: 0, to: 3, by: 0.3).map {
+            $0
+        }
+        array.forEach {
+            print($0)
+        }
+        /* 闭区间 */
+        let brr = stride(from: 0, through: 3, by: 0.3)
+        brr.forEach {
+            print($0)
+        }
+        
         let size = NSMakeSize(400, 100)
 //        let rect = NSMakeRect(0, 0, size.width, size.height)
         
