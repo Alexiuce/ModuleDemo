@@ -83,14 +83,6 @@
         created() {
             // 使用function 函数 时 成功回调中的this 指向的并不是vue实例,
 
-//            axios.get('./cars.json').then(function (res) {  // 请求成功回调
-//
-//                this.product = res.data
-//                console.log(res);
-//            },function (err) { // 请求失败回调
-//                console.log(err);
-//            })
-
             // 可以使用箭头函数避免这个问题
             this.getData()
         },

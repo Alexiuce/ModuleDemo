@@ -31,8 +31,8 @@ console.log(2);
 function myajax(url = '') {
     return new Promise((resolve,reject)=>{
 
-        let request = new XMLHttpRequest()
-        request.open('GET',url,true)
+        let request = new XMLHttpRequest();
+        request.open('GET',url,true);
 
         request.onload = (data) =>{  // 请求成功
             resolve(data)
