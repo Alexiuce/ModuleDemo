@@ -12,7 +12,21 @@ print("Hello, World!")
 
 func pthread_demo()  {
     print("p....")
-    pthread_create(<#T##UnsafeMutablePointer<pthread_t?>!#>, <#T##UnsafePointer<pthread_attr_t>?#>, <#T##(UnsafeMutableRawPointer) -> UnsafeMutableRawPointer?#>, <#T##UnsafeMutableRawPointer?#>)
+    
+    var pt: pthread_t?
+    var arg = "abc"
+    
+   let tid = pthread_create(&pt, nil, { (sp) -> UnsafeMutableRawPointer? in
+        let str = sp.assumingMemoryBound(to: String.self)
+
+        print("create == \(str.pointee) \(Thread.current)")
+        return nil
+    }, &arg)
+    
+    
+    
+    print("\(tid) ")
+
 }
 
 pthread_demo()
