@@ -8,6 +8,13 @@
 
 import Foundation
 
+class Person: NSObject {
+   @objc func sayHello()  {
+        print("hello ....")
+    }
+}
+
+
 print("Hello, World!")
 
 func pthread_demo()  {
@@ -28,7 +35,16 @@ func pthread_demo()  {
     print("\(tid) ")
 
 }
+func nsthread_demo(){
+    
+    let p = Person()
+    let t = Thread(target:p, selector: #selector(p.sayHello), object: nil)
 
+    t.start()
+    
+}
+
+nsthread_demo()
 pthread_demo()
 
 
