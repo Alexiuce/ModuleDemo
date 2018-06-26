@@ -10,9 +10,11 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var btn: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        btn.isEnabled = false
        reduceDemo1()
         
     }
@@ -24,11 +26,18 @@ class ViewController: NSViewController {
     }
 
     @IBAction func clickBtnOne(_ sender: NSButton) {
-        sender.xc_startMarchingAnts()
+//        sender.xc_startMarchingAnts()
+        btn.isEnabled = false
     }
     
     @IBAction func clickBtnTwo(_ sender: NSButton) {
+        btn.isEnabled = true
     }
+    
+    @IBAction func clickBtnTest(_ sender: Any) {
+        print("btn....")
+    }
+    
 }
 
 
