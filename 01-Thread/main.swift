@@ -9,11 +9,23 @@
 import Foundation
 
 class Person: NSObject {
+    var count = 0
+    
    @objc func sayHello()  {
-        print("hello ....\(Thread.current)")
+    print("ddd")
+    
+        for _ in 0 ..< 10 {
+            
+            /** 同步锁
+                 objc_sync_enter(self)
+                 objc_sync_exit(self)
+                */
+//            count += 1
+            print("count \(count)....\(Thread.current.name ?? "")")
+        }
+    
     }
 }
-
 
 
 func pthread_demo()  {
@@ -30,16 +42,24 @@ func pthread_demo()  {
     }, &arg)
     print(tid)
 }
+let p = Person()
+p.sayHello()
 func nsthread_demo(){
     /** 线程的状态: 新建---> 就绪 ---> 执行--->阻塞--->死亡 */
-    let p = Person()
     let t = Thread(target:p, selector: #selector(p.sayHello), object: nil)
     t.name = "mythread"
     t.start()
     
+//    let t1 = Thread(target:p, selector: #selector(p.sayHello), object: nil)
+//    t1.name = "t1"
+//    t1.start()
+    
+    
 }
 
-nsthread_demo()
-pthread_demo()
+
+//nsthread_demo()
+
+
 
 
