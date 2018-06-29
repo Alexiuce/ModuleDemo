@@ -16,7 +16,7 @@ class Person: NSObject {
     
         for _ in 0 ..< 10 {
             
-            /** 同步锁
+            /** swift 同步锁
                  objc_sync_enter(self)
                  objc_sync_exit(self)
                 */
