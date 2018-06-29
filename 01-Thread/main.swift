@@ -62,7 +62,17 @@ func nsthread_demo(){
     
 }
 
-
+func getImage(url: String)  {
+    guard let imgUrl = URL(string: url) else {return}
+    guard let imgData = try? Data(contentsOf: imgUrl) else {return}
+    print(imgData)
+    
+    
+    /** sizeToFit
+     设置控件大小匹配需要展示的内容
+     */
+    
+}
 //nsthread_demo()
 
 
