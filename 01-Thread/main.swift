@@ -90,8 +90,38 @@ func getImage(url: String)  {
  ------------------ 自动释放池使用情景 ------------
  1. 在一个循环中,创建了大量的临时对象
  2. 在子线程创建时
- 
  */
+func property(){
+    /**
+     retain: MRC中使用
+     strong : ARC下使用
+     weak : ARC中使用
+     assign: 修饰基本数据类型
+     -----------------------
+     weak 与 assign 的区别:
+     assign修饰的对象被释放后,不会被设置为nil
+     weak修饰的对象释放后,会被设置nil
+     -----------------------
+     copy : 字符串和block使用修饰符
+     * gloable block : 存储在代码区
+     * mallockBlock : 堆区Block,(ARC环境下 block内部访问了外部的临时变量)
+     * stackBlock: 栈区Block (MRC环境下,block内部访问了外部的临时变量)
+     1. 当对stackBlock执行 copy操作时,stackBlock会转换为mallocBlock
+     */
+    let s = "steven"
+    let  block: (String)->() = { msg in
+        print(s)
+        print("hello.....\(msg)")
+    }
+    block(s)
+    print(block)
+    
+    
+    
+}
+
+
+property()
 
 
 
