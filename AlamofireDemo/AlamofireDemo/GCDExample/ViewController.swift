@@ -36,9 +36,14 @@ class ViewController: NSViewController {
 extension ViewController{
     /** GCD 内部会维护一个线程池, async会将创建的新线程添加到线程池中,这是为了减少频繁创建线程,直到线程池中的线程不够用时,才会新创建线程 */
     func gcdemo1()  {
-        let queue = DispatchQueue.global()
-        queue.async {
-            print("thread \(Thread.current)")
+        let queue = DispatchQueue(label: "myq")  // 串行队列
+//        let conqueue = DispatchQueue(label: "mmm", qos: .default, attributes:.concurrent) // 并行队列
+        
+        for i in 0..<10 {
+            queue.async {
+                print("\(i) thread \(Thread.current)")
+            }
+            
         }
         
         
