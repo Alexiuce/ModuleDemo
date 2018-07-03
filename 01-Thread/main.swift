@@ -47,8 +47,8 @@ func pthread_demo()  {
     }, &arg)
     print(tid)
 }
-let p = Person()
-p.sayHello()
+//let p = Person()
+//p.sayHello()
 func nsthread_demo(){
     /** 线程的状态: 新建---> 就绪 ---> 执行--->阻塞--->死亡 */
     let t = Thread(target:p, selector: #selector(p.sayHello), object: nil)
@@ -132,7 +132,7 @@ func scanDemo()  {
     
 }
 
-scanDemo()
+//scanDemo()
 
 
 
