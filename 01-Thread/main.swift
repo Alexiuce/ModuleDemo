@@ -120,8 +120,19 @@ func property(){
     
 }
 
+func scanDemo()  {
+    let charset = CharacterSet(charactersIn: "-")
+    let scanner = Scanner(string: "123-234-23423")
+    scanner.charactersToBeSkipped = charset
+    var s1,s2,s3: NSString?
+    scanner.scanUpToCharacters(from: charset, into: &s1)
+    scanner.scanUpToCharacters(from: charset, into: &s2)
+    scanner.scanUpToCharacters(from: charset, into: &s3)
+    print("s1 = \(s1!),s2 = \(s2!), s3 = \(s3!)")
+    
+}
 
-property()
+scanDemo()
 
 
 
