@@ -11,23 +11,22 @@ import Cocoa
 class ViewController: NSViewController {
 
     
+    var array = [0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gcdemo1()
+//        gcdemo1()
+        barrier()
         // Do any additional setup after loading the view.
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
+   
 
     @IBOutlet weak var click: NSButton!
     
     @IBAction func clickBtn(_ sender: Any) {
-        gcdemo1()
+//        gcdemo1()
+        print("count = \(array.count)")
     }
     
 }
@@ -58,7 +57,62 @@ extension ViewController{
                 print("😡 \(i)")
             }
         }
+    }
+    // gcd barrier demo
+    func barrier(){
+//        let queue = DispatchQueue.global()
+//        for i  in 1 ..< 100 {
+//            queue.async {
+//                print("i = \(i)")
+//                self.array.append(i)
+//            }
+//        }
         
+        
+        let conqueue = DispatchQueue(label: "com.alexiuce",  attributes: .concurrent)
+       
+        let barrierItem = DispatchWorkItem(flags: .barrier) {
+            print("barrier============")
+        }
+        
+        
+        conqueue.async {
+            print("task 1...")
+        }
+        conqueue.async {
+            print("task 2...")
+        }
+        conqueue.async {
+            print("task 3...")
+        }
+        conqueue.async {
+            print("task 4...")
+        }
+        // barrier 会等待前面的任务都执行完毕后,再执行开始执行后续的任务,它类似与在队列中添加了一个同步栅栏,使得之前和之后的任务有了先后顺序
+        conqueue.async(execute: barrierItem)
+        
+        conqueue.async {
+            print("task 5...")
+        }
+        conqueue.async {
+            print("task 6...")
+        }
+        conqueue.async {
+            print("task 7...")
+        }
+        
+        
+        
+    
+//        for i in 1 ..< 10 {
+//            // .barrier 对全局队列没有约束效果
+//            let work = DispatchWorkItem(flags:.barrier) {
+//                print("current....\(i)")
+//            }
+//            conqueue.async(execute: work)
+//        }
         
     }
+    
+    
 }
