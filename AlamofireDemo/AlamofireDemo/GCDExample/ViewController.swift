@@ -17,6 +17,14 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 //        gcdemo1()
         barrier()
+        
+        let a = 1
+        
+        if 0...10 ~= a {
+            print("yes")
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
 
