@@ -11,19 +11,17 @@ import Cocoa
 class ViewController: NSViewController {
 
     
-    var array = [0]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        gcdemo1()
-        barrier()
+//        barrier()
         
-        let a = 1
-        
-        if 0...10 ~= a {
-            print("yes")
-        }
-        
+//        let a = 1
+//
+//        if 0...10 ~= a {
+//            print("yes")
+//        }
+        groupExample()
         
         // Do any additional setup after loading the view.
     }
@@ -34,7 +32,9 @@ class ViewController: NSViewController {
     
     @IBAction func clickBtn(_ sender: Any) {
 //        gcdemo1()
-        print("count = \(array.count)")
+        print("time = \(Date())")
+        afterExample()
+        
     }
     
 }
@@ -119,6 +119,43 @@ extension ViewController{
 //            }
 //            conqueue.async(execute: work)
 //        }
+        
+    }
+    
+    func afterExample()  {
+        let queue = DispatchQueue(label: "com.alex")
+        queue.asyncAfter(deadline: DispatchTime.now() + 2) {
+            print("good")
+        }
+    }
+    
+    func groupExample()  {
+        let group = DispatchGroup()
+        let queue = DispatchQueue.global()
+        
+        group.enter()
+        queue.async {
+            print("task 1")
+            group.leave()
+        }
+//        queue.async(group: group) {
+//             print("task 1")
+//        }
+        queue.async(group: group) {
+            print("task 2")
+        }
+        queue.async(group: group) {
+            print("task 3")
+        }
+        queue.async(group: group) {
+            print("task 4")
+        }
+        group.notify(queue: queue) {
+            print("all done")
+        }
+        /* 等待组内的任务执行,如果指定时间内尚未完成,则继续执行后面的代码*/
+//        group.wait(timeout: .now() + 2.0)
+        
         
     }
     
