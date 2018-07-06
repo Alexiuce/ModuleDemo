@@ -18,6 +18,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        blockOPExample()
         
     }
 
@@ -30,5 +31,10 @@ extension ViewController{
     
     fileprivate func blockOPExample(){
         /* swift 中没有NSInvocationOperation, 仅支持BlockOperation */
+        let op1 = BlockOperation {
+            print("task 1 \(Thread.current)")
+        }
+        
+        op1.start()
     }
 }
