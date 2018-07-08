@@ -35,7 +35,7 @@ extension ViewController{
             print("task 1 \(Thread.current)")
         }
         
-//        op1.start()
+        op1.start()
         
         let queue = OperationQueue()
         queue.addOperation(op1)
