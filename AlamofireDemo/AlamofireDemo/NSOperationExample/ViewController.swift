@@ -35,7 +35,8 @@ extension ViewController{
             print("task 1 \(Thread.current)")
         }
         
-        op1.start()
+        /* start 方式调用执行operation 时,不会开启新线程,需要将operation添加到queue中,才会创建新的线程执行operation*/
+//        op1.start()
         
         let queue = OperationQueue()
         queue.addOperation(op1)
