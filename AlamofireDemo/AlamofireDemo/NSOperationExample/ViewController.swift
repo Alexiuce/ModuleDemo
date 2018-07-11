@@ -90,8 +90,6 @@ extension ViewController{
         /* Operation 之间的依赖关系可以跨队列存在(即使多个操作在不同的队列,也可以保证依赖关系顺序的执行) */
 //        op2.addDependency(op1)
     
-        
-        
         let queue1 = OperationQueue()
         queue1.addOperation(op1)
         queue1.addOperation(op2)
