@@ -16,13 +16,32 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var label1: NSTextField!
+    
+    @IBOutlet weak var label2: NSTextField!
+    
+    @IBOutlet weak var label3: NSTextField!
+    
+    
+    @IBOutlet weak var btn: NSButton!
+    
+    let queue = OperationQueue()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        blockOPExample()
+//        blockOPExample()
+        
         
     }
 
-
+    @IBAction func clickBtn(_ sender: NSButton) {
+        queue.addOperation {
+            self.ui_demo()
+        }
+    }
+    
 }
 
 
@@ -40,5 +59,20 @@ extension ViewController{
         
         let queue = OperationQueue()
         queue.addOperation(op1)
+    }
+    // UI responser event
+    fileprivate func ui_demo(){
+        while true {
+            Thread.sleep(forTimeInterval: 0.05)
+            let n1 = arc4random_uniform(10)
+            let n2 = arc4random_uniform(10)
+            let n3 = arc4random_uniform(10)
+            OperationQueue.main.addOperation {
+                self.label1.stringValue = "\(n1)"
+                self.label2.stringValue = "\(n2)"
+                self.label3.stringValue = "\(n3)"
+            }
+            
+        }
     }
 }
