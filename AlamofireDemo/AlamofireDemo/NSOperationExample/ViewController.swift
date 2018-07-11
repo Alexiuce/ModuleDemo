@@ -37,9 +37,21 @@ class ViewController: NSViewController {
     }
 
     @IBAction func clickBtn(_ sender: NSButton) {
-        queue.addOperation {
-            self.ui_demo()
+        
+        if queue.operationCount == 0 {
+            queue.addOperation {
+                self.ui_demo()
+            }
+//            btn.stringValue = "Stop"
+            btn.title = "Stop"
+            queue.isSuspended = false
+        }else if !queue.isSuspended {
+            queue.isSuspended = true
+//            btn.stringValue = "Start"
+            btn.title = "Start"
+            
         }
+        
     }
     
 }
@@ -62,7 +74,7 @@ extension ViewController{
     }
     // UI responser event
     fileprivate func ui_demo(){
-        while true {
+        while !queue.isSuspended {
             Thread.sleep(forTimeInterval: 0.05)
             let n1 = arc4random_uniform(10)
             let n2 = arc4random_uniform(10)
