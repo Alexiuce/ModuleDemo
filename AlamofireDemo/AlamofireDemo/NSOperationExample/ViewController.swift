@@ -71,6 +71,7 @@ extension ViewController{
         /* start 方式调用执行operation 时,不会开启新线程,需要将operation添加到queue中,才会创建新的线程执行operation*/
 //        op1.start()
          // 操作的优先级别(**不是队列的优先级):
+        
         op1.qualityOfService = .userInteractive
         op1.completionBlock = {
             print("op1 finished \(Thread.current)")
@@ -84,6 +85,12 @@ extension ViewController{
         }
         op2.qualityOfService = .background
 //        op2.qualityOfService = .
+        
+        
+        /* Operation 之间的依赖关系可以跨队列存在(即使多个操作在不同的队列,也可以保证依赖关系顺序的执行) */
+//        op2.addDependency(op1)
+    
+        
         
         let queue1 = OperationQueue()
         queue1.addOperation(op1)
