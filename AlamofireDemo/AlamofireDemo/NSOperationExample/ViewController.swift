@@ -31,7 +31,9 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        blockOPExample()
+        blockOPExample()
+        
+        
         
         
     }
@@ -42,16 +44,14 @@ class ViewController: NSViewController {
             queue.addOperation {
                 self.ui_demo()
             }
-//            btn.stringValue = "Stop"
+
             btn.title = "Stop"
             queue.isSuspended = false
         }else if !queue.isSuspended {
             queue.isSuspended = true
-//            btn.stringValue = "Start"
+            /* OperationQueue suspended 时,不会挂起已经开始的任务 */
             btn.title = "Start"
-            
         }
-        
     }
     
 }
@@ -63,14 +63,31 @@ extension ViewController{
     fileprivate func blockOPExample(){
         /* swift 中没有NSInvocationOperation, 仅支持BlockOperation */
         let op1 = BlockOperation {
-            print("task 1 \(Thread.current)")
+            for i in 0 ..< 10 {
+                print("op1 \(i)")
+            }
         }
         
         /* start 方式调用执行operation 时,不会开启新线程,需要将operation添加到queue中,才会创建新的线程执行operation*/
 //        op1.start()
+         // 操作的优先级别(**不是队列的优先级):
+        op1.qualityOfService = .userInteractive
+        op1.completionBlock = {
+            print("op1 finished \(Thread.current)")
+        }
         
-        let queue = OperationQueue()
-        queue.addOperation(op1)
+        let op2 = BlockOperation{
+            
+            for i in 0 ..< 10 {
+                print("op2 \(i)")
+            }
+        }
+        op2.qualityOfService = .background
+//        op2.qualityOfService = .
+        
+        let queue1 = OperationQueue()
+        queue1.addOperation(op1)
+        queue1.addOperation(op2)
     }
     // UI responser event
     fileprivate func ui_demo(){
