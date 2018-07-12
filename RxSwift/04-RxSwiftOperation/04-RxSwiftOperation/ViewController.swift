@@ -57,8 +57,8 @@ class ViewController: NSViewController {
         img.delegate = self
         img.addRepresentation(imgRep!)
         
-    
         imageView.image = img
+        
         /*
         print(img)
         let img1 = NSImage(named: NSImage.Name.init("youwin"))!
@@ -73,8 +73,6 @@ class ViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-
-       
         view.window?.center()
       
     }
@@ -377,7 +375,6 @@ extension ViewController{
             }).disposed(by: bag)
          */
  
-        
         
         student.flatMap {
             $0.score
