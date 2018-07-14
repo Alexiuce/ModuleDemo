@@ -12,7 +12,9 @@
 
 
 - (instancetype)init{
-    if ([super init]) {
+    NSObject * a = [super init];
+    if (a) {
+        NSLog(@"a = %@",a);
         NSLog(@"super ok....%@",[super class]);
         NSLog(@"init self = %@",self);
     }
