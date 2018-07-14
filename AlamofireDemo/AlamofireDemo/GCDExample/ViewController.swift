@@ -16,13 +16,15 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 //        gcdemo1()
 //        barrier()
+        let a =   NSViewController.self
+        print(a)
         
 //        let a = 1
 //
 //        if 0...10 ~= a {
 //            print("yes")
 //        }
-        groupExample()
+//        groupExample()
         
         // Do any additional setup after loading the view.
     }
