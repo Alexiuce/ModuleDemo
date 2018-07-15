@@ -11,3 +11,8 @@
 @interface Person : NSObject
 
 @end
+
+
+
+extern const int OCInt;
+extern const NSString *myString;

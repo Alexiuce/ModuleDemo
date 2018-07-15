@@ -17,10 +17,25 @@
         NSLog(@"a = %@",a);
         NSLog(@"super ok....%@",[super class]);
         NSLog(@"init self = %@",self);
+        
+        NSString *sss = ({
+            NSLog(@"hello ....ssss dfasdfsad");
+            int a = 10;
+            NSLog(@"%d", a + 2);
+            @"ggod";
+            
+        });
+        NSLog(@"%@",sss);
+    
     }
     return self;
     
 }
 
+const int OCInt = 20;
+
+const NSString *myString = { ({
+    @"hello";
+});};
 
 @end
