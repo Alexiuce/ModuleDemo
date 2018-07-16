@@ -34,8 +34,6 @@
 
 const int OCInt = 20;
 
-const NSString *myString = { ({
-    @"hello";
-});};
+const NSString *myString = @"hello";
 
 @end
