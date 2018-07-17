@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Person.h"
 
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -16,6 +17,8 @@
     Person *p = [[Person alloc]init];
     NSLog(@"%@",p);
     NSLog(@"%d",OCInt);
+    
+    
     // Do any additional setup after loading the view.
 }
 
