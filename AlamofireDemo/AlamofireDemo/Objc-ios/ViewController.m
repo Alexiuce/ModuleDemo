@@ -16,10 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIWebView *web = [[UIWebView alloc]init];
-    [web respondsToSelector:NSSelectorFromString(@"")];
+//    UIWebView *web = [[UIWebView alloc]init];
+//    [web respondsToSelector:NSSelectorFromString(@"")];
     
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 
