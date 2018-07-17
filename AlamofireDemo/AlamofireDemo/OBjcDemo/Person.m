@@ -12,6 +12,8 @@
 
 
 - (instancetype)init{
+    
+    NSLog(@"self == %@",self);
     NSObject * a = [super init];
     if (a) {
         NSLog(@"a = %@",a);
