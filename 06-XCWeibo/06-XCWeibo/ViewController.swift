@@ -13,8 +13,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let v = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        
+        v.backgroundColor = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+        view.addSubview(v)
+        
+        let btn = UIButton(type: .contactAdd)
+        
+        v.addSubview(btn)
+        btn.addTarget(self, action: #selector(clickMe), for: .touchUpInside)
+        
     }
 
+    
+   @objc func clickMe()  {
+        print(#function)
+        print(#file)
 
+}
+    
 }
 
