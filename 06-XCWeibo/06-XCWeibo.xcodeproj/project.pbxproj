@@ -12,6 +12,14 @@
 		D810798720FC1EA0000E97CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798520FC1EA0000E97CA /* Main.storyboard */; };
 		D810798920FC1EA1000E97CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D810798820FC1EA1000E97CA /* Assets.xcassets */; };
 		D810798C20FC1EA1000E97CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798A20FC1EA1000E97CA /* LaunchScreen.storyboard */; };
+		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
+		D86CEF3720FF4120009BB583 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3620FF4120009BB583 /* ViewController.m */; };
+		D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF3820FF4120009BB583 /* Main.storyboard */; };
+		D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF3B20FF4121009BB583 /* Assets.xcassets */; };
+		D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF3D20FF4121009BB583 /* LaunchScreen.storyboard */; };
+		D86CEF4220FF4121009BB583 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF4120FF4121009BB583 /* main.m */; };
+		D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF4620FF415F009BB583 /* HelloView.xib */; };
+		D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF4920FF417C009BB583 /* HelloView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +30,30 @@
 		D810798820FC1EA1000E97CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D810798B20FC1EA1000E97CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D810798D20FC1EA1000E97CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86CEF3020FF4120009BB583 /* Objc-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D86CEF3220FF4120009BB583 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D86CEF3320FF4120009BB583 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D86CEF3520FF4120009BB583 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D86CEF3620FF4120009BB583 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D86CEF3920FF4120009BB583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D86CEF3B20FF4121009BB583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D86CEF3E20FF4121009BB583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D86CEF4020FF4121009BB583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86CEF4120FF4121009BB583 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D86CEF4620FF415F009BB583 /* HelloView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloView.xib; sourceTree = "<group>"; };
+		D86CEF4820FF417C009BB583 /* HelloView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloView.h; sourceTree = "<group>"; };
+		D86CEF4920FF417C009BB583 /* HelloView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D810797B20FC1EA0000E97CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D86CEF2D20FF4120009BB583 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D810798020FC1EA0000E97CA /* 06-XCWeibo */,
+				D86CEF3120FF4120009BB583 /* Objc-UI */,
 				D810797F20FC1EA0000E97CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				D810797E20FC1EA0000E97CA /* 06-XCWeibo.app */,
+				D86CEF3020FF4120009BB583 /* Objc-UI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +92,25 @@
 				D810798D20FC1EA1000E97CA /* Info.plist */,
 			);
 			path = "06-XCWeibo";
+			sourceTree = "<group>";
+		};
+		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
+			isa = PBXGroup;
+			children = (
+				D86CEF3220FF4120009BB583 /* AppDelegate.h */,
+				D86CEF3320FF4120009BB583 /* AppDelegate.m */,
+				D86CEF3520FF4120009BB583 /* ViewController.h */,
+				D86CEF3620FF4120009BB583 /* ViewController.m */,
+				D86CEF4620FF415F009BB583 /* HelloView.xib */,
+				D86CEF4820FF417C009BB583 /* HelloView.h */,
+				D86CEF4920FF417C009BB583 /* HelloView.m */,
+				D86CEF3820FF4120009BB583 /* Main.storyboard */,
+				D86CEF3B20FF4121009BB583 /* Assets.xcassets */,
+				D86CEF3D20FF4121009BB583 /* LaunchScreen.storyboard */,
+				D86CEF4020FF4121009BB583 /* Info.plist */,
+				D86CEF4120FF4121009BB583 /* main.m */,
+			);
+			path = "Objc-UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +133,23 @@
 			productReference = D810797E20FC1EA0000E97CA /* 06-XCWeibo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D86CEF2F20FF4120009BB583 /* Objc-UI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D86CEF4520FF4121009BB583 /* Build configuration list for PBXNativeTarget "Objc-UI" */;
+			buildPhases = (
+				D86CEF2C20FF4120009BB583 /* Sources */,
+				D86CEF2D20FF4120009BB583 /* Frameworks */,
+				D86CEF2E20FF4120009BB583 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Objc-UI";
+			productName = "Objc-UI";
+			productReference = D86CEF3020FF4120009BB583 /* Objc-UI.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +161,9 @@
 				ORGANIZATIONNAME = Alexcai;
 				TargetAttributes = {
 					D810797D20FC1EA0000E97CA = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D86CEF2F20FF4120009BB583 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -113,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				D810797D20FC1EA0000E97CA /* 06-XCWeibo */,
+				D86CEF2F20FF4120009BB583 /* Objc-UI */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +198,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D86CEF2E20FF4120009BB583 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
+				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
+				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
+				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,6 +218,17 @@
 			files = (
 				D810798420FC1EA0000E97CA /* ViewController.swift in Sources */,
 				D810798220FC1EA0000E97CA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D86CEF2C20FF4120009BB583 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
+				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
+				D86CEF4220FF4121009BB583 /* main.m in Sources */,
+				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +247,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				D810798B20FC1EA1000E97CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D86CEF3820FF4120009BB583 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D86CEF3920FF4120009BB583 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D86CEF3D20FF4121009BB583 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D86CEF3E20FF4121009BB583 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -310,6 +418,38 @@
 			};
 			name = Release;
 		};
+		D86CEF4320FF4121009BB583 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Objc-UI/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.Objc-UI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D86CEF4420FF4121009BB583 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Objc-UI/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.Objc-UI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +467,15 @@
 			buildConfigurations = (
 				D810799120FC1EA1000E97CA /* Debug */,
 				D810799220FC1EA1000E97CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D86CEF4520FF4121009BB583 /* Build configuration list for PBXNativeTarget "Objc-UI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D86CEF4320FF4121009BB583 /* Debug */,
+				D86CEF4420FF4121009BB583 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
