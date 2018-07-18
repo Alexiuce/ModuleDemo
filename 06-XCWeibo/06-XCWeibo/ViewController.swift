@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
         let v = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
         
-        v.backgroundColor = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+        v.backgroundColor = #colorLiteral(red: 0.8331019746, green: 0.6142278148, blue: 0.09803921729, alpha: 1)
         view.addSubview(v)
         
         let btn = UIButton(type: .contactAdd)
