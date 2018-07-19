@@ -20,9 +20,17 @@
 		D86CEF4220FF4121009BB583 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF4120FF4121009BB583 /* main.m */; };
 		D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF4620FF415F009BB583 /* HelloView.xib */; };
 		D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF4920FF417C009BB583 /* HelloView.m */; };
+		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
+		FCB73D74692EF1711B2B9796 /* Pods_Objc_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_06_XCWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25522F0E6853F942C38D4EB7 /* Pods-06-XCWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-06-XCWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-06-XCWeibo/Pods-06-XCWeibo.release.xcconfig"; sourceTree = "<group>"; };
+		5AA470079CB4336B4FE921D5 /* Pods-Objc-UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc-UI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objc-UI/Pods-Objc-UI.debug.xcconfig"; sourceTree = "<group>"; };
+		6581CC2A01465FD1D8B64CE2 /* Pods-Objc-UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc-UI.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objc-UI/Pods-Objc-UI.release.xcconfig"; sourceTree = "<group>"; };
+		B1917A21A3635FF970CD5A0C /* Pods-06-XCWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-06-XCWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-06-XCWeibo/Pods-06-XCWeibo.debug.xcconfig"; sourceTree = "<group>"; };
+		CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Objc_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D810797E20FC1EA0000E97CA /* 06-XCWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "06-XCWeibo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D810798120FC1EA0000E97CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D810798320FC1EA0000E97CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,18 +66,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB73D74692EF1711B2B9796 /* Pods_Objc_UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FD0C62CA64D000178D2BF3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */,
+				CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C6143DF4E4FAE765ADF7E5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1917A21A3635FF970CD5A0C /* Pods-06-XCWeibo.debug.xcconfig */,
+				25522F0E6853F942C38D4EB7 /* Pods-06-XCWeibo.release.xcconfig */,
+				5AA470079CB4336B4FE921D5 /* Pods-Objc-UI.debug.xcconfig */,
+				6581CC2A01465FD1D8B64CE2 /* Pods-Objc-UI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D810797520FC1EA0000E97CA = {
 			isa = PBXGroup;
 			children = (
 				D810798020FC1EA0000E97CA /* 06-XCWeibo */,
 				D86CEF3120FF4120009BB583 /* Objc-UI */,
 				D810797F20FC1EA0000E97CA /* Products */,
+				9C6143DF4E4FAE765ADF7E5E /* Pods */,
+				3FD0C62CA64D000178D2BF3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D810799020FC1EA1000E97CA /* Build configuration list for PBXNativeTarget "06-XCWeibo" */;
 			buildPhases = (
+				0CA05A53DEE8D9A3A66A913B /* [CP] Check Pods Manifest.lock */,
 				D810797A20FC1EA0000E97CA /* Sources */,
 				D810797B20FC1EA0000E97CA /* Frameworks */,
 				D810797C20FC1EA0000E97CA /* Resources */,
+				0DAC91771009D30B3052F5CD /* [CP] Embed Pods Frameworks */,
+				C10877E12D3D0016EE8F9BF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D86CEF4520FF4121009BB583 /* Build configuration list for PBXNativeTarget "Objc-UI" */;
 			buildPhases = (
+				7136A68B642D46E824B89532 /* [CP] Check Pods Manifest.lock */,
 				D86CEF2C20FF4120009BB583 /* Sources */,
 				D86CEF2D20FF4120009BB583 /* Frameworks */,
 				D86CEF2E20FF4120009BB583 /* Resources */,
+				1F70808A9F751FD2982EB436 /* [CP] Embed Pods Frameworks */,
+				903DCE13447F063EBC8A4D67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +248,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CA05A53DEE8D9A3A66A913B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-06-XCWeibo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DAC91771009D30B3052F5CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-06-XCWeibo/Pods-06-XCWeibo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F70808A9F751FD2982EB436 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Objc-UI/Pods-Objc-UI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Objc-UI/Pods-Objc-UI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7136A68B642D46E824B89532 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Objc-UI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		903DCE13447F063EBC8A4D67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Objc-UI/Pods-Objc-UI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C10877E12D3D0016EE8F9BF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-06-XCWeibo/Pods-06-XCWeibo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D810797A20FC1EA0000E97CA /* Sources */ = {
@@ -386,14 +526,12 @@
 		};
 		D810799120FC1EA1000E97CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1917A21A3635FF970CD5A0C /* Pods-06-XCWeibo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "06-XCWeibo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.-6-XCWeibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -403,14 +541,12 @@
 		};
 		D810799220FC1EA1000E97CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25522F0E6853F942C38D4EB7 /* Pods-06-XCWeibo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "06-XCWeibo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.-6-XCWeibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -420,14 +556,12 @@
 		};
 		D86CEF4320FF4121009BB583 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AA470079CB4336B4FE921D5 /* Pods-Objc-UI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Objc-UI/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.Objc-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -436,14 +570,12 @@
 		};
 		D86CEF4420FF4121009BB583 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6581CC2A01465FD1D8B64CE2 /* Pods-Objc-UI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Objc-UI/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.Objc-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

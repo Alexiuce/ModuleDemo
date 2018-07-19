@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HelloView.h"
+#import "SDAutoLayout.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,7 @@
     HelloView *v = [[NSBundle mainBundle]loadNibNamed:@"HelloView" owner:self options:nil].firstObject;//[[HelloView alloc]init];
     v.frame = CGRectMake(100, 100, 30, 30);
     [self.view addSubview:v];
+    
      
     // Do any additional setup after loading the view, typically from a nib.
 }

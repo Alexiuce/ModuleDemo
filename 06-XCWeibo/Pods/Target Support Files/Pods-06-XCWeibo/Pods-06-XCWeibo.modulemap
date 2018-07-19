@@ -1,0 +1,6 @@
+framework module Pods_06_XCWeibo {
+  umbrella header "Pods-06-XCWeibo-umbrella.h"
+
+  export *
+  module * { export * }
+}

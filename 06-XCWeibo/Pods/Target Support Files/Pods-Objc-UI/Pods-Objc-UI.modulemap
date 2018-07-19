@@ -1,0 +1,6 @@
+framework module Pods_Objc_UI {
+  umbrella header "Pods-Objc-UI-umbrella.h"
+
+  export *
+  module * { export * }
+}
