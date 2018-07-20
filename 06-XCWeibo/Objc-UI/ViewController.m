@@ -23,6 +23,8 @@
     v.frame = CGRectMake(100, 100, 30, 30);
     [self.view addSubview:v];
     
+    
+    
      
     // Do any additional setup after loading the view, typically from a nib.
 }
