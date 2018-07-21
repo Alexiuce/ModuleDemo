@@ -25,6 +25,18 @@
     
     v.sd_layout.widthIs(100).heightIs(50).xIs(50).yIs(60);
     
+    UILabel *demoLabel = [UILabel new];
+    demoLabel.backgroundColor = [UIColor redColor];
+    [self.view addSubview:demoLabel];
+    UIFont *originalFont = [UIFont fontWithName:@"American Typewriter" size:24.0];
+    demoLabel.sd_layout.xIs(50).topSpaceToView(v, 20).widthIs(200).autoHeightRatio(0);
+    
+    
+    UIFontDescriptor *fd = [originalFont.fontDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
+    UIFont *newFont = [UIFont fontWithDescriptor:fd size:originalFont.pointSize];
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:@"Hello Wrold~"];
+    [text addAttributes:@{NSFontAttributeName:newFont} range:NSMakeRange(0, 5)];
+    demoLabel.attributedText = text;
      
     // Do any additional setup after loading the view, typically from a nib.
 }
