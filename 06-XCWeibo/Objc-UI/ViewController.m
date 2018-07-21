@@ -28,15 +28,29 @@
     UILabel *demoLabel = [UILabel new];
     demoLabel.backgroundColor = [UIColor redColor];
     [self.view addSubview:demoLabel];
-    UIFont *originalFont = [UIFont fontWithName:@"American Typewriter" size:24.0];
-    demoLabel.sd_layout.xIs(50).topSpaceToView(v, 20).widthIs(200).autoHeightRatio(0);
+//    UIFont *originalFont = [UIFont fontWithName:@"American Typewriter" size:24.0];
+//    demoLabel.sd_layout.xIs(50).topSpaceToView(v, 20).widthIs(200).autoHeightRatio(0);
+//    
+//    
+//    UIFontDescriptor *fd = [originalFont.fontDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
+//    UIFont *newFont = [UIFont fontWithDescriptor:fd size:originalFont.pointSize];
+//    NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:@"Hello Wrold~"];
+//    [text addAttributes:@{NSFontAttributeName:newFont} range:NSMakeRange(0, 5)];
+//    demoLabel.attributedText = text;
     
     
-    UIFontDescriptor *fd = [originalFont.fontDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
-    UIFont *newFont = [UIFont fontWithDescriptor:fd size:originalFont.pointSize];
-    NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:@"Hello Wrold~"];
-    [text addAttributes:@{NSFontAttributeName:newFont} range:NSMakeRange(0, 5)];
-    demoLabel.attributedText = text;
+    NSTextStorage *storage = [[NSTextStorage alloc]initWithString:@"good morning~"];
+    NSLayoutManager *layoutManager = [[NSLayoutManager alloc]init];
+    [storage addLayoutManager:layoutManager];
+    
+    NSTextContainer *textContainer = [[NSTextContainer alloc]init];
+    
+    [layoutManager addTextContainer:textContainer];
+    
+    demoLabel.attributedText = storage;
+    
+    
+    
      
     // Do any additional setup after loading the view, typically from a nib.
 }
