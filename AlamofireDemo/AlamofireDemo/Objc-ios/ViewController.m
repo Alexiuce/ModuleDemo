@@ -16,8 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    UIWebView *web = [[UIWebView alloc]init];
-//    [web respondsToSelector:NSSelectorFromString(@"")];
+    
     
     
 }
