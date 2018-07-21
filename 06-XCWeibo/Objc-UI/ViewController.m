@@ -20,10 +20,10 @@
     [super viewDidLoad];
     
     HelloView *v = [[NSBundle mainBundle]loadNibNamed:@"HelloView" owner:self options:nil].firstObject;//[[HelloView alloc]init];
-    v.frame = CGRectMake(100, 100, 30, 30);
+//    v.frame = CGRectMake(100, 100, 30, 30);
     [self.view addSubview:v];
     
-    
+    v.sd_layout.widthIs(100).heightIs(50).xIs(50).yIs(60);
     
      
     // Do any additional setup after loading the view, typically from a nib.
