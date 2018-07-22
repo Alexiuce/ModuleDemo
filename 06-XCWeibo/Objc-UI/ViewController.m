@@ -39,7 +39,10 @@
     demoLabel.attributedText = text;
     
     
-    NSLayoutManager *lm = demoLabel.layoutManager;
+    
+    NSTextContainer *tc = demoLabel.textContainer;
+    UIBezierPath *exclusPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 50, 30)];
+    tc.exclusionPaths = @[exclusPath];
     
     
     
