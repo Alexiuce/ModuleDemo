@@ -25,29 +25,34 @@
     
     v.sd_layout.widthIs(100).heightIs(50).xIs(50).yIs(60);
     
-    UILabel *demoLabel = [UILabel new];
+    UITextView *demoLabel = [UITextView new];
     demoLabel.backgroundColor = [UIColor redColor];
     [self.view addSubview:demoLabel];
-//    UIFont *originalFont = [UIFont fontWithName:@"American Typewriter" size:24.0];
-//    demoLabel.sd_layout.xIs(50).topSpaceToView(v, 20).widthIs(200).autoHeightRatio(0);
+    UIFont *originalFont = [UIFont fontWithName:@"American Typewriter" size:24.0];
+    demoLabel.sd_layout.xIs(50).topSpaceToView(v, 20).widthIs(200).heightIs(100);
+    
+    
+    UIFontDescriptor *fd = [originalFont.fontDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
+    UIFont *newFont = [UIFont fontWithDescriptor:fd size:originalFont.pointSize];
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:@"Hello Wrold~, this is a demo for trail mode Text on more content ..., if you can see a button in the last,this's ok~"];
+    [text addAttributes:@{NSFontAttributeName:newFont} range:NSMakeRange(0, 5)];
+    demoLabel.attributedText = text;
+    
+    
+    NSLayoutManager *lm = demoLabel.layoutManager;
+    
+    
+    
+//    NSTextStorage *storage = [[NSTextStorage alloc]initWithString:@"good morning~"];
+//    NSLayoutManager *layoutManager = [[NSLayoutManager alloc]init];
+//    [storage addLayoutManager:layoutManager];
 //    
+//    NSTextContainer *textContainer = [[NSTextContainer alloc]init];
 //    
-//    UIFontDescriptor *fd = [originalFont.fontDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
-//    UIFont *newFont = [UIFont fontWithDescriptor:fd size:originalFont.pointSize];
-//    NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:@"Hello Wrold~"];
-//    [text addAttributes:@{NSFontAttributeName:newFont} range:NSMakeRange(0, 5)];
-//    demoLabel.attributedText = text;
+//    [layoutManager addTextContainer:textContainer];
     
     
-    NSTextStorage *storage = [[NSTextStorage alloc]initWithString:@"good morning~"];
-    NSLayoutManager *layoutManager = [[NSLayoutManager alloc]init];
-    [storage addLayoutManager:layoutManager];
-    
-    NSTextContainer *textContainer = [[NSTextContainer alloc]init];
-    
-    [layoutManager addTextContainer:textContainer];
-    
-    demoLabel.attributedText = storage;
+   
     
     
     
