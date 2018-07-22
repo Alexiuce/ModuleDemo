@@ -45,6 +45,11 @@
     tc.exclusionPaths = @[exclusPath];
     
     
+    UITableView *tableView = [UITableView new];
+    [tableView beginUpdates];
+    [tableView endUpdates];
+    
+    
     
 //    NSTextStorage *storage = [[NSTextStorage alloc]initWithString:@"good morning~"];
 //    NSLayoutManager *layoutManager = [[NSLayoutManager alloc]init];
