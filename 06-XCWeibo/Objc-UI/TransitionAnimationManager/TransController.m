@@ -13,6 +13,7 @@
 
 @property (nonatomic, assign) BOOL isPresentStyle;
 
+
 @end
 
 
@@ -35,6 +36,25 @@
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     
+    UIView *containerView = transitionContext.containerView;
+    if (self.isPresentStyle) {
+        UIView *showView = [transitionContext viewForKey:UITransitionContextToViewKey];
+        [containerView addSubview:showView];
+        showView.frame = CGRectMake(300, 100, 300, 300);
+        [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+            showView.frame =  CGRectMake(0, 100, 300, 300);
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+        return;
+    }
+    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        fromView.frame = CGRectMake(1000, 100, 300, 300);
+    } completion:^(BOOL finished) {
+        [fromView removeFromSuperview];
+        [transitionContext completeTransition:YES];
+    }];
 }
 
 - (void)dealloc{
