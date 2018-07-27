@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "HelloView.h"
 #import "SDAutoLayout.h"
+#import "PersonViewController.h"
+#import "TransAnimationManager.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong)TransAnimationManager *transManager;
 
 @end
 
@@ -44,14 +48,14 @@
     UIBezierPath *exclusPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 50, 30)];
     tc.exclusionPaths = @[exclusPath];
     
-    UITableView *tableView = [UITableView new];
+//    UITableView *tableView = [UITableView new];
     /** 1、beginUpdates 和 endUpdates必须成对使用
      2、使用beginUpdates和endUpdates可以在改变一些行（row）的高度时自带动画，并且不需要Reload row（不用调用cellForRow，仅仅需要调用heightForRow，这样效率最高）。
      3、在beginUpdates和endUpdates中执行insert,delete,select,reload row时，动画效果更加同步和顺滑，否则动画卡顿且table的属性（如row count）可能会失效。
      4、在beginUpdates 和 endUpdates中执行 reloadData 方法和直接reloadData一样，没有相应的中间动画
      */
-    [tableView beginUpdates];
-    [tableView endUpdates];
+//    [tableView beginUpdates];
+//    [tableView endUpdates];
     
     
     /** CATransaction
@@ -79,6 +83,12 @@
      
     // Do any additional setup after loading the view, typically from a nib.
 }
+- (IBAction)clickBtn:(UIButton *)sender {
+    PersonViewController *pvc = [[PersonViewController alloc]init];
+    pvc.modalPresentationStyle = UIModalPresentationCustom;
+    pvc.transitioningDelegate = self.transManager;
+    [self presentViewController:pvc animated:YES completion:nil];
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -86,5 +96,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (TransAnimationManager *)transManager{
+    if (_transManager == nil) {
+        _transManager = [TransAnimationManager new];
+    }
+    return _transManager;
+}
 
 @end

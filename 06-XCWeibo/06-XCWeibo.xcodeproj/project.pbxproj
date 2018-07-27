@@ -13,6 +13,10 @@
 		D810798920FC1EA1000E97CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D810798820FC1EA1000E97CA /* Assets.xcassets */; };
 		D810798C20FC1EA1000E97CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798A20FC1EA1000E97CA /* LaunchScreen.storyboard */; };
 		D818D079210AA24A0002C03E /* DemoMan.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D078210AA24A0002C03E /* DemoMan.m */; };
+		D818D07D210AB5890002C03E /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D07B210AB5890002C03E /* PersonViewController.m */; };
+		D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D818D07C210AB5890002C03E /* PersonViewController.xib */; };
+		D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D081210ABA930002C03E /* TransAnimationManager.m */; };
+		D818D085210ABD6C0002C03E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D084210ABD6C0002C03E /* TransController.m */; };
 		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
 		D86CEF3720FF4120009BB583 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3620FF4120009BB583 /* ViewController.m */; };
 		D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF3820FF4120009BB583 /* Main.storyboard */; };
@@ -41,6 +45,13 @@
 		D810798D20FC1EA1000E97CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D818D077210AA24A0002C03E /* DemoMan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMan.h; sourceTree = "<group>"; };
 		D818D078210AA24A0002C03E /* DemoMan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMan.m; sourceTree = "<group>"; };
+		D818D07A210AB5890002C03E /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		D818D07B210AB5890002C03E /* PersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		D818D07C210AB5890002C03E /* PersonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
+		D818D080210ABA930002C03E /* TransAnimationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransAnimationManager.h; sourceTree = "<group>"; };
+		D818D081210ABA930002C03E /* TransAnimationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransAnimationManager.m; sourceTree = "<group>"; };
+		D818D083210ABD6C0002C03E /* TransController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
+		D818D084210ABD6C0002C03E /* TransController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
 		D86CEF3020FF4120009BB583 /* Objc-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86CEF3220FF4120009BB583 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86CEF3320FF4120009BB583 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,13 +140,28 @@
 			path = "06-XCWeibo";
 			sourceTree = "<group>";
 		};
+		D818D07F210ABA1B0002C03E /* TransitionAnimationManager */ = {
+			isa = PBXGroup;
+			children = (
+				D818D080210ABA930002C03E /* TransAnimationManager.h */,
+				D818D081210ABA930002C03E /* TransAnimationManager.m */,
+				D818D083210ABD6C0002C03E /* TransController.h */,
+				D818D084210ABD6C0002C03E /* TransController.m */,
+			);
+			path = TransitionAnimationManager;
+			sourceTree = "<group>";
+		};
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D818D07F210ABA1B0002C03E /* TransitionAnimationManager */,
 				D86CEF3220FF4120009BB583 /* AppDelegate.h */,
 				D86CEF3320FF4120009BB583 /* AppDelegate.m */,
 				D86CEF3520FF4120009BB583 /* ViewController.h */,
 				D86CEF3620FF4120009BB583 /* ViewController.m */,
+				D818D07A210AB5890002C03E /* PersonViewController.h */,
+				D818D07B210AB5890002C03E /* PersonViewController.m */,
+				D818D07C210AB5890002C03E /* PersonViewController.xib */,
 				D818D077210AA24A0002C03E /* DemoMan.h */,
 				D818D078210AA24A0002C03E /* DemoMan.m */,
 				D86CEF4620FF415F009BB583 /* HelloView.xib */,
@@ -243,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
+				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
@@ -322,11 +349,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
 				D86CEF4220FF4121009BB583 /* main.m in Sources */,
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
+				D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */,
+				D818D07D210AB5890002C03E /* PersonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
