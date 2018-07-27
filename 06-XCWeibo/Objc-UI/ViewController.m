@@ -85,8 +85,8 @@
 }
 - (IBAction)clickBtn:(UIButton *)sender {
     PersonViewController *pvc = [[PersonViewController alloc]init];
-    pvc.modalPresentationStyle = UIModalPresentationCustom;
-    pvc.transitioningDelegate = self.transManager;
+//    pvc.modalPresentationStyle = UIModalPresentationCustom;
+//    pvc.transitioningDelegate = self.transManager;
     [self presentViewController:pvc animated:YES completion:nil];
 }
 

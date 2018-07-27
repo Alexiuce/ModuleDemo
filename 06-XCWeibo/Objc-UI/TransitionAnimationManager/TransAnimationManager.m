@@ -12,7 +12,7 @@
 
 @interface TransAnimationManager()
 
-//@property (nonatomic, strong)TransController *trans;
+
 
 @end
 
@@ -21,12 +21,12 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
     return [TransController transPrensentSytle:YES];
-//    return self.trans;
+
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
     return  [TransController transPrensentSytle:NO];
-//    return self.trans;
+
 }
 
 @end
