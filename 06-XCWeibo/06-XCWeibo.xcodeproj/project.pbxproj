@@ -12,6 +12,7 @@
 		D810798720FC1EA0000E97CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798520FC1EA0000E97CA /* Main.storyboard */; };
 		D810798920FC1EA1000E97CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D810798820FC1EA1000E97CA /* Assets.xcassets */; };
 		D810798C20FC1EA1000E97CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798A20FC1EA1000E97CA /* LaunchScreen.storyboard */; };
+		D818D079210AA24A0002C03E /* DemoMan.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D078210AA24A0002C03E /* DemoMan.m */; };
 		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
 		D86CEF3720FF4120009BB583 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3620FF4120009BB583 /* ViewController.m */; };
 		D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF3820FF4120009BB583 /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 		D810798820FC1EA1000E97CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D810798B20FC1EA1000E97CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D810798D20FC1EA1000E97CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D818D077210AA24A0002C03E /* DemoMan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMan.h; sourceTree = "<group>"; };
+		D818D078210AA24A0002C03E /* DemoMan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMan.m; sourceTree = "<group>"; };
 		D86CEF3020FF4120009BB583 /* Objc-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86CEF3220FF4120009BB583 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86CEF3320FF4120009BB583 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				D86CEF3320FF4120009BB583 /* AppDelegate.m */,
 				D86CEF3520FF4120009BB583 /* ViewController.h */,
 				D86CEF3620FF4120009BB583 /* ViewController.m */,
+				D818D077210AA24A0002C03E /* DemoMan.h */,
+				D818D078210AA24A0002C03E /* DemoMan.m */,
 				D86CEF4620FF415F009BB583 /* HelloView.xib */,
 				D86CEF4820FF417C009BB583 /* HelloView.h */,
 				D86CEF4920FF417C009BB583 /* HelloView.m */,
@@ -156,8 +161,6 @@
 				D810797A20FC1EA0000E97CA /* Sources */,
 				D810797B20FC1EA0000E97CA /* Frameworks */,
 				D810797C20FC1EA0000E97CA /* Resources */,
-				0DAC91771009D30B3052F5CD /* [CP] Embed Pods Frameworks */,
-				C10877E12D3D0016EE8F9BF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,7 +180,6 @@
 				D86CEF2D20FF4120009BB583 /* Frameworks */,
 				D86CEF2E20FF4120009BB583 /* Resources */,
 				1F70808A9F751FD2982EB436 /* [CP] Embed Pods Frameworks */,
-				903DCE13447F063EBC8A4D67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,21 +270,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0DAC91771009D30B3052F5CD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-06-XCWeibo/Pods-06-XCWeibo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1F70808A9F751FD2982EB436 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,36 +306,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		903DCE13447F063EBC8A4D67 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Objc-UI/Pods-Objc-UI-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C10877E12D3D0016EE8F9BF1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-06-XCWeibo/Pods-06-XCWeibo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -369,6 +326,7 @@
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
 				D86CEF4220FF4121009BB583 /* main.m in Sources */,
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
+				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +489,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "06-XCWeibo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.-6-XCWeibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -546,7 +507,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "06-XCWeibo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.-6-XCWeibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -561,7 +525,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Objc-UI/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.Objc-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -575,7 +542,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Objc-UI/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexiuce.Objc-UI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
