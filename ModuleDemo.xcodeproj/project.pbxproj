@@ -11,6 +11,17 @@
 		56327DE8204E913400B193C6 /* NSView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56327DE7204E913400B193C6 /* NSView-Extension.swift */; };
 		56572FAD20DC8C8D007E392C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56572FAC20DC8C8D007E392C /* main.swift */; };
 		56CF729F20EB1DCE003204F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF729E20EB1DCE003204F5 /* main.swift */; };
+		D89A1BDD210BF337006D767F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A1BDC210BF337006D767F /* AppDelegate.swift */; };
+		D89A1BDF210BF337006D767F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A1BDE210BF337006D767F /* ViewController.swift */; };
+		D89A1BE1210BF338006D767F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89A1BE0210BF338006D767F /* Assets.xcassets */; };
+		D89A1BE4210BF338006D767F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89A1BE2210BF338006D767F /* Main.storyboard */; };
+		D89A1BEC210C003E006D767F /* RedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A1BEA210C003E006D767F /* RedController.swift */; };
+		D89A1BED210C003E006D767F /* RedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89A1BEB210C003E006D767F /* RedController.xib */; };
+		D89A1BF0210C004C006D767F /* BlueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A1BEE210C004C006D767F /* BlueController.swift */; };
+		D89A1BF1210C004C006D767F /* BlueController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89A1BEF210C004C006D767F /* BlueController.xib */; };
+		D89A1BF4210C005C006D767F /* GreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A1BF2210C005C006D767F /* GreenController.swift */; };
+		D89A1BF5210C005C006D767F /* GreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89A1BF3210C005C006D767F /* GreenController.xib */; };
+		D89A1BF7210C1449006D767F /* MYContainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A1BF6210C1449006D767F /* MYContainView.swift */; };
 		D8DE5E2A203BD01300541915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE5E29203BD01300541915 /* AppDelegate.swift */; };
 		D8DE5E2C203BD01300541915 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE5E2B203BD01300541915 /* ViewController.swift */; };
 		D8DE5E2E203BD01300541915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DE5E2D203BD01300541915 /* Assets.xcassets */; };
@@ -45,6 +56,20 @@
 		56572FAC20DC8C8D007E392C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		56CF729C20EB1DCE003204F5 /* 02-runloop */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "02-runloop"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56CF729E20EB1DCE003204F5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D89A1BDA210BF337006D767F /* TransAnimationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransAnimationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D89A1BDC210BF337006D767F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D89A1BDE210BF337006D767F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D89A1BE0210BF338006D767F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D89A1BE3210BF338006D767F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D89A1BE5210BF338006D767F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D89A1BE6210BF338006D767F /* TransAnimationController.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TransAnimationController.entitlements; sourceTree = "<group>"; };
+		D89A1BEA210C003E006D767F /* RedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedController.swift; sourceTree = "<group>"; };
+		D89A1BEB210C003E006D767F /* RedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedController.xib; sourceTree = "<group>"; };
+		D89A1BEE210C004C006D767F /* BlueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueController.swift; sourceTree = "<group>"; };
+		D89A1BEF210C004C006D767F /* BlueController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlueController.xib; sourceTree = "<group>"; };
+		D89A1BF2210C005C006D767F /* GreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenController.swift; sourceTree = "<group>"; };
+		D89A1BF3210C005C006D767F /* GreenController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenController.xib; sourceTree = "<group>"; };
+		D89A1BF6210C1449006D767F /* MYContainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYContainView.swift; sourceTree = "<group>"; };
 		D8DE5E26203BD01300541915 /* ModuleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DE5E29203BD01300541915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8DE5E2B203BD01300541915 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +88,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		56CF729920EB1DCE003204F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D89A1BD7210BF337006D767F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -104,12 +136,33 @@
 			path = "02-runloop";
 			sourceTree = "<group>";
 		};
+		D89A1BDB210BF337006D767F /* TransAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				D89A1BDC210BF337006D767F /* AppDelegate.swift */,
+				D89A1BDE210BF337006D767F /* ViewController.swift */,
+				D89A1BF6210C1449006D767F /* MYContainView.swift */,
+				D89A1BEA210C003E006D767F /* RedController.swift */,
+				D89A1BEE210C004C006D767F /* BlueController.swift */,
+				D89A1BF2210C005C006D767F /* GreenController.swift */,
+				D89A1BF3210C005C006D767F /* GreenController.xib */,
+				D89A1BEF210C004C006D767F /* BlueController.xib */,
+				D89A1BEB210C003E006D767F /* RedController.xib */,
+				D89A1BE0210BF338006D767F /* Assets.xcassets */,
+				D89A1BE2210BF338006D767F /* Main.storyboard */,
+				D89A1BE5210BF338006D767F /* Info.plist */,
+				D89A1BE6210BF338006D767F /* TransAnimationController.entitlements */,
+			);
+			path = TransAnimationController;
+			sourceTree = "<group>";
+		};
 		D8DE5E1D203BD01300541915 = {
 			isa = PBXGroup;
 			children = (
 				D8DE5E28203BD01300541915 /* ModuleDemo */,
 				56572FAB20DC8C8D007E392C /* 01-Thread */,
 				56CF729D20EB1DCE003204F5 /* 02-runloop */,
+				D89A1BDB210BF337006D767F /* TransAnimationController */,
 				D8DE5E27203BD01300541915 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +173,7 @@
 				D8DE5E26203BD01300541915 /* ModuleDemo.app */,
 				56572FAA20DC8C8D007E392C /* 01-Thread */,
 				56CF729C20EB1DCE003204F5 /* 02-runloop */,
+				D89A1BDA210BF337006D767F /* TransAnimationController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +229,23 @@
 			productReference = 56CF729C20EB1DCE003204F5 /* 02-runloop */;
 			productType = "com.apple.product-type.tool";
 		};
+		D89A1BD9210BF337006D767F /* TransAnimationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D89A1BE9210BF338006D767F /* Build configuration list for PBXNativeTarget "TransAnimationController" */;
+			buildPhases = (
+				D89A1BD6210BF337006D767F /* Sources */,
+				D89A1BD7210BF337006D767F /* Frameworks */,
+				D89A1BD8210BF337006D767F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransAnimationController;
+			productName = TransAnimationController;
+			productReference = D89A1BDA210BF337006D767F /* TransAnimationController.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D8DE5E25203BD01300541915 /* ModuleDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8DE5E36203BD01300541915 /* Build configuration list for PBXNativeTarget "ModuleDemo" */;
@@ -210,6 +281,10 @@
 						CreatedOnToolsVersion = 9.4.1;
 						ProvisioningStyle = Automatic;
 					};
+					D89A1BD9210BF337006D767F = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
 					D8DE5E25203BD01300541915 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -232,11 +307,24 @@
 				D8DE5E25203BD01300541915 /* ModuleDemo */,
 				56572FA920DC8C8D007E392C /* 01-Thread */,
 				56CF729B20EB1DCE003204F5 /* 02-runloop */,
+				D89A1BD9210BF337006D767F /* TransAnimationController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D89A1BD8210BF337006D767F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89A1BED210C003E006D767F /* RedController.xib in Resources */,
+				D89A1BE1210BF338006D767F /* Assets.xcassets in Resources */,
+				D89A1BE4210BF338006D767F /* Main.storyboard in Resources */,
+				D89A1BF1210C004C006D767F /* BlueController.xib in Resources */,
+				D89A1BF5210C005C006D767F /* GreenController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8DE5E24203BD01300541915 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,6 +353,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D89A1BD6210BF337006D767F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89A1BDF210BF337006D767F /* ViewController.swift in Sources */,
+				D89A1BF7210C1449006D767F /* MYContainView.swift in Sources */,
+				D89A1BDD210BF337006D767F /* AppDelegate.swift in Sources */,
+				D89A1BF4210C005C006D767F /* GreenController.swift in Sources */,
+				D89A1BEC210C003E006D767F /* RedController.swift in Sources */,
+				D89A1BF0210C004C006D767F /* BlueController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8DE5E22203BD01300541915 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +380,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D89A1BE2210BF338006D767F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D89A1BE3210BF338006D767F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		D8DE5E2F203BD01300541915 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -333,6 +442,42 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		D89A1BE7210BF338006D767F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_ENTITLEMENTS = TransAnimationController/TransAnimationController.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TransAnimationController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.TransAnimationController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		D89A1BE8210BF338006D767F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_ENTITLEMENTS = TransAnimationController/TransAnimationController.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TransAnimationController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.TransAnimationController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -491,6 +636,15 @@
 			buildConfigurations = (
 				56CF72A020EB1DCE003204F5 /* Debug */,
 				56CF72A120EB1DCE003204F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D89A1BE9210BF338006D767F /* Build configuration list for PBXNativeTarget "TransAnimationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D89A1BE7210BF338006D767F /* Debug */,
+				D89A1BE8210BF338006D767F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
