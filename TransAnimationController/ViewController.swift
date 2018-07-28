@@ -23,11 +23,12 @@ class ViewController: NSViewController {
     }
 
     @IBAction func clickBtn(_ sender: Any) {
-        transition(from: childViewControllers[0], to: childViewControllers[1], options: .slideUp, completionHandler: nil)
+        transition(from: childViewControllers[0], to: childViewControllers[1], options: .allowUserInteraction, completionHandler: nil)
     }
     
     @IBAction func clickUpButton(_ sender: Any) {
-        transition(from: childViewControllers[1], to: childViewControllers[0], options: .slideDown, completionHandler: nil)
+        transition(from: childViewControllers[1], to: childViewControllers[0], options: .allowUserInteraction, completionHandler: nil)
     }
+    
 }
 
