@@ -16,4 +16,7 @@ class GreenController: NSViewController {
          view.layer?.backgroundColor = NSColor.green.cgColor
     }
     
+    @IBAction func clickButton(_ sender: Any) {
+        dismissViewController(self)
+    }
 }

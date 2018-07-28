@@ -30,8 +30,9 @@ class ViewController: NSViewController {
         transition(from: childViewControllers[1], to: childViewControllers[0], options: .slideRight, completionHandler: nil)
     }
     
-    @IBAction func presentTest(_ sender: Any) {
-        
+    @IBAction func presentTest(_ sender: NSButton) {
+        let greenVC = GreenController()
+        presentViewController(greenVC, asPopoverRelativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.maxX, behavior: NSPopover.Behavior.transient)
     }
 }
 
