@@ -735,6 +735,17 @@
                                     <action selector="clickUpButton:" target="XfG-lQ-9wD" id="EdN-nA-mnd"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzG-WZ-l7u">
+                                <rect key="frame" x="382" y="232" width="87" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Present" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DkU-l1-PDs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="presentTest:" target="XfG-lQ-9wD" id="lON-dD-AcJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
