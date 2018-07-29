@@ -10,6 +10,8 @@ import Cocoa
 
 class PresentAnimator: NSObject {
 
+    // 背景视图: 用来防止事件穿透
+    let backgroundView = CBackgroundView()
     
 }
 
@@ -22,7 +24,8 @@ extension PresentAnimator: NSViewControllerPresentationAnimator{
         /**viewController: 将要被present出来的视图控制器, fromViewcontroller --> presented动作 ---> viewController */
         // 1. 获取容器view
         let containerView = fromViewController.view
-        
+        backgroundView.frame = containerView.bounds
+        containerView.addSubview(backgroundView)
         // 2. 计算最终显示的frame
         let finalFrame = NSInsetRect(containerView.bounds, 50, 50)
         // 3. 需要显示的view
@@ -55,6 +58,7 @@ extension PresentAnimator: NSViewControllerPresentationAnimator{
         }) {
         // 3. 动画完成后,移除子视图
             viewController.view.removeFromSuperview()
+            self.backgroundView.removeFromSuperview()
            
         }
     }
