@@ -32,7 +32,7 @@ class ViewController: NSViewController {
     
     @IBAction func presentTest(_ sender: NSButton) {
         let greenVC = GreenController()
-        presentViewController(greenVC, asPopoverRelativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.maxX, behavior: NSPopover.Behavior.transient)
+        presentViewController(greenVC, animator: PresentAnimator())
     }
 }
 
