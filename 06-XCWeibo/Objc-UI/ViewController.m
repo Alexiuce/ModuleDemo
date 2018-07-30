@@ -75,12 +75,6 @@
 //    
 //    [layoutManager addTextContainer:textContainer];
     
-    
-   
-    
-    
-    
-     
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (IBAction)clickBtn:(UIButton *)sender {
@@ -88,12 +82,6 @@
     pvc.modalPresentationStyle = UIModalPresentationCustom;
     pvc.transitioningDelegate = self.transManager;
     [self presentViewController:pvc animated:YES completion:nil];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
