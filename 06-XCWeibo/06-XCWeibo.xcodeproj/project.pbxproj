@@ -28,6 +28,8 @@
 		D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87EDEAE210EB53200D09FC1 /* Second.storyboard */; };
 		D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87EDEB1210EB62500D09FC1 /* SecondViewController.m */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
+		D8EF8469211012990095F19E /* page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EF8468211012990095F19E /* page.storyboard */; };
+		D8EF846C211012C40095F19E /* PHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF846B211012C40095F19E /* PHViewController.m */; };
 		FCB73D74692EF1711B2B9796 /* Pods_Objc_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,9 @@
 		D87EDEAE210EB53200D09FC1 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		D87EDEB0210EB62500D09FC1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D87EDEB1210EB62500D09FC1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D8EF8468211012990095F19E /* page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = page.storyboard; sourceTree = "<group>"; };
+		D8EF846A211012C40095F19E /* PHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHViewController.h; sourceTree = "<group>"; };
+		D8EF846B211012C40095F19E /* PHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +164,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8EF84672110127E0095F19E /* PageViewController */,
 				D818D07F210ABA1B0002C03E /* TransitionAnimationManager */,
 				D86CEF3220FF4120009BB583 /* AppDelegate.h */,
 				D86CEF3320FF4120009BB583 /* AppDelegate.m */,
@@ -182,6 +188,16 @@
 				D86CEF4120FF4121009BB583 /* main.m */,
 			);
 			path = "Objc-UI";
+			sourceTree = "<group>";
+		};
+		D8EF84672110127E0095F19E /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D8EF8468211012990095F19E /* page.storyboard */,
+				D8EF846A211012C40095F19E /* PHViewController.h */,
+				D8EF846B211012C40095F19E /* PHViewController.m */,
+			);
+			path = PageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +296,7 @@
 				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
+				D8EF8469211012990095F19E /* page.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
 			);
@@ -362,6 +379,7 @@
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
+				D8EF846C211012C40095F19E /* PHViewController.m in Sources */,
 				D86CEF4220FF4121009BB583 /* main.m in Sources */,
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
