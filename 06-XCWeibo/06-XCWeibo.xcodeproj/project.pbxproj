@@ -32,6 +32,10 @@
 		D8EF846C211012C40095F19E /* PHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF846B211012C40095F19E /* PHViewController.m */; };
 		D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF847321102E2F0095F19E /* XCPageViewController.m */; };
 		D8EF847621102E2F0095F19E /* XCPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF847421102E2F0095F19E /* XCPageViewController.xib */; };
+		D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF84782110342E0095F19E /* FirstTableViewController.m */; };
+		D8EF847B2110342E0095F19E /* FirstTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF84792110342E0095F19E /* FirstTableViewController.xib */; };
+		D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF847D2110344A0095F19E /* SecTableViewController.m */; };
+		D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF847E2110344A0095F19E /* SecTableViewController.xib */; };
 		FCB73D74692EF1711B2B9796 /* Pods_Objc_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +84,12 @@
 		D8EF847221102E2F0095F19E /* XCPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPageViewController.h; sourceTree = "<group>"; };
 		D8EF847321102E2F0095F19E /* XCPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPageViewController.m; sourceTree = "<group>"; };
 		D8EF847421102E2F0095F19E /* XCPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCPageViewController.xib; sourceTree = "<group>"; };
+		D8EF84772110342E0095F19E /* FirstTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
+		D8EF84782110342E0095F19E /* FirstTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
+		D8EF84792110342E0095F19E /* FirstTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewController.xib; sourceTree = "<group>"; };
+		D8EF847C2110344A0095F19E /* SecTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecTableViewController.h; sourceTree = "<group>"; };
+		D8EF847D2110344A0095F19E /* SecTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecTableViewController.m; sourceTree = "<group>"; };
+		D8EF847E2110344A0095F19E /* SecTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +214,12 @@
 				D8EF847221102E2F0095F19E /* XCPageViewController.h */,
 				D8EF847321102E2F0095F19E /* XCPageViewController.m */,
 				D8EF847421102E2F0095F19E /* XCPageViewController.xib */,
+				D8EF84772110342E0095F19E /* FirstTableViewController.h */,
+				D8EF84782110342E0095F19E /* FirstTableViewController.m */,
+				D8EF84792110342E0095F19E /* FirstTableViewController.xib */,
+				D8EF847C2110344A0095F19E /* SecTableViewController.h */,
+				D8EF847D2110344A0095F19E /* SecTableViewController.m */,
+				D8EF847E2110344A0095F19E /* SecTableViewController.xib */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -303,7 +319,9 @@
 				D8EF847621102E2F0095F19E /* XCPageViewController.xib in Resources */,
 				D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */,
 				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
+				D8EF847B2110342E0095F19E /* FirstTableViewController.xib in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
+				D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */,
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
@@ -388,10 +406,12 @@
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
+				D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */,
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
 				D8EF846C211012C40095F19E /* PHViewController.m in Sources */,
 				D86CEF4220FF4121009BB583 /* main.m in Sources */,
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
+				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
 				D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */,
 				D818D07D210AB5890002C03E /* PersonViewController.m in Sources */,

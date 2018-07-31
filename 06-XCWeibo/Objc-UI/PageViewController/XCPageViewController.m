@@ -9,14 +9,40 @@
 #import "XCPageViewController.h"
 
 @interface XCPageViewController ()
+@property (weak, nonatomic) IBOutlet UIView *topHeadView;
+
+@property (nonatomic, weak) UIViewController * currentController;
+
+
 
 @end
 
 @implementation XCPageViewController
 
++ (instancetype)pageViewControllers:(NSArray<UIViewController *> *)children{
+ 
+    return [[self alloc]initWithControllers:children];
+}
+
+- (instancetype)initWithControllers:(NSArray <UIViewController *> *)controllers{
+    if (self = [super init]) {
+        for (UIViewController *c in controllers) {
+            [self addChildViewController:c];
+        }
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (_currentController == nil) {return;}
+    [self.view insertSubview:_currentController.view atIndex:0];
+    
 }
 
 /*
