@@ -30,6 +30,8 @@
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
 		D8EF8469211012990095F19E /* page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EF8468211012990095F19E /* page.storyboard */; };
 		D8EF846C211012C40095F19E /* PHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF846B211012C40095F19E /* PHViewController.m */; };
+		D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF847321102E2F0095F19E /* XCPageViewController.m */; };
+		D8EF847621102E2F0095F19E /* XCPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF847421102E2F0095F19E /* XCPageViewController.xib */; };
 		FCB73D74692EF1711B2B9796 /* Pods_Objc_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,9 @@
 		D8EF8468211012990095F19E /* page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = page.storyboard; sourceTree = "<group>"; };
 		D8EF846A211012C40095F19E /* PHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHViewController.h; sourceTree = "<group>"; };
 		D8EF846B211012C40095F19E /* PHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHViewController.m; sourceTree = "<group>"; };
+		D8EF847221102E2F0095F19E /* XCPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPageViewController.h; sourceTree = "<group>"; };
+		D8EF847321102E2F0095F19E /* XCPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPageViewController.m; sourceTree = "<group>"; };
+		D8EF847421102E2F0095F19E /* XCPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCPageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +201,9 @@
 				D8EF8468211012990095F19E /* page.storyboard */,
 				D8EF846A211012C40095F19E /* PHViewController.h */,
 				D8EF846B211012C40095F19E /* PHViewController.m */,
+				D8EF847221102E2F0095F19E /* XCPageViewController.h */,
+				D8EF847321102E2F0095F19E /* XCPageViewController.m */,
+				D8EF847421102E2F0095F19E /* XCPageViewController.xib */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EF847621102E2F0095F19E /* XCPageViewController.xib in Resources */,
 				D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */,
 				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
@@ -376,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
+				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
