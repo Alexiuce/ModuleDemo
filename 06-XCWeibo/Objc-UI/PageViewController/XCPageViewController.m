@@ -110,15 +110,15 @@
 
 #pragma mark - WMPageControllerDelegate
 - (void)pageController:(WMPageController *)pageController willEnterViewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
-    if (_isFirstShow) {_isFirstShow = false;return;}
+    if (_isFirstShow) {_isFirstShow = YES;return;}
     NSLog(@"-------");
-    _psv.scrollEnabled = false;
+    _psv.scrollEnabled = NO;
     
 }
 
 - (void)pageController:(WMPageController *)pageController didEnterViewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
     NSLog(@"========");
-    _psv.scrollEnabled = true;
+    _psv.scrollEnabled = YES;
 }
 
 
