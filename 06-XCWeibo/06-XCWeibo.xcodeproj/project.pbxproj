@@ -40,6 +40,7 @@
 		D87799162111383F00611EF1 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D877990B2111383F00611EF1 /* MASConstraint.m */; };
 		D87799172111383F00611EF1 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D877990D2111383F00611EF1 /* MASViewConstraint.m */; };
 		D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = D877990E2111383F00611EF1 /* MASViewAttribute.m */; };
+		D877991B211139D600611EF1 /* PageScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D877991A211139D600611EF1 /* PageScrollerView.m */; };
 		D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87EDEAE210EB53200D09FC1 /* Second.storyboard */; };
 		D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87EDEB1210EB62500D09FC1 /* SecondViewController.m */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
@@ -125,6 +126,8 @@
 		D877990C2111383F00611EF1 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		D877990D2111383F00611EF1 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		D877990E2111383F00611EF1 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		D8779919211139D600611EF1 /* PageScrollerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageScrollerView.h; sourceTree = "<group>"; };
+		D877991A211139D600611EF1 /* PageScrollerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageScrollerView.m; sourceTree = "<group>"; };
 		D87EDEAE210EB53200D09FC1 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		D87EDEB0210EB62500D09FC1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D87EDEB1210EB62500D09FC1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				D8EF847C2110344A0095F19E /* SecTableViewController.h */,
 				D8EF847D2110344A0095F19E /* SecTableViewController.m */,
 				D8EF847E2110344A0095F19E /* SecTableViewController.xib */,
+				D8779919211139D600611EF1 /* PageScrollerView.h */,
+				D877991A211139D600611EF1 /* PageScrollerView.m */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D87798F42111383500611EF1 /* WMProgressView.m in Sources */,
+				D877991B211139D600611EF1 /* PageScrollerView.m in Sources */,
 				D87798F02111383500611EF1 /* WMPageController.m in Sources */,
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D87799102111383F00611EF1 /* ViewController+MASAdditions.m in Sources */,
@@ -738,6 +744,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57SDN968Q2;
 				INFOPLIST_FILE = "Objc-UI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -756,6 +763,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57SDN968Q2;
 				INFOPLIST_FILE = "Objc-UI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

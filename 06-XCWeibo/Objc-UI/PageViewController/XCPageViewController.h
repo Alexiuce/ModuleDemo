@@ -10,7 +10,5 @@
 
 @interface XCPageViewController : UIViewController
 
-+ (instancetype)pageViewControllers:(NSArray <UIViewController *>*)children;
-
 
 @end

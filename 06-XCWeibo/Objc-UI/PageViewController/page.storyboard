@@ -25,22 +25,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M61-eV-X5g">
+                                <rect key="frame" x="79" y="116" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pushAction:" destination="b6y-IG-PFI" eventType="touchUpInside" id="S1e-6F-NBH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bUB-7P-DGl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PCf-bw-1ad">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="0Kq-Kj-TcY">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mB6-N6-KO3">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <connections>
-                                <action selector="pushAction:" destination="b6y-IG-PFI" id="7WO-vy-r7M"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="PCf-bw-1ad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLh-HM-o2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
