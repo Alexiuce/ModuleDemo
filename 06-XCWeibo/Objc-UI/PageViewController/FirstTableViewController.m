@@ -9,11 +9,12 @@
 #import "FirstTableViewController.h"
 #import "WSServerGameCell.h"
 #import "XCPageViewConfig.h"
+#import "WSServerGameCollectionView.h"
 
 @interface FirstTableViewController ()<UICollectionViewDataSource>
 @property (nonatomic, assign) BOOL canScroll;
 
-@property (nonatomic, strong) UICollectionView *collectView;
+@property (nonatomic, strong) WSServerGameCollectionView *collectView;
 
 @end
 
@@ -21,17 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGRect collectRect = CGRectMake(0, 0,self.view.bounds.size.width , 60);
+    CGRect collectRect = CGRectMake(0, 0,self.view.bounds.size.width , 50);
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    layout.itemSize = CGSizeMake(60, 20);
-    layout.minimumLineSpacing = 15;
-    layout.minimumInteritemSpacing = 10;
-    _collectView = [[UICollectionView alloc]initWithFrame:collectRect collectionViewLayout:layout];
+    _collectView = [[WSServerGameCollectionView alloc]initWithFrame:collectRect collectionViewLayout:layout];
     _collectView.dataSource = self;
-    _collectView.scrollEnabled = NO;
-    _collectView.backgroundColor = UIColor.whiteColor;
-    _collectView.contentInset = UIEdgeInsetsMake(15, 15, 0, 15);
-    
     [_collectView registerNib:[UINib nibWithNibName:@"WSServerGameCell" bundle:nil] forCellWithReuseIdentifier:@"ws_server_game"];
     
     self.tableView.tableHeaderView = _collectView;
