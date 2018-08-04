@@ -43,6 +43,8 @@
 		D877991B211139D600611EF1 /* PageScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D877991A211139D600611EF1 /* PageScrollerView.m */; };
 		D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87EDEAE210EB53200D09FC1 /* Second.storyboard */; };
 		D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87EDEB1210EB62500D09FC1 /* SecondViewController.m */; };
+		D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D709C21152F5F00858B62 /* WSServerGameCell.m */; };
+		D88D709F21152F5F00858B62 /* WSServerGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88D709D21152F5F00858B62 /* WSServerGameCell.xib */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
 		D8EF8469211012990095F19E /* page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EF8468211012990095F19E /* page.storyboard */; };
 		D8EF846C211012C40095F19E /* PHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF846B211012C40095F19E /* PHViewController.m */; };
@@ -131,6 +133,9 @@
 		D87EDEAE210EB53200D09FC1 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		D87EDEB0210EB62500D09FC1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D87EDEB1210EB62500D09FC1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D88D709B21152F5F00858B62 /* WSServerGameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSServerGameCell.h; sourceTree = "<group>"; };
+		D88D709C21152F5F00858B62 /* WSServerGameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSServerGameCell.m; sourceTree = "<group>"; };
+		D88D709D21152F5F00858B62 /* WSServerGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WSServerGameCell.xib; sourceTree = "<group>"; };
 		D8EF8468211012990095F19E /* page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = page.storyboard; sourceTree = "<group>"; };
 		D8EF846A211012C40095F19E /* PHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHViewController.h; sourceTree = "<group>"; };
 		D8EF846B211012C40095F19E /* PHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHViewController.m; sourceTree = "<group>"; };
@@ -333,6 +338,9 @@
 				D8EF847E2110344A0095F19E /* SecTableViewController.xib */,
 				D8779919211139D600611EF1 /* PageScrollerView.h */,
 				D877991A211139D600611EF1 /* PageScrollerView.m */,
+				D88D709B21152F5F00858B62 /* WSServerGameCell.h */,
+				D88D709C21152F5F00858B62 /* WSServerGameCell.m */,
+				D88D709D21152F5F00858B62 /* WSServerGameCell.xib */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -431,6 +439,7 @@
 			files = (
 				D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */,
 				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
+				D88D709F21152F5F00858B62 /* WSServerGameCell.xib in Resources */,
 				D8EF847B2110342E0095F19E /* FirstTableViewController.xib in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */,
@@ -532,6 +541,7 @@
 				D87799162111383F00611EF1 /* MASConstraint.m in Sources */,
 				D87799112111383F00611EF1 /* MASCompositeConstraint.m in Sources */,
 				D87799132111383F00611EF1 /* MASLayoutConstraint.m in Sources */,
+				D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */,
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
 				D87798F22111383500611EF1 /* WMScrollView.m in Sources */,
 				D8EF846C211012C40095F19E /* PHViewController.m in Sources */,
