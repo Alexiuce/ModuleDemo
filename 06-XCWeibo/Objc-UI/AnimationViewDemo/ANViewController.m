@@ -41,16 +41,24 @@
     
     self.l1.text = self.titleArray[self.titleIndex];
     self.l1.alpha = 0;
-    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseInOut  animations:^{
-        self.l1.y = -self.l1.height;
+    [UIView animateWithDuration:1.2 delay:0 options:UIViewAnimationOptionCurveEaseIn  animations:^{
+        self.l1.y = self.containerView.height * 0.5;
         self.l1.alpha = 1;
     } completion:^(BOOL finished) {
-        self.l1.y = self.containerView.height;
-        self.titleIndex += 1;
-        if (self.titleIndex > self.titleArray.count - 1) {
-            self.titleIndex = 0;
-        }
-        [self starAnim];
+        
+        [UIView animateWithDuration:1.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.l1.y = - self.l1.height;
+            self.l1.alpha = 0;
+        } completion:^(BOOL finished) {
+            self.l1.y = self.containerView.height;
+            self.titleIndex += 1;
+            if (self.titleIndex > self.titleArray.count - 1) {
+                self.titleIndex = 0;
+            }
+            [self starAnim];
+        }];
+        
+       
     }];
     
 }
