@@ -89,6 +89,12 @@
     }];
 }
 
+
+- (void)l1LayerAnim{
+    CALayer *layer = self.l1.layer;
+    
+    CABasicAnimation *baseAnim = [CABasicAnimation animation];
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self starAnim];
 //    [self startL2Anim];
