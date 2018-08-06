@@ -93,7 +93,9 @@
 - (void)l1LayerAnim{
     CALayer *layer = self.l1.layer;
     
-    CABasicAnimation *baseAnim = [CABasicAnimation animation];
+    CABasicAnimation *baseAnim = [CABasicAnimation animationWithKeyPath:@""];
+    
+    [layer addAnimation:baseAnim forKey:@""];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self starAnim];
