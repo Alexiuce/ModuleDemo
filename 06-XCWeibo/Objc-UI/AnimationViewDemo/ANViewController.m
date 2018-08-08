@@ -105,13 +105,25 @@
 
 - (void)my_test{
     
-    NSMethodSignature *sign = [[self class] instanceMethodSignatureForSelector:@selector(starAnim)];
+    NSMethodSignature *sign = [[self class] instanceMethodSignatureForSelector:@selector(my_add:and:)];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:sign];
-    invocation.selector = @selector(starAnim);
+    invocation.selector = @selector(my_add:and:);
     invocation.target = self;
+    int a = 2;
+    int b = 3;
+    int c = 10;
+    [invocation setArgument:&a atIndex:2];
+    [invocation setArgument:&b atIndex:3];
     [invocation invoke];
+    [invocation getReturnValue:&c];
+    NSLog(@"c = %d",c);
 }
 
+
+- (int)my_add:(int)a and:(int) b{
+    NSLog(@"%d",a + b);
+    return a + b;
+}
 
 
 
