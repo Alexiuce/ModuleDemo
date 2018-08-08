@@ -98,8 +98,33 @@
     [layer addAnimation:baseAnim forKey:@""];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self starAnim];
+//    [self starAnim];
+    [self my_test];
 //    [self startL2Anim];
 }
+
+- (void)my_test{
+    
+    NSMethodSignature *sign = [[self class] instanceMethodSignatureForSelector:@selector(starAnim)];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:sign];
+    invocation.selector = @selector(starAnim);
+    invocation.target = self;
+    [invocation invoke];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
