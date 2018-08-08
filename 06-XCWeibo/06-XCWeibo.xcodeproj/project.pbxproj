@@ -17,6 +17,9 @@
 		D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D818D07C210AB5890002C03E /* PersonViewController.xib */; };
 		D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D081210ABA930002C03E /* TransAnimationManager.m */; };
 		D818D085210ABD6C0002C03E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D084210ABD6C0002C03E /* TransController.m */; };
+		D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */; };
+		D8485AB5211AAB9F009CD0DA /* WebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */; };
+		D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */; };
 		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
 		D86CEF3720FF4120009BB583 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3620FF4120009BB583 /* ViewController.m */; };
 		D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF3820FF4120009BB583 /* Main.storyboard */; };
@@ -84,6 +87,11 @@
 		D818D081210ABA930002C03E /* TransAnimationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransAnimationManager.m; sourceTree = "<group>"; };
 		D818D083210ABD6C0002C03E /* TransController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
 		D818D084210ABD6C0002C03E /* TransController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
+		D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableCellWebView.storyboard; sourceTree = "<group>"; };
+		D8485AB3211AAB9F009CD0DA /* WebTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTableViewController.h; sourceTree = "<group>"; };
+		D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewController.m; sourceTree = "<group>"; };
+		D8485AB6211AAC55009CD0DA /* WebTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTableViewCell.h; sourceTree = "<group>"; };
+		D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewCell.m; sourceTree = "<group>"; };
 		D8623FD921117EA300998D38 /* XCPageViewConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPageViewConfig.h; sourceTree = "<group>"; };
 		D86CEF3020FF4120009BB583 /* Objc-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86CEF3220FF4120009BB583 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -247,9 +255,22 @@
 			path = TransitionAnimationManager;
 			sourceTree = "<group>";
 		};
+		D8485AB2211AAB0C009CD0DA /* TableCellWebView */ = {
+			isa = PBXGroup;
+			children = (
+				D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */,
+				D8485AB3211AAB9F009CD0DA /* WebTableViewController.h */,
+				D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */,
+				D8485AB6211AAC55009CD0DA /* WebTableViewCell.h */,
+				D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */,
+			);
+			path = TableCellWebView;
+			sourceTree = "<group>";
+		};
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8485AB2211AAB0C009CD0DA /* TableCellWebView */,
 				D88D70AF21158D2E00858B62 /* AnimationViewDemo */,
 				D8EF84672110127E0095F19E /* PageViewController */,
 				D818D07F210ABA1B0002C03E /* TransitionAnimationManager */,
@@ -479,6 +500,7 @@
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
+				D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +587,7 @@
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D88D70A2211537A600858B62 /* WSServerGameCollectionView.m in Sources */,
 				D87799102111383F00611EF1 /* ViewController+MASAdditions.m in Sources */,
+				D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */,
 				D88D70B421158D6F00858B62 /* ANViewController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
 				D87799152111383F00611EF1 /* View+MASAdditions.m in Sources */,
@@ -581,6 +604,7 @@
 				D87798F22111383500611EF1 /* WMScrollView.m in Sources */,
 				D8EF846C211012C40095F19E /* PHViewController.m in Sources */,
 				D86CEF4220FF4121009BB583 /* main.m in Sources */,
+				D8485AB5211AAB9F009CD0DA /* WebTableViewController.m in Sources */,
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
