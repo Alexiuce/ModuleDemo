@@ -57,10 +57,10 @@
     if (![keyPath isEqualToString:@"contentSize"]) {return;}
     CGSize webSize = [self.webView sizeThatFits:CGSizeZero];
     NSLog(@"kvo content size = %@",NSStringFromCGSize(webSize));
-//    self.webView.frame = CGRectMake(0, 0, webSize.width, webSize.height);
-//    [self.tableView beginUpdates];
-//    [self.tableView setTableHeaderView:self.webView];
-//    [self.tableView endUpdates];
+    self.webView.frame = CGRectMake(0, 0, webSize.width, webSize.height);
+    [self.tableView beginUpdates];
+    [self.tableView setTableHeaderView:self.webView];
+    [self.tableView endUpdates];
     
 }
 
