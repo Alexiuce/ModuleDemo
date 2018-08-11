@@ -21,6 +21,7 @@
 @property (nonatomic, assign) CGPoint origin;
 @property (nonatomic, assign) CGSize size;
 
+
 /**
  寻找当前view所在的主视图控制器
  

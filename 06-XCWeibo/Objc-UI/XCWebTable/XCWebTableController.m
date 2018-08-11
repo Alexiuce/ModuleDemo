@@ -73,8 +73,38 @@
 #pragma mark - table view delegate
 
 #pragma mark - UIScrollView delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+}
 
 
+#pragma mark - notification Handle
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if (object == self.tableView && [keyPath isEqualToString:@"contentSize"]) {
+        [self resetScrollViewContainerView];
+    }else if (object == self.webView && [keyPath isEqualToString:@"scrollView.contentSize"]){
+        [self resetScrollViewContainerView];
+    }
+}
+
+#pragma mark - private mehthod
+- (void)resetScrollViewContainerView{
+    CGFloat webContentHeight = self.webView.scrollView.contentSize.height;
+    CGFloat tabContentHeight = self.tableView.contentSize.height;
+    
+    if (webContentHeight == _maxWebContentHeight && tabContentHeight == _maxTabContentHeight) {return;}
+    _maxWebContentHeight = webContentHeight;
+    _maxTabContentHeight = tabContentHeight;
+    self.scrollView.contentSize = CGSizeMake(self.view.width, webContentHeight + tabContentHeight);
+    CGFloat webHeight = (webContentHeight < self.view.height) ? webContentHeight :self.view.height ;
+    CGFloat tableHeight = tabContentHeight < self.view.height ? tabContentHeight :self.view.height;
+    self.webView.height = webHeight <= 0.1 ? 0.1 : webHeight;
+    self.scrollViewContainerView.height = webHeight + tableHeight;
+    self.tableView.height = tableHeight;
+    self.tableView.y = self.webView.bottom;
+
+}
 
 
 #pragma mark - lazy getter method
