@@ -20,6 +20,8 @@
 		D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */; };
 		D8485AB5211AAB9F009CD0DA /* WebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */; };
 		D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */; };
+		D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */; };
+		D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D853EEB7211E622300DED0AD /* XCWebTableController.m */; };
 		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
 		D86CEF3720FF4120009BB583 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3620FF4120009BB583 /* ViewController.m */; };
 		D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF3820FF4120009BB583 /* Main.storyboard */; };
@@ -92,6 +94,9 @@
 		D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewController.m; sourceTree = "<group>"; };
 		D8485AB6211AAC55009CD0DA /* WebTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTableViewCell.h; sourceTree = "<group>"; };
 		D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewCell.m; sourceTree = "<group>"; };
+		D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCWebTable.storyboard; sourceTree = "<group>"; };
+		D853EEB6211E622300DED0AD /* XCWebTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCWebTableController.h; sourceTree = "<group>"; };
+		D853EEB7211E622300DED0AD /* XCWebTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebTableController.m; sourceTree = "<group>"; };
 		D8623FD921117EA300998D38 /* XCPageViewConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPageViewConfig.h; sourceTree = "<group>"; };
 		D86CEF3020FF4120009BB583 /* Objc-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86CEF3220FF4120009BB583 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -267,9 +272,20 @@
 			path = TableCellWebView;
 			sourceTree = "<group>";
 		};
+		D853EEB5211E61C400DED0AD /* XCWebTable */ = {
+			isa = PBXGroup;
+			children = (
+				D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */,
+				D853EEB6211E622300DED0AD /* XCWebTableController.h */,
+				D853EEB7211E622300DED0AD /* XCWebTableController.m */,
+			);
+			path = XCWebTable;
+			sourceTree = "<group>";
+		};
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D853EEB5211E61C400DED0AD /* XCWebTable */,
 				D8485AB2211AAB0C009CD0DA /* TableCellWebView */,
 				D88D70AF21158D2E00858B62 /* AnimationViewDemo */,
 				D8EF84672110127E0095F19E /* PageViewController */,
@@ -496,6 +512,7 @@
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */,
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
+				D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */,
 				D88D70B121158D4A00858B62 /* AnimationDemo.storyboard in Resources */,
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
@@ -580,6 +597,7 @@
 				D87798F32111383500611EF1 /* WMMenuView.m in Sources */,
 				D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */,
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
+				D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D87798F42111383500611EF1 /* WMProgressView.m in Sources */,
 				D877991B211139D600611EF1 /* PageScrollerView.m in Sources */,
