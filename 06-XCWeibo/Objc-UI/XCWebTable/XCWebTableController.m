@@ -10,7 +10,7 @@
 #import "UIView+ACMediaExt.h"
 #import <WebKit/WebKit.h>
 
-@interface XCWebTableController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate, WKNavigationDelegate>
+@interface XCWebTableController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;     // 主滚动视图
 @property (nonatomic, strong) UIView *scrollViewContainerView;    //  添加到scrollView中的容器视图
@@ -74,22 +74,43 @@
 
 #pragma mark - UIScrollView delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
+    CGFloat offsetY = scrollView.contentOffset.y;
+
+    CGFloat webHeight = self.webView.height;
+    CGFloat tabHeight = self.tableView.height;
+
+    CGFloat webContentHeight = self.webView.scrollView.contentSize.height;
+    CGFloat tabContentHeight = self.tableView.contentSize.height;
+
+    if (offsetY <= 0) {
+        self.scrollViewContainerView.y = 0;
+        self.webView.scrollView.contentOffset = self.tableView.contentOffset = CGPointZero;
+    }else if (offsetY < webContentHeight - webHeight){
+        self.scrollViewContainerView.y = offsetY;
+        self.webView.scrollView.contentOffset = CGPointMake(0, offsetY);
+        self.tableView.contentOffset = CGPointZero;;
+    }else if (offsetY < webContentHeight){
+        self.scrollViewContainerView.y = webContentHeight - webHeight;
+        self.webView.scrollView.contentOffset = CGPointMake(0, webContentHeight - webHeight);
+        self.tableView.contentOffset = CGPointZero;
+    }else if (offsetY < webContentHeight + tabContentHeight - tabHeight){
+        self.scrollViewContainerView.y = offsetY - webHeight;
+        self.webView.scrollView.contentOffset = CGPointMake(0, webContentHeight - webHeight);
+        self.tableView.contentOffset = CGPointMake(0, offsetY - webContentHeight);
+    }else if (offsetY < webContentHeight + tabContentHeight){
+        self.scrollViewContainerView.y = self.scrollView.contentSize.height - self.scrollViewContainerView.height;
+        self.webView.scrollView.contentOffset = CGPointMake(0, webContentHeight - webHeight);
+        self.tableView.contentOffset = CGPointMake(0, tabContentHeight - tabHeight);
+    }else{
+        NSLog(@"加载更多.....");
+    }
+
 }
 
 
 #pragma mark - notification Handle
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    if (object == self.tableView && [keyPath isEqualToString:@"contentSize"]) {
-        [self resetScrollViewContainerView];
-    }else if (object == self.webView && [keyPath isEqualToString:@"scrollView.contentSize"]){
-        [self resetScrollViewContainerView];
-    }
-}
-
-#pragma mark - private mehthod
-- (void)resetScrollViewContainerView{
     CGFloat webContentHeight = self.webView.scrollView.contentSize.height;
     CGFloat tabContentHeight = self.tableView.contentSize.height;
     
@@ -97,13 +118,12 @@
     _maxWebContentHeight = webContentHeight;
     _maxTabContentHeight = tabContentHeight;
     self.scrollView.contentSize = CGSizeMake(self.view.width, webContentHeight + tabContentHeight);
-    CGFloat webHeight = (webContentHeight < self.view.height) ? webContentHeight :self.view.height ;
-    CGFloat tableHeight = tabContentHeight < self.view.height ? tabContentHeight :self.view.height;
-    self.webView.height = webHeight <= 0.1 ? 0.1 : webHeight;
+    CGFloat webHeight = MIN( webContentHeight, self.view.height)  ;
+    CGFloat tableHeight = MIN(tabContentHeight, self.view.height) ;
+    self.webView.height = MAX(0.1, webHeight);
     self.scrollViewContainerView.height = webHeight + tableHeight;
     self.tableView.height = tableHeight;
     self.tableView.y = self.webView.bottom;
-
 }
 
 
@@ -131,7 +151,6 @@
         WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc]init];
         _webView = [[WKWebView alloc]initWithFrame:self.view.bounds configuration:config];
         _webView.scrollView.scrollEnabled = NO;
-        _webView.navigationDelegate = self;
     }
     return _webView;
 }
