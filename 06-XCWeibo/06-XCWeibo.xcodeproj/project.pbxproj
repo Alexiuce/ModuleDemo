@@ -17,6 +17,7 @@
 		D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D818D07C210AB5890002C03E /* PersonViewController.xib */; };
 		D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D081210ABA930002C03E /* TransAnimationManager.m */; };
 		D818D085210ABD6C0002C03E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D084210ABD6C0002C03E /* TransController.m */; };
+		D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B002D212006600066C32E /* XCWebTableController+WebTab.m */; };
 		D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */; };
 		D8485AB5211AAB9F009CD0DA /* WebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */; };
 		D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */; };
@@ -89,6 +90,8 @@
 		D818D081210ABA930002C03E /* TransAnimationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransAnimationManager.m; sourceTree = "<group>"; };
 		D818D083210ABD6C0002C03E /* TransController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
 		D818D084210ABD6C0002C03E /* TransController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
+		D82B002C212006600066C32E /* XCWebTableController+WebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCWebTableController+WebTab.h"; sourceTree = "<group>"; };
+		D82B002D212006600066C32E /* XCWebTableController+WebTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCWebTableController+WebTab.m"; sourceTree = "<group>"; };
 		D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableCellWebView.storyboard; sourceTree = "<group>"; };
 		D8485AB3211AAB9F009CD0DA /* WebTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTableViewController.h; sourceTree = "<group>"; };
 		D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewController.m; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 		D853EEB5211E61C400DED0AD /* XCWebTable */ = {
 			isa = PBXGroup;
 			children = (
+				D82B002C212006600066C32E /* XCWebTableController+WebTab.h */,
+				D82B002D212006600066C32E /* XCWebTableController+WebTab.m */,
 				D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */,
 				D853EEB6211E622300DED0AD /* XCWebTableController.h */,
 				D853EEB7211E622300DED0AD /* XCWebTableController.m */,
@@ -611,6 +616,7 @@
 				D87799152111383F00611EF1 /* View+MASAdditions.m in Sources */,
 				D87799172111383F00611EF1 /* MASViewConstraint.m in Sources */,
 				D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */,
+				D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */,
 				D87799122111383F00611EF1 /* MASConstraintMaker.m in Sources */,
 				D877990F2111383F00611EF1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				D87799162111383F00611EF1 /* MASConstraint.m in Sources */,
