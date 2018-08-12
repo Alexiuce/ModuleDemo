@@ -58,7 +58,7 @@
 
 #pragma mark - table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 30;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -74,6 +74,10 @@
 
 #pragma mark - UIScrollView delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    if (self.scrollView != scrollView) {
+        return;
+    }
     CGFloat offsetY = scrollView.contentOffset.y;  /* scrollview的 滑动偏移 */
 
     CGFloat webHeight = self.webView.height;
