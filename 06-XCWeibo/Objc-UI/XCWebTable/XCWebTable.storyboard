@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Web Table Controller-->
+        <!--Web Tab Controller-->
         <scene sceneID="zUm-7Q-PL4">
             <objects>
-                <viewController id="JTt-wE-Exv" customClass="XCWebTableController" sceneMemberID="viewController">
+                <viewController id="JTt-wE-Exv" customClass="SDYWebTabController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SqJ-Pb-FaY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
