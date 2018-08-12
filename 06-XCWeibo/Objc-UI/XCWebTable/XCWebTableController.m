@@ -28,10 +28,6 @@
     NSURL *url = [NSURL URLWithString:@"https://www.jianshu.com/p/b6b30d38255e"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
-}
-
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
     self.scrollViewContainerView.frame = CGRectMake(0, 0, self.view.width, self.view.height * 2);
     self.tableView.y = CGRectGetMaxY(self.scrollView.bounds);
     self.scrollView.contentSize = CGSizeMake(0, self.view.height * 2);
