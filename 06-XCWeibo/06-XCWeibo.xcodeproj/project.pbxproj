@@ -25,6 +25,8 @@
 		D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */; };
 		D8485AB5211AAB9F009CD0DA /* WebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */; };
 		D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */; };
+		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
+		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */; };
 		D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D853EEB7211E622300DED0AD /* XCWebTableController.m */; };
 		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
@@ -109,6 +111,9 @@
 		D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewController.m; sourceTree = "<group>"; };
 		D8485AB6211AAC55009CD0DA /* WebTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTableViewCell.h; sourceTree = "<group>"; };
 		D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewCell.m; sourceTree = "<group>"; };
+		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
+		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
+		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
 		D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCWebTable.storyboard; sourceTree = "<group>"; };
 		D853EEB6211E622300DED0AD /* XCWebTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCWebTableController.h; sourceTree = "<group>"; };
 		D853EEB7211E622300DED0AD /* XCWebTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebTableController.m; sourceTree = "<group>"; };
@@ -412,6 +417,9 @@
 				D88D70B021158D4A00858B62 /* AnimationDemo.storyboard */,
 				D88D70B221158D6F00858B62 /* ANViewController.h */,
 				D88D70B321158D6F00858B62 /* ANViewController.m */,
+				D8497199212058D3007AA201 /* SDYUserTopView.xib */,
+				D849719B212058F2007AA201 /* SDYUserTopView.h */,
+				D849719C212058F2007AA201 /* SDYUserTopView.m */,
 			);
 			path = AnimationViewDemo;
 			sourceTree = "<group>";
@@ -542,6 +550,7 @@
 				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
 				D88D709F21152F5F00858B62 /* WSServerGameCell.xib in Resources */,
 				D8EF847B2110342E0095F19E /* FirstTableViewController.xib in Resources */,
+				D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */,
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
@@ -663,6 +672,7 @@
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
+				D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */,
 				D87798F12111383500611EF1 /* WMMenuItem.m in Sources */,
 				D87799142111383F00611EF1 /* NSArray+MASAdditions.m in Sources */,
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,

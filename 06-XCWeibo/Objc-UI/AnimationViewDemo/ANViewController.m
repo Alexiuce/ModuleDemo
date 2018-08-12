@@ -9,6 +9,8 @@
 #import "ANViewController.h"
 #import "UIView+ACMediaExt.h"
 
+#import "SDYUserTopView.h"
+
 @interface ANViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
@@ -17,6 +19,8 @@
 @property (nonatomic, strong) UILabel *l1;
 @property (nonatomic, strong) UILabel *l2;
 @property (nonatomic, assign) NSUInteger titleIndex;
+
+@property (nonatomic, strong) SDYUserTopView *topView;
 
 @end
 
@@ -34,6 +38,7 @@
     _l2.frame =  CGRectMake(20, self.containerView.height + self.l1.y + self.l1.height, 100, 20);
     _l2.backgroundColor = UIColor.yellowColor;
     [self.containerView addSubview:self.l2];
+    [self.view addSubview:self.topView];
     
     
 }
@@ -128,7 +133,13 @@
 
 
 
-
+- (SDYUserTopView *)topView{
+    if (_topView == nil) {
+        _topView = [[NSBundle mainBundle]loadNibNamed:@"SDYUserTopView" owner:nil options:nil].firstObject;
+        _topView.frame = CGRectMake(0, 80, self.view.width, 70);
+    }
+    return _topView;
+}
 
 
 
