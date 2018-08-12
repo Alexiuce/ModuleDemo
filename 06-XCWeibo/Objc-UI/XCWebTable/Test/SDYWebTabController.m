@@ -27,11 +27,10 @@
     [self.webView loadRequest:request];
     
     self.scrollViewContainerView.frame = CGRectMake(0, 0, self.view.width, self.view.height * 2);
-    self.topView.frame = CGRectMake(0, 0, self.view.width, 70);
-    self.webView.top = self.topView.height;
+    
+    self.webView.y = self.topView.height;
     self.webView.height = self.view.height;
-    self.tableView.top = self.webView.bottom;
-   
+    self.tableView.y = CGRectGetMaxY(self.scrollView.bounds);
     [self startRequest];
 }
 

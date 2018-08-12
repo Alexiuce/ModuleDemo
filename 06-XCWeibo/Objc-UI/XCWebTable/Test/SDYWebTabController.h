@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+HSKit.h"
+#import "UIView+ACMediaExt.h"
 #import <WebKit/WebKit.h>
 
 @interface SDYWebTabController : UIViewController

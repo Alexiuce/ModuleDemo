@@ -24,10 +24,6 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 70;
-}
-
 #pragma mark - table view delegate
 
 #pragma mark - UIScrollView delegate
@@ -42,29 +38,26 @@
     CGFloat webContentHeight = self.webView.scrollView.contentSize.height;
     CGFloat tabContentHeight = self.tableView.contentSize.height;
     
-    CGFloat webTop = self.webView.top;
+    CGFloat webTop = self.webView.y;
     CGFloat newOffsetY = offsetY - webTop;
     
-    
-   
-    
     if (newOffsetY <= 0) {   // 最顶部向上滑动
-        self.scrollViewContainerView.top = 0;
+        self.scrollViewContainerView.y = 0;
         self.webView.scrollView.contentOffset = self.tableView.contentOffset = CGPointZero;
     }else if (newOffsetY < webContentHeight - webHeight){  // web view 内容滚动区间
-        self.scrollViewContainerView.top = newOffsetY;
+        self.scrollViewContainerView.y = newOffsetY;
         self.webView.scrollView.contentOffset = CGPointMake(0, newOffsetY);
         self.tableView.contentOffset = CGPointZero;;
     }else if (newOffsetY < webContentHeight){   // web view 已滚动最大范围
-        self.scrollViewContainerView.top = webContentHeight - webHeight;
+        self.scrollViewContainerView.y = webContentHeight - webHeight;
         self.webView.scrollView.contentOffset = CGPointMake(0, webContentHeight - webHeight);
         self.tableView.contentOffset = CGPointZero;
     }else if (newOffsetY < webContentHeight + tabContentHeight - tabHeight){ // table view 内容滚动区间
-        self.scrollViewContainerView.top = offsetY - webHeight - webTop;
+        self.scrollViewContainerView.y = offsetY - webHeight - webTop;
         self.webView.scrollView.contentOffset = CGPointMake(0, webContentHeight - webHeight);
         self.tableView.contentOffset = CGPointMake(0, offsetY - webContentHeight - webTop);
     }else if (newOffsetY <= webContentHeight + tabContentHeight){  // table 已滚动到最大范围
-        self.scrollViewContainerView.top = self.scrollView.contentSize.height - self.scrollViewContainerView.height;
+        self.scrollViewContainerView.y = self.scrollView.contentSize.height - self.scrollViewContainerView.height;
         self.webView.scrollView.contentOffset = CGPointMake(0, webContentHeight - webHeight);
         self.tableView.contentOffset = CGPointMake(0, tabContentHeight - tabHeight);
     }
@@ -76,19 +69,6 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     
-    
-    if (object == self.webView) {
-        if ([keyPath isEqualToString:@"scrollView.contentSize"]) {
-            [self updateContent];
-        }
-    }else if(object == self.tableView) {
-        if ([keyPath isEqualToString:@"contentSize"]) {
-            [self updateContent];
-        }
-    }
-   
-}
-- (void)updateContent{
     CGFloat webContentHeight = self.webView.scrollView.contentSize.height; /*web view 的内容高度 */
     CGFloat tabContentHeight = self.tableView.contentSize.height;   /* tablie 的内容高度 */
     
@@ -96,15 +76,14 @@
     self.maxWebContentHeight = webContentHeight;  /* 保存最新web内容高度 */
     self.maxTabContentHeight = tabContentHeight;  /*  保存最新tab内容高度 */
     // 设置总的视图滚动范围: web 内容高度 + tab 内容高度;
-    self.scrollView.contentSize = CGSizeMake(self.view.width, self.webView.top + webContentHeight + tabContentHeight);
+    self.scrollView.contentSize = CGSizeMake(self.view.width, self.webView.y + webContentHeight + tabContentHeight);
     
-    CGFloat webHeight = MIN(webContentHeight, self.view.height)  ;
+    CGFloat webHeight = MIN( webContentHeight, self.view.height)  ;
     CGFloat tableHeight = MIN(tabContentHeight, self.view.height) ;  // tab view 的最大高度不超过屏幕高度
     self.webView.height = MAX(0.1, webHeight);    // 限制web view 的最大高度不超过屏幕高度
-    // 设置scrollview的高度 =  web view 的高度 + table view 的高度 + topView高度;
-    self.scrollViewContainerView.height = self.webView.top + webHeight + tableHeight;
+    // 设置scrollview的高度 =  web view 的高度 + table view 的高度;
+    self.scrollViewContainerView.height = webHeight + tableHeight + self.webView.y;
     self.tableView.height = tableHeight;
-    self.tableView.top = self.webView.bottom;
+    self.tableView.y = self.webView.bottom;
 }
-
 @end

@@ -18,10 +18,10 @@
 		D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D081210ABA930002C03E /* TransAnimationManager.m */; };
 		D818D085210ABD6C0002C03E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D084210ABD6C0002C03E /* TransController.m */; };
 		D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B002D212006600066C32E /* XCWebTableController+WebTab.m */; };
-		D82B003821201EFC0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003421201EFB0066C32E /* SDYWebTabController+SDYWebTab.m */; };
-		D82B003921201EFC0066C32E /* SDYWebTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003521201EFB0066C32E /* SDYWebTabController.m */; };
 		D82B003C212020300066C32E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003B212020300066C32E /* DetailViewController.m */; };
 		D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003E2120208B0066C32E /* UIView+HSKit.m */; };
+		D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B00402120281C0066C32E /* SDYWebTabController+SDYWebTab.m */; };
+		D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B00412120281C0066C32E /* SDYWebTabController.m */; };
 		D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */; };
 		D8485AB5211AAB9F009CD0DA /* WebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */; };
 		D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */; };
@@ -96,14 +96,14 @@
 		D818D084210ABD6C0002C03E /* TransController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
 		D82B002C212006600066C32E /* XCWebTableController+WebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCWebTableController+WebTab.h"; sourceTree = "<group>"; };
 		D82B002D212006600066C32E /* XCWebTableController+WebTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCWebTableController+WebTab.m"; sourceTree = "<group>"; };
-		D82B003421201EFB0066C32E /* SDYWebTabController+SDYWebTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDYWebTabController+SDYWebTab.m"; sourceTree = "<group>"; };
-		D82B003521201EFB0066C32E /* SDYWebTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDYWebTabController.m; sourceTree = "<group>"; };
-		D82B003621201EFB0066C32E /* SDYWebTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDYWebTabController.h; sourceTree = "<group>"; };
-		D82B003721201EFC0066C32E /* SDYWebTabController+SDYWebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDYWebTabController+SDYWebTab.h"; sourceTree = "<group>"; };
 		D82B003A212020300066C32E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		D82B003B212020300066C32E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D82B003D2120208B0066C32E /* UIView+HSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HSKit.h"; sourceTree = "<group>"; };
 		D82B003E2120208B0066C32E /* UIView+HSKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HSKit.m"; sourceTree = "<group>"; };
+		D82B00402120281C0066C32E /* SDYWebTabController+SDYWebTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDYWebTabController+SDYWebTab.m"; sourceTree = "<group>"; };
+		D82B00412120281C0066C32E /* SDYWebTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDYWebTabController.m; sourceTree = "<group>"; };
+		D82B00422120281C0066C32E /* SDYWebTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDYWebTabController.h; sourceTree = "<group>"; };
+		D82B00432120281C0066C32E /* SDYWebTabController+SDYWebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDYWebTabController+SDYWebTab.h"; sourceTree = "<group>"; };
 		D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableCellWebView.storyboard; sourceTree = "<group>"; };
 		D8485AB3211AAB9F009CD0DA /* WebTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTableViewController.h; sourceTree = "<group>"; };
 		D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewController.m; sourceTree = "<group>"; };
@@ -278,14 +278,14 @@
 		D82B003321201EE20066C32E /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				D82B00422120281C0066C32E /* SDYWebTabController.h */,
+				D82B00412120281C0066C32E /* SDYWebTabController.m */,
+				D82B00432120281C0066C32E /* SDYWebTabController+SDYWebTab.h */,
+				D82B00402120281C0066C32E /* SDYWebTabController+SDYWebTab.m */,
 				D82B003A212020300066C32E /* DetailViewController.h */,
 				D82B003B212020300066C32E /* DetailViewController.m */,
 				D82B003D2120208B0066C32E /* UIView+HSKit.h */,
 				D82B003E2120208B0066C32E /* UIView+HSKit.m */,
-				D82B003621201EFB0066C32E /* SDYWebTabController.h */,
-				D82B003521201EFB0066C32E /* SDYWebTabController.m */,
-				D82B003721201EFC0066C32E /* SDYWebTabController+SDYWebTab.h */,
-				D82B003421201EFB0066C32E /* SDYWebTabController+SDYWebTab.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -639,13 +639,13 @@
 				D88D70A2211537A600858B62 /* WSServerGameCollectionView.m in Sources */,
 				D87799102111383F00611EF1 /* ViewController+MASAdditions.m in Sources */,
 				D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */,
-				D82B003821201EFC0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */,
 				D88D70B421158D6F00858B62 /* ANViewController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
 				D87799152111383F00611EF1 /* View+MASAdditions.m in Sources */,
 				D87799172111383F00611EF1 /* MASViewConstraint.m in Sources */,
 				D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */,
 				D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */,
+				D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */,
 				D82B003C212020300066C32E /* DetailViewController.m in Sources */,
 				D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */,
 				D87799122111383F00611EF1 /* MASConstraintMaker.m in Sources */,
@@ -654,7 +654,6 @@
 				D87799112111383F00611EF1 /* MASCompositeConstraint.m in Sources */,
 				D87799132111383F00611EF1 /* MASLayoutConstraint.m in Sources */,
 				D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */,
-				D82B003921201EFC0066C32E /* SDYWebTabController.m in Sources */,
 				D88D70B72115912A00858B62 /* UIView+ACMediaExt.m in Sources */,
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
 				D87798F22111383500611EF1 /* WMScrollView.m in Sources */,
@@ -669,6 +668,7 @@
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
 				D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */,
 				D818D07D210AB5890002C03E /* PersonViewController.m in Sources */,
+				D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
