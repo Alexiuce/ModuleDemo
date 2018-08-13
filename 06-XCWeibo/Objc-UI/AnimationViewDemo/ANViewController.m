@@ -11,6 +11,8 @@
 
 #import "SDYUserTopView.h"
 
+#import "SDYStrategyBottomInputView.h"
+
 @interface ANViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
@@ -21,6 +23,8 @@
 @property (nonatomic, assign) NSUInteger titleIndex;
 
 @property (nonatomic, strong) SDYUserTopView *topView;
+
+
 
 @end
 
@@ -39,6 +43,10 @@
     _l2.backgroundColor = UIColor.yellowColor;
     [self.containerView addSubview:self.l2];
     [self.view addSubview:self.topView];
+    
+    SDYStrategyBottomInputView *bottomInputView = [SDYStrategyBottomInputView strategyBottomInputView];
+    bottomInputView.frame = CGRectMake(0, 490, self.view.width, 50);
+    [self.view addSubview:bottomInputView];
     
     
 }
@@ -104,8 +112,9 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    [self starAnim];
-    [self my_test];
+//    [self my_test];
 //    [self startL2Anim];
+    [self.view endEditing:YES];
 }
 
 - (void)my_test{

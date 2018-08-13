@@ -10,4 +10,6 @@
 
 @interface SDYStrategyBottomInputView : UIView
 
++ (instancetype)strategyBottomInputView;
+
 @end
