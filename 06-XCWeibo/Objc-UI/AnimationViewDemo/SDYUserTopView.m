@@ -24,6 +24,8 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+    self.nameLabel.text = @"";
+    self.detailLabel.text = @"";
    
 }
 
