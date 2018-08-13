@@ -27,6 +27,8 @@
 		D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */; };
 		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
+		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
+		D84BD01021210766003C819F /* SDYStrategyBottomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = D84BD00F21210766003C819F /* SDYStrategyBottomInputView.m */; };
 		D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */; };
 		D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D853EEB7211E622300DED0AD /* XCWebTableController.m */; };
 		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
@@ -114,6 +116,9 @@
 		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
 		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
 		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
+		D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYStrategyBottomInputView.xib; sourceTree = "<group>"; };
+		D84BD00E21210766003C819F /* SDYStrategyBottomInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYStrategyBottomInputView.h; sourceTree = "<group>"; };
+		D84BD00F21210766003C819F /* SDYStrategyBottomInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYStrategyBottomInputView.m; sourceTree = "<group>"; };
 		D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCWebTable.storyboard; sourceTree = "<group>"; };
 		D853EEB6211E622300DED0AD /* XCWebTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCWebTableController.h; sourceTree = "<group>"; };
 		D853EEB7211E622300DED0AD /* XCWebTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebTableController.m; sourceTree = "<group>"; };
@@ -420,6 +425,9 @@
 				D8497199212058D3007AA201 /* SDYUserTopView.xib */,
 				D849719B212058F2007AA201 /* SDYUserTopView.h */,
 				D849719C212058F2007AA201 /* SDYUserTopView.m */,
+				D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */,
+				D84BD00E21210766003C819F /* SDYStrategyBottomInputView.h */,
+				D84BD00F21210766003C819F /* SDYStrategyBottomInputView.m */,
 			);
 			path = AnimationViewDemo;
 			sourceTree = "<group>";
@@ -559,6 +567,7 @@
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
+				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
 				D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,6 +651,7 @@
 				D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D87798F42111383500611EF1 /* WMProgressView.m in Sources */,
+				D84BD01021210766003C819F /* SDYStrategyBottomInputView.m in Sources */,
 				D877991B211139D600611EF1 /* PageScrollerView.m in Sources */,
 				D87798F02111383500611EF1 /* WMPageController.m in Sources */,
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
