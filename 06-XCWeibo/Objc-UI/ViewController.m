@@ -12,6 +12,11 @@
 #import "PersonViewController.h"
 #import "TransAnimationManager.h"
 
+
+
+
+
+
 @interface ViewController ()
 
 @property (nonatomic, strong)TransAnimationManager *transManager;
@@ -23,7 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HelloView *v = [[NSBundle mainBundle]loadNibNamed:@"HelloView" owner:self options:nil].firstObject;//[[HelloView alloc]init];
+   
+    
+    HelloView *v = [[NSBundle mainBundle]loadNibNamed:@"HelloView" owner:self options:nil].firstObject;
+    //[[HelloView alloc]init];
 //    v.frame = CGRectMake(100, 100, 30, 30);
     [self.view addSubview:v];
     
@@ -91,5 +99,12 @@
     }
     return _transManager;
 }
+
+typedef NSString *MYNotificationName NS_EXTENSIBLE_STRING_ENUM;
+
+
+UIKIT_EXTERN MYNotificationName const WORKING;
+UIKIT_EXTERN MYNotificationName const SLEEPING;
+UIKIT_EXTERN MYNotificationName const EATING;
 
 @end
