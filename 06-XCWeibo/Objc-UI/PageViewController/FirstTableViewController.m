@@ -28,6 +28,7 @@
     _collectView.dataSource = self;
     [_collectView registerNib:[UINib nibWithNibName:@"WSServerGameCell" bundle:nil] forCellWithReuseIdentifier:@"ws_server_game"];
     
+    
     self.tableView.tableHeaderView = _collectView;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(acceptMsg:) name:PageGoTopNotification object:nil];
@@ -78,6 +79,34 @@
         self.tableView.showsVerticalScrollIndicator = NO;
     }
     
+}
+
+//侧滑允许编辑cell
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // 添加一个删除按钮
+    UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除"handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        NSLog(@"点击了删除");
+    }];
+    // 删除一个置顶按钮
+    UITableViewRowAction *topRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"置顶"handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        NSLog(@"点击了置顶");
+    }];
+    topRowAction.backgroundColor = [UIColor blueColor];
+    
+    // 添加一个更多按钮
+    UITableViewRowAction *moreRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"更多"handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        NSLog(@"点击了更多");
+        
+        
+    }];
+    moreRowAction.backgroundEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    
+    // 将设置好的按钮放到数组中返回
+    return @[deleteRowAction, topRowAction, moreRowAction];
 }
 
 #pragma mark - notification
