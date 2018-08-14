@@ -100,6 +100,8 @@
     return _transManager;
 }
 
+
+// 定义字符串常量
 typedef NSString *MYNotificationName NS_EXTENSIBLE_STRING_ENUM;
 
 
