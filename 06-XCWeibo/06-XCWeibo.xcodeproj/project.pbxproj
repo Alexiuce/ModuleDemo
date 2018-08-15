@@ -22,9 +22,6 @@
 		D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003E2120208B0066C32E /* UIView+HSKit.m */; };
 		D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B00402120281C0066C32E /* SDYWebTabController+SDYWebTab.m */; };
 		D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B00412120281C0066C32E /* SDYWebTabController.m */; };
-		D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */; };
-		D8485AB5211AAB9F009CD0DA /* WebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */; };
-		D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */; };
 		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
@@ -65,6 +62,8 @@
 		D88D70B421158D6F00858B62 /* ANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70B321158D6F00858B62 /* ANViewController.m */; };
 		D88D70B72115912A00858B62 /* UIView+ACMediaExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70B52115912A00858B62 /* UIView+ACMediaExt.m */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
+		D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DE091A2123B337005F1214 /* CycleView.storyboard */; };
+		D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DE091D2123B38D005F1214 /* XCCycleController.m */; };
 		D8EF8469211012990095F19E /* page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EF8468211012990095F19E /* page.storyboard */; };
 		D8EF846C211012C40095F19E /* PHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF846B211012C40095F19E /* PHViewController.m */; };
 		D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF847321102E2F0095F19E /* XCPageViewController.m */; };
@@ -108,11 +107,6 @@
 		D82B00412120281C0066C32E /* SDYWebTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDYWebTabController.m; sourceTree = "<group>"; };
 		D82B00422120281C0066C32E /* SDYWebTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDYWebTabController.h; sourceTree = "<group>"; };
 		D82B00432120281C0066C32E /* SDYWebTabController+SDYWebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDYWebTabController+SDYWebTab.h"; sourceTree = "<group>"; };
-		D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableCellWebView.storyboard; sourceTree = "<group>"; };
-		D8485AB3211AAB9F009CD0DA /* WebTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTableViewController.h; sourceTree = "<group>"; };
-		D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewController.m; sourceTree = "<group>"; };
-		D8485AB6211AAC55009CD0DA /* WebTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTableViewCell.h; sourceTree = "<group>"; };
-		D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTableViewCell.m; sourceTree = "<group>"; };
 		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
 		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
 		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
@@ -188,6 +182,9 @@
 		D88D70B321158D6F00858B62 /* ANViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANViewController.m; sourceTree = "<group>"; };
 		D88D70B52115912A00858B62 /* UIView+ACMediaExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ACMediaExt.m"; sourceTree = "<group>"; };
 		D88D70B62115912A00858B62 /* UIView+ACMediaExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ACMediaExt.h"; sourceTree = "<group>"; };
+		D8DE091A2123B337005F1214 /* CycleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CycleView.storyboard; sourceTree = "<group>"; };
+		D8DE091C2123B38D005F1214 /* XCCycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCycleController.h; sourceTree = "<group>"; };
+		D8DE091D2123B38D005F1214 /* XCCycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCycleController.m; sourceTree = "<group>"; };
 		D8EF8468211012990095F19E /* page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = page.storyboard; sourceTree = "<group>"; };
 		D8EF846A211012C40095F19E /* PHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHViewController.h; sourceTree = "<group>"; };
 		D8EF846B211012C40095F19E /* PHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHViewController.m; sourceTree = "<group>"; };
@@ -300,18 +297,6 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
-		D8485AB2211AAB0C009CD0DA /* TableCellWebView */ = {
-			isa = PBXGroup;
-			children = (
-				D8485AB0211AAB02009CD0DA /* TableCellWebView.storyboard */,
-				D8485AB3211AAB9F009CD0DA /* WebTableViewController.h */,
-				D8485AB4211AAB9F009CD0DA /* WebTableViewController.m */,
-				D8485AB6211AAC55009CD0DA /* WebTableViewCell.h */,
-				D8485AB7211AAC55009CD0DA /* WebTableViewCell.m */,
-			);
-			path = TableCellWebView;
-			sourceTree = "<group>";
-		};
 		D853EEB5211E61C400DED0AD /* XCWebTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,8 +313,8 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8DE09192123B31E005F1214 /* CycleScrollView */,
 				D853EEB5211E61C400DED0AD /* XCWebTable */,
-				D8485AB2211AAB0C009CD0DA /* TableCellWebView */,
 				D88D70AF21158D2E00858B62 /* AnimationViewDemo */,
 				D8EF84672110127E0095F19E /* PageViewController */,
 				D818D07F210ABA1B0002C03E /* TransitionAnimationManager */,
@@ -430,6 +415,16 @@
 				D84BD00F21210766003C819F /* SDYStrategyBottomInputView.m */,
 			);
 			path = AnimationViewDemo;
+			sourceTree = "<group>";
+		};
+		D8DE09192123B31E005F1214 /* CycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D8DE091A2123B337005F1214 /* CycleView.storyboard */,
+				D8DE091C2123B38D005F1214 /* XCCycleController.h */,
+				D8DE091D2123B38D005F1214 /* XCCycleController.m */,
+			);
+			path = CycleScrollView;
 			sourceTree = "<group>";
 		};
 		D8EF84672110127E0095F19E /* PageViewController */ = {
@@ -560,6 +555,7 @@
 				D8EF847B2110342E0095F19E /* FirstTableViewController.xib in Resources */,
 				D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
+				D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */,
 				D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */,
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
 				D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */,
@@ -568,7 +564,6 @@
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
-				D8485AB1211AAB02009CD0DA /* TableCellWebView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,12 +651,12 @@
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D87798F42111383500611EF1 /* WMProgressView.m in Sources */,
 				D84BD01021210766003C819F /* SDYStrategyBottomInputView.m in Sources */,
+				D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */,
 				D877991B211139D600611EF1 /* PageScrollerView.m in Sources */,
 				D87798F02111383500611EF1 /* WMPageController.m in Sources */,
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D88D70A2211537A600858B62 /* WSServerGameCollectionView.m in Sources */,
 				D87799102111383F00611EF1 /* ViewController+MASAdditions.m in Sources */,
-				D8485AB8211AAC55009CD0DA /* WebTableViewCell.m in Sources */,
 				D88D70B421158D6F00858B62 /* ANViewController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
 				D87799152111383F00611EF1 /* View+MASAdditions.m in Sources */,
@@ -682,7 +677,6 @@
 				D87798F22111383500611EF1 /* WMScrollView.m in Sources */,
 				D8EF846C211012C40095F19E /* PHViewController.m in Sources */,
 				D86CEF4220FF4121009BB583 /* main.m in Sources */,
-				D8485AB5211AAB9F009CD0DA /* WebTableViewController.m in Sources */,
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
