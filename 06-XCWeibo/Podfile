@@ -15,7 +15,7 @@ target 'Objc-UI' do
 
   # Pods for Objc-UI
   pod 'SDAutoLayout', '~> 2.1.3'
-  pod 'SDCycleScrollView'
+  pod 'SDCycleScrollView','~> 1.75'
 #  pod 'Hyphenate'
 
 end

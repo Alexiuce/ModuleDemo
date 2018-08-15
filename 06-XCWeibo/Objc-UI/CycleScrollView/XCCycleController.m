@@ -20,6 +20,10 @@
     UIView *topView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
     topView.backgroundColor = UIColor.lightGrayColor;
     [self.view addSubview:topView];
+    
+    
+    
+    
 }
 
 

@@ -313,6 +313,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8DE091F2123B61C005F1214 /* ProfilePage */,
 				D8DE09192123B31E005F1214 /* CycleScrollView */,
 				D853EEB5211E61C400DED0AD /* XCWebTable */,
 				D88D70AF21158D2E00858B62 /* AnimationViewDemo */,
@@ -320,19 +321,6 @@
 				D818D07F210ABA1B0002C03E /* TransitionAnimationManager */,
 				D86CEF3220FF4120009BB583 /* AppDelegate.h */,
 				D86CEF3320FF4120009BB583 /* AppDelegate.m */,
-				D86CEF3520FF4120009BB583 /* ViewController.h */,
-				D86CEF3620FF4120009BB583 /* ViewController.m */,
-				D87EDEB0210EB62500D09FC1 /* SecondViewController.h */,
-				D87EDEB1210EB62500D09FC1 /* SecondViewController.m */,
-				D87EDEAE210EB53200D09FC1 /* Second.storyboard */,
-				D818D07A210AB5890002C03E /* PersonViewController.h */,
-				D818D07B210AB5890002C03E /* PersonViewController.m */,
-				D818D07C210AB5890002C03E /* PersonViewController.xib */,
-				D818D077210AA24A0002C03E /* DemoMan.h */,
-				D818D078210AA24A0002C03E /* DemoMan.m */,
-				D86CEF4620FF415F009BB583 /* HelloView.xib */,
-				D86CEF4820FF417C009BB583 /* HelloView.h */,
-				D86CEF4920FF417C009BB583 /* HelloView.m */,
 				D86CEF3820FF4120009BB583 /* Main.storyboard */,
 				D86CEF3B20FF4121009BB583 /* Assets.xcassets */,
 				D86CEF3D20FF4121009BB583 /* LaunchScreen.storyboard */,
@@ -425,6 +413,26 @@
 				D8DE091D2123B38D005F1214 /* XCCycleController.m */,
 			);
 			path = CycleScrollView;
+			sourceTree = "<group>";
+		};
+		D8DE091F2123B61C005F1214 /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				D86CEF3520FF4120009BB583 /* ViewController.h */,
+				D86CEF3620FF4120009BB583 /* ViewController.m */,
+				D87EDEB0210EB62500D09FC1 /* SecondViewController.h */,
+				D87EDEB1210EB62500D09FC1 /* SecondViewController.m */,
+				D87EDEAE210EB53200D09FC1 /* Second.storyboard */,
+				D818D07A210AB5890002C03E /* PersonViewController.h */,
+				D818D07B210AB5890002C03E /* PersonViewController.m */,
+				D818D07C210AB5890002C03E /* PersonViewController.xib */,
+				D818D077210AA24A0002C03E /* DemoMan.h */,
+				D818D078210AA24A0002C03E /* DemoMan.m */,
+				D86CEF4620FF415F009BB583 /* HelloView.xib */,
+				D86CEF4820FF417C009BB583 /* HelloView.h */,
+				D86CEF4920FF417C009BB583 /* HelloView.m */,
+			);
+			path = ProfilePage;
 			sourceTree = "<group>";
 		};
 		D8EF84672110127E0095F19E /* PageViewController */ = {

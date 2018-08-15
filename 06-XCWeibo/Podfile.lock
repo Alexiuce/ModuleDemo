@@ -8,7 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - SDAutoLayout (~> 2.1.3)
-  - SDCycleScrollView
+  - SDCycleScrollView (~> 1.75)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,6 +21,6 @@ SPEC CHECKSUMS:
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
 
-PODFILE CHECKSUM: 79a033ca44e65ea04f6ccd1da109293f31333bc7
+PODFILE CHECKSUM: 2e70477aa97f2b827eb22e9ca8595817c61623a9
 
 COCOAPODS: 1.5.3
