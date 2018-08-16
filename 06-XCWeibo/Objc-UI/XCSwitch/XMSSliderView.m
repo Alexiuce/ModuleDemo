@@ -8,14 +8,28 @@
 
 #import "XMSSliderView.h"
 
-@implementation XMSSliderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+@interface XMSSliderView()
+    
+    
+    @property (weak, nonatomic) IBOutlet UIButton *leftButton;
+    
+    @property (weak, nonatomic) IBOutlet UIButton *rightButton;
+    
+@end
+
+
+@implementation XMSSliderView
+    
++ (instancetype)sliderView{
+    
+    return [[NSBundle mainBundle] loadNibNamed:@"XMSSliderView" owner:nil options:nil].firstObject;
 }
-*/
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    
+}
 
 @end

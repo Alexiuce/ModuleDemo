@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface XMSSliderView : UIView
+    
++ (instancetype)sliderView;
 
 @end

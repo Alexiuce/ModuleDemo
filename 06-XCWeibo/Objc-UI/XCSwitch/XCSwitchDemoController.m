@@ -8,6 +8,8 @@
 
 #import "XCSwitchDemoController.h"
 
+#import "XMSSliderView.h"
+
 @interface XCSwitchDemoController ()
 
 @end
@@ -19,7 +21,9 @@
     
    
     
-    
+    XMSSliderView *slider = [XMSSliderView sliderView];
+    slider.frame = CGRectMake(100, 100, 200, 50);
+    [self.view addSubview:slider];
     
 }
 
