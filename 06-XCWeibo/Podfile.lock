@@ -1,4 +1,5 @@
 PODS:
+  - JPVideoPlayer (3.1.1)
   - SDAutoLayout (2.1.9)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
@@ -7,20 +8,23 @@ PODS:
   - SDWebImage/Core (4.3.0)
 
 DEPENDENCIES:
+  - JPVideoPlayer
   - SDAutoLayout (~> 2.1.3)
   - SDCycleScrollView (~> 1.75)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - JPVideoPlayer
     - SDAutoLayout
     - SDCycleScrollView
     - SDWebImage
 
 SPEC CHECKSUMS:
+  JPVideoPlayer: 234c2fc5c9dfd67b969a5dd8233815eb872472c6
   SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
 
-PODFILE CHECKSUM: 2e70477aa97f2b827eb22e9ca8595817c61623a9
+PODFILE CHECKSUM: 3a0484dc3c236494c84a157a751cd2bf0b45e243
 
 COCOAPODS: 1.5.3
