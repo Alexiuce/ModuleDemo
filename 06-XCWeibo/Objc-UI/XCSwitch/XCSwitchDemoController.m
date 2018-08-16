@@ -22,9 +22,9 @@
    
     
     XMSSliderView *slider = [XMSSliderView sliderView];
-    slider.frame = CGRectMake(100, 100, 200, 50);
+    slider.frame = CGRectMake(100, 100, 100, 30);
     [self.view addSubview:slider];
-    slider.layer.cornerRadius = 25.0f;
+    slider.layer.cornerRadius = 15.0f;
     
 }
 
