@@ -21,6 +21,7 @@
 		D81AA1EB21259A80008A887F /* XCSwitchDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AA1EA21259A80008A887F /* XCSwitchDemoController.m */; };
 		D81AA1ED21259F83008A887F /* XMSSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AA1EC21259F83008A887F /* XMSSliderView.xib */; };
 		D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AA1EF21259FAD008A887F /* XMSSliderView.m */; };
+		D81AA1F32125A768008A887F /* XMSNoHightLightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AA1F22125A768008A887F /* XMSNoHightLightButton.m */; };
 		D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B002D212006600066C32E /* XCWebTableController+WebTab.m */; };
 		D82B003C212020300066C32E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003B212020300066C32E /* DetailViewController.m */; };
 		D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003E2120208B0066C32E /* UIView+HSKit.m */; };
@@ -110,6 +111,8 @@
 		D81AA1EC21259F83008A887F /* XMSSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMSSliderView.xib; sourceTree = "<group>"; };
 		D81AA1EE21259FAD008A887F /* XMSSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMSSliderView.h; sourceTree = "<group>"; };
 		D81AA1EF21259FAD008A887F /* XMSSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMSSliderView.m; sourceTree = "<group>"; };
+		D81AA1F12125A768008A887F /* XMSNoHightLightButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMSNoHightLightButton.h; sourceTree = "<group>"; };
+		D81AA1F22125A768008A887F /* XMSNoHightLightButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMSNoHightLightButton.m; sourceTree = "<group>"; };
 		D82B002C212006600066C32E /* XCWebTableController+WebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCWebTableController+WebTab.h"; sourceTree = "<group>"; };
 		D82B002D212006600066C32E /* XCWebTableController+WebTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCWebTableController+WebTab.m"; sourceTree = "<group>"; };
 		D82B003A212020300066C32E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				D81AA1EC21259F83008A887F /* XMSSliderView.xib */,
 				D81AA1EE21259FAD008A887F /* XMSSliderView.h */,
 				D81AA1EF21259FAD008A887F /* XMSSliderView.m */,
+				D81AA1F12125A768008A887F /* XMSNoHightLightButton.h */,
+				D81AA1F22125A768008A887F /* XMSNoHightLightButton.m */,
 			);
 			path = XCSwitch;
 			sourceTree = "<group>";
@@ -749,6 +754,7 @@
 				D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */,
 				D818D07D210AB5890002C03E /* PersonViewController.m in Sources */,
 				D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */,
+				D81AA1F32125A768008A887F /* XMSNoHightLightButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,9 +13,15 @@
 @interface XMSSliderView()
     
     
-    @property (weak, nonatomic) IBOutlet UIButton *leftButton;
+@property (weak, nonatomic) IBOutlet UIButton *leftButton;
     
-    @property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+    
+@property (nonatomic, strong) CALayer *animateLayer;
+    
+@property (nonatomic, strong) CABasicAnimation *moveAnimation;  // 移动动画
+
+@property (nonatomic, weak) UIButton *currentSelecteButton;
     
 @end
 
@@ -29,7 +35,70 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    
+    self.leftButton.selected = YES;
+    [self.layer addObserver:self forKeyPath:@"cornerRadius" options:NSKeyValueObservingOptionNew context:nil];
+    self.currentSelecteButton = self.leftButton;
 }
 
+    
+    
+#pragma mark - animation handle
+    
+// 点击左边按钮
+- (IBAction)clickLeftButton:(UIButton *)sender {
+    if (sender == self.currentSelecteButton){return;}
+    self.currentSelecteButton.selected = NO;
+    sender.selected = YES;
+    self.currentSelecteButton = sender;
+    
+    
+    self.moveAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(0, 0)];
+    [self.animateLayer addAnimation:self.moveAnimation forKey:nil];
+}
+    
+// 点击右边按钮
+- (IBAction)clickRightButton:(UIButton *)sender {
+    if (sender == self.currentSelecteButton){return;}
+    self.currentSelecteButton.selected = NO;
+    sender.selected = YES;
+    self.currentSelecteButton = sender;
+    self.moveAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(self.bounds.size.width * 0.5, 0)];
+    [self.animateLayer addAnimation:self.moveAnimation forKey:nil];
+}
+    
+    
+#pragma mark KVO observer methon
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if (object != self.layer){return;}
+    CGFloat newCornerRadius = [change[NSKeyValueChangeNewKey] floatValue];
+    self.animateLayer.cornerRadius = newCornerRadius;
+}
+    
+#pragma mark - lazy getter method
+    
+- (CALayer *)animateLayer{
+    if (_animateLayer == nil){
+        _animateLayer = [CALayer layer];
+        _animateLayer.frame = CGRectMake(0, 0, self.bounds.size.width * 0.5, self.bounds.size.height);
+        _animateLayer.backgroundColor = UIColor.orangeColor.CGColor;
+        _animateLayer.anchorPoint = CGPointZero;
+        [self.layer insertSublayer:self.animateLayer atIndex:0];
+        _animateLayer.position = CGPointZero;
+    }
+    return _animateLayer;
+}
+
+- (CABasicAnimation *)moveAnimation{
+    if (_moveAnimation == nil){
+        _moveAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+        _moveAnimation.duration = 0.25f;
+        _moveAnimation.removedOnCompletion = NO;
+        _moveAnimation.fillMode = kCAFillModeForwards;
+    }
+    return _moveAnimation;
+}
+
+- (void)dealloc{
+    [self.layer removeObserver:self forKeyPath:@"cornerRadius"];
+}
 @end
