@@ -11,7 +11,7 @@
 
 #import "TableVideoCell.h"
 
-@interface TableVideoController ()<JPTableViewPlayVideoDelegate>
+@interface TableVideoController ()<JPTableViewPlayVideoDelegate, JPVideoPlayerDelegate>
 
 /**
  * Arrary of video paths.
@@ -27,7 +27,8 @@
     [super viewDidLoad];
      self.clearsSelectionOnViewWillAppear = NO;
     self.tableView.rowHeight = 150;
-//    self.tableView.jp_delegate = self;
+    self.tableView.jp_delegate = self;
+    
     self.pathStrings = @[
                          @"http://www.w3school.com.cn/example/html5/mov_bbb.mp4",
                          @"https://www.w3schools.com/html/movie.mp4",
@@ -46,11 +47,11 @@
     self.tableView.jp_tableViewVisibleFrame = tableViewFrame;
 }
 
-//- (void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-//    [self.tableView jp_handleCellUnreachableTypeInVisibleCellsAfterReloadData];
-//    [self.tableView jp_playVideoInVisibleCellsIfNeed];
-//}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView jp_handleCellUnreachableTypeInVisibleCellsAfterReloadData];
+    [self.tableView jp_playVideoInVisibleCellsIfNeed];
+}
 
 #pragma mark - Table view data source
 
@@ -68,20 +69,33 @@
     // Configure the cell...
     cell.jp_videoURL = [NSURL URLWithString:self.pathStrings[indexPath.row]];
     cell.jp_videoPlayView = cell.videoImage;
+    cell.videoImage.jp_videoPlayerDelegate = self;
+    [tableView jp_handleCellUnreachableTypeForCell:cell
+                                       atIndexPath:indexPath];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     [selectedCell.jp_videoPlayView jp_playVideoWithURL:selectedCell.jp_videoURL ];
+
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.tableView jp_scrollViewDidEndDraggingWillDecelerate:decelerate];
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self.tableView jp_scrollViewDidEndDecelerating];
 }
 
-#pragma mark - JPTableViewPlayVideoDelegate
-//- (void)tableView:(UITableView *)tableView willPlayVideoOnCell:(UITableViewCell *)cell{
-//
-//    [cell.jp_videoPlayView jp_resumeMutePlayWithURL:cell.jp_videoURL bufferingIndicator:nil progressView:nil configuration:nil];
-//
-//}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [self.tableView jp_scrollViewDidScroll];
+}
 
+- (BOOL)shouldShowBlackBackgroundWhenPlaybackStart{
+    return NO;
+}
+- (BOOL)shouldShowBlackBackgroundBeforePlaybackStart{
+    return NO;
+}
 
 @end
