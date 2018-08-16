@@ -52,6 +52,9 @@
 		D87799172111383F00611EF1 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D877990D2111383F00611EF1 /* MASViewConstraint.m */; };
 		D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = D877990E2111383F00611EF1 /* MASViewAttribute.m */; };
 		D877991B211139D600611EF1 /* PageScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D877991A211139D600611EF1 /* PageScrollerView.m */; };
+		D87E62D72124F664007C5D35 /* TableVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87E62D62124F664007C5D35 /* TableVideo.storyboard */; };
+		D87E62DA2124F6A4007C5D35 /* TableVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E62D92124F6A4007C5D35 /* TableVideoController.m */; };
+		D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E62DC2124F6D2007C5D35 /* TableVideoCell.m */; };
 		D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87EDEAE210EB53200D09FC1 /* Second.storyboard */; };
 		D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87EDEB1210EB62500D09FC1 /* SecondViewController.m */; };
 		D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D709C21152F5F00858B62 /* WSServerGameCell.m */; };
@@ -167,6 +170,11 @@
 		D877990E2111383F00611EF1 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		D8779919211139D600611EF1 /* PageScrollerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageScrollerView.h; sourceTree = "<group>"; };
 		D877991A211139D600611EF1 /* PageScrollerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageScrollerView.m; sourceTree = "<group>"; };
+		D87E62D62124F664007C5D35 /* TableVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableVideo.storyboard; sourceTree = "<group>"; };
+		D87E62D82124F6A4007C5D35 /* TableVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableVideoController.h; sourceTree = "<group>"; };
+		D87E62D92124F6A4007C5D35 /* TableVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableVideoController.m; sourceTree = "<group>"; };
+		D87E62DB2124F6D2007C5D35 /* TableVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableVideoCell.h; sourceTree = "<group>"; };
+		D87E62DC2124F6D2007C5D35 /* TableVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableVideoCell.m; sourceTree = "<group>"; };
 		D87EDEAE210EB53200D09FC1 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		D87EDEB0210EB62500D09FC1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D87EDEB1210EB62500D09FC1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
@@ -313,6 +321,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D87E62D52124F63E007C5D35 /* TableViewVideo */,
 				D8DE091F2123B61C005F1214 /* ProfilePage */,
 				D8DE09192123B31E005F1214 /* CycleScrollView */,
 				D853EEB5211E61C400DED0AD /* XCWebTable */,
@@ -385,6 +394,18 @@
 				D877990E2111383F00611EF1 /* MASViewAttribute.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		D87E62D52124F63E007C5D35 /* TableViewVideo */ = {
+			isa = PBXGroup;
+			children = (
+				D87E62D62124F664007C5D35 /* TableVideo.storyboard */,
+				D87E62D82124F6A4007C5D35 /* TableVideoController.h */,
+				D87E62D92124F6A4007C5D35 /* TableVideoController.m */,
+				D87E62DB2124F6D2007C5D35 /* TableVideoCell.h */,
+				D87E62DC2124F6D2007C5D35 /* TableVideoCell.m */,
+			);
+			path = TableViewVideo;
 			sourceTree = "<group>";
 		};
 		D88D70AF21158D2E00858B62 /* AnimationViewDemo */ = {
@@ -568,6 +589,7 @@
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
 				D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */,
 				D88D70B121158D4A00858B62 /* AnimationDemo.storyboard in Resources */,
+				D87E62D72124F664007C5D35 /* TableVideo.storyboard in Resources */,
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
@@ -652,8 +674,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87E62DA2124F6A4007C5D35 /* TableVideoController.m in Sources */,
 				D87798F32111383500611EF1 /* WMMenuView.m in Sources */,
 				D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */,
+				D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */,
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
 				D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
