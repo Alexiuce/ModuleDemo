@@ -31,6 +31,9 @@
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
 		D84BD01021210766003C819F /* SDYStrategyBottomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = D84BD00F21210766003C819F /* SDYStrategyBottomInputView.m */; };
+		D84C41AC2126A5920036E778 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84C41AB2126A5920036E778 /* Navigation.storyboard */; };
+		D84C41B02126A5C90036E778 /* NavTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84C41AF2126A5C90036E778 /* NavTopViewController.m */; };
+		D84C41B32126A6400036E778 /* NavHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84C41B22126A6400036E778 /* NavHomeViewController.m */; };
 		D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */; };
 		D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D853EEB7211E622300DED0AD /* XCWebTableController.m */; };
 		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
@@ -129,6 +132,11 @@
 		D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYStrategyBottomInputView.xib; sourceTree = "<group>"; };
 		D84BD00E21210766003C819F /* SDYStrategyBottomInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYStrategyBottomInputView.h; sourceTree = "<group>"; };
 		D84BD00F21210766003C819F /* SDYStrategyBottomInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYStrategyBottomInputView.m; sourceTree = "<group>"; };
+		D84C41AB2126A5920036E778 /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
+		D84C41AE2126A5C90036E778 /* NavTopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavTopViewController.h; sourceTree = "<group>"; };
+		D84C41AF2126A5C90036E778 /* NavTopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavTopViewController.m; sourceTree = "<group>"; };
+		D84C41B12126A6400036E778 /* NavHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavHomeViewController.h; sourceTree = "<group>"; };
+		D84C41B22126A6400036E778 /* NavHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavHomeViewController.m; sourceTree = "<group>"; };
 		D853EEB3211E61BD00DED0AD /* XCWebTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCWebTable.storyboard; sourceTree = "<group>"; };
 		D853EEB6211E622300DED0AD /* XCWebTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCWebTableController.h; sourceTree = "<group>"; };
 		D853EEB7211E622300DED0AD /* XCWebTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebTableController.m; sourceTree = "<group>"; };
@@ -333,6 +341,18 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		D84C41AD2126A59B0036E778 /* NavigationBack */ = {
+			isa = PBXGroup;
+			children = (
+				D84C41AB2126A5920036E778 /* Navigation.storyboard */,
+				D84C41B12126A6400036E778 /* NavHomeViewController.h */,
+				D84C41B22126A6400036E778 /* NavHomeViewController.m */,
+				D84C41AE2126A5C90036E778 /* NavTopViewController.h */,
+				D84C41AF2126A5C90036E778 /* NavTopViewController.m */,
+			);
+			path = NavigationBack;
+			sourceTree = "<group>";
+		};
 		D853EEB5211E61C400DED0AD /* XCWebTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +369,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D84C41AD2126A59B0036E778 /* NavigationBack */,
 				D81AA1E621259A43008A887F /* XCSwitch */,
 				D87E62D52124F63E007C5D35 /* TableViewVideo */,
 				D8DE091F2123B61C005F1214 /* ProfilePage */,
@@ -625,6 +646,7 @@
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
+				D84C41AC2126A5920036E778 /* Navigation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +744,7 @@
 				D87798F02111383500611EF1 /* WMPageController.m in Sources */,
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D88D70A2211537A600858B62 /* WSServerGameCollectionView.m in Sources */,
+				D84C41B32126A6400036E778 /* NavHomeViewController.m in Sources */,
 				D87799102111383F00611EF1 /* ViewController+MASAdditions.m in Sources */,
 				D88D70B421158D6F00858B62 /* ANViewController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
@@ -732,6 +755,7 @@
 				D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */,
 				D82B003C212020300066C32E /* DetailViewController.m in Sources */,
 				D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */,
+				D84C41B02126A5C90036E778 /* NavTopViewController.m in Sources */,
 				D87799122111383F00611EF1 /* MASConstraintMaker.m in Sources */,
 				D877990F2111383F00611EF1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				D87799162111383F00611EF1 /* MASConstraint.m in Sources */,
