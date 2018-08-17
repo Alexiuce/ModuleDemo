@@ -19,8 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
-    
     XMSSliderView *slider = [XMSSliderView sliderView];
     slider.frame = CGRectMake(100, 100, 100, 30);
     [self.view addSubview:slider];
