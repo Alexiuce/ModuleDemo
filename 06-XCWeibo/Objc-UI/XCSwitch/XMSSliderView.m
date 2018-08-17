@@ -38,6 +38,7 @@
     self.leftButton.selected = YES;
     [self.layer addObserver:self forKeyPath:@"cornerRadius" options:NSKeyValueObservingOptionNew context:nil];
     self.currentSelecteButton = self.leftButton;
+    _currentSelectedIndex = 0;
 }
 
     
@@ -97,6 +98,11 @@
         _moveAnimation.fillMode = kCAFillModeForwards;
     }
     return _moveAnimation;
+}
+
+- (void)setCurrentSelectedIndex:(NSUInteger)currentSelectedIndex{
+    _currentSelectedIndex = currentSelectedIndex;
+    currentSelectedIndex == 0 ?[self clickLeftButton:self.leftButton] : [self clickRightButton:self.rightButton];
 }
 
 - (void)dealloc{

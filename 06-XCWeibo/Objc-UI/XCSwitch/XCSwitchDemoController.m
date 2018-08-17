@@ -12,6 +12,8 @@
 
 @interface XCSwitchDemoController ()<XMSSliderViewDelegate>
 
+@property (nonatomic, weak) XMSSliderView *sliderView;
+
 @end
 
 @implementation XCSwitchDemoController
@@ -24,6 +26,9 @@
     [self.view addSubview:slider];
     slider.layer.cornerRadius = 15.0f;
     slider.select_delegate = self;
+    _sliderView = slider;
+    
+   
     
 }
 
@@ -31,4 +36,11 @@
     NSLog(@"%zd",index);
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+  
+    static int index = 0;
+    
+    self.sliderView.currentSelectedIndex = (++index) % 2;
+}
 @end

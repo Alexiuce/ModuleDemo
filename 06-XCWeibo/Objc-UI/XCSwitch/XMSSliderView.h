@@ -32,4 +32,9 @@
 @property (nonatomic, weak) id<XMSSliderViewDelegate> select_delegate;
 
 
+/**
+ 获取和设置默认的选项索引
+ */
+@property (nonatomic, assign) NSUInteger currentSelectedIndex;
+
 @end
