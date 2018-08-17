@@ -10,7 +10,7 @@
 
 #import "XMSSliderView.h"
 
-@interface XCSwitchDemoController ()
+@interface XCSwitchDemoController ()<XMSSliderViewDelegate>
 
 @end
 
@@ -23,9 +23,12 @@
     slider.frame = CGRectMake(100, 100, 100, 30);
     [self.view addSubview:slider];
     slider.layer.cornerRadius = 15.0f;
+    slider.select_delegate = self;
     
 }
 
-
+- (void)sliderView:(XMSSliderView *)view didSelectedAtIndex:(NSUInteger)index{
+    NSLog(@"%zd",index);
+}
 
 @end

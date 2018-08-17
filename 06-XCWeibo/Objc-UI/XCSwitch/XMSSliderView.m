@@ -46,26 +46,27 @@
     
 // 点击左边按钮
 - (IBAction)clickLeftButton:(UIButton *)sender {
-    if (sender == self.currentSelecteButton){return;}
-    self.currentSelecteButton.selected = NO;
-    sender.selected = YES;
-    self.currentSelecteButton = sender;
-    
-    
-    self.moveAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(0, 0)];
-    [self.animateLayer addAnimation:self.moveAnimation forKey:nil];
+   NSValue *toValue = [NSValue valueWithCGPoint:CGPointMake(0, 0)];
+    [self startAnimation:sender toValue:toValue];
 }
     
 // 点击右边按钮
 - (IBAction)clickRightButton:(UIButton *)sender {
-    if (sender == self.currentSelecteButton){return;}
-    self.currentSelecteButton.selected = NO;
-    sender.selected = YES;
-    self.currentSelecteButton = sender;
-    self.moveAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(self.bounds.size.width * 0.5, 0)];
-    [self.animateLayer addAnimation:self.moveAnimation forKey:nil];
+    NSValue *toValue =[NSValue valueWithCGPoint:CGPointMake(self.bounds.size.width * 0.5, 0)];
+    [self startAnimation:sender toValue:toValue];
 }
-    
+
+- (void)startAnimation:(UIButton *)button toValue:(NSValue *)toValue{
+    if (button == self.currentSelecteButton){return;}
+    self.currentSelecteButton.selected = NO;
+    button.selected = YES;
+    self.currentSelecteButton = button;
+    self.moveAnimation.toValue = toValue;
+    [self.animateLayer addAnimation:self.moveAnimation forKey:nil];
+    if ([self.select_delegate conformsToProtocol:@protocol(XMSSliderViewDelegate)]) {
+        [self.select_delegate sliderView:self didSelectedAtIndex:button == self.leftButton ? 0 : 1];
+    }
+}
     
 #pragma mark KVO observer methon
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
