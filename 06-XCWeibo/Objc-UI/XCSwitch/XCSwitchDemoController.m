@@ -33,7 +33,7 @@
 }
 
 - (void)sliderView:(XMSSliderView *)view didSelectedAtIndex:(NSUInteger)index{
-    NSLog(@"%zd",index);
+    NSLog(@"%lu",(unsigned long)index);
 }
 
 
