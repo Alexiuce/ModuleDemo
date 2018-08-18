@@ -38,6 +38,7 @@
 		D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D853EEB7211E622300DED0AD /* XCWebTableController.m */; };
 		D867D3862127AA5D007E9AD2 /* SafeArea.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D867D3852127AA5D007E9AD2 /* SafeArea.storyboard */; };
 		D867D3892127AAE9007E9AD2 /* SafeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D867D3882127AAE9007E9AD2 /* SafeTableViewController.m */; };
+		D867D38C2127B76F007E9AD2 /* SAFrameObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D867D38B2127B76F007E9AD2 /* SAFrameObj.m */; };
 		D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3320FF4120009BB583 /* AppDelegate.m */; };
 		D86CEF3720FF4120009BB583 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF3620FF4120009BB583 /* ViewController.m */; };
 		D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF3820FF4120009BB583 /* Main.storyboard */; };
@@ -146,6 +147,8 @@
 		D867D3852127AA5D007E9AD2 /* SafeArea.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafeArea.storyboard; sourceTree = "<group>"; };
 		D867D3872127AAE9007E9AD2 /* SafeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeTableViewController.h; sourceTree = "<group>"; };
 		D867D3882127AAE9007E9AD2 /* SafeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeTableViewController.m; sourceTree = "<group>"; };
+		D867D38A2127B76F007E9AD2 /* SAFrameObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAFrameObj.h; sourceTree = "<group>"; };
+		D867D38B2127B76F007E9AD2 /* SAFrameObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAFrameObj.m; sourceTree = "<group>"; };
 		D86CEF3020FF4120009BB583 /* Objc-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86CEF3220FF4120009BB583 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86CEF3320FF4120009BB583 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -377,6 +380,8 @@
 				D867D3852127AA5D007E9AD2 /* SafeArea.storyboard */,
 				D867D3872127AAE9007E9AD2 /* SafeTableViewController.h */,
 				D867D3882127AAE9007E9AD2 /* SafeTableViewController.m */,
+				D867D38A2127B76F007E9AD2 /* SAFrameObj.h */,
+				D867D38B2127B76F007E9AD2 /* SAFrameObj.m */,
 			);
 			path = SafeAreaInset;
 			sourceTree = "<group>";
@@ -781,6 +786,7 @@
 				D87799162111383F00611EF1 /* MASConstraint.m in Sources */,
 				D87799112111383F00611EF1 /* MASCompositeConstraint.m in Sources */,
 				D87799132111383F00611EF1 /* MASLayoutConstraint.m in Sources */,
+				D867D38C2127B76F007E9AD2 /* SAFrameObj.m in Sources */,
 				D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */,
 				D88D70B72115912A00858B62 /* UIView+ACMediaExt.m in Sources */,
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,

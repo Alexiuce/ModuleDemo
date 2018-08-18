@@ -8,7 +8,7 @@
 
 #import "SafeTableViewController.h"
 #import <MJRefresh/MJRefresh.h>
-
+#import "SAFrameObj.h"
 
 #define Screen_Height  [UIScreen mainScreen].bounds.size.height
 #define IS_IPHONE_X (Screen_Height == 812.0f) ? YES : NO
@@ -36,6 +36,25 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     self.sa_tableView.contentInset = UIEdgeInsetsMake(Height_NavBar, 0, Height_TabBar, 0);
+    
+    
+    
+    /** 使用对象方式缓存系统的screenBounds的效率要比直接使用多消耗一个对象的创建消耗时间 */
+    static const int tc = 10000;
+    CFAbsoluteTime beginTime = CFAbsoluteTimeGetCurrent();
+    NSLog(@"begin time %f",beginTime);
+    for (int i = 0; i < tc; i ++) {
+        CGRect a = [UIScreen mainScreen].bounds;
+        a.origin.x = 20;
+    }
+//        for (int i = 0; i < tc; i ++) {
+//            CGRect b = [SAFrameObj shareFrame].screenBounds;
+//            b.origin.x = 20;
+//        }
+    CFAbsoluteTime endTime = CFAbsoluteTimeGetCurrent();
+     NSLog(@"end time %f",endTime);
+    NSLog(@"delta time = %f", endTime - beginTime);
+    
 }
 
 #pragma mark - Simulate request
