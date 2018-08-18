@@ -9,6 +9,12 @@
 #import "SafeTableViewController.h"
 #import <MJRefresh/MJRefresh.h>
 
+
+#define Screen_Height  [UIScreen mainScreen].bounds.size.height
+#define IS_IPHONE_X (Screen_Height == 812.0f) ? YES : NO
+#define Height_NavBar    (IS_IPHONE_X==YES)?88.0f: 64.0f
+#define Height_TabBar    (IS_IPHONE_X==YES)?83.0f: 49.0f
+
 @interface SafeTableViewController ()<UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *sa_tableView;
@@ -19,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     self.sa_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startRequest)];
     
     self.sa_tableView.mj_footer = [MJRefreshBackStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
@@ -28,7 +35,7 @@
     }else{
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-    self.sa_tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
+    self.sa_tableView.contentInset = UIEdgeInsetsMake(Height_NavBar, 0, Height_TabBar, 0);
 }
 
 #pragma mark - Simulate request
