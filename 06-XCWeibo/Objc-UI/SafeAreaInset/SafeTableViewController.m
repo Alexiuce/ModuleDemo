@@ -7,6 +7,7 @@
 //
 
 #import "SafeTableViewController.h"
+#import <MJRefresh/MJRefresh.h>
 
 @interface SafeTableViewController ()<UITableViewDataSource>
 
@@ -18,10 +19,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.sa_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startRequest)];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.sa_tableView.mj_footer = [MJRefreshBackStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+}
 
+#pragma mark - Simulate request
+- (void)startRequest{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.sa_tableView.mj_header endRefreshing];
+    });
+}
+
+- (void)loadMore{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.sa_tableView.mj_footer endRefreshingWithNoMoreData];
+    });
 }
 
 #pragma mark - Table view data source
@@ -41,6 +54,7 @@
     }
     cell.contentView.backgroundColor = UIColor.orangeColor;
     cell.textLabel.text = @(indexPath.row).stringValue;
+    cell.imageView.image = [UIImage imageNamed:@"h7"];
     
     return cell;
 }
