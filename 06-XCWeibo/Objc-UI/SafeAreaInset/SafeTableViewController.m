@@ -22,6 +22,13 @@
     self.sa_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startRequest)];
     
     self.sa_tableView.mj_footer = [MJRefreshBackStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+    if (@available(iOS 11.0, *)) {
+        self.sa_tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+       
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    self.sa_tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
 }
 
 #pragma mark - Simulate request
