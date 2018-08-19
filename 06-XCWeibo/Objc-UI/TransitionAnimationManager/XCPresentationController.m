@@ -39,14 +39,14 @@
 //#endif
 
 
-- (CGRect)frameOfPresentedViewInContainerView{
-    return CGRectMake(100, 100, 100, 200);
-}
+//- (CGRect)frameOfPresentedViewInContainerView{
+//    return CGRectMake(100, 100, 100, 200);
+//}
 
 - (void)presentationTransitionWillBegin{
     [self.containerView addSubview:self.backView];
     [self.containerView addSubview:self.presentedView];
-    self.presentedView.frame = self.containerView.bounds;
+    self.presentedView.frame = CGRectMake(100, 100, 300, 400);//self.containerView.bounds;
     
     NSLog(@"frame %@",NSStringFromCGRect(self.presentedView.frame));
     
