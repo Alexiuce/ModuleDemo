@@ -27,6 +27,7 @@
 		D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003E2120208B0066C32E /* UIView+HSKit.m */; };
 		D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B00402120281C0066C32E /* SDYWebTabController+SDYWebTab.m */; };
 		D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B00412120281C0066C32E /* SDYWebTabController.m */; };
+		D8382B572128E9350086512E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8382B562128E9350086512E /* main.m */; };
 		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
@@ -88,6 +89,18 @@
 		FCB73D74692EF1711B2B9796 /* Pods_Objc_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D8382B522128E9350086512E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_06_XCWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25522F0E6853F942C38D4EB7 /* Pods-06-XCWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-06-XCWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-06-XCWeibo/Pods-06-XCWeibo.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +142,8 @@
 		D82B00412120281C0066C32E /* SDYWebTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDYWebTabController.m; sourceTree = "<group>"; };
 		D82B00422120281C0066C32E /* SDYWebTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDYWebTabController.h; sourceTree = "<group>"; };
 		D82B00432120281C0066C32E /* SDYWebTabController+SDYWebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDYWebTabController+SDYWebTab.h"; sourceTree = "<group>"; };
+		D8382B542128E9350086512E /* Objc-main */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objc-main"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8382B562128E9350086512E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
 		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
 		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
@@ -244,6 +259,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8382B512128E9350086512E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D86CEF2D20FF4120009BB583 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +302,7 @@
 			children = (
 				D810798020FC1EA0000E97CA /* 06-XCWeibo */,
 				D86CEF3120FF4120009BB583 /* Objc-UI */,
+				D8382B552128E9350086512E /* Objc-main */,
 				D810797F20FC1EA0000E97CA /* Products */,
 				9C6143DF4E4FAE765ADF7E5E /* Pods */,
 				3FD0C62CA64D000178D2BF3A /* Frameworks */,
@@ -291,6 +314,7 @@
 			children = (
 				D810797E20FC1EA0000E97CA /* 06-XCWeibo.app */,
 				D86CEF3020FF4120009BB583 /* Objc-UI.app */,
+				D8382B542128E9350086512E /* Objc-main */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +371,14 @@
 				D82B003E2120208B0066C32E /* UIView+HSKit.m */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		D8382B552128E9350086512E /* Objc-main */ = {
+			isa = PBXGroup;
+			children = (
+				D8382B562128E9350086512E /* main.m */,
+			);
+			path = "Objc-main";
 			sourceTree = "<group>";
 		};
 		D84C41AD2126A59B0036E778 /* NavigationBack */ = {
@@ -578,6 +610,23 @@
 			productReference = D810797E20FC1EA0000E97CA /* 06-XCWeibo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D8382B532128E9350086512E /* Objc-main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8382B5A2128E9350086512E /* Build configuration list for PBXNativeTarget "Objc-main" */;
+			buildPhases = (
+				D8382B502128E9350086512E /* Sources */,
+				D8382B512128E9350086512E /* Frameworks */,
+				D8382B522128E9350086512E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Objc-main";
+			productName = "Objc-main";
+			productReference = D8382B542128E9350086512E /* Objc-main */;
+			productType = "com.apple.product-type.tool";
+		};
 		D86CEF2F20FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D86CEF4520FF4121009BB583 /* Build configuration list for PBXNativeTarget "Objc-UI" */;
@@ -610,6 +659,9 @@
 					D810797D20FC1EA0000E97CA = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					D8382B532128E9350086512E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					D86CEF2F20FF4120009BB583 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -630,6 +682,7 @@
 			targets = (
 				D810797D20FC1EA0000E97CA /* 06-XCWeibo */,
 				D86CEF2F20FF4120009BB583 /* Objc-UI */,
+				D8382B532128E9350086512E /* Objc-main */,
 			);
 		};
 /* End PBXProject section */
@@ -746,6 +799,14 @@
 			files = (
 				D810798420FC1EA0000E97CA /* ViewController.swift in Sources */,
 				D810798220FC1EA0000E97CA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8382B502128E9350086512E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8382B572128E9350086512E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,6 +1057,30 @@
 			};
 			name = Release;
 		};
+		D8382B582128E9350086512E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5A3738DGQW;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D8382B592128E9350086512E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5A3738DGQW;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		D86CEF4320FF4121009BB583 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AA470079CB4336B4FE921D5 /* Pods-Objc-UI.debug.xcconfig */;
@@ -1051,6 +1136,15 @@
 			buildConfigurations = (
 				D810799120FC1EA1000E97CA /* Debug */,
 				D810799220FC1EA1000E97CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8382B5A2128E9350086512E /* Build configuration list for PBXNativeTarget "Objc-main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8382B582128E9350086512E /* Debug */,
+				D8382B592128E9350086512E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
