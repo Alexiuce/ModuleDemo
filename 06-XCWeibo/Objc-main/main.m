@@ -37,27 +37,38 @@ void my_test(){
     // 串行队列
     dispatch_queue_t queue =  dispatch_queue_create("threand-one",DISPATCH_QUEUE_SERIAL);
     
-    Tasklock task = ^{
-        if (operaterNumber % 2) {
-            NSLog(@"===%@",[NSThread currentThread]);
-            [_mArray addObject:@(operaterNumber)];
-            operaterNumber += 1;
-        }
-    };
-    Tasklock task1 = ^{
-        if (operaterNumber % 2 == 0) {
-            NSLog(@"===%@",[NSThread currentThread]);
-            [_mArray addObject:@(operaterNumber)];
-             operaterNumber += 1;
-        }
-    };
+   
     
     // 队列中添加异步任务
     
     for (int i = 0; i < 10; i ++) {
+        
+        Tasklock task = ^{
+            if (operaterNumber % 2) {
+                NSLog(@"00000%@perator number %d",[NSThread currentThread],operaterNumber);
+                [_mArray addObject:@(operaterNumber)];
+                operaterNumber += 1;
+            }
+        };
+        Tasklock task1 = ^{
+            if (operaterNumber % 2 == 0) {
+                NSLog(@"1111%@ perator number %d",[NSThread currentThread],operaterNumber);
+                [_mArray addObject:@(operaterNumber)];
+                operaterNumber += 1;
+            }
+        };
+        
         Tasklock execTask = i % 2 ? task : task1;
+        NSLog(@"for ....");
         dispatch_async(queue, execTask);
     }
-    NSLog(@"----------");
-    NSLog(@"%@",_mArray);
+ 
+    dispatch_sync(queue, ^{
+        NSLog(@"----------");
+        NSLog(@"%zd",_mArray.count);
+        for (NSNumber *number in _mArray) {
+            NSLog(@"%d", number.intValue);
+        }
+        
+    });
 }
