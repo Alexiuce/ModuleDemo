@@ -7,6 +7,7 @@
 //
 
 #import "TransController.h"
+#import "UIView+ACMediaExt.h"
 
 
 @interface TransController()
@@ -31,18 +32,21 @@
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext{
-    return 0.5;
+    return 5;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     
-    UIView *containerView = transitionContext.containerView;
+//    UIView *containerView = transitionContext.containerView;
     if (self.isPresentStyle) {
         UIView *showView = [transitionContext viewForKey:UITransitionContextToViewKey];
-        [containerView addSubview:showView];
-        showView.transform = CGAffineTransformMakeTranslation(300, 0);
+//        [containerView addSubview:showView];
+//        showView.transform = CGAffineTransformMakeTranslation(300, 0);
+        showView.x = 400;
+        
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-            showView.transform = CGAffineTransformIdentity;
+//            showView.transform = CGAffineTransformIdentity;
+            showView.x = 0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
         }];

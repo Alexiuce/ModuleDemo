@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXX-PM-0VS">
-                    <rect key="frame" x="62" y="201" width="251" height="264"/>
+                    <rect key="frame" x="62" y="201.5" width="251" height="264"/>
                     <color key="backgroundColor" red="0.47490218299999998" green="0.90924235200000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="251" id="Fpk-HN-cq7"/>
@@ -29,7 +29,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufe-FM-OOg">
-                    <rect key="frame" x="172" y="163" width="31" height="30"/>
+                    <rect key="frame" x="172" y="163.5" width="31" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="31" id="N2Y-4S-3aD"/>
                         <constraint firstAttribute="height" constant="30" id="w5O-3D-tkG"/>
@@ -40,7 +40,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="0.61568627450000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="kXX-PM-0VS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BLM-hh-Rdb"/>
                 <constraint firstItem="ufe-FM-OOg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BuJ-vd-Fun"/>

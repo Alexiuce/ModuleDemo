@@ -7,7 +7,7 @@
 //
 
 #import "TransAnimationManager.h"
-
+#import "XCPresentationController.h"
 #import "TransController.h"
 
 @interface TransAnimationManager()
@@ -28,5 +28,10 @@
     return  [TransController transPrensentSytle:NO];
 
 }
+
+- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source{
+    return [[XCPresentationController alloc]initWithPresentedViewController:presented presentingViewController:presenting];
+}
+
 
 @end
