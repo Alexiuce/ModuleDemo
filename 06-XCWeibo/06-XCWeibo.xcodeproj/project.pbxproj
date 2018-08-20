@@ -79,6 +79,7 @@
 		D88D70B72115912A00858B62 /* UIView+ACMediaExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70B52115912A00858B62 /* UIView+ACMediaExt.m */; };
 		D8A0E994212A3D6600D8969F /* XCSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A0E993212A3D6600D8969F /* XCSearch.storyboard */; };
 		D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E996212A3D8000D8969F /* XCSearchViewController.m */; };
+		D8A0E99A212A448E00D8969F /* XCSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E999212A448E00D8969F /* XCSearchTableViewController.m */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
 		D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DE091A2123B337005F1214 /* CycleView.storyboard */; };
 		D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DE091D2123B38D005F1214 /* XCCycleController.m */; };
@@ -242,6 +243,8 @@
 		D8A0E993212A3D6600D8969F /* XCSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCSearch.storyboard; sourceTree = "<group>"; };
 		D8A0E995212A3D8000D8969F /* XCSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSearchViewController.h; sourceTree = "<group>"; };
 		D8A0E996212A3D8000D8969F /* XCSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSearchViewController.m; sourceTree = "<group>"; };
+		D8A0E998212A448E00D8969F /* XCSearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSearchTableViewController.h; sourceTree = "<group>"; };
+		D8A0E999212A448E00D8969F /* XCSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSearchTableViewController.m; sourceTree = "<group>"; };
 		D8DE091A2123B337005F1214 /* CycleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CycleView.storyboard; sourceTree = "<group>"; };
 		D8DE091C2123B38D005F1214 /* XCCycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCycleController.h; sourceTree = "<group>"; };
 		D8DE091D2123B38D005F1214 /* XCCycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCycleController.m; sourceTree = "<group>"; };
@@ -546,6 +549,8 @@
 				D8A0E993212A3D6600D8969F /* XCSearch.storyboard */,
 				D8A0E995212A3D8000D8969F /* XCSearchViewController.h */,
 				D8A0E996212A3D8000D8969F /* XCSearchViewController.m */,
+				D8A0E998212A448E00D8969F /* XCSearchTableViewController.h */,
+				D8A0E999212A448E00D8969F /* XCSearchTableViewController.m */,
 			);
 			path = XCSerachBar;
 			sourceTree = "<group>";
@@ -870,6 +875,7 @@
 				D877990F2111383F00611EF1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				D87799162111383F00611EF1 /* MASConstraint.m in Sources */,
 				D87799112111383F00611EF1 /* MASCompositeConstraint.m in Sources */,
+				D8A0E99A212A448E00D8969F /* XCSearchTableViewController.m in Sources */,
 				D87799132111383F00611EF1 /* MASLayoutConstraint.m in Sources */,
 				D867D38C2127B76F007E9AD2 /* SAFrameObj.m in Sources */,
 				D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */,
