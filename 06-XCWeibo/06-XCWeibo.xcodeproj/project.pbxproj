@@ -77,6 +77,8 @@
 		D88D70B121158D4A00858B62 /* AnimationDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88D70B021158D4A00858B62 /* AnimationDemo.storyboard */; };
 		D88D70B421158D6F00858B62 /* ANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70B321158D6F00858B62 /* ANViewController.m */; };
 		D88D70B72115912A00858B62 /* UIView+ACMediaExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70B52115912A00858B62 /* UIView+ACMediaExt.m */; };
+		D8A0E994212A3D6600D8969F /* XCSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A0E993212A3D6600D8969F /* XCSearch.storyboard */; };
+		D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E996212A3D8000D8969F /* XCSearchViewController.m */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
 		D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DE091A2123B337005F1214 /* CycleView.storyboard */; };
 		D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DE091D2123B38D005F1214 /* XCCycleController.m */; };
@@ -237,6 +239,9 @@
 		D88D70B321158D6F00858B62 /* ANViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANViewController.m; sourceTree = "<group>"; };
 		D88D70B52115912A00858B62 /* UIView+ACMediaExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ACMediaExt.m"; sourceTree = "<group>"; };
 		D88D70B62115912A00858B62 /* UIView+ACMediaExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ACMediaExt.h"; sourceTree = "<group>"; };
+		D8A0E993212A3D6600D8969F /* XCSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCSearch.storyboard; sourceTree = "<group>"; };
+		D8A0E995212A3D8000D8969F /* XCSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSearchViewController.h; sourceTree = "<group>"; };
+		D8A0E996212A3D8000D8969F /* XCSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSearchViewController.m; sourceTree = "<group>"; };
 		D8DE091A2123B337005F1214 /* CycleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CycleView.storyboard; sourceTree = "<group>"; };
 		D8DE091C2123B38D005F1214 /* XCCycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCycleController.h; sourceTree = "<group>"; };
 		D8DE091D2123B38D005F1214 /* XCCycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCycleController.m; sourceTree = "<group>"; };
@@ -426,6 +431,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8A0E992212A3D4E00D8969F /* XCSerachBar */,
 				D867D3842127AA3D007E9AD2 /* SafeAreaInset */,
 				D84C41AD2126A59B0036E778 /* NavigationBack */,
 				D81AA1E621259A43008A887F /* XCSwitch */,
@@ -532,6 +538,16 @@
 				D84BD00F21210766003C819F /* SDYStrategyBottomInputView.m */,
 			);
 			path = AnimationViewDemo;
+			sourceTree = "<group>";
+		};
+		D8A0E992212A3D4E00D8969F /* XCSerachBar */ = {
+			isa = PBXGroup;
+			children = (
+				D8A0E993212A3D6600D8969F /* XCSearch.storyboard */,
+				D8A0E995212A3D8000D8969F /* XCSearchViewController.h */,
+				D8A0E996212A3D8000D8969F /* XCSearchViewController.m */,
+			);
+			path = XCSerachBar;
 			sourceTree = "<group>";
 		};
 		D8DE09192123B31E005F1214 /* CycleScrollView */ = {
@@ -721,6 +737,7 @@
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
 				D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */,
 				D88D70B121158D4A00858B62 /* AnimationDemo.storyboard in Resources */,
+				D8A0E994212A3D6600D8969F /* XCSearch.storyboard in Resources */,
 				D87E62D72124F664007C5D35 /* TableVideo.storyboard in Resources */,
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
@@ -826,6 +843,7 @@
 				D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */,
 				D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */,
 				D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */,
+				D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */,
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
 				D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
