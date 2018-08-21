@@ -9,7 +9,7 @@
 #import "XCSearchTableViewController.h"
 #import "UIView+ACMediaExt.h"
 
-@interface XCSearchTableViewController ()
+@interface XCSearchTableViewController ()<UISearchBarDelegate>
 
 @end
 
@@ -19,6 +19,7 @@
     [super viewDidLoad];
     
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 56)];
+    searchBar.delegate = self;
     [searchBar setImage:[UIImage imageNamed:@"icon_search1"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
     [searchBar setBackgroundImage:[UIImage imageNamed:@"searchBg"]];
    
@@ -46,6 +47,11 @@
     return cell;
 }
 
+#pragma mark - UISearch bar delegate
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    [searchBar setShowsCancelButton:YES animated:YES];
+    return YES;
+}
 
 /*
 // Override to support conditional editing of the table view.
