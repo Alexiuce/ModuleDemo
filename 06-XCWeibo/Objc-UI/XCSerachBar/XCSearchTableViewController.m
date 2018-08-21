@@ -25,8 +25,8 @@
    
     searchBar.barTintColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
     self.tableView.tableHeaderView = searchBar;
-    
 
+    [self filterArray];
 }
 
 #pragma mark - Table view data source
@@ -57,48 +57,21 @@
     [searchBar setShowsCancelButton:NO animated:YES];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+#pragma mark - Custom method
+- (void)filterArray{
+    NSArray *allInfos = @[@{@"sort":@"1",@"price":@"1.24",@"name":@"wzry"},
+                          @{@"sort":@"2",@"price":@"1.25",@"subDict":@{@"name":@"sub-name"}},
+                          @{@"sort":@"3",@"price":@"1.26"},
+                          @{@"sort":@"4",@"price":@"1.27"},
+                          @{@"sort":@"5",@"price":@"1.28"},
+                          @{@"sort":@"6",@"price":@"1.29"},
+                          @{@"sort":@"7",@"price":@"1.20"},
+                          ];
+    
+    
+    NSArray *sorts = [allInfos valueForKeyPath:@"name"];
+    NSLog(@"%@",sorts);
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
