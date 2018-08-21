@@ -70,6 +70,8 @@
                           ];
     
     
+    
+    
 //    NSArray *sorts = [allInfos valueForKeyPath:@"name"];
     // 排序
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"price" ascending:YES];
