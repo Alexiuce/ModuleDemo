@@ -61,16 +61,19 @@
 #pragma mark - Custom method
 - (void)filterArray{
     NSArray *allInfos = @[@{@"sort":@"1",@"price":@"1.24",@"name":@"wzry"},
-                          @{@"sort":@"2",@"price":@"1.25",@"subDict":@{@"name":@"sub-name"}},
+                          @{@"sort":@"2",@"price":@"1.35",@"subDict":@{@"name":@"sub-name"}},
                           @{@"sort":@"3",@"price":@"1.26"},
-                          @{@"sort":@"4",@"price":@"1.27"},
+                          @{@"sort":@"4",@"price":@"1.77"},
                           @{@"sort":@"5",@"price":@"1.28"},
-                          @{@"sort":@"6",@"price":@"1.29"},
+                          @{@"sort":@"6",@"price":@"1.89"},
                           @{@"sort":@"7",@"price":@"1.20"},
                           ];
     
     
-    NSArray *sorts = [allInfos valueForKeyPath:@"name"];
+//    NSArray *sorts = [allInfos valueForKeyPath:@"name"];
+    // 排序
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"price" ascending:YES];
+    NSArray *sorts = [allInfos sortedArrayUsingDescriptors:@[sort]];
     NSLog(@"%@",sorts);
 }
 
