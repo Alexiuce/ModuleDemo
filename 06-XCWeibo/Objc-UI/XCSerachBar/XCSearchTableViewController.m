@@ -27,6 +27,8 @@
     self.tableView.tableHeaderView = searchBar;
 
     [self filterArray];
+    
+    [self localCache];
 }
 
 #pragma mark - Table view data source
@@ -77,6 +79,23 @@
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"price" ascending:YES];
     NSArray *sorts = [allInfos sortedArrayUsingDescriptors:@[sort]];
     NSLog(@"%@",sorts);
+}
+
+- (void)localCache{
+    NSArray *allInfos = @[@{@"sort":@"1",@"price":@"1.24",@"name":@"wzry"},
+                          @{@"sort":@"2",@"price":@"1.35",@"subDict":@{@"name":@"sub-name"}},
+                          @{@"sort":@"3",@"price":@"1.26"},
+                          @{@"sort":@"4",@"price":@"1.77"},
+                          @{@"sort":@"5",@"price":@"1.28"},
+                          @{@"sort":@"6",@"price":@"1.89"},
+                          @{@"sort":@"7",@"price":@"1.20"},
+                          ];
+    
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+    
+    NSString *fullPath = [path stringByAppendingPathComponent:@"cache.plist"];
+    [allInfos writeToFile:fullPath atomically:YES];
+    NSLog(@"%@",fullPath);
 }
 
 @end
