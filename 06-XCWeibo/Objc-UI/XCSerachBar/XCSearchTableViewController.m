@@ -11,6 +11,9 @@
 
 @interface XCSearchTableViewController ()<UISearchBarDelegate>
 
+
+
+
 @end
 
 @implementation XCSearchTableViewController
@@ -91,11 +94,26 @@
                           @{@"sort":@"7",@"price":@"1.20"},
                           ];
     
+    NSData *infoData = [NSJSONSerialization dataWithJSONObject:allInfos options:NSJSONWritingPrettyPrinted error:nil];
+    
     NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
     
     NSString *fullPath = [path stringByAppendingPathComponent:@"cache.plist"];
-    [allInfos writeToFile:fullPath atomically:YES];
+    [infoData writeToFile:fullPath atomically:YES];
     NSLog(@"%@",fullPath);
+    [self readLocalCache];
+}
+
+- (void)readLocalCache{
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+    
+    NSString *fullPath = [path stringByAppendingPathComponent:@"cache.plist"];
+    
+    NSData *cacheData = [NSData dataWithContentsOfFile:fullPath];
+    
+    NSArray *result = [NSJSONSerialization JSONObjectWithData:cacheData options:NSJSONReadingMutableLeaves error:nil];
+    
+    NSLog(@"read cache == %@",result);
 }
 
 @end
