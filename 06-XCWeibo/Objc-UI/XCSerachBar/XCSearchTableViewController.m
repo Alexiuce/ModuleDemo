@@ -8,11 +8,12 @@
 
 #import "XCSearchTableViewController.h"
 #import "UIView+ACMediaExt.h"
+#import "NSString+MD5.h"
 
 @interface XCSearchTableViewController ()<UISearchBarDelegate>
 
 
-
+@property (nonatomic, copy) NSString *oldMD5;
 
 @end
 
@@ -20,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _oldMD5 = @"b7605d86412373ee5390df50cf515465";
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 56)];
     searchBar.delegate = self;
     [searchBar setImage:[UIImage imageNamed:@"icon_search1"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
@@ -32,6 +33,8 @@
     [self filterArray];
     
     [self localCache];
+    
+    
 }
 
 #pragma mark - Table view data source
@@ -95,6 +98,25 @@
                           ];
     
     NSData *infoData = [NSJSONSerialization dataWithJSONObject:allInfos options:NSJSONWritingPrettyPrinted error:nil];
+    
+    NSString *base64Text = [infoData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    NSLog(@"%@",base64Text.MD5);
+    
+    if ([base64Text.MD5 isEqualToString:self.oldMD5]) {
+        NSLog(@"YES");
+    }
+    
+//    NSString *infoString = [[NSString alloc]initWithData:infoData encoding:NSUTF8StringEncoding];
+//    NSLog(@"info string == %@",infoString);
+    
+//    CiAgICAic29ydCIgOiAiMSIKICB9LAogIHsKICAgICJwcmljZSIgOiAiMS4zNSIs
+//    CiAgICAic3ViRGljdCIgOiB7CiAgICAgICJuYW1lIiA6ICJzdWItbmFtZSIKICAg
+//    IH0sCiAgICAic29ydCIgOiAiMiIKICB9LAogIHsKICAgICJwcmljZSIgOiAiMS4y
+//    NiIsCiAgICAic29ydCIgOiAiMyIKICB9LAogIHsKICAgICJwcmljZSIgOiAiMS43
+//    NyIsCiAgICAic29ydCIgOiAiNCIKICB9LAogIHsKICAgICJwcmljZSIgOiAiMS4y
+//    OCIsCiAgICAic29ydCIgOiAiNSIKICB9LAogIHsKICAgICJwcmljZSIgOiAiMS44
+//    OSIsCiAgICAic29ydCIgOiAiNiIKICB9LAogIHsKICAgICJwcmljZSIgOiAiMS4y
+//    MCIsCiAgICAic29ydCIgOiAiNyIKICB9Cl0=
     
     NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
     
