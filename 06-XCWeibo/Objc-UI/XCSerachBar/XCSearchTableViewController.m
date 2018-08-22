@@ -91,7 +91,7 @@
     NSArray *allInfos = @[@{@"sort":@"1",@"price":@"1.24",@"name":@"wzry"},
                           @{@"sort":@"2",@"price":@"1.35",@"subDict":@{@"name":@"sub-name"}},
                           @{@"sort":@"3",@"price":@"1.26"},
-                          @{@"sort":@"4",@"price":@"1.77"},
+                          @{@"sort":@"4",@"price":@"1.770"},
                           @{@"sort":@"5",@"price":@"1.28"},
                           @{@"sort":@"6",@"price":@"1.89"},
                           @{@"sort":@"7",@"price":@"1.20"},
