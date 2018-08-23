@@ -77,6 +77,8 @@
 		D88D70B121158D4A00858B62 /* AnimationDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88D70B021158D4A00858B62 /* AnimationDemo.storyboard */; };
 		D88D70B421158D6F00858B62 /* ANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70B321158D6F00858B62 /* ANViewController.m */; };
 		D88D70B72115912A00858B62 /* UIView+ACMediaExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70B52115912A00858B62 /* UIView+ACMediaExt.m */; };
+		D88DAE05212E310900F0B5DA /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88DAE04212E310900F0B5DA /* VideoPlayer.storyboard */; };
+		D88DAE08212E312300F0B5DA /* XCVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88DAE07212E312300F0B5DA /* XCVideoViewController.m */; };
 		D8A0E994212A3D6600D8969F /* XCSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A0E993212A3D6600D8969F /* XCSearch.storyboard */; };
 		D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E996212A3D8000D8969F /* XCSearchViewController.m */; };
 		D8A0E99A212A448E00D8969F /* XCSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E999212A448E00D8969F /* XCSearchTableViewController.m */; };
@@ -241,6 +243,9 @@
 		D88D70B321158D6F00858B62 /* ANViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANViewController.m; sourceTree = "<group>"; };
 		D88D70B52115912A00858B62 /* UIView+ACMediaExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ACMediaExt.m"; sourceTree = "<group>"; };
 		D88D70B62115912A00858B62 /* UIView+ACMediaExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ACMediaExt.h"; sourceTree = "<group>"; };
+		D88DAE04212E310900F0B5DA /* VideoPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
+		D88DAE06212E312300F0B5DA /* XCVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCVideoViewController.h; sourceTree = "<group>"; };
+		D88DAE07212E312300F0B5DA /* XCVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCVideoViewController.m; sourceTree = "<group>"; };
 		D8A0E993212A3D6600D8969F /* XCSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCSearch.storyboard; sourceTree = "<group>"; };
 		D8A0E995212A3D8000D8969F /* XCSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSearchViewController.h; sourceTree = "<group>"; };
 		D8A0E996212A3D8000D8969F /* XCSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSearchViewController.m; sourceTree = "<group>"; };
@@ -437,6 +442,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D88DAE03212E30EB00F0B5DA /* XCVideoPlayer */,
 				D8A0E992212A3D4E00D8969F /* XCSerachBar */,
 				D867D3842127AA3D007E9AD2 /* SafeAreaInset */,
 				D84C41AD2126A59B0036E778 /* NavigationBack */,
@@ -544,6 +550,16 @@
 				D84BD00F21210766003C819F /* SDYStrategyBottomInputView.m */,
 			);
 			path = AnimationViewDemo;
+			sourceTree = "<group>";
+		};
+		D88DAE03212E30EB00F0B5DA /* XCVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D88DAE04212E310900F0B5DA /* VideoPlayer.storyboard */,
+				D88DAE06212E312300F0B5DA /* XCVideoViewController.h */,
+				D88DAE07212E312300F0B5DA /* XCVideoViewController.m */,
+			);
+			path = XCVideoPlayer;
 			sourceTree = "<group>";
 		};
 		D8A0E992212A3D4E00D8969F /* XCSerachBar */ = {
@@ -750,6 +766,7 @@
 				D8A0E994212A3D6600D8969F /* XCSearch.storyboard in Resources */,
 				D87E62D72124F664007C5D35 /* TableVideo.storyboard in Resources */,
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
+				D88DAE05212E310900F0B5DA /* VideoPlayer.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
@@ -893,6 +910,7 @@
 				D86CEF4220FF4121009BB583 /* main.m in Sources */,
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
+				D88DAE08212E312300F0B5DA /* XCVideoViewController.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
 				D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */,
 				D87798F12111383500611EF1 /* WMMenuItem.m in Sources */,
