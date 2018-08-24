@@ -28,6 +28,7 @@
     _xc_player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:viderUrl]];
     
     AVPlayerLayer *playLayer = [AVPlayerLayer playerLayerWithPlayer:_xc_player];
+    playLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     playLayer.frame = self.containerView.bounds;
     [self.containerView.layer addSublayer:playLayer];
     [_xc_player play];
