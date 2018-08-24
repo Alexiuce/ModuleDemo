@@ -23,6 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSString *viderUrl =  @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+    _xc_player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:viderUrl]];
+    
+    AVPlayerLayer *playLayer = [AVPlayerLayer playerLayerWithPlayer:_xc_player];
+    playLayer.frame = self.view.bounds;
+    [self.view.layer addSublayer:playLayer];
+    
 }
 
 
