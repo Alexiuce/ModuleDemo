@@ -24,13 +24,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *viderUrl =  @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+    NSString *viderUrl =  @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
+    //@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     _xc_player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:viderUrl]];
     
     AVPlayerLayer *playLayer = [AVPlayerLayer playerLayerWithPlayer:_xc_player];
-    playLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    playLayer.frame = self.containerView.bounds;
-    [self.containerView.layer addSublayer:playLayer];
+    playLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+    //AVLayerVideoGravityResizeAspect
+    //AVLayerVideoGravityResizeAspectFill
+    playLayer.frame = self.view.bounds;
+    [self.view.layer addSublayer:playLayer];
     [_xc_player play];
     
     
