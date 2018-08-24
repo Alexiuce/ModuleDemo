@@ -51,6 +51,9 @@
                         <viewLayoutGuide key="safeArea" id="yMQ-c6-ThI"/>
                     </view>
                     <navigationItem key="navigationItem" id="jrw-Vu-WAT"/>
+                    <connections>
+                        <outlet property="containerView" destination="IHy-B8-Rwd" id="bl5-me-LMS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6n3-Ag-IVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,6 +67,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y61-bZ-JhS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZS-bh-FlD" userLabel="First Responder" sceneMemberID="firstResponder"/>

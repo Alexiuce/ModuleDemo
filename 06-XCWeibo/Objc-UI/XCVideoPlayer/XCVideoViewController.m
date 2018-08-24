@@ -15,6 +15,7 @@
 @property (nonatomic, strong) AVPlayer *xc_player;
 
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 
@@ -27,8 +28,10 @@
     _xc_player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:viderUrl]];
     
     AVPlayerLayer *playLayer = [AVPlayerLayer playerLayerWithPlayer:_xc_player];
-    playLayer.frame = self.view.bounds;
-    [self.view.layer addSublayer:playLayer];
+    playLayer.frame = self.containerView.bounds;
+    [self.containerView.layer addSublayer:playLayer];
+    [_xc_player play];
+    
     
 }
 
