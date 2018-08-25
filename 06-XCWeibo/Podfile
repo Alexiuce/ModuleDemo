@@ -18,6 +18,10 @@ target 'Objc-UI' do
   pod 'SDCycleScrollView','~> 1.75'
   pod 'JPVideoPlayer'
   pod 'MJRefresh'
+  pod 'Masonry'
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  
 #  pod 'Hyphenate'
 
 end
