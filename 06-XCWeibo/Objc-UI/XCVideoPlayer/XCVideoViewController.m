@@ -11,10 +11,14 @@
 #import "SuperPlayer.h"
 
 
-@interface XCVideoViewController ()
+@interface XCVideoViewController ()<SuperPlayerDelegate>
 
 @property (nonatomic, strong) AVPlayer *xc_player;
 
+@property (nonatomic, strong)TXVodPlayer *vodPlayer;
+
+@property (nonatomic, strong) SuperPlayerView *playerView;
+@property (nonatomic, strong) SuperPlayerModel *playerModel;
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
@@ -25,15 +29,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-  
+    [self playVod];
+
     
     
 }
 
-
+- (void)playVod{
+    _vodPlayer = [[TXVodPlayer alloc]init];
+    [_vodPlayer setupVideoWidget:self.containerView insertIndex:0];
+    NSString *url = @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
+    [_vodPlayer startPlay:url];
+}
 - (void)superPlayerView{
+    _playerView = [[SuperPlayerView alloc] init];
+    _playerModel = [[SuperPlayerModel alloc] init];
+    _playerModel.videoURL =  @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
+    // 设置代理
+    _playerView.delegate = self;
     
+    // 设置父View
+    _playerView.fatherView = self.containerView;
+    
+    // 开始播放
+    [_playerView playWithModel:self.playerModel];
 }
+
+
 
 - (void)avplayerDemo{
     NSString *viderUrl =  @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
