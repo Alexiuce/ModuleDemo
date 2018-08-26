@@ -23,24 +23,6 @@
 		D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AA1EF21259FAD008A887F /* XMSSliderView.m */; };
 		D81AA1F32125A768008A887F /* XMSNoHightLightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AA1F22125A768008A887F /* XMSNoHightLightButton.m */; };
 		D81E9E57213243CF00040000 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E9E56213243CF00040000 /* libsqlite3.tbd */; };
-		D81E9E8B213248AD00040000 /* SuperPlayerGlobleConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E62213248AD00040000 /* SuperPlayerGlobleConfig.m */; };
-		D81E9E8C213248AD00040000 /* UIView+MMLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E68213248AD00040000 /* UIView+MMLayout.m */; };
-		D81E9E8D213248AD00040000 /* UINavigationController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E69213248AD00040000 /* UINavigationController+ZFPlayerRotation.m */; };
-		D81E9E8E213248AD00040000 /* UIViewController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E6A213248AD00040000 /* UIViewController+ZFPlayerRotation.m */; };
-		D81E9E8F213248AD00040000 /* SuperPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E6C213248AD00040000 /* SuperPlayerWindow.m */; };
-		D81E9E90213248AD00040000 /* J2Obj.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E71213248AD00040000 /* J2Obj.m */; };
-		D81E9E91213248AD00040000 /* DataReport.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E72213248AD00040000 /* DataReport.m */; };
-		D81E9E92213248AD00040000 /* NetWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E73213248AD00040000 /* NetWatcher.m */; };
-		D81E9E93213248AD00040000 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D81E9E74213248AD00040000 /* README.md */; };
-		D81E9E94213248AD00040000 /* SuperPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E77213248AD00040000 /* SuperPlayerModel.m */; };
-		D81E9E95213248AD00040000 /* SuperPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D81E9E78213248AD00040000 /* SuperPlayer.bundle */; };
-		D81E9E96213248AD00040000 /* SuperPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E7A213248AD00040000 /* SuperPlayerView.m */; };
-		D81E9E97213248AD00040000 /* MoreContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E7D213248AD00040000 /* MoreContentView.m */; };
-		D81E9E98213248AD00040000 /* SuperPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E80213248AD00040000 /* SuperPlayerControlView.m */; };
-		D81E9E99213248AD00040000 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E81213248AD00040000 /* MMMaterialDesignSpinner.m */; };
-		D81E9E9A213248AD00040000 /* CFDanmakuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E85213248AD00040000 /* CFDanmakuView.m */; };
-		D81E9E9B213248AD00040000 /* CFDanmaku.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E87213248AD00040000 /* CFDanmaku.m */; };
-		D81E9E9C213248AD00040000 /* CFDanmakuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9E8A213248AD00040000 /* CFDanmakuInfo.m */; };
 		D81E9EA42132493300040000 /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E9E9F2132493300040000 /* ImSDK.framework */; };
 		D81E9EA52132493300040000 /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E9EA02132493300040000 /* TLSSDK.framework */; };
 		D81E9EA62132493300040000 /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E9EA12132493300040000 /* QALSDK.framework */; };
@@ -50,6 +32,24 @@
 		D81E9EAC2132498A00040000 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E9EAB2132498A00040000 /* libstdc++.tbd */; };
 		D81E9EAE2132499C00040000 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E9EAD2132499C00040000 /* libresolv.tbd */; };
 		D81E9EB0213249A600040000 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E9EAF213249A600040000 /* Accelerate.framework */; };
+		D81E9F5321324B0400040000 /* SuperPlayerGlobleConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F2A21324B0400040000 /* SuperPlayerGlobleConfig.m */; };
+		D81E9F5421324B0400040000 /* UIView+MMLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F3021324B0400040000 /* UIView+MMLayout.m */; };
+		D81E9F5521324B0400040000 /* UINavigationController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F3121324B0400040000 /* UINavigationController+ZFPlayerRotation.m */; };
+		D81E9F5621324B0400040000 /* UIViewController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F3221324B0400040000 /* UIViewController+ZFPlayerRotation.m */; };
+		D81E9F5721324B0400040000 /* SuperPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F3421324B0400040000 /* SuperPlayerWindow.m */; };
+		D81E9F5821324B0400040000 /* J2Obj.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F3921324B0400040000 /* J2Obj.m */; };
+		D81E9F5921324B0400040000 /* DataReport.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F3A21324B0400040000 /* DataReport.m */; };
+		D81E9F5A21324B0400040000 /* NetWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F3B21324B0400040000 /* NetWatcher.m */; };
+		D81E9F5B21324B0400040000 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D81E9F3C21324B0400040000 /* README.md */; };
+		D81E9F5C21324B0400040000 /* SuperPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F3F21324B0400040000 /* SuperPlayerModel.m */; };
+		D81E9F5D21324B0400040000 /* SuperPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D81E9F4021324B0400040000 /* SuperPlayer.bundle */; };
+		D81E9F5E21324B0400040000 /* SuperPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F4221324B0400040000 /* SuperPlayerView.m */; };
+		D81E9F5F21324B0400040000 /* MoreContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F4521324B0400040000 /* MoreContentView.m */; };
+		D81E9F6021324B0400040000 /* SuperPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F4821324B0400040000 /* SuperPlayerControlView.m */; };
+		D81E9F6121324B0400040000 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F4921324B0400040000 /* MMMaterialDesignSpinner.m */; };
+		D81E9F6221324B0400040000 /* CFDanmakuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F4D21324B0400040000 /* CFDanmakuView.m */; };
+		D81E9F6321324B0400040000 /* CFDanmaku.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F4F21324B0400040000 /* CFDanmaku.m */; };
+		D81E9F6421324B0400040000 /* CFDanmakuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F5221324B0400040000 /* CFDanmakuInfo.m */; };
 		D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B002D212006600066C32E /* XCWebTableController+WebTab.m */; };
 		D82B003C212020300066C32E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003B212020300066C32E /* DetailViewController.m */; };
 		D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003E2120208B0066C32E /* UIView+HSKit.m */; };
@@ -168,43 +168,6 @@
 		D81AA1F12125A768008A887F /* XMSNoHightLightButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMSNoHightLightButton.h; sourceTree = "<group>"; };
 		D81AA1F22125A768008A887F /* XMSNoHightLightButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMSNoHightLightButton.m; sourceTree = "<group>"; };
 		D81E9E56213243CF00040000 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		D81E9E62213248AD00040000 /* SuperPlayerGlobleConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerGlobleConfig.m; sourceTree = "<group>"; };
-		D81E9E63213248AD00040000 /* SuperPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerModel.h; sourceTree = "<group>"; };
-		D81E9E65213248AD00040000 /* UIView+MMLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MMLayout.h"; sourceTree = "<group>"; };
-		D81E9E66213248AD00040000 /* UINavigationController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
-		D81E9E67213248AD00040000 /* UIViewController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
-		D81E9E68213248AD00040000 /* UIView+MMLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MMLayout.m"; sourceTree = "<group>"; };
-		D81E9E69213248AD00040000 /* UINavigationController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
-		D81E9E6A213248AD00040000 /* UIViewController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
-		D81E9E6B213248AD00040000 /* SuperPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerView.h; sourceTree = "<group>"; };
-		D81E9E6C213248AD00040000 /* SuperPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerWindow.m; sourceTree = "<group>"; };
-		D81E9E6E213248AD00040000 /* J2Obj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = J2Obj.h; sourceTree = "<group>"; };
-		D81E9E6F213248AD00040000 /* NetWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWatcher.h; sourceTree = "<group>"; };
-		D81E9E70213248AD00040000 /* DataReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataReport.h; sourceTree = "<group>"; };
-		D81E9E71213248AD00040000 /* J2Obj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = J2Obj.m; sourceTree = "<group>"; };
-		D81E9E72213248AD00040000 /* DataReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataReport.m; sourceTree = "<group>"; };
-		D81E9E73213248AD00040000 /* NetWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWatcher.m; sourceTree = "<group>"; };
-		D81E9E74213248AD00040000 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D81E9E75213248AD00040000 /* SuperPlayerGlobleConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerGlobleConfig.h; sourceTree = "<group>"; };
-		D81E9E76213248AD00040000 /* SuperPlayerControlViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerControlViewDelegate.h; sourceTree = "<group>"; };
-		D81E9E77213248AD00040000 /* SuperPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerModel.m; sourceTree = "<group>"; };
-		D81E9E78213248AD00040000 /* SuperPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SuperPlayer.bundle; sourceTree = "<group>"; };
-		D81E9E79213248AD00040000 /* SuperPlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerWindow.h; sourceTree = "<group>"; };
-		D81E9E7A213248AD00040000 /* SuperPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerView.m; sourceTree = "<group>"; };
-		D81E9E7C213248AD00040000 /* SuperPlayerView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SuperPlayerView+Private.h"; sourceTree = "<group>"; };
-		D81E9E7D213248AD00040000 /* MoreContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreContentView.m; sourceTree = "<group>"; };
-		D81E9E7E213248AD00040000 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
-		D81E9E7F213248AD00040000 /* SuperPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerControlView.h; sourceTree = "<group>"; };
-		D81E9E80213248AD00040000 /* SuperPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerControlView.m; sourceTree = "<group>"; };
-		D81E9E81213248AD00040000 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
-		D81E9E82213248AD00040000 /* MoreContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreContentView.h; sourceTree = "<group>"; };
-		D81E9E83213248AD00040000 /* SuperPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayer.h; sourceTree = "<group>"; };
-		D81E9E85213248AD00040000 /* CFDanmakuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDanmakuView.m; sourceTree = "<group>"; };
-		D81E9E86213248AD00040000 /* CFDanmakuInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDanmakuInfo.h; sourceTree = "<group>"; };
-		D81E9E87213248AD00040000 /* CFDanmaku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDanmaku.m; sourceTree = "<group>"; };
-		D81E9E88213248AD00040000 /* CFDanmakuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDanmakuView.h; sourceTree = "<group>"; };
-		D81E9E89213248AD00040000 /* CFDanmaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDanmaku.h; sourceTree = "<group>"; };
-		D81E9E8A213248AD00040000 /* CFDanmakuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDanmakuInfo.m; sourceTree = "<group>"; };
 		D81E9E9F2132493300040000 /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
 		D81E9EA02132493300040000 /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSSDK.framework; sourceTree = "<group>"; };
 		D81E9EA12132493300040000 /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
@@ -214,6 +177,43 @@
 		D81E9EAB2132498A00040000 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		D81E9EAD2132499C00040000 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		D81E9EAF213249A600040000 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		D81E9F2A21324B0400040000 /* SuperPlayerGlobleConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerGlobleConfig.m; sourceTree = "<group>"; };
+		D81E9F2B21324B0400040000 /* SuperPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerModel.h; sourceTree = "<group>"; };
+		D81E9F2D21324B0400040000 /* UIView+MMLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MMLayout.h"; sourceTree = "<group>"; };
+		D81E9F2E21324B0400040000 /* UINavigationController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
+		D81E9F2F21324B0400040000 /* UIViewController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
+		D81E9F3021324B0400040000 /* UIView+MMLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MMLayout.m"; sourceTree = "<group>"; };
+		D81E9F3121324B0400040000 /* UINavigationController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
+		D81E9F3221324B0400040000 /* UIViewController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
+		D81E9F3321324B0400040000 /* SuperPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerView.h; sourceTree = "<group>"; };
+		D81E9F3421324B0400040000 /* SuperPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerWindow.m; sourceTree = "<group>"; };
+		D81E9F3621324B0400040000 /* J2Obj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = J2Obj.h; sourceTree = "<group>"; };
+		D81E9F3721324B0400040000 /* NetWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWatcher.h; sourceTree = "<group>"; };
+		D81E9F3821324B0400040000 /* DataReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataReport.h; sourceTree = "<group>"; };
+		D81E9F3921324B0400040000 /* J2Obj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = J2Obj.m; sourceTree = "<group>"; };
+		D81E9F3A21324B0400040000 /* DataReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataReport.m; sourceTree = "<group>"; };
+		D81E9F3B21324B0400040000 /* NetWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWatcher.m; sourceTree = "<group>"; };
+		D81E9F3C21324B0400040000 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D81E9F3D21324B0400040000 /* SuperPlayerGlobleConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerGlobleConfig.h; sourceTree = "<group>"; };
+		D81E9F3E21324B0400040000 /* SuperPlayerControlViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerControlViewDelegate.h; sourceTree = "<group>"; };
+		D81E9F3F21324B0400040000 /* SuperPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerModel.m; sourceTree = "<group>"; };
+		D81E9F4021324B0400040000 /* SuperPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SuperPlayer.bundle; sourceTree = "<group>"; };
+		D81E9F4121324B0400040000 /* SuperPlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerWindow.h; sourceTree = "<group>"; };
+		D81E9F4221324B0400040000 /* SuperPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerView.m; sourceTree = "<group>"; };
+		D81E9F4421324B0400040000 /* SuperPlayerView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SuperPlayerView+Private.h"; sourceTree = "<group>"; };
+		D81E9F4521324B0400040000 /* MoreContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreContentView.m; sourceTree = "<group>"; };
+		D81E9F4621324B0400040000 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		D81E9F4721324B0400040000 /* SuperPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayerControlView.h; sourceTree = "<group>"; };
+		D81E9F4821324B0400040000 /* SuperPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPlayerControlView.m; sourceTree = "<group>"; };
+		D81E9F4921324B0400040000 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		D81E9F4A21324B0400040000 /* MoreContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreContentView.h; sourceTree = "<group>"; };
+		D81E9F4B21324B0400040000 /* SuperPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPlayer.h; sourceTree = "<group>"; };
+		D81E9F4D21324B0400040000 /* CFDanmakuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDanmakuView.m; sourceTree = "<group>"; };
+		D81E9F4E21324B0400040000 /* CFDanmakuInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDanmakuInfo.h; sourceTree = "<group>"; };
+		D81E9F4F21324B0400040000 /* CFDanmaku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDanmaku.m; sourceTree = "<group>"; };
+		D81E9F5021324B0400040000 /* CFDanmakuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDanmakuView.h; sourceTree = "<group>"; };
+		D81E9F5121324B0400040000 /* CFDanmaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDanmaku.h; sourceTree = "<group>"; };
+		D81E9F5221324B0400040000 /* CFDanmakuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDanmakuInfo.m; sourceTree = "<group>"; };
 		D82B002C212006600066C32E /* XCWebTableController+WebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCWebTableController+WebTab.h"; sourceTree = "<group>"; };
 		D82B002D212006600066C32E /* XCWebTableController+WebTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCWebTableController+WebTab.m"; sourceTree = "<group>"; };
 		D82B003A212020300066C32E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -469,83 +469,6 @@
 			path = XCSwitch;
 			sourceTree = "<group>";
 		};
-		D81E9E61213248AD00040000 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				D81E9E62213248AD00040000 /* SuperPlayerGlobleConfig.m */,
-				D81E9E63213248AD00040000 /* SuperPlayerModel.h */,
-				D81E9E64213248AD00040000 /* Category */,
-				D81E9E6B213248AD00040000 /* SuperPlayerView.h */,
-				D81E9E6C213248AD00040000 /* SuperPlayerWindow.m */,
-				D81E9E6D213248AD00040000 /* Utils */,
-				D81E9E74213248AD00040000 /* README.md */,
-				D81E9E75213248AD00040000 /* SuperPlayerGlobleConfig.h */,
-				D81E9E76213248AD00040000 /* SuperPlayerControlViewDelegate.h */,
-				D81E9E77213248AD00040000 /* SuperPlayerModel.m */,
-				D81E9E78213248AD00040000 /* SuperPlayer.bundle */,
-				D81E9E79213248AD00040000 /* SuperPlayerWindow.h */,
-				D81E9E7A213248AD00040000 /* SuperPlayerView.m */,
-				D81E9E7B213248AD00040000 /* Views */,
-				D81E9E83213248AD00040000 /* SuperPlayer.h */,
-				D81E9E84213248AD00040000 /* CFDanmaku */,
-			);
-			name = src;
-			path = ../../../../../Desktop/TXLiteAVSDK_Player/Demo/TXLiteAVDemo/Player/SuperPlayer/src;
-			sourceTree = "<group>";
-		};
-		D81E9E64213248AD00040000 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				D81E9E65213248AD00040000 /* UIView+MMLayout.h */,
-				D81E9E66213248AD00040000 /* UINavigationController+ZFPlayerRotation.h */,
-				D81E9E67213248AD00040000 /* UIViewController+ZFPlayerRotation.h */,
-				D81E9E68213248AD00040000 /* UIView+MMLayout.m */,
-				D81E9E69213248AD00040000 /* UINavigationController+ZFPlayerRotation.m */,
-				D81E9E6A213248AD00040000 /* UIViewController+ZFPlayerRotation.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		D81E9E6D213248AD00040000 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				D81E9E6E213248AD00040000 /* J2Obj.h */,
-				D81E9E6F213248AD00040000 /* NetWatcher.h */,
-				D81E9E70213248AD00040000 /* DataReport.h */,
-				D81E9E71213248AD00040000 /* J2Obj.m */,
-				D81E9E72213248AD00040000 /* DataReport.m */,
-				D81E9E73213248AD00040000 /* NetWatcher.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		D81E9E7B213248AD00040000 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D81E9E7C213248AD00040000 /* SuperPlayerView+Private.h */,
-				D81E9E7D213248AD00040000 /* MoreContentView.m */,
-				D81E9E7E213248AD00040000 /* MMMaterialDesignSpinner.h */,
-				D81E9E7F213248AD00040000 /* SuperPlayerControlView.h */,
-				D81E9E80213248AD00040000 /* SuperPlayerControlView.m */,
-				D81E9E81213248AD00040000 /* MMMaterialDesignSpinner.m */,
-				D81E9E82213248AD00040000 /* MoreContentView.h */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D81E9E84213248AD00040000 /* CFDanmaku */ = {
-			isa = PBXGroup;
-			children = (
-				D81E9E85213248AD00040000 /* CFDanmakuView.m */,
-				D81E9E86213248AD00040000 /* CFDanmakuInfo.h */,
-				D81E9E87213248AD00040000 /* CFDanmaku.m */,
-				D81E9E88213248AD00040000 /* CFDanmakuView.h */,
-				D81E9E89213248AD00040000 /* CFDanmaku.h */,
-				D81E9E8A213248AD00040000 /* CFDanmakuInfo.m */,
-			);
-			path = CFDanmaku;
-			sourceTree = "<group>";
-		};
 		D81E9E9D2132493300040000 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +487,82 @@
 				D81E9EA22132493300040000 /* IMSDKBugly.framework */,
 			);
 			path = ImSDK;
+			sourceTree = "<group>";
+		};
+		D81E9F2921324B0400040000 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D81E9F2A21324B0400040000 /* SuperPlayerGlobleConfig.m */,
+				D81E9F2B21324B0400040000 /* SuperPlayerModel.h */,
+				D81E9F2C21324B0400040000 /* Category */,
+				D81E9F3321324B0400040000 /* SuperPlayerView.h */,
+				D81E9F3421324B0400040000 /* SuperPlayerWindow.m */,
+				D81E9F3521324B0400040000 /* Utils */,
+				D81E9F3C21324B0400040000 /* README.md */,
+				D81E9F3D21324B0400040000 /* SuperPlayerGlobleConfig.h */,
+				D81E9F3E21324B0400040000 /* SuperPlayerControlViewDelegate.h */,
+				D81E9F3F21324B0400040000 /* SuperPlayerModel.m */,
+				D81E9F4021324B0400040000 /* SuperPlayer.bundle */,
+				D81E9F4121324B0400040000 /* SuperPlayerWindow.h */,
+				D81E9F4221324B0400040000 /* SuperPlayerView.m */,
+				D81E9F4321324B0400040000 /* Views */,
+				D81E9F4B21324B0400040000 /* SuperPlayer.h */,
+				D81E9F4C21324B0400040000 /* CFDanmaku */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		D81E9F2C21324B0400040000 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D81E9F2D21324B0400040000 /* UIView+MMLayout.h */,
+				D81E9F2E21324B0400040000 /* UINavigationController+ZFPlayerRotation.h */,
+				D81E9F2F21324B0400040000 /* UIViewController+ZFPlayerRotation.h */,
+				D81E9F3021324B0400040000 /* UIView+MMLayout.m */,
+				D81E9F3121324B0400040000 /* UINavigationController+ZFPlayerRotation.m */,
+				D81E9F3221324B0400040000 /* UIViewController+ZFPlayerRotation.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D81E9F3521324B0400040000 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D81E9F3621324B0400040000 /* J2Obj.h */,
+				D81E9F3721324B0400040000 /* NetWatcher.h */,
+				D81E9F3821324B0400040000 /* DataReport.h */,
+				D81E9F3921324B0400040000 /* J2Obj.m */,
+				D81E9F3A21324B0400040000 /* DataReport.m */,
+				D81E9F3B21324B0400040000 /* NetWatcher.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D81E9F4321324B0400040000 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D81E9F4421324B0400040000 /* SuperPlayerView+Private.h */,
+				D81E9F4521324B0400040000 /* MoreContentView.m */,
+				D81E9F4621324B0400040000 /* MMMaterialDesignSpinner.h */,
+				D81E9F4721324B0400040000 /* SuperPlayerControlView.h */,
+				D81E9F4821324B0400040000 /* SuperPlayerControlView.m */,
+				D81E9F4921324B0400040000 /* MMMaterialDesignSpinner.m */,
+				D81E9F4A21324B0400040000 /* MoreContentView.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D81E9F4C21324B0400040000 /* CFDanmaku */ = {
+			isa = PBXGroup;
+			children = (
+				D81E9F4D21324B0400040000 /* CFDanmakuView.m */,
+				D81E9F4E21324B0400040000 /* CFDanmakuInfo.h */,
+				D81E9F4F21324B0400040000 /* CFDanmaku.m */,
+				D81E9F5021324B0400040000 /* CFDanmakuView.h */,
+				D81E9F5121324B0400040000 /* CFDanmaku.h */,
+				D81E9F5221324B0400040000 /* CFDanmakuInfo.m */,
+			);
+			path = CFDanmaku;
 			sourceTree = "<group>";
 		};
 		D82B003321201EE20066C32E /* Test */ = {
@@ -742,8 +741,8 @@
 		D88DAE03212E30EB00F0B5DA /* XCVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				D81E9F2921324B0400040000 /* src */,
 				D81E9E9D2132493300040000 /* SDK */,
-				D81E9E61213248AD00040000 /* src */,
 				D88DAE04212E310900F0B5DA /* VideoPlayer.storyboard */,
 				D88DAE06212E312300F0B5DA /* XCVideoViewController.h */,
 				D88DAE07212E312300F0B5DA /* XCVideoViewController.m */,
@@ -951,7 +950,7 @@
 				D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */,
 				D867D3862127AA5D007E9AD2 /* SafeArea.storyboard in Resources */,
 				D81AA1ED21259F83008A887F /* XMSSliderView.xib in Resources */,
-				D81E9E93213248AD00040000 /* README.md in Resources */,
+				D81E9F5B21324B0400040000 /* README.md in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */,
 				D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */,
@@ -965,7 +964,7 @@
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
-				D81E9E95213248AD00040000 /* SuperPlayer.bundle in Resources */,
+				D81E9F5D21324B0400040000 /* SuperPlayer.bundle in Resources */,
 				D84C41AC2126A5920036E778 /* Navigation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1066,31 +1065,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87E62DA2124F6A4007C5D35 /* TableVideoController.m in Sources */,
-				D81E9E98213248AD00040000 /* SuperPlayerControlView.m in Sources */,
+				D81E9F6021324B0400040000 /* SuperPlayerControlView.m in Sources */,
 				D867D3892127AAE9007E9AD2 /* SafeTableViewController.m in Sources */,
 				D87798F32111383500611EF1 /* WMMenuView.m in Sources */,
 				D83DA3AC212954A000388078 /* XCPresentationController.m in Sources */,
 				D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */,
 				D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */,
-				D81E9E9C213248AD00040000 /* CFDanmakuInfo.m in Sources */,
+				D81E9F6421324B0400040000 /* CFDanmakuInfo.m in Sources */,
 				D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */,
 				D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */,
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
-				D81E9E99213248AD00040000 /* MMMaterialDesignSpinner.m in Sources */,
-				D81E9E96213248AD00040000 /* SuperPlayerView.m in Sources */,
+				D81E9F6121324B0400040000 /* MMMaterialDesignSpinner.m in Sources */,
+				D81E9F5E21324B0400040000 /* SuperPlayerView.m in Sources */,
 				D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D87798F42111383500611EF1 /* WMProgressView.m in Sources */,
 				D84BD01021210766003C819F /* SDYStrategyBottomInputView.m in Sources */,
-				D81E9E9B213248AD00040000 /* CFDanmaku.m in Sources */,
+				D81E9F6321324B0400040000 /* CFDanmaku.m in Sources */,
 				D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */,
-				D81E9E94213248AD00040000 /* SuperPlayerModel.m in Sources */,
+				D81E9F5C21324B0400040000 /* SuperPlayerModel.m in Sources */,
 				D877991B211139D600611EF1 /* PageScrollerView.m in Sources */,
 				D87798F02111383500611EF1 /* WMPageController.m in Sources */,
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
 				D88D70A2211537A600858B62 /* WSServerGameCollectionView.m in Sources */,
 				D84C41B32126A6400036E778 /* NavHomeViewController.m in Sources */,
-				D81E9E97213248AD00040000 /* MoreContentView.m in Sources */,
+				D81E9F5F21324B0400040000 /* MoreContentView.m in Sources */,
 				D87799102111383F00611EF1 /* ViewController+MASAdditions.m in Sources */,
 				D88D70B421158D6F00858B62 /* ANViewController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
@@ -1101,18 +1100,18 @@
 				D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */,
 				D82B003C212020300066C32E /* DetailViewController.m in Sources */,
 				D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */,
-				D81E9E91213248AD00040000 /* DataReport.m in Sources */,
+				D81E9F5921324B0400040000 /* DataReport.m in Sources */,
 				D84C41B02126A5C90036E778 /* NavTopViewController.m in Sources */,
 				D87799122111383F00611EF1 /* MASConstraintMaker.m in Sources */,
 				D877990F2111383F00611EF1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				D87799162111383F00611EF1 /* MASConstraint.m in Sources */,
 				D87799112111383F00611EF1 /* MASCompositeConstraint.m in Sources */,
-				D81E9E8D213248AD00040000 /* UINavigationController+ZFPlayerRotation.m in Sources */,
+				D81E9F5521324B0400040000 /* UINavigationController+ZFPlayerRotation.m in Sources */,
 				D8AECB62212CDFDE00BB7FE6 /* NSString+MD5.m in Sources */,
 				D8A0E99A212A448E00D8969F /* XCSearchTableViewController.m in Sources */,
 				D87799132111383F00611EF1 /* MASLayoutConstraint.m in Sources */,
 				D867D38C2127B76F007E9AD2 /* SAFrameObj.m in Sources */,
-				D81E9E9A213248AD00040000 /* CFDanmakuView.m in Sources */,
+				D81E9F6221324B0400040000 /* CFDanmakuView.m in Sources */,
 				D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */,
 				D88D70B72115912A00858B62 /* UIView+ACMediaExt.m in Sources */,
 				D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */,
@@ -1128,16 +1127,16 @@
 				D87798F12111383500611EF1 /* WMMenuItem.m in Sources */,
 				D87799142111383F00611EF1 /* NSArray+MASAdditions.m in Sources */,
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
-				D81E9E90213248AD00040000 /* J2Obj.m in Sources */,
-				D81E9E92213248AD00040000 /* NetWatcher.m in Sources */,
-				D81E9E8B213248AD00040000 /* SuperPlayerGlobleConfig.m in Sources */,
-				D81E9E8E213248AD00040000 /* UIViewController+ZFPlayerRotation.m in Sources */,
+				D81E9F5821324B0400040000 /* J2Obj.m in Sources */,
+				D81E9F5A21324B0400040000 /* NetWatcher.m in Sources */,
+				D81E9F5321324B0400040000 /* SuperPlayerGlobleConfig.m in Sources */,
+				D81E9F5621324B0400040000 /* UIViewController+ZFPlayerRotation.m in Sources */,
 				D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */,
 				D818D07D210AB5890002C03E /* PersonViewController.m in Sources */,
 				D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */,
 				D81AA1F32125A768008A887F /* XMSNoHightLightButton.m in Sources */,
-				D81E9E8F213248AD00040000 /* SuperPlayerWindow.m in Sources */,
-				D81E9E8C213248AD00040000 /* UIView+MMLayout.m in Sources */,
+				D81E9F5721324B0400040000 /* SuperPlayerWindow.m in Sources */,
+				D81E9F5421324B0400040000 /* UIView+MMLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

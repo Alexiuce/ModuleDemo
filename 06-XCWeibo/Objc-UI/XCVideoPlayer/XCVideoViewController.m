@@ -8,6 +8,7 @@
 
 #import "XCVideoViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "SuperPlayer.h"
 
 
 @interface XCVideoViewController ()
@@ -24,6 +25,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+  
+    
+    
+}
+
+
+- (void)superPlayerView{
+    
+}
+
+- (void)avplayerDemo{
     NSString *viderUrl =  @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
     //@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     _xc_player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:viderUrl]];
@@ -35,9 +47,6 @@
     playLayer.frame = self.view.bounds;
     [self.view.layer addSublayer:playLayer];
     [_xc_player play];
-    
-    
 }
-
 
 @end
