@@ -16,6 +16,7 @@
 @property (nonatomic, strong) AVPlayer *xc_player;
 
 @property (nonatomic, strong)TXVodPlayer *vodPlayer;
+@property (nonatomic, strong) TXLivePlayer *livePlayer;
 
 @property (nonatomic, strong) SuperPlayerView *playerView;
 @property (nonatomic, strong) SuperPlayerModel *playerModel;
@@ -29,14 +30,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self playVod];
-
-    
+    [self superPlayerView];
     
 }
 
+-(void)playLive{
+    _livePlayer = [[TXLivePlayer alloc]init];
+     NSString *url = @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
+    [_livePlayer setupVideoWidget:self.containerView.bounds containView:self.containerView insertIndex:0];
+    [_livePlayer startPlay:url type:PLAY_TYPE_VOD_MP4];
+}
 - (void)playVod{
     _vodPlayer = [[TXVodPlayer alloc]init];
+    
     [_vodPlayer setupVideoWidget:self.containerView insertIndex:0];
     NSString *url = @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
     [_vodPlayer startPlay:url];
@@ -44,7 +50,7 @@
 - (void)superPlayerView{
     _playerView = [[SuperPlayerView alloc] init];
     _playerModel = [[SuperPlayerModel alloc] init];
-    _playerModel.videoURL =  @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
+    _playerModel.videoURL = @"http://flashfish.oss-cn-hangzhou.aliyuncs.com/CDN/image/android_1534917672881_1.mp4";
     // 设置代理
     _playerView.delegate = self;
     
