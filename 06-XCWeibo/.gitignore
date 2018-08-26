@@ -28,6 +28,7 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 TXLiteAVSDK_Player.framework
+*.framework
 
 # CocoaPods
 #

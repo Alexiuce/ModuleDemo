@@ -21,6 +21,7 @@ target 'Objc-UI' do
   pod 'Masonry'
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'MBProgressHUD'
   
 #  pod 'Hyphenate'
 
