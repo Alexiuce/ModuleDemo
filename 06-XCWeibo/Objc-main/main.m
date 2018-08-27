@@ -23,25 +23,33 @@ int main(int argc, const char * argv[]) {
         dispatch_queue_t q2 = dispatch_queue_create("queue_two", DISPATCH_QUEUE_SERIAL);
         
         dispatch_semaphore_t semap = dispatch_semaphore_create(1);
-        
-        dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+         dispatch_semaphore_t semap1 = dispatch_semaphore_create(0);
         
         for (int i = 0; i < 100; i++) {
             
             dispatch_async(q1, ^{
+                dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
                 NSLog(@"one %d",a);
                 a += 1;
                 dispatch_semaphore_signal(semap);
+                if (a == 100) {
+                    dispatch_semaphore_signal(semap1);
+                }
             });
             
-            dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
             dispatch_async(q2, ^{
+                dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
                 NSLog(@"two %d",a);
                 a += 1;
                 dispatch_semaphore_signal(semap);
+                if (a == 100) {
+                    dispatch_semaphore_signal(semap1);
+                }
             });
         }
+        dispatch_semaphore_wait(semap1, DISPATCH_TIME_FOREVER);
         NSLog(@"end");
+        dispatch_semaphore_signal(semap1);
         
         
         
