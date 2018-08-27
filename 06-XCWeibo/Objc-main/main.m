@@ -28,10 +28,10 @@ int main(int argc, const char * argv[]) {
         for (int i = 0; i < 101; i++) {
             if (i % 2 ) {
                 dispatch_async(q1, ^{
-//                    dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+                    dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
                     NSLog(@"one %d",i);
                     
-//                    dispatch_semaphore_signal(semap);
+                    dispatch_semaphore_signal(semap);
                     if (i == 100) {
                         dispatch_semaphore_signal(semap1);
                     }
@@ -39,10 +39,10 @@ int main(int argc, const char * argv[]) {
                 
             }else{
                 dispatch_async(q2, ^{
-//                    dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+                    dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
                     NSLog(@"two %d",i);
                     
-//                    dispatch_semaphore_signal(semap);
+                    dispatch_semaphore_signal(semap);
                     if (i == 100) {
                         dispatch_semaphore_signal(semap1);
                     }
