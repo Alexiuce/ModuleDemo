@@ -17,8 +17,38 @@ typedef void(^Tasklock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        my_test();
+       
+       __block int a = 0;
+        dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
+        dispatch_queue_t q2 = dispatch_queue_create("queue_two", DISPATCH_QUEUE_SERIAL);
+        
+        dispatch_semaphore_t semap = dispatch_semaphore_create(1);
+        
+        dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+        
+        for (int i = 0; i < 100; i++) {
+            
+            dispatch_async(q1, ^{
+                NSLog(@"one %d",a);
+                a += 1;
+                dispatch_semaphore_signal(semap);
+            });
+            
+            dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+            dispatch_async(q2, ^{
+                NSLog(@"two %d",a);
+                a += 1;
+                dispatch_semaphore_signal(semap);
+            });
+        }
+        NSLog(@"end");
+        
+        
+        
+        
+       
+        
+        
         
    
     }
