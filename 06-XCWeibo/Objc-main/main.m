@@ -18,54 +18,50 @@ typedef void(^Tasklock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
- 
-        dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
-        dispatch_queue_t q2 = dispatch_queue_create("queue_two", DISPATCH_QUEUE_SERIAL);
-        
-        dispatch_semaphore_t semap = dispatch_semaphore_create(1);
-         dispatch_semaphore_t semap1 = dispatch_semaphore_create(0);
-        
-        for (int i = 0; i < 101; i++) {
-            if (i % 2 ) {
-                dispatch_async(q1, ^{
-                    dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
-                    NSLog(@"one %d",i);
-                    
-                    dispatch_semaphore_signal(semap);
-                    if (i == 100) {
-                        dispatch_semaphore_signal(semap1);
-                    }
-                });
-                
-            }else{
-                dispatch_async(q2, ^{
-                    dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
-                    NSLog(@"two %d",i);
-                    
-                    dispatch_semaphore_signal(semap);
-                    if (i == 100) {
-                        dispatch_semaphore_signal(semap1);
-                    }
-                });
-                
-            }
-            
-        }
-        
-        dispatch_semaphore_wait(semap1, DISPATCH_TIME_FOREVER);
-        NSLog(@"end");
-        dispatch_semaphore_signal(semap1);
-        
-        
-        
-        
-       
-        
-        
-        
+
    
     }
     return 0;
+}
+
+
+void gcd_test(){
+    dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t q2 = dispatch_queue_create("queue_two", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_semaphore_t semap = dispatch_semaphore_create(1);
+    dispatch_semaphore_t semap1 = dispatch_semaphore_create(0);
+    
+    for (int i = 0; i < 101; i++) {
+        if (i % 2 ) {
+            dispatch_async(q1, ^{
+                dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+                NSLog(@"one %d",i);
+                
+                dispatch_semaphore_signal(semap);
+                if (i == 100) {
+                    dispatch_semaphore_signal(semap1);
+                }
+            });
+            
+        }else{
+            dispatch_async(q2, ^{
+                dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+                NSLog(@"two %d",i);
+                
+                dispatch_semaphore_signal(semap);
+                if (i == 100) {
+                    dispatch_semaphore_signal(semap1);
+                }
+            });
+            
+        }
+        
+    }
+    
+    dispatch_semaphore_wait(semap1, DISPATCH_TIME_FOREVER);
+    NSLog(@"end");
+    dispatch_semaphore_signal(semap1);
 }
 
 int my_sum(int a,int b){
