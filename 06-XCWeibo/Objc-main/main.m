@@ -17,8 +17,9 @@ typedef void(^Tasklock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSDecimalNumber *decimal = [NSDecimalNumber decimalNumberWithMantissa:12.345 exponent:-3 isNegative:NO];
-        NSLog(@"%f",decimal.floatValue);
+        float f = 12.343434;
+        float f1 = floorf(f * 100 + 0.5 ) / 100;
+        NSLog(@"%.2f",f1);
    
     }
     return 0;
