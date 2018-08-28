@@ -17,14 +17,17 @@ typedef void(^Tasklock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        float f = 12.343434;
-        float f1 = floorf(f * 100 + 0.5 ) / 100;
-        NSLog(@"%.2f",f1);
+      
    
     }
     return 0;
 }
 
+void my_float_4to5(){
+    float f = 12.343434;
+    float f1 = floorf(f * 100 + 0.5 ) / 100;
+    NSLog(@"%.2f",f1);
+}
 
 void gcd_test(){
     dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
