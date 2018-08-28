@@ -12,21 +12,41 @@
 
 int my_sum(int a,int b);
 void my_test(void);
+void my_float_4to5(void *);
 
 typedef void(^Tasklock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-      
+        dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
+        dispatch_async_f(q1, @"good morning", my_float_4to5);
    
     }
     return 0;
 }
 
-void my_float_4to5(){
+void my_float_4to5(void * s){
+    NSLog(@"param -- %@",s);
     float f = 12.343434;
     float f1 = floorf(f * 100 + 0.5 ) / 100;
     NSLog(@"%.2f",f1);
+}
+
+void gcd_queue_suspend(){
+    dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t q2 = dispatch_queue_create("queue_two", DISPATCH_QUEUE_SERIAL);
+    
+    for (int i = 0; i < 100; i++) {
+        if (i % 2) {
+            dispatch_async(q1, ^{
+                NSLog(@"queue one : %d",i);
+            });
+//            dispatch_suspend(<#dispatch_object_t  _Nonnull object#>)
+        }else{
+            
+        }
+    }
+    
 }
 
 void gcd_test(){
