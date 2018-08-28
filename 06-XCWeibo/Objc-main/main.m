@@ -19,10 +19,24 @@ typedef void(^Tasklock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
-        dispatch_async_f(q1, @"good morning", my_float_4to5);
+        dispatch_async(q1, ^{
+            NSLog(@"task 1...");
+        });
+        dispatch_async(q1, ^{
+            NSLog(@"task 2...");
+        });
+        dispatch_suspend(q1);
+        NSLog(@"end");
+        
+        dispatch_resume(q1);
    
     }
     return 0;
+}
+
+void dispatchFunc(){
+    dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
+    dispatch_async_f(q1, @"good morning", my_float_4to5);
 }
 
 void my_float_4to5(void * s){
