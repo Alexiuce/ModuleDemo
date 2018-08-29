@@ -59,6 +59,7 @@
 		D83DA3AC212954A000388078 /* XCPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83DA3AB212954A000388078 /* XCPresentationController.m */; };
 		D84375B12136931A00A19364 /* XCInvocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84375B02136931A00A19364 /* XCInvocation.storyboard */; };
 		D84375B42136933700A19364 /* XCInvocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84375B32136933700A19364 /* XCInvocationController.m */; };
+		D84375B72136944300A19364 /* XCStrategyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D84375B62136944300A19364 /* XCStrategyManager.m */; };
 		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
@@ -233,6 +234,8 @@
 		D84375B02136931A00A19364 /* XCInvocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCInvocation.storyboard; sourceTree = "<group>"; };
 		D84375B22136933700A19364 /* XCInvocationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCInvocationController.h; sourceTree = "<group>"; };
 		D84375B32136933700A19364 /* XCInvocationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCInvocationController.m; sourceTree = "<group>"; };
+		D84375B52136944300A19364 /* XCStrategyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCStrategyManager.h; sourceTree = "<group>"; };
+		D84375B62136944300A19364 /* XCStrategyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCStrategyManager.m; sourceTree = "<group>"; };
 		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
 		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
 		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
@@ -599,6 +602,8 @@
 				D84375B02136931A00A19364 /* XCInvocation.storyboard */,
 				D84375B22136933700A19364 /* XCInvocationController.h */,
 				D84375B32136933700A19364 /* XCInvocationController.m */,
+				D84375B52136944300A19364 /* XCStrategyManager.h */,
+				D84375B62136944300A19364 /* XCStrategyManager.m */,
 			);
 			path = XCInvocation;
 			sourceTree = "<group>";
@@ -1082,6 +1087,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87E62DA2124F6A4007C5D35 /* TableVideoController.m in Sources */,
+				D84375B72136944300A19364 /* XCStrategyManager.m in Sources */,
 				D81E9F6021324B0400040000 /* SuperPlayerControlView.m in Sources */,
 				D867D3892127AAE9007E9AD2 /* SafeTableViewController.m in Sources */,
 				D87798F32111383500611EF1 /* WMMenuView.m in Sources */,
