@@ -18,9 +18,21 @@ typedef void(^Tasklock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-       
-    
-   
+        
+        dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
+        
+        dispatch_async(q1, ^{
+            NSLog(@"start q1");
+        });
+        dispatch_suspend(q1);
+        
+        for (int i = 0; i < 5; i++) {
+            NSLog(@"%@", [NSString stringWithFormat:@"%d",i]);
+        }
+        dispatch_resume(q1);
+        NSLog(@"end ");
+        
+        
     }
     return 0;
 }
@@ -46,10 +58,7 @@ void gcd_queue_suspend(){
     dispatch_async(q2, ^{
         NSLog(@"task 2...");
     });
-    
-    
-    
-    
+
     NSLog(@"end");
     
 }
