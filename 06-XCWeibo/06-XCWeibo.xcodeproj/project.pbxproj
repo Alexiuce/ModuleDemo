@@ -57,6 +57,8 @@
 		D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B00412120281C0066C32E /* SDYWebTabController.m */; };
 		D8382B572128E9350086512E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8382B562128E9350086512E /* main.m */; };
 		D83DA3AC212954A000388078 /* XCPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83DA3AB212954A000388078 /* XCPresentationController.m */; };
+		D84375B12136931A00A19364 /* XCInvocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84375B02136931A00A19364 /* XCInvocation.storyboard */; };
+		D84375B42136933700A19364 /* XCInvocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84375B32136933700A19364 /* XCInvocationController.m */; };
 		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
@@ -228,6 +230,9 @@
 		D8382B562128E9350086512E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D83DA3AA212954A000388078 /* XCPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPresentationController.h; sourceTree = "<group>"; };
 		D83DA3AB212954A000388078 /* XCPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPresentationController.m; sourceTree = "<group>"; };
+		D84375B02136931A00A19364 /* XCInvocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCInvocation.storyboard; sourceTree = "<group>"; };
+		D84375B22136933700A19364 /* XCInvocationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCInvocationController.h; sourceTree = "<group>"; };
+		D84375B32136933700A19364 /* XCInvocationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCInvocationController.m; sourceTree = "<group>"; };
 		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
 		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
 		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
@@ -588,6 +593,16 @@
 			path = "Objc-main";
 			sourceTree = "<group>";
 		};
+		D84375AF213692FB00A19364 /* XCInvocation */ = {
+			isa = PBXGroup;
+			children = (
+				D84375B02136931A00A19364 /* XCInvocation.storyboard */,
+				D84375B22136933700A19364 /* XCInvocationController.h */,
+				D84375B32136933700A19364 /* XCInvocationController.m */,
+			);
+			path = XCInvocation;
+			sourceTree = "<group>";
+		};
 		D84C41AD2126A59B0036E778 /* NavigationBack */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,6 +643,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D84375AF213692FB00A19364 /* XCInvocation */,
 				D88DAE03212E30EB00F0B5DA /* XCVideoPlayer */,
 				D8A0E992212A3D4E00D8969F /* XCSerachBar */,
 				D867D3842127AA3D007E9AD2 /* SafeAreaInset */,
@@ -942,6 +958,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84375B12136931A00A19364 /* XCInvocation.storyboard in Resources */,
 				D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */,
 				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
 				D81AA1E821259A5A008A887F /* switch.storyboard in Resources */,
@@ -1074,6 +1091,7 @@
 				D81E9F6421324B0400040000 /* CFDanmakuInfo.m in Sources */,
 				D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */,
 				D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */,
+				D84375B42136933700A19364 /* XCInvocationController.m in Sources */,
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
 				D81E9F6121324B0400040000 /* MMMaterialDesignSpinner.m in Sources */,
 				D81E9F5E21324B0400040000 /* SuperPlayerView.m in Sources */,
