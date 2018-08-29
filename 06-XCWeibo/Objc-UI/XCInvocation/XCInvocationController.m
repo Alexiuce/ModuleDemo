@@ -8,6 +8,8 @@
 
 #import "XCInvocationController.h"
 
+#import "XCStrategyManager.h"
+
 @interface XCInvocationController ()
 
 @end
@@ -16,9 +18,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    NSDictionary *dict = @{@"a":@"good"};
+    XCStrategyManager *sm = [XCStrategyManager defaultManager];
+    [sm appendStrategy:@"test_s" target:self selector:@selector(testStrategy:) param:dict];
 }
 
 
+
+- (void)testStrategy:(NSDictionary *)dict{
+    NSLog(@"%@",dict);
+    
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    XCStrategyManager *sm = [XCStrategyManager defaultManager];
+    [sm executeStrategyWithKey:@"test_s"];
+}
 
 @end

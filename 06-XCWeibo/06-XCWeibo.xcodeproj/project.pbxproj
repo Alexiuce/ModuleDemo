@@ -60,6 +60,7 @@
 		D84375B12136931A00A19364 /* XCInvocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84375B02136931A00A19364 /* XCInvocation.storyboard */; };
 		D84375B42136933700A19364 /* XCInvocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84375B32136933700A19364 /* XCInvocationController.m */; };
 		D84375B72136944300A19364 /* XCStrategyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D84375B62136944300A19364 /* XCStrategyManager.m */; };
+		D84375BA2136A43A00A19364 /* XCTestMan.m in Sources */ = {isa = PBXBuildFile; fileRef = D84375B92136A43A00A19364 /* XCTestMan.m */; };
 		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
@@ -236,6 +237,8 @@
 		D84375B32136933700A19364 /* XCInvocationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCInvocationController.m; sourceTree = "<group>"; };
 		D84375B52136944300A19364 /* XCStrategyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCStrategyManager.h; sourceTree = "<group>"; };
 		D84375B62136944300A19364 /* XCStrategyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCStrategyManager.m; sourceTree = "<group>"; };
+		D84375B82136A43A00A19364 /* XCTestMan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTestMan.h; sourceTree = "<group>"; };
+		D84375B92136A43A00A19364 /* XCTestMan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTestMan.m; sourceTree = "<group>"; };
 		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
 		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
 		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
@@ -604,6 +607,8 @@
 				D84375B32136933700A19364 /* XCInvocationController.m */,
 				D84375B52136944300A19364 /* XCStrategyManager.h */,
 				D84375B62136944300A19364 /* XCStrategyManager.m */,
+				D84375B82136A43A00A19364 /* XCTestMan.h */,
+				D84375B92136A43A00A19364 /* XCTestMan.m */,
 			);
 			path = XCInvocation;
 			sourceTree = "<group>";
@@ -1147,6 +1152,7 @@
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
 				D88DAE08212E312300F0B5DA /* XCVideoViewController.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
+				D84375BA2136A43A00A19364 /* XCTestMan.m in Sources */,
 				D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */,
 				D87798F12111383500611EF1 /* WMMenuItem.m in Sources */,
 				D87799142111383F00611EF1 /* NSArray+MASAdditions.m in Sources */,

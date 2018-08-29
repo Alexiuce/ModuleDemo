@@ -17,20 +17,28 @@
  */
 + (instancetype)defaultManager;
 
-
-
 /**
- 添加策略到管理者中
+ 添加策略到管理者中(含参数)
 
  @param key 策略的key
  @param sender 策略的执行对象
  @param dict 策略的参数
  */
-- (void)appendStrategy:(NSString *)key target:(id)sender selector:(SEL)action param:(NSDictionary *)dict;
+- (void)appendStrategy:(nonnull NSString *)key target:(id)sender selector:(SEL)action param:(nonnull NSDictionary *)dict;
+
+
+/**
+  添加策略到管理者中(不含参数)
+
+ @param key 策略的key
+ @param sender 策略的执行对象
+ @param action 策略的方法
+ */
+- (void)appendStrategy:(nonnull NSString *)key target:(id)sender selector:(SEL)action;
 
 /**
  执行策略
  */
-- (void)executeStrategyWithKey:(NSString *)strategyKey;
+- (void)executeStrategyWithKey:(nonnull NSString *)strategyKey;
 
 @end
