@@ -10,6 +10,8 @@
 
 #import "XCStrategyManager.h"
 
+#import "XCTestMan.h"
+
 @interface XCInvocationController ()
 
 @end
@@ -21,6 +23,10 @@
     NSDictionary *dict = @{@"a":@"good"};
     XCStrategyManager *sm = [XCStrategyManager defaultManager];
     [sm appendStrategy:@"test_s" target:self selector:@selector(testStrategy:) param:dict];
+    
+    XCTestMan *tm = [[XCTestMan alloc]init];
+    [tm testStrategy];
+    
 }
 
 
