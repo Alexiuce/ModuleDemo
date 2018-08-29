@@ -19,22 +19,33 @@ typedef void(^Tasklock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
+        NSDecimalNumberHandler *handle = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:2 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
         
-        dispatch_async(q1, ^{
-            NSLog(@"start q1");
-        });
-        dispatch_suspend(q1);
         
-        for (int i = 0; i < 5; i++) {
-            NSLog(@"%@", [NSString stringWithFormat:@"%d",i]);
-        }
-        dispatch_resume(q1);
-        NSLog(@"end ");
+        
+        NSDecimalNumber *dn = [NSDecimalNumber decimalNumberWithString:@"123.432"];
+        NSDecimalNumber *result = [dn decimalNumberByRoundingAccordingToBehavior:handle];
+        NSLog(@"%f",result.floatValue);
+        
         
         
     }
     return 0;
+}
+
+void dispatch_suspend(){
+    dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_async(q1, ^{
+        NSLog(@"start q1");
+    });
+    dispatch_suspend(q1);
+    
+    for (int i = 0; i < 5; i++) {
+        NSLog(@"%@", [NSString stringWithFormat:@"%d",i]);
+    }
+    dispatch_resume(q1);
+    NSLog(@"end ");
 }
 
 void dispatchFunc(){
