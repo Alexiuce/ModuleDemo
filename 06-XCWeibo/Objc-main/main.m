@@ -21,19 +21,20 @@ int main(int argc, const char * argv[]) {
         
         NSDecimalNumberHandler *handle = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:2 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
         
-        
-        
         NSDecimalNumber *dn = [[NSDecimalNumber alloc]initWithFloat:12.451632];
         NSDecimalNumber *result = [dn decimalNumberByRoundingAccordingToBehavior:handle];
         NSLog(@"%f",result.floatValue);
         
+        NSLocale *lo = [NSLocale currentLocale];
+        NSDecimal d = result.decimalValue;
+        NSLog(@"%@",NSDecimalString(&d, lo));
         
         
     }
     return 0;
 }
 
-void dispatch_suspend(){
+void suspendDemo(){
     dispatch_queue_t q1 = dispatch_queue_create("queue_one", DISPATCH_QUEUE_SERIAL);
     
     dispatch_async(q1, ^{
