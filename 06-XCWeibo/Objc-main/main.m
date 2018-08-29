@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
         
         
         
-        NSDecimalNumber *dn = [NSDecimalNumber decimalNumberWithString:@"123.432"];
+        NSDecimalNumber *dn = [[NSDecimalNumber alloc]initWithFloat:12.451632];
         NSDecimalNumber *result = [dn decimalNumberByRoundingAccordingToBehavior:handle];
         NSLog(@"%f",result.floatValue);
         
