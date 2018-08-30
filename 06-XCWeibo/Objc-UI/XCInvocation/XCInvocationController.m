@@ -14,6 +14,8 @@
 
 @interface XCInvocationController ()
 
+
+
 @end
 
 @implementation XCInvocationController
@@ -22,14 +24,15 @@
     [super viewDidLoad];
     NSDictionary *dict = @{@"a":@"good"};
    
-    [XCStrategyManager appendStrategy:@"test_s" target:self selector:@selector(testStrategy:) param:dict];
+    [XCStrategyManager appendStrategy:@"test_s" target:self selector:@selector(testStrategy123:) param:dict];
     
     XCTestMan *tm = [[XCTestMan alloc]init];
-    [tm testStrategy];
+
+//    [XCStrategyManager appendStrategy:@"man_test" target:tm selector:@selector(testStrategy)];
     
 }
 
-- (void)testStrategy:(NSDictionary *)dict{
+- (void)testStrategy123:(NSDictionary *)dict{
     NSLog(@"%@",dict);
     
 }
@@ -37,6 +40,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     [XCStrategyManager executeStrategyWithKey:@"test_s"];
+    [XCStrategyManager executeStrategyWithKey:@"man_test"];
 }
 
 @end

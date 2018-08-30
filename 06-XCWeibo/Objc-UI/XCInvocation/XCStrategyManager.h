@@ -21,7 +21,7 @@
  添加策略到管理者中(含参数)
 
  @param key 策略的key
- @param sender 策略的执行对象
+ @param sender 策略的执行对象 (不会对sender 进行强应用)
  @param dict 策略的参数
  */
 + (void)appendStrategy:(nonnull NSString *)key target:(id)sender selector:(SEL)action param:(nonnull NSDictionary *)dict;

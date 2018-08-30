@@ -17,9 +17,9 @@
 - (instancetype)init{
     if (self = [super init]) {
        
-        [XCStrategyManager appendStrategy:@"eat" target:self selector:@selector(eatLaunch)];
-        [XCStrategyManager appendStrategy:@"sleep" target:self selector:@selector(manSleep)];
-        [XCStrategyManager appendStrategy:@"fetch" target:self selector:@selector(fetchInfo)];
+//        [XCStrategyManager appendStrategy:@"eat" target:self selector:@selector(eatLaunch)];
+//        [XCStrategyManager appendStrategy:@"sleep" target:self selector:@selector(manSleep)];
+//        [XCStrategyManager appendStrategy:@"fetch" target:self selector:@selector(fetchInfo)];
     }
     return self;
 }
@@ -55,5 +55,8 @@
     NSLog(@"%s",__FUNCTION__);
 }
 
+- (void)dealloc{
+    NSLog(@"%s",__FUNCTION__);
+}
 
 @end
