@@ -35,7 +35,9 @@
     return __instance;
     
 }
-
+/**
+ 添加策略到管理者中(含参数)
+ */
 - (void)appendStrategy:(NSString *)key target:(id)sender selector:(SEL)action param:(NSDictionary *)dict{
     
     NSMethodSignature *signature = [sender methodSignatureForSelector:action];
@@ -53,12 +55,16 @@
     self.paramsDict[paramKey] = dict;
     
 }
-
+/**
+ 添加策略到管理者中(不含参数)
+ */
 - (void)appendStrategy:(NSString *)key target:(id)sender selector:(SEL)action{
     [self appendStrategy:key target:sender selector:action param:@{}];
 }
 
-
+/**
+ 执行策略
+ */
 - (void)executeStrategyWithKey:(NSString *)strategyKey{
     NSInvocation *invocation = self.strategyDict[strategyKey];
     if (invocation == nil) {return;}
@@ -69,6 +75,17 @@
         [invocation setArgument:&param atIndex:2];
     }
     [invocation invoke];
+}
+
+/**
+移除策略
+
+ @param key 移除策略的key键
+ */
+- (void)removeStrategy:(NSString *)key{
+    self.strategyDict[key] = nil;
+     NSString *paramKey = [NSString stringWithFormat:@"%@%@",key,self.paramKey];
+    self.paramsDict[paramKey] = nil;
 }
 
 @end

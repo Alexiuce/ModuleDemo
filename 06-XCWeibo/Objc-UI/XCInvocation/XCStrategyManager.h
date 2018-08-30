@@ -41,4 +41,12 @@
  */
 - (void)executeStrategyWithKey:(nonnull NSString *)strategyKey;
 
+
+/**
+ 移除策略
+
+ @param key 需要移除策略的key
+ */
+- (void)removeStrategy:(nonnull NSString *)key;
+
 @end
