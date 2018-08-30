@@ -35,6 +35,42 @@
     return __instance;
     
 }
+
+/**
+ 添加策略到管理者中(含参数)
+ */
++ (void)appendStrategy:(NSString *)key target:(id)sender selector:(SEL)action param:(NSDictionary *)dict{
+    [[self defaultManager] appendStrategy:key target:sender selector:action param:dict];
+}
+/**
+ 添加策略到管理者中(不含参数)
+ */
++ (void)appendStrategy:(NSString *)key target:(id)sender selector:(SEL)action{
+    [self appendStrategy:key target:sender selector:action param:@{}];
+}
+/**
+ 执行策略
+ */
++ (void)executeStrategyWithKey:(NSString *)strategyKey{
+    [[self defaultManager] executeStrategyWithKey:strategyKey];
+}
+
+/**
+ 移除策略
+ @param key 移除策略的key键
+ */
++ (void)removeStrategy:(NSString *)key{
+    [[self defaultManager]removeStrategy:key];
+}
+
+
+/**
+ 移除所有策略
+ */
++ (void)removeAllStrategy{
+    [[self defaultManager] removeAllStrategy];
+}
+
 /**
  添加策略到管理者中(含参数)
  */
@@ -55,12 +91,7 @@
     self.paramsDict[paramKey] = dict;
     
 }
-/**
- 添加策略到管理者中(不含参数)
- */
-- (void)appendStrategy:(NSString *)key target:(id)sender selector:(SEL)action{
-    [self appendStrategy:key target:sender selector:action param:@{}];
-}
+
 
 /**
  执行策略
@@ -79,13 +110,20 @@
 
 /**
 移除策略
-
  @param key 移除策略的key键
  */
 - (void)removeStrategy:(NSString *)key{
     self.strategyDict[key] = nil;
      NSString *paramKey = [NSString stringWithFormat:@"%@%@",key,self.paramKey];
     self.paramsDict[paramKey] = nil;
+}
+
+/**
+ 移除所有策略
+ */
+- (void)removeAllStrategy{
+    [self.paramsDict removeAllObjects];
+    [self.strategyDict removeAllObjects];
 }
 
 @end

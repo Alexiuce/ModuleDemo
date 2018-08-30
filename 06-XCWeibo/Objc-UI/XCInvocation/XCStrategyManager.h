@@ -15,7 +15,7 @@
 
  @return 创建好的管理者单利对象
  */
-+ (instancetype)defaultManager;
+//+ (instancetype)defaultManager;
 
 /**
  添加策略到管理者中(含参数)
@@ -24,7 +24,7 @@
  @param sender 策略的执行对象
  @param dict 策略的参数
  */
-- (void)appendStrategy:(nonnull NSString *)key target:(id)sender selector:(SEL)action param:(nonnull NSDictionary *)dict;
++ (void)appendStrategy:(nonnull NSString *)key target:(id)sender selector:(SEL)action param:(nonnull NSDictionary *)dict;
 
 
 /**
@@ -34,19 +34,25 @@
  @param sender 策略的执行对象
  @param action 策略的方法
  */
-- (void)appendStrategy:(nonnull NSString *)key target:(id)sender selector:(SEL)action;
++ (void)appendStrategy:(nonnull NSString *)key target:(id)sender selector:(SEL)action;
 
 /**
  执行策略
  */
-- (void)executeStrategyWithKey:(nonnull NSString *)strategyKey;
++ (void)executeStrategyWithKey:(nonnull NSString *)strategyKey;
 
 
 /**
- 移除策略
+ 移除指定key键的策略
 
  @param key 需要移除策略的key
  */
-- (void)removeStrategy:(nonnull NSString *)key;
++ (void)removeStrategy:(nonnull NSString *)key;
+
+/**
+ 移除所有策略
+ */
++ (void)removeAllStrategy;
+
 
 @end
