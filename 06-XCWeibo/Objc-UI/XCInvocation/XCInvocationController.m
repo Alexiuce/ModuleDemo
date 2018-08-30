@@ -28,7 +28,7 @@
     
     XCTestMan *tm = [[XCTestMan alloc]init];
 
-//    [XCStrategyManager appendStrategy:@"man_test" target:tm selector:@selector(testStrategy)];
+    [XCStrategyManager appendStrategy:@"man_test" target:tm selector:@selector(testStrategy)];
     
 }
 

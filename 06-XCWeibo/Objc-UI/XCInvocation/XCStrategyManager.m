@@ -15,8 +15,6 @@
 
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSDictionary *>*paramsDict;
 
-@property (nonatomic, strong) NSMutableDictionary *senderDict;
-
 @property (nonatomic, copy) NSString *paramKey;
 
 @end
@@ -32,7 +30,6 @@
         __instance = [[self alloc]init];
         __instance.strategyDict = [NSMutableDictionary dictionaryWithCapacity:10];
         __instance.paramsDict = [NSMutableDictionary dictionaryWithCapacity:10];
-        __instance.senderDict = [NSMutableDictionary dictionaryWithCapacity:10];
         __instance.paramKey = @"__instance_param_key";
     });
     return __instance;
@@ -83,7 +80,6 @@
         return;
     }
     __weak typeof(sender) weakTarget = sender;
-    self.senderDict[key] = weakTarget;
     
     
     NSMethodSignature *signature = [sender methodSignatureForSelector:action];
@@ -108,8 +104,8 @@
  */
 - (void)executeStrategyWithKey:(NSString *)strategyKey{
     NSInvocation *invocation = self.strategyDict[strategyKey];
-    id target = self.senderDict[strategyKey];
-    if (invocation == nil || target == nil) {return;}
+
+    if (invocation == nil ) {return;}
   
     NSString *paramKey = [NSString stringWithFormat:@"%@%@",strategyKey,self.paramKey];
     NSDictionary *param = self.paramsDict[paramKey];
@@ -127,7 +123,6 @@
     self.strategyDict[key] = nil;
      NSString *paramKey = [NSString stringWithFormat:@"%@%@",key,self.paramKey];
     self.paramsDict[paramKey] = nil;
-    self.senderDict[key] = nil;
 }
 
 /**
