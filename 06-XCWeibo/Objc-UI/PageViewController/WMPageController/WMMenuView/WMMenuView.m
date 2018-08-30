@@ -80,7 +80,7 @@ static NSInteger const WMBadgeViewTagOffset = 1212;
     
     [self.scrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[WMMenuItem class]]) {
-            ((WMMenuItem *)obj).speedFactor = _speedFactor;
+            ((WMMenuItem *)obj).speedFactor = self->_speedFactor;
         }
     }];
     

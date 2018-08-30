@@ -16,18 +16,17 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        XCStrategyManager *sm = [XCStrategyManager defaultManager];
-        [sm appendStrategy:@"eat" target:self selector:@selector(eatLaunch)];
-        [sm appendStrategy:@"sleep" target:self selector:@selector(manSleep)];
-        [sm appendStrategy:@"fetch" target:self selector:@selector(fetchInfo)];
+       
+        [XCStrategyManager appendStrategy:@"eat" target:self selector:@selector(eatLaunch)];
+        [XCStrategyManager appendStrategy:@"sleep" target:self selector:@selector(manSleep)];
+        [XCStrategyManager appendStrategy:@"fetch" target:self selector:@selector(fetchInfo)];
     }
     return self;
 }
 
 - (void)testStrategy{
     
-    XCStrategyManager *sm = [XCStrategyManager defaultManager];
-    [sm executeStrategyWithKey:@"eat"];
+    [XCStrategyManager executeStrategyWithKey:@"eat"];
     
     
 }
@@ -55,5 +54,6 @@
 - (void)sayHello{
     NSLog(@"%s",__FUNCTION__);
 }
+
 
 @end

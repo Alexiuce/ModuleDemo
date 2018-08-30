@@ -21,25 +21,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSDictionary *dict = @{@"a":@"good"};
-    XCStrategyManager *sm = [XCStrategyManager defaultManager];
-    [sm appendStrategy:@"test_s" target:self selector:@selector(testStrategy:) param:dict];
+   
+    [XCStrategyManager appendStrategy:@"test_s" target:self selector:@selector(testStrategy:) param:dict];
     
     XCTestMan *tm = [[XCTestMan alloc]init];
     [tm testStrategy];
     
 }
 
-
-
 - (void)testStrategy:(NSDictionary *)dict{
     NSLog(@"%@",dict);
     
 }
 
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    XCStrategyManager *sm = [XCStrategyManager defaultManager];
-    [sm executeStrategyWithKey:@"test_s"];
+    
+    [XCStrategyManager executeStrategyWithKey:@"test_s"];
 }
 
 @end
