@@ -14,9 +14,8 @@
 @property (nonatomic, strong)NSMutableDictionary <NSString*, NSInvocation*>*strategyDict;
 // 参数表: 当执行对象nil时,清除对应的参数
 @property (nonatomic, strong) NSMapTable <NSString *, NSDictionary *>*paramsMap;
-
+// 执行对象表: 弱引用外部的执行对象(防止单利对象强引用造成内存泄漏)
 @property (nonatomic, strong) NSMapTable *targetMap;
-
 // 参数key键
 @property (nonatomic, copy) NSString *paramKey;
 
@@ -32,8 +31,8 @@
     dispatch_once(&onceToken, ^{
         __instance = [[self alloc]init];
         __instance.strategyDict = [NSMutableDictionary dictionaryWithCapacity:10];
-        __instance.paramsMap = [NSMapTable strongToStrongObjectsMapTable];
-        __instance.targetMap = [NSMapTable strongToStrongObjectsMapTable];
+        __instance.paramsMap = [NSMapTable strongToWeakObjectsMapTable];
+        __instance.targetMap = [NSMapTable weakToWeakObjectsMapTable];
         __instance.paramKey = @"__instance_param_key";
     });
     return __instance;

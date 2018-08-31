@@ -10,6 +10,9 @@
 
 @interface XCTestMan : NSObject
 
+@property (nonatomic, copy) NSString *name;
+
+
 - (void)testStrategy;
 
 @end

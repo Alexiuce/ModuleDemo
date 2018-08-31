@@ -29,13 +29,13 @@
     XCTestMan *tm = [[XCTestMan alloc]init];
 
     [XCStrategyManager appendStrategy:@"man_test" target:tm selector:@selector(testStrategy)];
-    
+
 }
 
 - (void)testStrategy123:(NSDictionary *)dict{
     NSLog(@"%@",dict);
-    
 }
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     

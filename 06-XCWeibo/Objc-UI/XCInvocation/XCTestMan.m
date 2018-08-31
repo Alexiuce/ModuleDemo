@@ -16,9 +16,10 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-       
+        _name = @"alex";
         [XCStrategyManager appendStrategy:@"eat" target:self selector:@selector(eatLaunch)];
-        [XCStrategyManager appendStrategy:@"sleep" target:self selector:@selector(manSleep)];
+        
+        [XCStrategyManager appendStrategy:@"showName" target:self selector:@selector(showName:) param:@{@"name":self}];
         [XCStrategyManager appendStrategy:@"fetch" target:self selector:@selector(fetchInfo)];
     }
     return self;
@@ -27,11 +28,15 @@
 - (void)testStrategy{
     
     [XCStrategyManager executeStrategyWithKey:@"eat"];
+    [XCStrategyManager executeStrategyWithKey:@"showName"];
     
     
 }
 
-
+- (void)showName:(NSDictionary *)param{
+    NSLog(@"show the name is %@",param[@"name"]);
+    
+}
 - (void)manSleep{
     NSLog(@"%s",__FUNCTION__);
 }
