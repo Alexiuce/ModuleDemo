@@ -12,8 +12,8 @@
 
 // 策略字典: key -> NSInvocation
 @property (nonatomic, strong)NSMutableDictionary <NSString*, NSInvocation*>*strategyDict;
-// 参数字典: 当执行对象nil时,清除对应的参数
-@property (nonatomic, strong) NSMapTable <NSString *, NSDictionary *>*paramsDict;
+// 参数表: 当执行对象nil时,清除对应的参数
+@property (nonatomic, strong) NSMapTable <NSString *, NSDictionary *>*paramsMap;
 
 @property (nonatomic, strong) NSMapTable *targetMap;
 
@@ -32,7 +32,7 @@
     dispatch_once(&onceToken, ^{
         __instance = [[self alloc]init];
         __instance.strategyDict = [NSMutableDictionary dictionaryWithCapacity:10];
-        __instance.paramsDict = [NSMapTable strongToStrongObjectsMapTable];
+        __instance.paramsMap = [NSMapTable strongToStrongObjectsMapTable];
         __instance.targetMap = [NSMapTable strongToStrongObjectsMapTable];
         __instance.paramKey = @"__instance_param_key";
     });
@@ -99,8 +99,7 @@
     if (dict.allKeys.count < 1) {  return;}
     
     NSString *paramKey = [NSString stringWithFormat:@"%@%@",key,self.paramKey];
-//    self.paramsDict[paramKey] = dict;
-    [self.paramsDict setObject:dict forKey:paramKey];
+    [self.paramsMap setObject:dict forKey:paramKey];
     
 }
 
@@ -119,8 +118,7 @@
     }
   
     NSString *paramKey = [NSString stringWithFormat:@"%@%@",strategyKey,self.paramKey];
-    NSDictionary *param = [self.paramsDict objectForKey:paramKey];
-    //self.paramsDict[paramKey];
+    NSDictionary *param = [self.paramsMap objectForKey:paramKey];
     if (param) {
         [invocation setArgument:&param atIndex:2];
     }
@@ -134,15 +132,14 @@
 - (void)removeStrategy:(NSString *)key{
     self.strategyDict[key] = nil;
     NSString *paramKey = [NSString stringWithFormat:@"%@%@",key,self.paramKey];
-//    self.paramsDict[paramKey] = nil;
-    [self.paramsDict removeObjectForKey:paramKey];
+    [self.paramsMap removeObjectForKey:paramKey];
 }
 
 /**
  移除所有策略
  */
 - (void)removeAllStrategy{
-    [self.paramsDict removeAllObjects];
+    [self.paramsMap removeAllObjects];
     [self.strategyDict removeAllObjects];
 }
 
