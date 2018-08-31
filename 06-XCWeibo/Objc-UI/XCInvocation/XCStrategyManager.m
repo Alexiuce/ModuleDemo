@@ -15,7 +15,7 @@
 // 参数字典: 当执行对象nil时,清除对应的参数
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSDictionary *>*paramsDict;
 
-@property (nonatomic, strong) NSMutableDictionary *targetDict;
+@property (nonatomic, strong) NSMapTable *targetMap;
 
 // 参数key键
 @property (nonatomic, copy) NSString *paramKey;
@@ -33,7 +33,7 @@
         __instance = [[self alloc]init];
         __instance.strategyDict = [NSMutableDictionary dictionaryWithCapacity:10];
         __instance.paramsDict = [NSMutableDictionary dictionaryWithCapacity:10];
-        __instance.targetDict = [NSMutableDictionary dictionaryWithCapacity:10];
+        __instance.targetMap = [NSMapTable weakToWeakObjectsMapTable];
         __instance.paramKey = @"__instance_param_key";
     });
     return __instance;
@@ -93,7 +93,7 @@
     invocation.target = weakTarget;
     invocation.selector = action;
     self.strategyDict[key] = invocation;
-    self.targetDict[key] = weakTarget;
+    [self.targetMap setObject:sender forKey:key];
     
     // 空的dict,直接返回
     if (dict.allKeys.count < 1) {  return;}
@@ -111,7 +111,11 @@
     NSInvocation *invocation = self.strategyDict[strategyKey];
 
     if (invocation == nil ) {return;}
-    if (self.targetDict[strategyKey] == nil) {return;}
+    
+    if ([self.targetMap objectForKey:strategyKey] == nil) {
+        [self removeStrategy:strategyKey];
+        return;
+    }
   
     NSString *paramKey = [NSString stringWithFormat:@"%@%@",strategyKey,self.paramKey];
     NSDictionary *param = self.paramsDict[paramKey];
