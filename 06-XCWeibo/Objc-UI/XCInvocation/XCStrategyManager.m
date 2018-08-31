@@ -13,7 +13,7 @@
 // 策略字典: key -> NSInvocation
 @property (nonatomic, strong)NSMutableDictionary <NSString*, NSInvocation*>*strategyDict;
 // 参数字典: 当执行对象nil时,清除对应的参数
-@property (nonatomic, strong) NSMapTable <NSString *, NSDictionary *>*paramsMap;
+@property (nonatomic, strong) NSMapTable <NSString *, NSDictionary *>*paramsDict;
 
 @property (nonatomic, strong) NSMapTable *targetMap;
 
@@ -32,8 +32,8 @@
     dispatch_once(&onceToken, ^{
         __instance = [[self alloc]init];
         __instance.strategyDict = [NSMutableDictionary dictionaryWithCapacity:10];
-        __instance.paramsMap = [NSMapTable weakToWeakObjectsMapTable];;
-        __instance.targetMap = [NSMapTable weakToWeakObjectsMapTable];
+        __instance.paramsDict = [NSMapTable strongToStrongObjectsMapTable];
+        __instance.targetMap = [NSMapTable strongToStrongObjectsMapTable];
         __instance.paramKey = @"__instance_param_key";
     });
     return __instance;
@@ -99,7 +99,8 @@
     if (dict.allKeys.count < 1) {  return;}
     
     NSString *paramKey = [NSString stringWithFormat:@"%@%@",key,self.paramKey];
-    [self.paramsMap setObject:dict forKey:paramKey];
+//    self.paramsDict[paramKey] = dict;
+    [self.paramsDict setObject:dict forKey:paramKey];
     
 }
 
@@ -118,7 +119,8 @@
     }
   
     NSString *paramKey = [NSString stringWithFormat:@"%@%@",strategyKey,self.paramKey];
-    NSDictionary *param = [self.paramsMap objectForKey:paramKey];
+    NSDictionary *param = [self.paramsDict objectForKey:paramKey];
+    //self.paramsDict[paramKey];
     if (param) {
         [invocation setArgument:&param atIndex:2];
     }
@@ -131,15 +133,16 @@
  */
 - (void)removeStrategy:(NSString *)key{
     self.strategyDict[key] = nil;
-     NSString *paramKey = [NSString stringWithFormat:@"%@%@",key,self.paramKey];
-    [self.paramsMap removeObjectForKey:paramKey];
+    NSString *paramKey = [NSString stringWithFormat:@"%@%@",key,self.paramKey];
+//    self.paramsDict[paramKey] = nil;
+    [self.paramsDict removeObjectForKey:paramKey];
 }
 
 /**
  移除所有策略
  */
 - (void)removeAllStrategy{
-    [self.paramsMap removeAllObjects];
+    [self.paramsDict removeAllObjects];
     [self.strategyDict removeAllObjects];
 }
 
