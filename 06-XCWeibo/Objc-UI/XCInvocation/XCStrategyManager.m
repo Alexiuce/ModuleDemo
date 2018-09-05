@@ -31,7 +31,7 @@
     dispatch_once(&onceToken, ^{
         __instance = [[self alloc]init];
         __instance.strategyDict = [NSMutableDictionary dictionaryWithCapacity:10];
-        __instance.paramsMap = [NSMapTable strongToStrongObjectsMapTable];
+        __instance.paramsMap = [NSMapTable strongToWeakObjectsMapTable];
         __instance.targetMap = [NSMapTable weakToWeakObjectsMapTable];
         __instance.paramKey = @"__instance_param_key";
     });
