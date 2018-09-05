@@ -17,9 +17,10 @@
 - (instancetype)init{
     if (self = [super init]) {
         _name = @"alex";
+        __weak typeof(self) weak = self;
         [XCStrategyManager appendStrategy:@"eat" target:self selector:@selector(eatLaunch)];
         
-        [XCStrategyManager appendStrategy:@"showName" target:self selector:@selector(showName:) param:@{@"name":self}];
+        [XCStrategyManager appendStrategy:@"showName" target:self selector:@selector(showName:) param:@{@"name":weak}];
         [XCStrategyManager appendStrategy:@"fetch" target:self selector:@selector(fetchInfo)];
     }
     return self;
