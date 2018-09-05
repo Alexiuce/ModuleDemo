@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *dict = @{@"a":@"good"};
+    NSDictionary *dict = @{@"a":@"good",@"b": self};
    
     [XCStrategyManager appendStrategy:@"test_s" target:self selector:@selector(testStrategy123:) param:dict];
     
