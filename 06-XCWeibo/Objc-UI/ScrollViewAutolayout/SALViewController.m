@@ -10,6 +10,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface SALViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *pictureView;
 
 @end
 
@@ -17,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *imageUrl = @"http://t2.hddhhn.com/uploads/tu/201610/198/scx30045vxd.jpg";
+    [_pictureView sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
 
 }
 

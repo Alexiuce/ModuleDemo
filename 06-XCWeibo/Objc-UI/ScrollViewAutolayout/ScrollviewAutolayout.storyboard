@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +30,7 @@
         <!--View Controller-->
         <scene sceneID="DLl-Qc-nMa">
             <objects>
-                <viewController id="dWn-nZ-Nsq" sceneMemberID="viewController">
+                <viewController id="dWn-nZ-Nsq" customClass="SALViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jlq-Tb-KoM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +40,21 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIc-TO-jai">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="d25-KK-CfD">
+                                                <rect key="frame" x="8" y="46" width="359" height="188"/>
+                                                <color key="backgroundColor" red="1" green="0.61568627450000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" secondItem="d25-KK-CfD" secondAttribute="width" multiplier="359:685" id="u42-IH-tGd"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="d25-KK-CfD" secondAttribute="trailing" constant="8" id="AYC-zN-dVR"/>
+                                            <constraint firstItem="d25-KK-CfD" firstAttribute="top" secondItem="XIc-TO-jai" secondAttribute="top" constant="46" id="mWD-j0-Vcd"/>
+                                            <constraint firstItem="d25-KK-CfD" firstAttribute="leading" secondItem="XIc-TO-jai" secondAttribute="leading" constant="8" id="wyA-Pp-5VW"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -62,6 +77,9 @@
                         <viewLayoutGuide key="safeArea" id="x2h-vF-a91"/>
                     </view>
                     <navigationItem key="navigationItem" id="W0J-9a-air"/>
+                    <connections>
+                        <outlet property="pictureView" destination="d25-KK-CfD" id="ivl-sH-ovq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFg-2h-zRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
