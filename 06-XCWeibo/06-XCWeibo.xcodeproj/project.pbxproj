@@ -115,6 +115,8 @@
 		D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E996212A3D8000D8969F /* XCSearchViewController.m */; };
 		D8A0E99A212A448E00D8969F /* XCSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E999212A448E00D8969F /* XCSearchTableViewController.m */; };
 		D8AECB62212CDFDE00BB7FE6 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AECB61212CDFDE00BB7FE6 /* NSString+MD5.m */; };
+		D8B29A222141F81F00A605BD /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B29A212141F81F00A605BD /* StackViewController.m */; };
+		D8B29A242141F82C00A605BD /* Stack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B29A232141F82C00A605BD /* Stack.storyboard */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
 		D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DE091A2123B337005F1214 /* CycleView.storyboard */; };
 		D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DE091D2123B38D005F1214 /* XCCycleController.m */; };
@@ -341,6 +343,9 @@
 		D8A0E999212A448E00D8969F /* XCSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSearchTableViewController.m; sourceTree = "<group>"; };
 		D8AECB60212CDFDE00BB7FE6 /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		D8AECB61212CDFDE00BB7FE6 /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		D8B29A202141F81F00A605BD /* StackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
+		D8B29A212141F81F00A605BD /* StackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
+		D8B29A232141F82C00A605BD /* Stack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stack.storyboard; sourceTree = "<group>"; };
 		D8DE091A2123B337005F1214 /* CycleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CycleView.storyboard; sourceTree = "<group>"; };
 		D8DE091C2123B38D005F1214 /* XCCycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCycleController.h; sourceTree = "<group>"; };
 		D8DE091D2123B38D005F1214 /* XCCycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCycleController.m; sourceTree = "<group>"; };
@@ -658,6 +663,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8B29A1F2141F80000A605BD /* StackView */,
 				D8E4ADCA2140A7180004BBB0 /* ScrollViewAutolayout */,
 				D84375AF213692FB00A19364 /* XCInvocation */,
 				D88DAE03212E30EB00F0B5DA /* XCVideoPlayer */,
@@ -794,6 +800,16 @@
 				D8AECB61212CDFDE00BB7FE6 /* NSString+MD5.m */,
 			);
 			path = XCSerachBar;
+			sourceTree = "<group>";
+		};
+		D8B29A1F2141F80000A605BD /* StackView */ = {
+			isa = PBXGroup;
+			children = (
+				D8B29A202141F81F00A605BD /* StackViewController.h */,
+				D8B29A212141F81F00A605BD /* StackViewController.m */,
+				D8B29A232141F82C00A605BD /* Stack.storyboard */,
+			);
+			path = StackView;
 			sourceTree = "<group>";
 		};
 		D8DE09192123B31E005F1214 /* CycleScrollView */ = {
@@ -1000,6 +1016,7 @@
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
 				D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */,
 				D88D70B121158D4A00858B62 /* AnimationDemo.storyboard in Resources */,
+				D8B29A242141F82C00A605BD /* Stack.storyboard in Resources */,
 				D8A0E994212A3D6600D8969F /* XCSearch.storyboard in Resources */,
 				D87E62D72124F664007C5D35 /* TableVideo.storyboard in Resources */,
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
@@ -1151,6 +1168,7 @@
 				D84C41B02126A5C90036E778 /* NavTopViewController.m in Sources */,
 				D87799122111383F00611EF1 /* MASConstraintMaker.m in Sources */,
 				D877990F2111383F00611EF1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				D8B29A222141F81F00A605BD /* StackViewController.m in Sources */,
 				D87799162111383F00611EF1 /* MASConstraint.m in Sources */,
 				D87799112111383F00611EF1 /* MASCompositeConstraint.m in Sources */,
 				D81E9F5521324B0400040000 /* UINavigationController+ZFPlayerRotation.m in Sources */,
