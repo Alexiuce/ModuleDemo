@@ -117,6 +117,8 @@
 		D8AECB62212CDFDE00BB7FE6 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AECB61212CDFDE00BB7FE6 /* NSString+MD5.m */; };
 		D8B29A222141F81F00A605BD /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B29A212141F81F00A605BD /* StackViewController.m */; };
 		D8B29A242141F82C00A605BD /* Stack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B29A232141F82C00A605BD /* Stack.storyboard */; };
+		D8B29A2921422B4C00A605BD /* Network.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B29A2821422B4C00A605BD /* Network.storyboard */; };
+		D8B29A2C21422B5D00A605BD /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B29A2B21422B5D00A605BD /* NetworkViewController.m */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
 		D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DE091A2123B337005F1214 /* CycleView.storyboard */; };
 		D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DE091D2123B38D005F1214 /* XCCycleController.m */; };
@@ -346,6 +348,9 @@
 		D8B29A202141F81F00A605BD /* StackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
 		D8B29A212141F81F00A605BD /* StackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
 		D8B29A232141F82C00A605BD /* Stack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stack.storyboard; sourceTree = "<group>"; };
+		D8B29A2821422B4C00A605BD /* Network.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Network.storyboard; sourceTree = "<group>"; };
+		D8B29A2A21422B5D00A605BD /* NetworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkViewController.h; sourceTree = "<group>"; };
+		D8B29A2B21422B5D00A605BD /* NetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
 		D8DE091A2123B337005F1214 /* CycleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CycleView.storyboard; sourceTree = "<group>"; };
 		D8DE091C2123B38D005F1214 /* XCCycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCycleController.h; sourceTree = "<group>"; };
 		D8DE091D2123B38D005F1214 /* XCCycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCycleController.m; sourceTree = "<group>"; };
@@ -663,6 +668,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8B29A2721422B2800A605BD /* NetworkModule */,
 				D8B29A1F2141F80000A605BD /* StackView */,
 				D8E4ADCA2140A7180004BBB0 /* ScrollViewAutolayout */,
 				D84375AF213692FB00A19364 /* XCInvocation */,
@@ -810,6 +816,16 @@
 				D8B29A232141F82C00A605BD /* Stack.storyboard */,
 			);
 			path = StackView;
+			sourceTree = "<group>";
+		};
+		D8B29A2721422B2800A605BD /* NetworkModule */ = {
+			isa = PBXGroup;
+			children = (
+				D8B29A2821422B4C00A605BD /* Network.storyboard */,
+				D8B29A2A21422B5D00A605BD /* NetworkViewController.h */,
+				D8B29A2B21422B5D00A605BD /* NetworkViewController.m */,
+			);
+			path = NetworkModule;
 			sourceTree = "<group>";
 		};
 		D8DE09192123B31E005F1214 /* CycleScrollView */ = {
@@ -1023,6 +1039,7 @@
 				D88DAE05212E310900F0B5DA /* VideoPlayer.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
+				D8B29A2921422B4C00A605BD /* Network.storyboard in Resources */,
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
 				D8E4ADCC2140A7400004BBB0 /* ScrollviewAutolayout.storyboard in Resources */,
 				D81E9F5D21324B0400040000 /* SuperPlayer.bundle in Resources */,
@@ -1185,6 +1202,7 @@
 				D8EF846C211012C40095F19E /* PHViewController.m in Sources */,
 				D86CEF4220FF4121009BB583 /* main.m in Sources */,
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
+				D8B29A2C21422B5D00A605BD /* NetworkViewController.m in Sources */,
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
 				D88DAE08212E312300F0B5DA /* XCVideoViewController.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
