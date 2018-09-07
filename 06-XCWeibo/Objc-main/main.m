@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "XCFileManager.h"
 
 
 int my_sum(int a,int b);
@@ -19,19 +19,25 @@ typedef void(^Tasklock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        NSDecimalNumberHandler *handle = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:2 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
-        
-        NSDecimalNumber *dn = [[NSDecimalNumber alloc]initWithFloat:12.451632];
-        NSDecimalNumber *result = [dn decimalNumberByRoundingAccordingToBehavior:handle];
-        NSLog(@"%f",result.floatValue);
-        
-        NSLocale *lo = [NSLocale currentLocale];
-        NSDecimal d = result.decimalValue;
-        NSLog(@"%@",NSDecimalString(&d, lo));
-        
+        XCFileManager *m = [XCFileManager shareManager];
+        [m listAllFilesInPath:@"/Users/Alexcai/GitApp/ModuleDemo/06-XCWeibo"];
         
     }
     return 0;
+}
+
+
+void decimalExample(){
+    NSDecimalNumberHandler *handle = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:2 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
+    
+    NSDecimalNumber *dn = [[NSDecimalNumber alloc]initWithFloat:12.451632];
+    NSDecimalNumber *result = [dn decimalNumberByRoundingAccordingToBehavior:handle];
+    NSLog(@"%f",result.floatValue);
+    
+    NSLocale *lo = [NSLocale currentLocale];
+    NSDecimal d = result.decimalValue;
+    NSLog(@"%@",NSDecimalString(&d, lo));
+    
 }
 
 void suspendDemo(){
