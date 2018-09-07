@@ -43,12 +43,10 @@
         if (flag) {
             [self listAllFilesInPath:fullPath];
         }
-        NSLog(@"---------------------------------------");
-        
     }
     
     [result enumerateObjectsUsingBlock:^(NSString *fileName, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"%lu : %@", (unsigned long)idx,fileName);
+        NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
     }];
     return result;
 }
