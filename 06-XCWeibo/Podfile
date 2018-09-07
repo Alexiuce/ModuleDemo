@@ -22,6 +22,7 @@ target 'Objc-UI' do
   pod 'AFNetworking'
   pod 'SDWebImage'
   pod 'MBProgressHUD'
+  pod 'PromiseKit', '~> 6.0'
   
 #  pod 'Hyphenate'
 
