@@ -12,6 +12,7 @@
 @interface XCFileManager()
 
 @property (nonatomic, strong)NSFileManager *fileManager;
+@property (nonatomic, strong) NSArray <NSString *>*fileSuffixs;
 
 @end
 
@@ -23,6 +24,7 @@
     static XCFileManager * __shareInstance = nil;
     dispatch_once(&onceToken, ^{
         __shareInstance = [[self alloc] init];
+        __shareInstance.fileSuffixs = @[@"",@".m",@".h"];
     });
     return __shareInstance;
 }
@@ -34,8 +36,20 @@
  */
 - (NSArray *)listAllFilesInPath:(NSString *)targetPath{
    
-    NSArray <NSString *>*result = [self.fileManager contentsOfDirectoryAtPath:targetPath error:nil];
+    return [self listAllFilesInPath:targetPath fileType:DOT_STAR];
+}
 
+/**
+ 列出指定目录下的指定类型的所有文件
+ 
+ @param targetPath 指定的目录
+ @param type 指定的类型
+ @return 返回搜索的结果数组
+ */
+- (NSArray *)listAllFilesInPath:(NSString *)targetPath fileType:(XCFileType)type{
+    
+    NSArray <NSString *>*result = [self.fileManager contentsOfDirectoryAtPath:targetPath error:nil];
+    
     for (NSString *fileName in result) {
         BOOL flag = YES;
         NSString *fullPath = [targetPath stringByAppendingPathComponent:fileName];
@@ -43,17 +57,20 @@
         if (flag) {
             [self listAllFilesInPath:fullPath];
         }else{
-            NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
+            // 判断文件类型是否匹配
+            if (type & DOT_STAR) {
+                NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
+            }else if ((type & DOT_M) && [fileName hasSuffix:self.fileSuffixs[type & DOT_M]]){
+                NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
+            }
+            
         }
     }
     
-    if (result.count) {
-        NSLog(@"-----------");        
-    }
+    NSLog(@"-----------");
+
     return result;
 }
-
-
 
 
 

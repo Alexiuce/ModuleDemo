@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         XCFileManager *m = [XCFileManager shareManager];
-        [m listAllFilesInPath:@"/Users/Alexcai/GitApp/ModuleDemo/06-XCWeibo"];
+        [m listAllFilesInPath:@"/Users/Alexcai/GitApp/ModuleDemo/06-XCWeibo" fileType:DOT_H];
         
     }
     return 0;
