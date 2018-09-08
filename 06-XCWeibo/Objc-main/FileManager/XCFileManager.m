@@ -42,12 +42,14 @@
         [self.fileManager fileExistsAtPath:fullPath isDirectory:&flag];
         if (flag) {
             [self listAllFilesInPath:fullPath];
+        }else{
+            NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
         }
     }
     
-    [result enumerateObjectsUsingBlock:^(NSString *fileName, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
-    }];
+    if (result.count) {
+        NSLog(@"-----------");        
+    }
     return result;
 }
 
