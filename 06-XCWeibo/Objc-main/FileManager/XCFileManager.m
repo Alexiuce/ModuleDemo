@@ -12,7 +12,6 @@
 @interface XCFileManager()
 
 @property (nonatomic, strong)NSFileManager *fileManager;
-@property (nonatomic, strong) NSArray <NSString *>*fileSuffixs;
 
 @end
 
@@ -24,7 +23,7 @@
     static XCFileManager * __shareInstance = nil;
     dispatch_once(&onceToken, ^{
         __shareInstance = [[self alloc] init];
-        __shareInstance.fileSuffixs = @[@"",@".m",@".h"];
+    
     });
     return __shareInstance;
 }
@@ -55,12 +54,14 @@
         NSString *fullPath = [targetPath stringByAppendingPathComponent:fileName];
         [self.fileManager fileExistsAtPath:fullPath isDirectory:&flag];
         if (flag) {
-            [self listAllFilesInPath:fullPath];
+            [self listAllFilesInPath:fullPath fileType:type];
         }else{
             // 判断文件类型是否匹配
             if (type & DOT_STAR) {
                 NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
-            }else if ((type & DOT_M) && [fileName hasSuffix:self.fileSuffixs[type & DOT_M]]){
+            }else if ((type & DOT_M) && [fileName hasSuffix:@".m"]){
+                NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
+            }else if ((type & DOT_H) && [fileName hasSuffix:@".h"]){
                 NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
             }
             
