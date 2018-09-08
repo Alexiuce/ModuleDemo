@@ -67,8 +67,7 @@
             
         }
     }
-    
-    NSLog(@"-----------");
+
 
     return result;
 }
