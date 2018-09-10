@@ -45,7 +45,7 @@
  @param type 指定的类型
  @return 返回搜索的结果数组
  */
-- (NSArray *)listAllFilesInPath:(NSString *)targetPath fileType:(XCFileType)type{
+- (NSArray <NSString *>*)listAllFilesInPath:(NSString *)targetPath fileType:(XCFileType)type{
     
     NSArray <NSString *>*result = [self.fileManager contentsOfDirectoryAtPath:targetPath error:nil];
     
@@ -56,7 +56,7 @@
         NSString *fullPath = [targetPath stringByAppendingPathComponent:fileName];
         [self.fileManager fileExistsAtPath:fullPath isDirectory:&flag];
         if (flag) {
-           [filesArray addObject:[self listAllFilesInPath:fullPath fileType:type]];
+           [filesArray addObjectsFromArray:[self listAllFilesInPath:fullPath fileType:type]];
         }else{
             // 判断文件类型是否匹配
             if (type & DOT_STAR) {
