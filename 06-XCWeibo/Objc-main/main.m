@@ -24,6 +24,8 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"%@",result);
         
+//        NSFileHandle *fileHandle = 
+        
     }
     return 0;
 }
