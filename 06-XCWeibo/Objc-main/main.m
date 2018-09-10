@@ -19,12 +19,22 @@ typedef void(^Tasklock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        XCFileManager *m = [XCFileManager shareManager];
-        NSArray * result = [m listAllFilesInPath:@"/Users/Alexcai/GitApp/ModuleDemo/06-XCWeibo" fileType:DOT_H | DOT_M];
+//        XCFileManager *m = [XCFileManager shareManager];
+//        NSArray * result = [m listAllFilesInPath:@"/Users/Alexcai/GitApp/ModuleDemo/06-XCWeibo" fileType:DOT_H | DOT_M];
+//
+//        NSLog(@"%@",result);
+       
+        NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
+        // 读取完成执行block
+        [fileHandle setReadabilityHandler:^(NSFileHandle * _Nonnull handle) {
+            NSLog(@"----handle == %@",handle);
+        }];
+        NSData *readData = [fileHandle readDataOfLength:50];
         
-        NSLog(@"%@",result);
+        NSString *readText = [[NSString alloc]initWithData:readData encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",readText);
         
-//        NSFileHandle *fileHandle = 
+        
         
     }
     return 0;
