@@ -10,4 +10,8 @@
 
 @interface TagCollectionViewCell : UICollectionViewCell
 
+
+@property (weak, nonatomic) IBOutlet UILabel *customLabel;
+
+
 @end

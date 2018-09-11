@@ -8,6 +8,18 @@
 
 #import "TagCollectionViewCell.h"
 
+@interface TagCollectionViewCell()
+
+
+@end
+
+
 @implementation TagCollectionViewCell
+
+
+- (void)setSelected:(BOOL)selected{
+    [super setSelected:selected];
+    NSLog(@"%@",selected ? @"Selected":@"Deselected");
+}
 
 @end

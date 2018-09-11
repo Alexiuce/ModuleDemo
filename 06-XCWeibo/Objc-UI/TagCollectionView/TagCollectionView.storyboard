@@ -58,17 +58,21 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="CVN-6S-nDq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="0.61568627450000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="O2a-bl-PXV" firstAttribute="top" secondItem="i3s-QI-Wdc" secondAttribute="top" constant="6" id="5FU-W8-0Un"/>
                                             <constraint firstItem="O2a-bl-PXV" firstAttribute="leading" secondItem="i3s-QI-Wdc" secondAttribute="leading" constant="11" id="USh-7M-H1S"/>
                                             <constraint firstAttribute="trailing" secondItem="O2a-bl-PXV" secondAttribute="trailing" constant="12" id="UZF-ev-kXO"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="customLabel" destination="O2a-bl-PXV" id="W94-z6-kSe"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
