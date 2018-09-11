@@ -8,6 +8,7 @@
 
 #import "TagViewController.h"
 #import "TagCollectionViewCell.h"
+#import "MYFlowLayout.h"
 
 @interface TagViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -17,16 +18,31 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (nonatomic, strong) MYFlowLayout *flowLayout;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeight;
+
 @end
 
 @implementation TagViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titles = @[@"王者荣耀",@"QQ (234)",@"LoL (100)",@"王个大者(345345345111)",@"特别农药 (234)",@"各位辛苦农药 (100)"];
+    _titles = @[@"王者荣耀",@"QQ (234)",@"LoL (100)",@"王个大者(345345345111)",@"特别农药 (234)",@"各位辛苦农药 (100)",@"王个大者(345345345111)",@"特别农药 (2341)",@"各位辛苦农药 (1009)"];
     
-    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-    flowLayout.minimumInteritemSpacing = 0;
+    self.collectionView.collectionViewLayout = self.flowLayout;
+    
+    __block CGFloat caclWith = 0;
+    __block int row = 1;  // 默认行数;
+    [self.titlesWidths enumerateObjectsUsingBlock:^(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        caclWith += obj.floatValue + 25;
+        if (caclWith > [UIScreen mainScreen].bounds.size.width) {
+            row ++;
+            caclWith = obj.floatValue;
+        }
+    }];
+    
+    self.collectionViewHeight.constant = (row * 30) + (row - 1) * 10;
     
 }
 
@@ -87,8 +103,13 @@
         
     }
     return [titleWidths copy];
-    
-    
+}
+
+- (MYFlowLayout *)flowLayout{
+    if (_flowLayout == nil) {
+        _flowLayout = [[MYFlowLayout alloc]init];
+    }
+    return _flowLayout;
 }
 
 @end
