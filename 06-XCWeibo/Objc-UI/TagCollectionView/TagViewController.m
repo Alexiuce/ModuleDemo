@@ -8,7 +8,7 @@
 
 #import "TagViewController.h"
 
-@interface TagViewController ()
+@interface TagViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @end
 
@@ -20,5 +20,16 @@
 }
 
 
+
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 10;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tagCell" forIndexPath:indexPath];
+    
+    return cell;
+}
 
 @end
