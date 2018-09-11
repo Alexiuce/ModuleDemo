@@ -65,6 +65,8 @@
 		D844C0A321474201008BF86A /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0A221474201008BF86A /* TagViewController.m */; };
 		D844C0A621474401008BF86A /* TagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0A521474401008BF86A /* TagCollectionViewCell.m */; };
 		D844C0A921475059008BF86A /* MYFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0A821475059008BF86A /* MYFlowLayout.m */; };
+		D844C0AD21478159008BF86A /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0AC21478159008BF86A /* MoveCollectionViewController.m */; };
+		D844C0B021478505008BF86A /* MoveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0AF21478505008BF86A /* MoveCollectionViewCell.m */; };
 		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
@@ -258,6 +260,10 @@
 		D844C0A521474401008BF86A /* TagCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagCollectionViewCell.m; sourceTree = "<group>"; };
 		D844C0A721475059008BF86A /* MYFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYFlowLayout.h; sourceTree = "<group>"; };
 		D844C0A821475059008BF86A /* MYFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYFlowLayout.m; sourceTree = "<group>"; };
+		D844C0AB21478159008BF86A /* MoveCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
+		D844C0AC21478159008BF86A /* MoveCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
+		D844C0AE21478505008BF86A /* MoveCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewCell.h; sourceTree = "<group>"; };
+		D844C0AF21478505008BF86A /* MoveCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewCell.m; sourceTree = "<group>"; };
 		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
 		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
 		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
@@ -656,6 +662,10 @@
 				D844C0A521474401008BF86A /* TagCollectionViewCell.m */,
 				D844C0A721475059008BF86A /* MYFlowLayout.h */,
 				D844C0A821475059008BF86A /* MYFlowLayout.m */,
+				D844C0AB21478159008BF86A /* MoveCollectionViewController.h */,
+				D844C0AC21478159008BF86A /* MoveCollectionViewController.m */,
+				D844C0AE21478505008BF86A /* MoveCollectionViewCell.h */,
+				D844C0AF21478505008BF86A /* MoveCollectionViewCell.m */,
 			);
 			path = TagCollectionView;
 			sourceTree = "<group>";
@@ -1199,6 +1209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87E62DA2124F6A4007C5D35 /* TableVideoController.m in Sources */,
+				D844C0B021478505008BF86A /* MoveCollectionViewCell.m in Sources */,
 				D844C0A621474401008BF86A /* TagCollectionViewCell.m in Sources */,
 				D84375B72136944300A19364 /* XCStrategyManager.m in Sources */,
 				D81E9F6021324B0400040000 /* SuperPlayerControlView.m in Sources */,
@@ -1221,6 +1232,7 @@
 				D84BD01021210766003C819F /* SDYStrategyBottomInputView.m in Sources */,
 				D81E9F6321324B0400040000 /* CFDanmaku.m in Sources */,
 				D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */,
+				D844C0AD21478159008BF86A /* MoveCollectionViewController.m in Sources */,
 				D81E9F5C21324B0400040000 /* SuperPlayerModel.m in Sources */,
 				D877991B211139D600611EF1 /* PageScrollerView.m in Sources */,
 				D87798F02111383500611EF1 /* WMPageController.m in Sources */,
