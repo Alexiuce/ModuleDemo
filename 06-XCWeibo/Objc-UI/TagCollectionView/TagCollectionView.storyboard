@@ -90,6 +90,9 @@
                         <viewLayoutGuide key="safeArea" id="tkA-yM-mHo"/>
                     </view>
                     <navigationItem key="navigationItem" id="PpK-aM-iXw"/>
+                    <connections>
+                        <outlet property="collectionView" destination="AMQ-8y-8JW" id="AB9-8X-ZaA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkp-1d-cBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

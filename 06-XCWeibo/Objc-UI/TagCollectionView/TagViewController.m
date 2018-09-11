@@ -13,13 +13,21 @@
 
 @property (nonatomic, strong) NSArray  <NSString *>*titles;
 
+@property (nonatomic, strong) NSArray <NSNumber *>*titlesWidths;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation TagViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titles = @[@"王者荣耀",@"QQ (234)",@"LoL (100)",@"王个大者(111)",@"特别农药 (234)",@"各位辛苦农药 (100)"];
+    _titles = @[@"王者荣耀",@"QQ (234)",@"LoL (100)",@"王个大者(345345345111)",@"特别农药 (234)",@"各位辛苦农药 (100)"];
+    
+    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+    flowLayout.minimumInteritemSpacing = 0;
+    
 }
 
 
@@ -39,9 +47,8 @@
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSString * containString = _titles[indexPath.item];
-    CGFloat width = [self getWidthWithText:containString height:30 font:13];
-    return CGSizeMake( width +25, 30.0f);
+   
+    return CGSizeMake( self.titlesWidths[indexPath.item].floatValue + 25, 30.0f);
 
 }
 
@@ -66,5 +73,22 @@
     
 }
 
+
+#pragma mark - lazy getter method
+
+- (NSArray <NSNumber *>*)titlesWidths{
+    
+    NSMutableArray *titleWidths = [NSMutableArray arrayWithCapacity:10];
+    if (_titlesWidths == nil) {
+        [_titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            CGFloat width = [self getWidthWithText:obj height:30 font:13];
+            [titleWidths addObject:@(width)];
+        }];
+        
+    }
+    return [titleWidths copy];
+    
+    
+}
 
 @end
