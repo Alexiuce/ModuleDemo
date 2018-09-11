@@ -8,34 +8,11 @@
 
 #import "MYFlowLayout.h"
 
-
-
-
-@interface UICollectionViewLayoutAttributes (LeftAligned)
-
-- (void)leftAlignFrameWithSectionInset:(UIEdgeInsets)sectionInset;
-
-@end
-
-@implementation UICollectionViewLayoutAttributes (LeftAligned)
-
-- (void)leftAlignFrameWithSectionInset:(UIEdgeInsets)sectionInset
-{
-    CGRect frame = self.frame;
-    frame.origin.x = sectionInset.left;
-    self.frame = frame;
-}
-
-@end
-
-
-
-
 @implementation MYFlowLayout
 
 - (instancetype)init{
     if (self = [super init]) {
-        self.minimumInteritemSpacing = 0;
+        self.minimumInteritemSpacing = 10;
     }
     return self;
 }
@@ -61,7 +38,7 @@
     CGFloat layoutWidth = CGRectGetWidth(self.collectionView.frame) - sectionInset.left - sectionInset.right;
     
     if (isFirstItemInSection) {
-        [currentItemAttributes leftAlignFrameWithSectionInset:sectionInset];
+        [self leftAlignFrame:currentItemAttributes sectionInset:sectionInset];
         return currentItemAttributes;
     }
     
@@ -79,7 +56,7 @@
     
     if (isFirstItemInRow) {
         // make sure the first item on a line is left aligned
-        [currentItemAttributes leftAlignFrameWithSectionInset:sectionInset];
+        [self leftAlignFrame:currentItemAttributes sectionInset:sectionInset];
         return currentItemAttributes;
     }
     
@@ -110,5 +87,11 @@
 }
 
 
+
+- (void)leftAlignFrame:(UICollectionViewLayoutAttributes *)layoutAttributes sectionInset:(UIEdgeInsets)sectionInset{
+    CGRect frame = layoutAttributes.frame;
+    frame.origin.x = sectionInset.left;
+    layoutAttributes.frame = frame;
+}
 
 @end
