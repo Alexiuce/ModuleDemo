@@ -20,6 +20,7 @@
 - (void)setSelected:(BOOL)selected{
     [super setSelected:selected];
     NSLog(@"%@",selected ? @"Selected":@"Deselected");
+    self.customLabel.backgroundColor = selected ? UIColor.whiteColor : UIColor.yellowColor;
 }
 
 @end
