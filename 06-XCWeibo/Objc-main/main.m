@@ -19,20 +19,26 @@ typedef void(^Tasklock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-//        XCFileManager *m = [XCFileManager shareManager];
-//        NSArray * result = [m listAllFilesInPath:@"/Users/Alexcai/GitApp/ModuleDemo/06-XCWeibo" fileType:DOT_H | DOT_M];
+        XCFileManager *m = [XCFileManager shareManager];
+        NSArray * result = [m listAllFilesInPath:@"/Users/Alexcai/SDY/newSDYiOS" fileType:DOT_STAR];
+
+        NSLog(@"%@",result);
 //
-//        NSLog(@"%@",result);
-       
-        NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
-        // 读取完成执行block
-        [fileHandle setReadabilityHandler:^(NSFileHandle * _Nonnull handle) {
-            NSLog(@"----handle == %@",handle);
+        [result enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj hasSuffix:@"\""]){
+                NSLog(@"====%@",obj);
+            }
         }];
-        NSData *readData = [fileHandle readDataOfLength:50];
-        
-        NSString *readText = [[NSString alloc]initWithData:readData encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",readText);
+       
+//        NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
+//        // 读取完成执行block
+//        [fileHandle setReadabilityHandler:^(NSFileHandle * _Nonnull handle) {
+//            NSLog(@"----handle == %@",handle);
+//        }];
+//        NSData *readData = [fileHandle readDataOfLength:50];
+//
+//        NSString *readText = [[NSString alloc]initWithData:readData encoding:NSUTF8StringEncoding];
+//        NSLog(@"%@",readText);
         
         
         

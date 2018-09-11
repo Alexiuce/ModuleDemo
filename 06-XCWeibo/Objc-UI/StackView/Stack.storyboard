@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -104,41 +103,56 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <wkWebView contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="CKz-h0-ABJ">
-                                <rect key="frame" x="16" y="511.5" width="343" height="128"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZR-ou-lAa">
+                                <rect key="frame" x="16" y="543" width="343" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="20.5" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg9-3d-TwT">
+                                        <rect key="frame" x="0.0" y="0.0" width="259" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="20.5" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="829-jF-tC3">
+                                        <rect key="frame" x="259" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="20.5" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBL-ir-e6y">
+                                        <rect key="frame" x="301" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="koJ-hC-fTt" firstAttribute="top" secondItem="1Qs-Ts-asl" secondAttribute="bottom" constant="15" id="7Rj-Dr-3eU"/>
+                            <constraint firstItem="5LV-hR-BLK" firstAttribute="trailing" secondItem="rZR-ou-lAa" secondAttribute="trailing" constant="16" id="91k-ca-48s"/>
                             <constraint firstItem="tTA-FU-JRV" firstAttribute="top" secondItem="5LV-hR-BLK" secondAttribute="top" constant="99" id="BzO-Jl-cUX"/>
                             <constraint firstItem="5LV-hR-BLK" firstAttribute="trailing" secondItem="1Qs-Ts-asl" secondAttribute="trailing" id="DVV-V0-vaJ"/>
+                            <constraint firstItem="rZR-ou-lAa" firstAttribute="top" secondItem="GXV-I9-J8u" secondAttribute="bottom" constant="61" id="HdN-te-Loc"/>
                             <constraint firstItem="1Qs-Ts-asl" firstAttribute="top" secondItem="5LV-hR-BLK" secondAttribute="top" id="HpK-Js-88X"/>
                             <constraint firstItem="GXV-I9-J8u" firstAttribute="leading" secondItem="5LV-hR-BLK" secondAttribute="leading" constant="16" id="Oeg-OZ-XVW"/>
                             <constraint firstItem="1Qs-Ts-asl" firstAttribute="leading" secondItem="5LV-hR-BLK" secondAttribute="leading" id="Wz2-vS-c4D"/>
-                            <constraint firstItem="5LV-hR-BLK" firstAttribute="trailing" secondItem="CKz-h0-ABJ" secondAttribute="trailing" constant="16" id="YZQ-KX-7BB"/>
-                            <constraint firstItem="CKz-h0-ABJ" firstAttribute="leading" secondItem="5LV-hR-BLK" secondAttribute="leading" constant="16" id="e7B-DO-PgU"/>
                             <constraint firstItem="5LV-hR-BLK" firstAttribute="trailing" secondItem="tTA-FU-JRV" secondAttribute="trailing" constant="26" id="r0M-Z7-kpa"/>
+                            <constraint firstItem="rZR-ou-lAa" firstAttribute="leading" secondItem="5LV-hR-BLK" secondAttribute="leading" constant="16" id="wk9-MY-9B6"/>
                             <constraint firstItem="koJ-hC-fTt" firstAttribute="leading" secondItem="5LV-hR-BLK" secondAttribute="leading" constant="15" id="wkL-w5-LEB"/>
                             <constraint firstItem="GXV-I9-J8u" firstAttribute="top" secondItem="koJ-hC-fTt" secondAttribute="bottom" constant="30" id="xL3-ep-HU2"/>
-                            <constraint firstItem="CKz-h0-ABJ" firstAttribute="top" secondItem="GXV-I9-J8u" secondAttribute="bottom" constant="29.5" id="yen-Zz-fUd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5LV-hR-BLK"/>
                     </view>
                     <navigationItem key="navigationItem" id="AYX-ez-2NQ"/>
                     <connections>
-                        <outlet property="bottomWebView" destination="CKz-h0-ABJ" id="ePe-oJ-jYm"/>
                         <outlet property="iconLabel" destination="isM-S7-7PZ" id="nEB-Cz-ZKj"/>
                         <outlet property="iconPictureView" destination="gqw-Gu-37i" id="Jx9-mk-eDR"/>
                         <outlet property="leftStackView" destination="koJ-hC-fTt" id="clG-v1-oqW"/>
                         <outlet property="nameLabel" destination="R8v-bL-shr" id="b3L-Mg-eiX"/>
                         <outlet property="topPicture" destination="1Qs-Ts-asl" id="aQQ-QR-SGM"/>
                         <outlet property="webView" destination="0PM-l2-qIG" id="zZr-L6-ngt"/>
+                        <outletCollection property="lastStackLabel" destination="829-jF-tC3" id="Rl2-Xr-L7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0i8-GC-7xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
