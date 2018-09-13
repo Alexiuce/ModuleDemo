@@ -57,7 +57,7 @@ UICollectionViewDelegateFlowLayout>
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(self.cellWidths[indexPath.item].floatValue, self.rowHeight);
+    return CGSizeMake(self.cellWidths[indexPath.item].floatValue + 20, self.rowHeight);
 }
 
 #pragma mark privated method
@@ -81,6 +81,24 @@ UICollectionViewDelegateFlowLayout>
     
 }
 
+- (void)setupViewHeight{
+    // 计算自身的视图高度
+    __block CGFloat caclWith = 0;
+    __block int row = 1;  // 默认行数;
+    [self.cellWidths enumerateObjectsUsingBlock:^(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        caclWith += obj.floatValue + self.tagMargin;
+        if (caclWith > self.maxRowWidth) {
+            row ++;
+            caclWith = obj.floatValue;
+        }
+    }];
+    NSLog(@"%f",caclWith);
+    
+    CGFloat height = (row * self.rowHeight) + (row - 1) * self.rowMargin;
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
+    [self.collectionView reloadData];
+}
+
 #pragma mark - setter method
 
 - (void)setTagTitles:(NSArray<NSString *> *)tagTitles{
@@ -91,32 +109,30 @@ UICollectionViewDelegateFlowLayout>
         CGFloat width = [self getWidthWithText:obj height:self.rowHeight font:self.fontSize];
         [self.cellWidths addObject:@(width)];
     }];
-    // 计算自身的视图高度
     
-    __block CGFloat caclWith = 0;
-    __block int row = 1;  // 默认行数;
-    [self.cellWidths enumerateObjectsUsingBlock:^(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        caclWith += obj.floatValue + 25;
-        if (caclWith > [UIScreen mainScreen].bounds.size.width) {
-            row ++;
-            caclWith = obj.floatValue;
-        }
-    }];
-    
-     CGFloat height = (row * self.rowHeight) + (row - 1) * 10;
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
-    
-    
-    [self.collectionView reloadData];
+    [self setupViewHeight];
 }
 
-
+- (void)setFontSize:(CGFloat)fontSize{
+    _fontSize = fontSize;
+    [self setupViewHeight];
+}
+- (void)setRowHeight:(CGFloat)rowHeight{
+    _rowHeight = rowHeight;
+    [self setupViewHeight];
+}
+- (void)setTagMargin:(CGFloat)tagMargin{
+    _tagMargin = tagMargin;
+    self.flowLayout.minimumLineSpacing = tagMargin;
+     [self setupViewHeight];
+}
 
 #pragma mark - lazy getter
 
 - (UICollectionView *)collectionView{
     if (_collectionView == nil) {
         self.flowLayout = [[XCTagViewFlowLayout alloc]init];
+        self.flowLayout.minimumLineSpacing = 0;
         _collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:self.flowLayout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
@@ -125,6 +141,11 @@ UICollectionViewDelegateFlowLayout>
     }
     return _collectionView;
 }
-
+- (CGFloat)maxRowWidth{
+    if (_maxRowWidth == 0) {
+        _maxRowWidth = [UIScreen mainScreen].bounds.size.width;
+    }
+    return _maxRowWidth;
+}
 
 @end

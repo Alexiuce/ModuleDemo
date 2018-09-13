@@ -9,12 +9,7 @@
 #import "XCTagViewFlowLayout.h"
 
 @implementation XCTagViewFlowLayout
-- (instancetype)init{
-    if (self = [super init]) {
-        self.minimumInteritemSpacing = 10;
-    }
-    return self;
-}
+
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     NSArray *originalAttributes = [super layoutAttributesForElementsInRect:rect];

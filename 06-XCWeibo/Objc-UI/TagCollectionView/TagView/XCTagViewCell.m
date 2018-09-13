@@ -13,13 +13,15 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self.contentView addSubview:self.textLabel];
+        self.contentView.backgroundColor = UIColor.redColor;
+        self.textLabel.backgroundColor = UIColor.orangeColor;
     }
     return self;
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    self.textLabel.frame = self.contentView.bounds;
+    self.textLabel.frame = CGRectInset(self.contentView.bounds, 10, 10);
 }
 
 
