@@ -13,6 +13,9 @@
 
 @interface XCTagView : UIView
 
-@property (nonatomic, strong) NSArray <NSString *>*tagTitles;
+@property (nonatomic, strong) NSArray <NSString *>*tagTitles;  // tag标签数组;
+@property (nonatomic, assign) CGFloat rowHeight;   // 行高;
+@property (nonatomic, assign) CGFloat fontSize;   // 字体大小;
+
 
 @end

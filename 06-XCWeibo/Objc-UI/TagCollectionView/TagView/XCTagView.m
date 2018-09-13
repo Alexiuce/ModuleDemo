@@ -8,11 +8,20 @@
 
 #import "XCTagView.h"
 #import "XCTagViewFlowLayout.h"
+#import "XCTagViewCell.h"
 
-@interface XCTagView()<UICollectionViewDataSource,UICollectionViewDelegate>
+
+static NSString *const ReusedKey = @"XC_TAG_CELL";
+
+@interface XCTagView()<
+UICollectionViewDataSource,
+UICollectionViewDelegate,
+UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) XCTagViewFlowLayout *flowLayout;
+
+@property (nonatomic, strong) NSMutableArray <NSNumber *>*cellWidths; // 保存每个cell 的宽度;
 
 
 @end
@@ -37,11 +46,64 @@
     return self.tagTitles.count;
 }
 
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    XCTagViewCell *tagCell = [collectionView dequeueReusableCellWithReuseIdentifier:ReusedKey forIndexPath:indexPath];
+    return tagCell;
+}
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(self.cellWidths[indexPath.item].floatValue, self.rowHeight);
+}
 
+#pragma mark privated method
 
+- (CGFloat)getWidthWithText:(NSString *)text height:(CGFloat)height font:(CGFloat)font{
+    //加上判断，防止传nil等不符合的值，导致程序奔溃
+    if (text == nil || [text isEqualToString:@""]){
+        return 0.0f;
+    }
+    if (font <= 0){
+        font = 13;
+    }
+    if (height < 0){
+        height = 0;
+    }
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, height)
+                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                  attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]}
+                                     context:nil];
+    return rect.size.width;
+    
+}
 
+#pragma mark - setter method
 
+- (void)setTagTitles:(NSArray<NSString *> *)tagTitles{
+    _tagTitles = tagTitles;
+    // 计算每个item 宽度,保存到数组中
+    _cellWidths = [NSMutableArray arrayWithCapacity:tagTitles.count];
+    [tagTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CGFloat width = [self getWidthWithText:obj height:self.rowHeight font:self.fontSize];
+        [self.cellWidths addObject:@(width)];
+    }];
+    // 计算自身的视图高度
+    
+    __block CGFloat caclWith = 0;
+    __block int row = 1;  // 默认行数;
+    [self.cellWidths enumerateObjectsUsingBlock:^(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        caclWith += obj.floatValue + 25;
+        if (caclWith > [UIScreen mainScreen].bounds.size.width) {
+            row ++;
+            caclWith = obj.floatValue;
+        }
+    }];
+    
+     CGFloat height = (row * self.rowHeight) + (row - 1) * 10;
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
+    
+    
+    [self.collectionView reloadData];
+}
 
 #pragma mark - lazy getter
 
