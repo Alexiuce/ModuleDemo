@@ -31,6 +31,8 @@ UICollectionViewDelegateFlowLayout>
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self addSubview:self.collectionView];
+        self.backgroundColor = UIColor.whiteColor;
+        self.collectionView.backgroundColor = UIColor.whiteColor;
     }
     return self;
 }
@@ -48,6 +50,9 @@ UICollectionViewDelegateFlowLayout>
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     XCTagViewCell *tagCell = [collectionView dequeueReusableCellWithReuseIdentifier:ReusedKey forIndexPath:indexPath];
+    
+    tagCell.textLabel.text = self.tagTitles[indexPath.item];
+    tagCell.textLabel.font = [UIFont systemFontOfSize:self.fontSize];
     return tagCell;
 }
 
@@ -105,13 +110,21 @@ UICollectionViewDelegateFlowLayout>
     [self.collectionView reloadData];
 }
 
+
+
 #pragma mark - lazy getter
 
 - (UICollectionView *)collectionView{
     if (_collectionView == nil) {
         self.flowLayout = [[XCTagViewFlowLayout alloc]init];
         _collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:self.flowLayout];
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        [_collectionView registerClass:[XCTagViewCell class] forCellWithReuseIdentifier:ReusedKey];
+        _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     }
     return _collectionView;
 }
+
+
 @end
