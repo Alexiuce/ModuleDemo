@@ -30,32 +30,11 @@ int main(int argc, const char * argv[]) {
 //            }
 //        }];
        
+    
+
+        
         NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
-        // 读取完成执行block
-        [fileHandle setReadabilityHandler:^(NSFileHandle * _Nonnull handle) {
-            NSLog(@"----handle == %@",handle);
-        }];
-//        NSData *readData = [fileHandle readDataOfLength:50];
-//
-//        NSString *readText = [[NSString alloc]initWithData:readData encoding:NSUTF8StringEncoding];
-//        NSLog(@"%@",readText);
-        
-        NSData *readyData = fileHandle.availableData;
-        NSLog(@"%zd",readyData.length);
-        NSString *availableText = [[NSString alloc]initWithData:readyData encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",availableText);
-        [fileHandle closeFile];
-        
-        
-        NSFileHandle *writeHandle = [NSFileHandle fileHandleForWritingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
-        
-//        [writeHandle seekToEndOfFile]; // 定位文件末尾;
-        NSData *writeData = [@"this is a end text for coding..." dataUsingEncoding:NSUTF8StringEncoding];
-        [writeHandle writeData:writeData];
-        [writeHandle closeFile];
-        
-        
-        
+        [fileHandle readToEndOfFileInBackgroundAndNotify];
         
         
     }

@@ -62,35 +62,6 @@
             [filesArray addObject:name];
         }
     }
-
-     return [filesArray copy];
-    /** 下面是自己实现的方法 (弃用),采用上面系统提供的API  */
-//    NSArray <NSString *>*result = [self.fileManager contentsOfDirectoryAtPath:targetPath error:nil];
-//
-//    NSMutableArray <NSString *>*filesArray = [NSMutableArray arrayWithCapacity:10];
-//
-//    for (NSString *fileName in result) {
-//        BOOL flag = YES;
-//        NSString *fullPath = [targetPath stringByAppendingPathComponent:fileName];
-//        [self.fileManager fileExistsAtPath:fullPath isDirectory:&flag];
-//        if (flag) {
-//           [filesArray addObjectsFromArray:[self listAllFilesInPath:fullPath fileType:type]];
-//        }else{
-//            // 判断文件类型是否匹配
-//            if (type & DOT_STAR) {
-//                NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
-//                [filesArray addObject:fileName];
-//            }else if ((type & DOT_M) && [fileName hasSuffix:@".m"]){
-//                NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
-//                 [filesArray addObject:fileName];
-//            }else if ((type & DOT_H) && [fileName hasSuffix:@".h"]){
-//                NSLog(@"%@  >>>>> %@",targetPath.lastPathComponent, fileName);
-//                 [filesArray addObject:fileName];
-//            }
-//        }
-//    }
-
-
     return [filesArray copy];
 }
 
