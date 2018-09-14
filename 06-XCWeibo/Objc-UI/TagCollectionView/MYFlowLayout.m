@@ -90,7 +90,7 @@
 
 - (void)leftAlignFrame:(UICollectionViewLayoutAttributes *)layoutAttributes sectionInset:(UIEdgeInsets)sectionInset{
     CGRect frame = layoutAttributes.frame;
-    frame.origin.x = sectionInset.left;
+    frame.origin.x = sectionInset.left + 10;
     layoutAttributes.frame = frame;
 }
 
