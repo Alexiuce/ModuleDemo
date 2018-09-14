@@ -25,6 +25,7 @@
     [self.view addSubview:tagView];
     tagView.rowHeight = 30;
     tagView.fontSize = 13;
+    tagView.tagMargin = 30;
 
 }
 

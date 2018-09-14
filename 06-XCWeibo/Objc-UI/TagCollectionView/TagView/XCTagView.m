@@ -92,8 +92,8 @@ UICollectionViewDelegateFlowLayout>
             caclWith = obj.floatValue;
         }
     }];
-    NSLog(@"%f",caclWith);
-    
+   
+    NSLog(@"%d",row);
     CGFloat height = (row * self.rowHeight) + (row - 1) * self.rowMargin;
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
     [self.collectionView reloadData];
@@ -123,7 +123,7 @@ UICollectionViewDelegateFlowLayout>
 }
 - (void)setTagMargin:(CGFloat)tagMargin{
     _tagMargin = tagMargin;
-    self.flowLayout.minimumLineSpacing = tagMargin;
+    self.flowLayout.minimumInteritemSpacing = tagMargin;
      [self setupViewHeight];
 }
 
