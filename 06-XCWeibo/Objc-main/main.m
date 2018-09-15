@@ -19,7 +19,7 @@ typedef void(^Tasklock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-//        XCFileManager *m = [XCFileManager shareManager];
+        XCFileManager *m = [XCFileManager shareManager];
 //        NSArray * result = [m listAllFilesInPath:@"/Users/Alexcai/SDY/newSDYiOS" fileType:DOT_STAR];
 //
 //        NSLog(@"%@",result);
@@ -29,9 +29,8 @@ int main(int argc, const char * argv[]) {
 //                NSLog(@"====%@",obj);
 //            }
 //        }];
-       
-    
-
+        
+        [NSNotificationCenter.defaultCenter addObserver:m selector:@selector(testReadFile:) name:NSFileHandleReadCompletionNotification object:nil];
         
         NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
         [fileHandle readToEndOfFileInBackgroundAndNotify];

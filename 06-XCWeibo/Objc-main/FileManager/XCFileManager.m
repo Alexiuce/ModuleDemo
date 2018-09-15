@@ -28,6 +28,10 @@
     return __shareInstance;
 }
 
+- (void)testReadFile:(NSNotification *)notification{
+    NSLog(@"%@",notification);
+}
+
 /**
  列出指定目录的下的所有文件
  

@@ -21,6 +21,8 @@ typedef NS_OPTIONS(NSUInteger, XCFileType){
 + (instancetype)shareManager;
 
 
+- (void)testReadFile:(NSNotification *)notification;
+
 /**
  列出指定目录的下的所有文件
 
