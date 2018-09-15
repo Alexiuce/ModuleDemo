@@ -28,6 +28,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
+    [fileHandle readToEndOfFileInBackgroundAndNotify];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleReadFileNotification:) name:NSFileHandleReadToEndOfFileCompletionNotification object:nil];
+
+    
+    
+    
     _titles = @[@"王者荣耀",@"QQ (234)",@"LoL (100)",@"王个大者(345345345111)",@"特别农药 (234)",@"各位辛苦农药 (100)",@"王个大者(345345345111)",@"特别农药 (2341)",@"各位辛苦农药 (1009)"];
     
     self.collectionView.collectionViewLayout = self.flowLayout;
@@ -46,7 +55,10 @@
     
 }
 
-
+#pragma mark - Notification handle
+- (void)handleReadFileNotification:(NSNotification *)noti{
+    NSLog(@"%@",NSThread.currentThread);
+}
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
