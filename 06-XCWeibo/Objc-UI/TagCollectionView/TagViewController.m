@@ -29,10 +29,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /** 下面这段代码不会触发 file*/
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        NSPort *port = [[NSPort alloc]init];
+        
+        NSLog(@"dispatch endter");
+        NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
+        [fileHandle readToEndOfFileInBackgroundAndNotify];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleReadFileNotification:) name:NSFileHandleReadToEndOfFileCompletionNotification object:nil];
+    });
     
-    NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
-    [fileHandle readToEndOfFileInBackgroundAndNotify];
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleReadFileNotification:) name:NSFileHandleReadToEndOfFileCompletionNotification object:nil];
 
     
     
