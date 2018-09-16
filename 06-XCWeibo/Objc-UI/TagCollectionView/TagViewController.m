@@ -31,12 +31,12 @@
     
     /** 下面这段代码不会触发 file*/
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        NSPort *port = [[NSPort alloc]init];
-        
-        NSLog(@"dispatch endter");
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleReadFileNotification:) name:NSFileHandleReadToEndOfFileCompletionNotification object:nil];
+        NSLog(@"dispatch endter  %@",NSThread.currentThread);
         NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
         [fileHandle readToEndOfFileInBackgroundAndNotify];
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleReadFileNotification:) name:NSFileHandleReadToEndOfFileCompletionNotification object:nil];
+        // 异步线程读取文件需要使用活动的runloop
+        [NSRunLoop.currentRunLoop run];
     });
     
 
