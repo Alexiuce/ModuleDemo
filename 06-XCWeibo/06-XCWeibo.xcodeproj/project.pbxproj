@@ -87,6 +87,7 @@
 		D86CEF4220FF4121009BB583 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF4120FF4121009BB583 /* main.m */; };
 		D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF4620FF415F009BB583 /* HelloView.xib */; };
 		D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF4920FF417C009BB583 /* HelloView.m */; };
+		D8771910214F27EA0087DEC5 /* XCResponseChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */; };
 		D87798F02111383500611EF1 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87798E52111383500611EF1 /* WMPageController.m */; };
 		D87798F12111383500611EF1 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D87798EB2111383500611EF1 /* WMMenuItem.m */; };
 		D87798F22111383500611EF1 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87798EC2111383500611EF1 /* WMScrollView.m */; };
@@ -301,6 +302,9 @@
 		D86CEF4620FF415F009BB583 /* HelloView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloView.xib; sourceTree = "<group>"; };
 		D86CEF4820FF417C009BB583 /* HelloView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloView.h; sourceTree = "<group>"; };
 		D86CEF4920FF417C009BB583 /* HelloView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloView.m; sourceTree = "<group>"; };
+		D877190D214F27440087DEC5 /* XCResponseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseProtocol.h; sourceTree = "<group>"; };
+		D877190E214F27EA0087DEC5 /* XCResponseChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseChainManager.h; sourceTree = "<group>"; };
+		D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCResponseChainManager.m; sourceTree = "<group>"; };
 		D87798E52111383500611EF1 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
 		D87798E72111383500611EF1 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
 		D87798E82111383500611EF1 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
@@ -644,6 +648,7 @@
 		D8382B552128E9350086512E /* Objc-main */ = {
 			isa = PBXGroup;
 			children = (
+				D877190C214F271C0087DEC5 /* ResponseChain */,
 				D8B29A3121423B8100A605BD /* FileManager */,
 				D8382B562128E9350086512E /* main.m */,
 			);
@@ -751,6 +756,16 @@
 				D86CEF4120FF4121009BB583 /* main.m */,
 			);
 			path = "Objc-UI";
+			sourceTree = "<group>";
+		};
+		D877190C214F271C0087DEC5 /* ResponseChain */ = {
+			isa = PBXGroup;
+			children = (
+				D877190D214F27440087DEC5 /* XCResponseProtocol.h */,
+				D877190E214F27EA0087DEC5 /* XCResponseChainManager.h */,
+				D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */,
+			);
+			path = ResponseChain;
 			sourceTree = "<group>";
 		};
 		D87798E42111383500611EF1 /* WMPageController */ = {
@@ -1227,6 +1242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8771910214F27EA0087DEC5 /* XCResponseChainManager.m in Sources */,
 				D8B29A3421423BBF00A605BD /* XCFileManager.m in Sources */,
 				D8382B572128E9350086512E /* main.m in Sources */,
 			);

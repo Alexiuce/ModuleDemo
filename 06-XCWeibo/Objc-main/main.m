@@ -19,27 +19,30 @@ typedef void(^Tasklock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        XCFileManager *m = [XCFileManager shareManager];
-//        NSArray * result = [m listAllFilesInPath:@"/Users/Alexcai/SDY/newSDYiOS" fileType:DOT_STAR];
-//
-//        NSLog(@"%@",result);
-////
-//        [result enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            if ([obj hasSuffix:@"\""]){
-//                NSLog(@"====%@",obj);
-//            }
-//        }];
-        
-        [NSNotificationCenter.defaultCenter addObserver:m selector:@selector(testReadFile:) name:NSFileHandleReadCompletionNotification object:nil];
-        
-        NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
-        [fileHandle readToEndOfFileInBackgroundAndNotify];
+ 
         
         
     }
     return 0;
 }
 
+void main_filehandler_test(){
+    XCFileManager *m = [XCFileManager shareManager];
+    //        NSArray * result = [m listAllFilesInPath:@"/Users/Alexcai/SDY/newSDYiOS" fileType:DOT_STAR];
+    //
+    //        NSLog(@"%@",result);
+    ////
+    //        [result enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    //            if ([obj hasSuffix:@"\""]){
+    //                NSLog(@"====%@",obj);
+    //            }
+    //        }];
+    
+    [NSNotificationCenter.defaultCenter addObserver:m selector:@selector(testReadFile:) name:NSFileHandleReadCompletionNotification object:nil];
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
+    [fileHandle readToEndOfFileInBackgroundAndNotify];
+}
 
 void decimalExample(){
     NSDecimalNumberHandler *handle = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:2 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];

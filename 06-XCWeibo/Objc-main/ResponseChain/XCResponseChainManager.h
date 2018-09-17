@@ -1,0 +1,17 @@
+//
+//  XCResponseChainManager.h
+//  Objc-main
+//
+//  Created by Alexcai on 2018/9/17.
+//  Copyright © 2018年 Alexcai. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "XCResponseProtocol.h"
+
+@interface XCResponseChainManager : NSObject<XCResponseProtocol>
+
+- (instancetype)addResponser:(id <XCResponseProtocol>)responser;
+
+
+@end
