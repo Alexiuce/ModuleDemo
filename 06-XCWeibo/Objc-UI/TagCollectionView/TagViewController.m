@@ -29,21 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /** 下面这段代码不会触发 file*/
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleReadFileNotification:) name:NSFileHandleReadToEndOfFileCompletionNotification object:nil];
-     
-        NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:@"/Users/Alexcai/Desktop/XCFileManager.m"];
-        [fileHandle readToEndOfFileInBackgroundAndNotify];
-        // 异步线程读取文件需要使用活动的runloop
-        [NSRunLoop.currentRunLoop run];
-        NSLog(@"after loop");
-    });
-    
-
-    
-    
-    
     _titles = @[@"王者荣耀",@"QQ (234)",@"LoL (100)",@"王个大者(345345345111)",@"特别农药 (234)",@"各位辛苦农药 (100)",@"王个大者(345345345111)",@"特别农药 (2341)",@"各位辛苦农药 (1009)"];
     
     self.collectionView.collectionViewLayout = self.flowLayout;
