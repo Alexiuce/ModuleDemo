@@ -31,6 +31,10 @@
 
 
 - (void)doSomething:(NSString *)thing responser:(id<XCResponseProtocol>)responser{
+    if (self.currentIndex == self.subResponsers.count) {return;}
+    id <XCResponseProtocol> resp = self.subResponsers[self.currentIndex];
+    self.currentIndex ++;
+    [resp doSomething:thing responser:self];
     
 }
 

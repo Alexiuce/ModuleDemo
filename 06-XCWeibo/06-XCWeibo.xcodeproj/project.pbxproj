@@ -88,6 +88,9 @@
 		D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86CEF4620FF415F009BB583 /* HelloView.xib */; };
 		D86CEF4A20FF417C009BB583 /* HelloView.m in Sources */ = {isa = PBXBuildFile; fileRef = D86CEF4920FF417C009BB583 /* HelloView.m */; };
 		D8771910214F27EA0087DEC5 /* XCResponseChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */; };
+		D8771913214F2B480087DEC5 /* OneResponser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8771912214F2B480087DEC5 /* OneResponser.m */; };
+		D8771916214F2B590087DEC5 /* TwoResponser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8771915214F2B590087DEC5 /* TwoResponser.m */; };
+		D8771919214F2B660087DEC5 /* ThirdResponser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8771918214F2B660087DEC5 /* ThirdResponser.m */; };
 		D87798F02111383500611EF1 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87798E52111383500611EF1 /* WMPageController.m */; };
 		D87798F12111383500611EF1 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D87798EB2111383500611EF1 /* WMMenuItem.m */; };
 		D87798F22111383500611EF1 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87798EC2111383500611EF1 /* WMScrollView.m */; };
@@ -305,6 +308,12 @@
 		D877190D214F27440087DEC5 /* XCResponseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseProtocol.h; sourceTree = "<group>"; };
 		D877190E214F27EA0087DEC5 /* XCResponseChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseChainManager.h; sourceTree = "<group>"; };
 		D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCResponseChainManager.m; sourceTree = "<group>"; };
+		D8771911214F2B480087DEC5 /* OneResponser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneResponser.h; sourceTree = "<group>"; };
+		D8771912214F2B480087DEC5 /* OneResponser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneResponser.m; sourceTree = "<group>"; };
+		D8771914214F2B590087DEC5 /* TwoResponser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoResponser.h; sourceTree = "<group>"; };
+		D8771915214F2B590087DEC5 /* TwoResponser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoResponser.m; sourceTree = "<group>"; };
+		D8771917214F2B660087DEC5 /* ThirdResponser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdResponser.h; sourceTree = "<group>"; };
+		D8771918214F2B660087DEC5 /* ThirdResponser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdResponser.m; sourceTree = "<group>"; };
 		D87798E52111383500611EF1 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
 		D87798E72111383500611EF1 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
 		D87798E82111383500611EF1 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
@@ -764,6 +773,12 @@
 				D877190D214F27440087DEC5 /* XCResponseProtocol.h */,
 				D877190E214F27EA0087DEC5 /* XCResponseChainManager.h */,
 				D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */,
+				D8771911214F2B480087DEC5 /* OneResponser.h */,
+				D8771912214F2B480087DEC5 /* OneResponser.m */,
+				D8771914214F2B590087DEC5 /* TwoResponser.h */,
+				D8771915214F2B590087DEC5 /* TwoResponser.m */,
+				D8771917214F2B660087DEC5 /* ThirdResponser.h */,
+				D8771918214F2B660087DEC5 /* ThirdResponser.m */,
 			);
 			path = ResponseChain;
 			sourceTree = "<group>";
@@ -1242,9 +1257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8771913214F2B480087DEC5 /* OneResponser.m in Sources */,
+				D8771916214F2B590087DEC5 /* TwoResponser.m in Sources */,
 				D8771910214F27EA0087DEC5 /* XCResponseChainManager.m in Sources */,
 				D8B29A3421423BBF00A605BD /* XCFileManager.m in Sources */,
 				D8382B572128E9350086512E /* main.m in Sources */,
+				D8771919214F2B660087DEC5 /* ThirdResponser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
