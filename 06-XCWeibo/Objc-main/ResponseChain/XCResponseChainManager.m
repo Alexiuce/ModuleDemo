@@ -8,7 +8,9 @@
 
 #import "XCResponseChainManager.h"
 
-@interface XCResponseChainManager()
+
+
+@interface XCResponseChainManager()<XCResponseProtocol>
 
 @property (nonatomic, strong) NSMutableArray *subResponsers;
 
@@ -29,6 +31,10 @@
 }
 
 
+- (void)doSomething:(NSString *)thing{
+    [self doSomething:thing responser:self];
+}
+
 
 - (void)doSomething:(NSString *)thing responser:(id<XCResponseProtocol>)responser{
     if (self.currentIndex == self.subResponsers.count) {return;}
@@ -37,10 +43,6 @@
     [resp doSomething:thing responser:self];
     
 }
-
-
-
-
 
 #pragma mark - lazy getter
 - (NSMutableArray *)subResponsers{

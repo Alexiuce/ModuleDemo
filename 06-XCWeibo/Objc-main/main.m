@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "XCFileManager.h"
+#import "XCResponseChainManager.h"
+#import "OneResponser.h"
+#import "TwoResponser.h"
+#import "ThirdResponser.h"
+
+
 
 
 int my_sum(int a,int b);
@@ -18,7 +24,13 @@ typedef void(^Tasklock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        XCResponseChainManager *chainManager = [[XCResponseChainManager alloc]init];
+        OneResponser *one = [OneResponser new];
+        TwoResponser *two = [TwoResponser new];
+        ThirdResponser *third = [ThirdResponser new];
+        [[[chainManager addResponser:one] addResponser:two]addResponser:third];
         
+        [chainManager doSomething:@"3"];
  
         
         
