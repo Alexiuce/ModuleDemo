@@ -40,8 +40,8 @@ void main_task_test(){
     
     NSTask *task = [[NSTask alloc]init];
     [task setLaunchPath:@"/bin/bash"];
-    task.arguments = @[@"-c",@"cd ~ && ls"];
-    
+//    task.arguments = @[@"-c",@"last | grep reboot"];  // 获取开始时间
+    task.arguments = @[@"-c", @"history"];
     NSPipe *pipe = [NSPipe pipe];
     [task setStandardOutput: pipe];
     NSFileHandle *file = [pipe fileHandleForReading];
