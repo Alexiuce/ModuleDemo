@@ -39,8 +39,8 @@ int main(int argc, const char * argv[]) {
 void main_task_test(){
     
     NSTask *task = [[NSTask alloc]init];
-    [task setLaunchPath:@"/bin/pwd"];
-    task.arguments = @[@"-L"];
+    [task setLaunchPath:@"/bin/bash"];
+    task.arguments = @[@"-c",@"cd ~ && ls"];
     
     NSPipe *pipe = [NSPipe pipe];
     [task setStandardOutput: pipe];
