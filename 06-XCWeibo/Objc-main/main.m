@@ -19,24 +19,53 @@
 int my_sum(int a,int b);
 void my_test(void);
 void my_float_4to5(void *);
+void main_task_test(void);
 
 typedef void(^Tasklock)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        XCResponseChainManager *chainManager = [[XCResponseChainManager alloc]init];
-        OneResponser *one = [OneResponser new];
-        TwoResponser *two = [TwoResponser new];
-        ThirdResponser *third = [ThirdResponser new];
-        [[[chainManager addResponser:one] addResponser:two]addResponser:third];
-        
-        [chainManager doSomething:@"3"];
- 
-        
+      
+       
+        main_task_test();
         
     }
     return 0;
 }
+
+
+#pragma mark - NSTask demo
+
+void main_task_test(){
+    
+    NSTask *task = [[NSTask alloc]init];
+    [task setLaunchPath:@"/bin/pwd"];
+    task.arguments = @[@"-L"];
+    
+    NSPipe *pipe = [NSPipe pipe];
+    [task setStandardOutput: pipe];
+    NSFileHandle *file = [pipe fileHandleForReading];
+    [task launch];
+    [task waitUntilExit];
+    
+    NSData *data =[file readDataToEndOfFile];
+    
+    NSString *string =[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+    NSLog (@"got\n%@", string);
+    
+}
+
+#pragma mark - 响应链demo
+void main_responseHandler_test(){
+    XCResponseChainManager *chainManager = [[XCResponseChainManager alloc]init];
+    OneResponser *one = [OneResponser new];
+    TwoResponser *two = [TwoResponser new];
+    ThirdResponser *third = [ThirdResponser new];
+    [[[chainManager addResponser:one] addResponser:two]addResponser:third];
+    
+    [chainManager doSomething:@"3"];
+}
+
 
 void main_filehandler_test(){
     XCFileManager *m = [XCFileManager shareManager];

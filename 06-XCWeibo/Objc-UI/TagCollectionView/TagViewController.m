@@ -29,6 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
+    
+    
     _titles = @[@"王者荣耀",@"QQ (234)",@"LoL (100)",@"王个大者(345345345111)",@"特别农药 (234)",@"各位辛苦农药 (100)",@"王个大者(345345345111)",@"特别农药 (2341)",@"各位辛苦农药 (1009)"];
     
     self.collectionView.collectionViewLayout = self.flowLayout;
