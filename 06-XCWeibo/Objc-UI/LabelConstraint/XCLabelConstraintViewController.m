@@ -11,9 +11,9 @@
 @interface XCLabelConstraintViewController ()
 
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *label3ToSuperLeftConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *label3ToSuperLeftConstraint;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *label3LeftMarginConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *label3LeftMarginConstraint;
 
 @end
 
