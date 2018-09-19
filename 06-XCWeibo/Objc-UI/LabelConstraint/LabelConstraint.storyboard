@@ -59,6 +59,7 @@
                                 <constraints>
                                     <constraint firstItem="alM-4M-eFi" firstAttribute="centerY" secondItem="cTm-Au-D36" secondAttribute="centerY" id="5ZR-3c-hqj"/>
                                     <constraint firstItem="alM-4M-eFi" firstAttribute="leading" secondItem="cTm-Au-D36" secondAttribute="trailing" constant="26" id="AB2-rE-4XS"/>
+                                    <constraint firstItem="alM-4M-eFi" firstAttribute="leading" secondItem="WwP-Ln-GUu" secondAttribute="leading" constant="189" id="CUN-7s-E27"/>
                                     <constraint firstItem="ooG-I9-1wU" firstAttribute="leading" secondItem="WwP-Ln-GUu" secondAttribute="leading" constant="28" id="DCi-Xy-oTE"/>
                                     <constraint firstAttribute="height" constant="128" id="FMu-ST-EUu"/>
                                     <constraint firstItem="cTm-Au-D36" firstAttribute="centerY" secondItem="ooG-I9-1wU" secondAttribute="centerY" id="KQ8-Fs-lfs"/>
@@ -66,16 +67,48 @@
                                     <constraint firstItem="cTm-Au-D36" firstAttribute="leading" secondItem="ooG-I9-1wU" secondAttribute="trailing" constant="33" id="bMt-im-bI8"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiH-yS-Lo9">
+                                <rect key="frame" x="282" y="374" width="77" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="5EZ-PB-JCj"/>
+                                    <constraint firstAttribute="height" constant="30" id="sez-nH-t5r"/>
+                                </constraints>
+                                <state key="normal" title="label3 还原"/>
+                                <connections>
+                                    <action selector="clickReset:" destination="vs2-AM-elw" eventType="touchUpInside" id="Ipw-8l-3aX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz0-0K-JgZ">
+                                <rect key="frame" x="16" y="374" width="129" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="WRE-jl-8BF"/>
+                                    <constraint firstAttribute="height" constant="30" id="mEd-FA-ALX"/>
+                                </constraints>
+                                <state key="normal" title="label3左对齐Super"/>
+                                <connections>
+                                    <action selector="clickLeft:" destination="vs2-AM-elw" eventType="touchUpInside" id="OJD-Af-lXU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="z2W-fX-uKG" firstAttribute="trailing" secondItem="NiH-yS-Lo9" secondAttribute="trailing" constant="16" id="7X0-M3-yiI"/>
                             <constraint firstItem="WwP-Ln-GUu" firstAttribute="top" secondItem="z2W-fX-uKG" secondAttribute="top" id="UjQ-VT-bp8"/>
                             <constraint firstItem="z2W-fX-uKG" firstAttribute="trailing" secondItem="WwP-Ln-GUu" secondAttribute="trailing" id="cmN-Y7-6A6"/>
+                            <constraint firstItem="gz0-0K-JgZ" firstAttribute="top" secondItem="WwP-Ln-GUu" secondAttribute="bottom" constant="182" id="kvb-No-aOx"/>
+                            <constraint firstItem="gz0-0K-JgZ" firstAttribute="leading" secondItem="z2W-fX-uKG" secondAttribute="leading" constant="16" id="rVC-yD-InB"/>
+                            <constraint firstItem="NiH-yS-Lo9" firstAttribute="top" secondItem="WwP-Ln-GUu" secondAttribute="bottom" constant="182" id="uIn-oO-RM7"/>
                             <constraint firstItem="WwP-Ln-GUu" firstAttribute="leading" secondItem="z2W-fX-uKG" secondAttribute="leading" id="wlP-gK-fKf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z2W-fX-uKG"/>
                     </view>
                     <navigationItem key="navigationItem" id="gkr-U1-bhn"/>
+                    <connections>
+                        <outlet property="label3LeftMarginConstraint" destination="AB2-rE-4XS" id="uY1-Do-8QE"/>
+                        <outlet property="label3ToSuperLeftConstraint" destination="CUN-7s-E27" id="wRq-Ye-bbz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP7-my-zRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

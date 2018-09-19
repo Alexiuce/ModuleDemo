@@ -10,6 +10,11 @@
 
 @interface XCLabelConstraintViewController ()
 
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *label3ToSuperLeftConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *label3LeftMarginConstraint;
+
 @end
 
 @implementation XCLabelConstraintViewController
@@ -19,19 +24,18 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)clickLeft:(UIButton *)sender {
+    [self.label3LeftMarginConstraint setActive:NO];
+    self.label3ToSuperLeftConstraint.constant = 16.0f;
+    [self.label3ToSuperLeftConstraint setActive:YES];
+    
 }
-*/
+- (IBAction)clickReset:(UIButton *)sender {
+    self.label3LeftMarginConstraint.constant = 26.0f;
+    [self.label3LeftMarginConstraint setActive:YES];
+//    self.label3ToSuperLeftConstraint.constant = 16.0f;
+    [self.label3ToSuperLeftConstraint setActive:NO];
+}
 
 @end
