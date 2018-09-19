@@ -51,7 +51,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alM-4M-eFi">
                                         <rect key="frame" x="189" y="54" width="52" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -106,6 +106,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="gkr-U1-bhn"/>
                     <connections>
+                        <outlet property="containerView" destination="WwP-Ln-GUu" id="lTz-bX-md5"/>
+                        <outlet property="l1" destination="ooG-I9-1wU" id="8L3-dW-yKE"/>
+                        <outlet property="l2" destination="cTm-Au-D36" id="wVW-Ln-jTc"/>
+                        <outlet property="l3" destination="alM-4M-eFi" id="LAp-gI-fb3"/>
                         <outlet property="label3LeftMarginConstraint" destination="AB2-rE-4XS" id="uY1-Do-8QE"/>
                         <outlet property="label3ToSuperLeftConstraint" destination="CUN-7s-E27" id="wRq-Ye-bbz"/>
                     </connections>
