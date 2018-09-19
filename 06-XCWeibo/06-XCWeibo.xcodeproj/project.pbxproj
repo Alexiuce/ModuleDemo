@@ -67,6 +67,8 @@
 		D844C0A921475059008BF86A /* MYFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0A821475059008BF86A /* MYFlowLayout.m */; };
 		D844C0AD21478159008BF86A /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0AC21478159008BF86A /* MoveCollectionViewController.m */; };
 		D844C0B021478505008BF86A /* MoveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0AF21478505008BF86A /* MoveCollectionViewCell.m */; };
+		D84726AC2151CA8D001E98A6 /* LabelConstraint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84726AB2151CA8D001E98A6 /* LabelConstraint.storyboard */; };
+		D84726AF2151CAA6001E98A6 /* XCLabelConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84726AE2151CAA6001E98A6 /* XCLabelConstraintViewController.m */; };
 		D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8497199212058D3007AA201 /* SDYUserTopView.xib */; };
 		D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D849719C212058F2007AA201 /* SDYUserTopView.m */; };
 		D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84BD00C21210756003C819F /* SDYStrategyBottomInputView.xib */; };
@@ -272,6 +274,9 @@
 		D844C0AC21478159008BF86A /* MoveCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
 		D844C0AE21478505008BF86A /* MoveCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewCell.h; sourceTree = "<group>"; };
 		D844C0AF21478505008BF86A /* MoveCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewCell.m; sourceTree = "<group>"; };
+		D84726AB2151CA8D001E98A6 /* LabelConstraint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LabelConstraint.storyboard; sourceTree = "<group>"; };
+		D84726AD2151CAA6001E98A6 /* XCLabelConstraintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCLabelConstraintViewController.h; sourceTree = "<group>"; };
+		D84726AE2151CAA6001E98A6 /* XCLabelConstraintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCLabelConstraintViewController.m; sourceTree = "<group>"; };
 		D8497199212058D3007AA201 /* SDYUserTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDYUserTopView.xib; sourceTree = "<group>"; };
 		D849719B212058F2007AA201 /* SDYUserTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDYUserTopView.h; sourceTree = "<group>"; };
 		D849719C212058F2007AA201 /* SDYUserTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDYUserTopView.m; sourceTree = "<group>"; };
@@ -699,6 +704,16 @@
 			path = TagCollectionView;
 			sourceTree = "<group>";
 		};
+		D84726AA2151CA71001E98A6 /* LabelConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				D84726AB2151CA8D001E98A6 /* LabelConstraint.storyboard */,
+				D84726AD2151CAA6001E98A6 /* XCLabelConstraintViewController.h */,
+				D84726AE2151CAA6001E98A6 /* XCLabelConstraintViewController.m */,
+			);
+			path = LabelConstraint;
+			sourceTree = "<group>";
+		};
 		D84C41AD2126A59B0036E778 /* NavigationBack */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,6 +754,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D84726AA2151CA71001E98A6 /* LabelConstraint */,
 				D844C09E214741C6008BF86A /* TagCollectionView */,
 				D8B29A2721422B2800A605BD /* NetworkModule */,
 				D8B29A1F2141F80000A605BD /* StackView */,
@@ -1148,6 +1164,7 @@
 				D81AA1ED21259F83008A887F /* XMSSliderView.xib in Resources */,
 				D81E9F5B21324B0400040000 /* README.md in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
+				D84726AC2151CA8D001E98A6 /* LabelConstraint.storyboard in Resources */,
 				D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */,
 				D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */,
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
@@ -1311,6 +1328,7 @@
 				D87799152111383F00611EF1 /* View+MASAdditions.m in Sources */,
 				D87799172111383F00611EF1 /* MASViewConstraint.m in Sources */,
 				D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */,
+				D84726AF2151CAA6001E98A6 /* XCLabelConstraintViewController.m in Sources */,
 				D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */,
 				D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */,
 				D82B003C212020300066C32E /* DetailViewController.m in Sources */,
