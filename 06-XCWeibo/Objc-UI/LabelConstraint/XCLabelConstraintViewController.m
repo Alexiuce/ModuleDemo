@@ -27,15 +27,25 @@
 
 - (IBAction)clickLeft:(UIButton *)sender {
     [self.label3LeftMarginConstraint setActive:NO];
-    self.label3ToSuperLeftConstraint.constant = 16.0f;
-    [self.label3ToSuperLeftConstraint setActive:YES];
+    
+    [UIView animateWithDuration:2 animations:^{
+        self.label3ToSuperLeftConstraint.constant = 16.0f;
+        [self.label3ToSuperLeftConstraint setActive:YES];
+        [self.view layoutIfNeeded];
+        
+    }];
     
 }
 - (IBAction)clickReset:(UIButton *)sender {
-    self.label3LeftMarginConstraint.constant = 26.0f;
-    [self.label3LeftMarginConstraint setActive:YES];
-//    self.label3ToSuperLeftConstraint.constant = 16.0f;
     [self.label3ToSuperLeftConstraint setActive:NO];
+    [UIView animateWithDuration:2 animations:^{
+      
+        [self.label3LeftMarginConstraint setActive:YES];
+       
+        [self.view layoutIfNeeded];
+        
+    }];
+
 }
 
 @end
