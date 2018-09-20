@@ -68,7 +68,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiH-yS-Lo9">
-                                <rect key="frame" x="282" y="374" width="77" height="30"/>
+                                <rect key="frame" x="282" y="217" width="77" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="5EZ-PB-JCj"/>
@@ -80,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz0-0K-JgZ">
-                                <rect key="frame" x="16" y="374" width="129" height="30"/>
+                                <rect key="frame" x="16" y="217" width="129" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="WRE-jl-8BF"/>
@@ -91,15 +91,29 @@
                                     <action selector="clickLeft:" destination="vs2-AM-elw" eventType="touchUpInside" id="OJD-Af-lXU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okt-rx-gaY">
+                                <rect key="frame" x="83" y="411" width="53" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om4-0f-et0">
+                                <rect key="frame" x="225" y="419" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="z2W-fX-uKG" firstAttribute="trailing" secondItem="NiH-yS-Lo9" secondAttribute="trailing" constant="16" id="7X0-M3-yiI"/>
                             <constraint firstItem="WwP-Ln-GUu" firstAttribute="top" secondItem="z2W-fX-uKG" secondAttribute="top" id="UjQ-VT-bp8"/>
                             <constraint firstItem="z2W-fX-uKG" firstAttribute="trailing" secondItem="WwP-Ln-GUu" secondAttribute="trailing" id="cmN-Y7-6A6"/>
-                            <constraint firstItem="gz0-0K-JgZ" firstAttribute="top" secondItem="WwP-Ln-GUu" secondAttribute="bottom" constant="182" id="kvb-No-aOx"/>
+                            <constraint firstItem="gz0-0K-JgZ" firstAttribute="top" secondItem="WwP-Ln-GUu" secondAttribute="bottom" constant="25" id="kvb-No-aOx"/>
                             <constraint firstItem="gz0-0K-JgZ" firstAttribute="leading" secondItem="z2W-fX-uKG" secondAttribute="leading" constant="16" id="rVC-yD-InB"/>
-                            <constraint firstItem="NiH-yS-Lo9" firstAttribute="top" secondItem="WwP-Ln-GUu" secondAttribute="bottom" constant="182" id="uIn-oO-RM7"/>
+                            <constraint firstItem="NiH-yS-Lo9" firstAttribute="top" secondItem="WwP-Ln-GUu" secondAttribute="bottom" constant="25" id="uIn-oO-RM7"/>
                             <constraint firstItem="WwP-Ln-GUu" firstAttribute="leading" secondItem="z2W-fX-uKG" secondAttribute="leading" id="wlP-gK-fKf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z2W-fX-uKG"/>
@@ -110,13 +124,15 @@
                         <outlet property="l1" destination="ooG-I9-1wU" id="8L3-dW-yKE"/>
                         <outlet property="l2" destination="cTm-Au-D36" id="wVW-Ln-jTc"/>
                         <outlet property="l3" destination="alM-4M-eFi" id="LAp-gI-fb3"/>
+                        <outlet property="l4" destination="Okt-rx-gaY" id="cqc-Ki-SlB"/>
+                        <outlet property="l5" destination="Om4-0f-et0" id="PRc-DN-4ps"/>
                         <outlet property="label3LeftMarginConstraint" destination="AB2-rE-4XS" id="uY1-Do-8QE"/>
                         <outlet property="label3ToSuperLeftConstraint" destination="CUN-7s-E27" id="wRq-Ye-bbz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP7-my-zRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-127" y="36"/>
+            <point key="canvasLocation" x="-127.2" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>
