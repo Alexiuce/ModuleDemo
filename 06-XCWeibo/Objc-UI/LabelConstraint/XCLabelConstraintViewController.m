@@ -45,13 +45,21 @@
     
     self.l4.translatesAutoresizingMaskIntoConstraints = NO;
     
-    
+    UIView *bgView = [UIView new];
+    bgView.backgroundColor = UIColor.redColor;
+    [self.view addSubview:bgView];
     
     [self.l4.topAnchor constraintEqualToAnchor:self.layoutGuide.topAnchor constant:20].active = YES;
     
     [self.l4.leftAnchor constraintEqualToAnchor:self.layoutGuide.leftAnchor].active = YES;
     [self.l5.bottomAnchor constraintEqualToAnchor:self.layoutGuide.bottomAnchor].active = YES;
     [self.l5.rightAnchor constraintEqualToAnchor:self.layoutGuide.rightAnchor].active = YES;
+    
+    [bgView.topAnchor constraintEqualToAnchor:self.layoutGuide.topAnchor].active = YES;
+    [bgView.leftAnchor constraintEqualToAnchor:self.layoutGuide.leftAnchor].active = YES;
+    [bgView.widthAnchor constraintEqualToAnchor:self.layoutGuide.widthAnchor].active = YES;
+    [bgView.heightAnchor constraintEqualToAnchor:self.layoutGuide.heightAnchor].active = YES;
+    
     
     
     
