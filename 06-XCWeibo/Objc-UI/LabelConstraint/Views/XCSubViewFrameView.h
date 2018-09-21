@@ -10,4 +10,11 @@
 
 @interface XCSubViewFrameView : UIView
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
+
+
++ (instancetype)xibView;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "XCLabelConstraintViewController.h"
+#import "XCSubViewFrameView.h"
 
 @interface XCLabelConstraintViewController ()
 
@@ -25,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *l4;
 @property (weak, nonatomic) IBOutlet UILabel *l5;
 
+@property (weak, nonatomic) IBOutlet UIView *bottomContainerView;
 
 @end
 
@@ -34,7 +36,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-  
+    XCSubViewFrameView *fv = [XCSubViewFrameView xibView];
+    [self.bottomContainerView addSubview:fv];
+    fv.frame = self.bottomContainerView.bounds;
+    
+    NSLog(@"%@",NSStringFromCGRect(fv.imgView.frame));
+    
+    
 }
 
 
