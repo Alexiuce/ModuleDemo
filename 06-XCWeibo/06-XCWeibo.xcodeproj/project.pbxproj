@@ -12,6 +12,8 @@
 		D810798720FC1EA0000E97CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798520FC1EA0000E97CA /* Main.storyboard */; };
 		D810798920FC1EA1000E97CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D810798820FC1EA1000E97CA /* Assets.xcassets */; };
 		D810798C20FC1EA1000E97CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798A20FC1EA1000E97CA /* LaunchScreen.storyboard */; };
+		D813D9532154703500DF3575 /* XCSubViewFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = D813D9522154703500DF3575 /* XCSubViewFrame.xib */; };
+		D813D9562154705A00DF3575 /* XCSubViewFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D813D9552154705A00DF3575 /* XCSubViewFrameView.m */; };
 		D818D079210AA24A0002C03E /* DemoMan.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D078210AA24A0002C03E /* DemoMan.m */; };
 		D818D07D210AB5890002C03E /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D07B210AB5890002C03E /* PersonViewController.m */; };
 		D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D818D07C210AB5890002C03E /* PersonViewController.xib */; };
@@ -178,6 +180,9 @@
 		D810798820FC1EA1000E97CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D810798B20FC1EA1000E97CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D810798D20FC1EA1000E97CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D813D9522154703500DF3575 /* XCSubViewFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCSubViewFrame.xib; sourceTree = "<group>"; };
+		D813D9542154705A00DF3575 /* XCSubViewFrameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSubViewFrameView.h; sourceTree = "<group>"; };
+		D813D9552154705A00DF3575 /* XCSubViewFrameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSubViewFrameView.m; sourceTree = "<group>"; };
 		D818D077210AA24A0002C03E /* DemoMan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMan.h; sourceTree = "<group>"; };
 		D818D078210AA24A0002C03E /* DemoMan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMan.m; sourceTree = "<group>"; };
 		D818D07A210AB5890002C03E /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
@@ -520,6 +525,16 @@
 			path = "06-XCWeibo";
 			sourceTree = "<group>";
 		};
+		D813D9512154700200DF3575 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D813D9522154703500DF3575 /* XCSubViewFrame.xib */,
+				D813D9542154705A00DF3575 /* XCSubViewFrameView.h */,
+				D813D9552154705A00DF3575 /* XCSubViewFrameView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D818D07F210ABA1B0002C03E /* TransitionAnimationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,6 +722,7 @@
 		D84726AA2151CA71001E98A6 /* LabelConstraint */ = {
 			isa = PBXGroup;
 			children = (
+				D813D9512154700200DF3575 /* Views */,
 				D84726AB2151CA8D001E98A6 /* LabelConstraint.storyboard */,
 				D84726AD2151CAA6001E98A6 /* XCLabelConstraintViewController.h */,
 				D84726AE2151CAA6001E98A6 /* XCLabelConstraintViewController.m */,
@@ -1177,6 +1193,7 @@
 				D88DAE05212E310900F0B5DA /* VideoPlayer.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
+				D813D9532154703500DF3575 /* XCSubViewFrame.xib in Resources */,
 				D8B29A2921422B4C00A605BD /* Network.storyboard in Resources */,
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
 				D8E4ADCC2140A7400004BBB0 /* ScrollviewAutolayout.storyboard in Resources */,
@@ -1375,6 +1392,7 @@
 				D818D07D210AB5890002C03E /* PersonViewController.m in Sources */,
 				D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */,
 				D81AA1F32125A768008A887F /* XMSNoHightLightButton.m in Sources */,
+				D813D9562154705A00DF3575 /* XCSubViewFrameView.m in Sources */,
 				D81E9F5721324B0400040000 /* SuperPlayerWindow.m in Sources */,
 				D81E9F5421324B0400040000 /* UIView+MMLayout.m in Sources */,
 			);
