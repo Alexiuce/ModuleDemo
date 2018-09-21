@@ -34,41 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    NSLog(@"%@",self.l4.translatesAutoresizingMaskIntoConstraints ? @"Y":@"N");
-    self.l4.translatesAutoresizingMaskIntoConstraints = NO;
-    self.l4.frame = CGRectMake(100, 130, 100, 20);
-    
-//    self.layoutGuide = [UILayoutGuide new];
-//    [self.view addLayoutGuide:self.layoutGuide];
-//
-//    [self.layoutGuide.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
-//    [self.layoutGuide.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
-//    [self.layoutGuide.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
-//    [self.layoutGuide.heightAnchor constraintEqualToConstant:100].active = YES;
-//
-//    self.l4.translatesAutoresizingMaskIntoConstraints = NO;
-//
-//    UIView *bgView = [UIView new];
-//    bgView.translatesAutoresizingMaskIntoConstraints = NO;
-//    bgView.backgroundColor = UIColor.redColor;
-//    [self.view insertSubview:bgView atIndex:0];
-//
-//    [self.l4.topAnchor constraintEqualToAnchor:self.layoutGuide.topAnchor constant:20].active = YES;
-//
-//    [self.l4.leftAnchor constraintEqualToAnchor:self.layoutGuide.leftAnchor constant:50].active = YES;
-//    [self.l5.bottomAnchor constraintEqualToAnchor:self.layoutGuide.bottomAnchor].active = YES;
-//    [self.l5.rightAnchor constraintEqualToAnchor:self.layoutGuide.rightAnchor].active = YES;
-//
-//    [bgView.topAnchor constraintEqualToAnchor:self.layoutGuide.topAnchor].active = YES;
-//    [bgView.leftAnchor constraintEqualToAnchor:self.layoutGuide.leftAnchor].active = YES;
-//    [bgView.widthAnchor constraintEqualToAnchor:self.layoutGuide.widthAnchor].active = YES;
-//    [bgView.heightAnchor constraintEqualToAnchor:self.layoutGuide.heightAnchor].active = YES;
-    
-    
-    
-    
-    
+  
 }
 
 
@@ -96,6 +62,44 @@
         
     }];
 
+}
+
+#pragma mark - UILayoutGuide
+
+- (void)guideForLayout{
+        self.layoutGuide = [UILayoutGuide new];
+        [self.view addLayoutGuide:self.layoutGuide];
+    
+        [self.layoutGuide.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+        [self.layoutGuide.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
+        [self.layoutGuide.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
+        [self.layoutGuide.heightAnchor constraintEqualToConstant:100].active = YES;
+    
+        self.l4.translatesAutoresizingMaskIntoConstraints = NO;
+    
+        UIView *bgView = [UIView new];
+        bgView.translatesAutoresizingMaskIntoConstraints = NO;
+        bgView.backgroundColor = UIColor.redColor;
+        [self.view insertSubview:bgView atIndex:0];
+    
+        [self.l4.topAnchor constraintEqualToAnchor:self.layoutGuide.topAnchor constant:20].active = YES;
+    
+        [self.l4.leftAnchor constraintEqualToAnchor:self.layoutGuide.leftAnchor constant:50].active = YES;
+        [self.l5.bottomAnchor constraintEqualToAnchor:self.layoutGuide.bottomAnchor].active = YES;
+        [self.l5.rightAnchor constraintEqualToAnchor:self.layoutGuide.rightAnchor].active = YES;
+    
+        [bgView.topAnchor constraintEqualToAnchor:self.layoutGuide.topAnchor].active = YES;
+        [bgView.leftAnchor constraintEqualToAnchor:self.layoutGuide.leftAnchor].active = YES;
+        [bgView.widthAnchor constraintEqualToAnchor:self.layoutGuide.widthAnchor].active = YES;
+        [bgView.heightAnchor constraintEqualToAnchor:self.layoutGuide.heightAnchor].active = YES;
+}
+#pragma mark - AutoresizingMaskIntoConstraints
+- (void)maskToConstraint{
+    
+    NSLog(@"%@",self.l4.translatesAutoresizingMaskIntoConstraints ? @"Y":@"N");
+    self.l4.translatesAutoresizingMaskIntoConstraints = NO;
+    self.l4.frame = CGRectMake(100, 130, 100, 20);
+    
 }
 
 @end
