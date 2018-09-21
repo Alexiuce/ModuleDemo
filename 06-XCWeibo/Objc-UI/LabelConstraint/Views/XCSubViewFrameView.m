@@ -14,4 +14,12 @@
     return [[NSBundle mainBundle]loadNibNamed:@"XCSubViewFrame" owner:nil options:nil].firstObject;
 }
 
+
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    NSLog(@"!!!!!!!!!!!");
+    NSLog(@"layout subview frame %@",NSStringFromCGRect(self.imgView.frame));
+}
+
 @end

@@ -28,6 +28,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *bottomContainerView;
 
+@property (nonatomic, weak) XCSubViewFrameView *frameView;
+
 @end
 
 @implementation XCLabelConstraintViewController
@@ -39,12 +41,16 @@
     XCSubViewFrameView *fv = [XCSubViewFrameView xibView];
     [self.bottomContainerView addSubview:fv];
     fv.frame = self.bottomContainerView.bounds;
-    
+    self.frameView = fv;
     NSLog(@"%@",NSStringFromCGRect(fv.imgView.frame));
     
     
 }
 
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    NSLog(@"2222:: %@",NSStringFromCGRect(self.frameView.imgView.frame));
+}
 
 - (IBAction)clickLeft:(UIButton *)sender {
     
