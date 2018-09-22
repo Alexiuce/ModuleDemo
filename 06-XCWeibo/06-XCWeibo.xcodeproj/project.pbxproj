@@ -12,6 +12,7 @@
 		D809AE84215616B000801CA0 /* GifPlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D809AE83215616B000801CA0 /* GifPlay.storyboard */; };
 		D809AE87215616BE00801CA0 /* GifPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D809AE86215616BE00801CA0 /* GifPlayViewController.m */; };
 		D809AE89215618DC00801CA0 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D809AE88215618DC00801CA0 /* demo.gif */; };
+		D809AE8B2156637000801CA0 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D809AE8A2156637000801CA0 /* video.mp4 */; };
 		D810798220FC1EA0000E97CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D810798120FC1EA0000E97CA /* AppDelegate.swift */; };
 		D810798420FC1EA0000E97CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D810798320FC1EA0000E97CA /* ViewController.swift */; };
 		D810798720FC1EA0000E97CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798520FC1EA0000E97CA /* Main.storyboard */; };
@@ -185,6 +186,7 @@
 		D809AE85215616BE00801CA0 /* GifPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifPlayViewController.h; sourceTree = "<group>"; };
 		D809AE86215616BE00801CA0 /* GifPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifPlayViewController.m; sourceTree = "<group>"; };
 		D809AE88215618DC00801CA0 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
+		D809AE8A2156637000801CA0 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		D810797E20FC1EA0000E97CA /* 06-XCWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "06-XCWeibo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D810798120FC1EA0000E97CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D810798320FC1EA0000E97CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 		D809AE7C2155F92700801CA0 /* WatermrkVideoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D809AE8A2156637000801CA0 /* video.mp4 */,
 				D809AE7D21560CDB00801CA0 /* WatermarkViewController.h */,
 				D809AE7E21560CDB00801CA0 /* WatermarkViewController.m */,
 				D809AE8021560CEA00801CA0 /* Watermark.storyboard */,
@@ -1214,6 +1217,7 @@
 				D849719A212058D3007AA201 /* SDYUserTopView.xib in Resources */,
 				D867D3862127AA5D007E9AD2 /* SafeArea.storyboard in Resources */,
 				D81AA1ED21259F83008A887F /* XMSSliderView.xib in Resources */,
+				D809AE8B2156637000801CA0 /* video.mp4 in Resources */,
 				D81E9F5B21324B0400040000 /* README.md in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D84726AC2151CA8D001E98A6 /* LabelConstraint.storyboard in Resources */,
