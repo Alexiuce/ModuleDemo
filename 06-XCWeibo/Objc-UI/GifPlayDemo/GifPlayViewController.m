@@ -7,8 +7,9 @@
 //
 
 #import "GifPlayViewController.h"
-
+#import <ImageIO/ImageIO.h>
 @interface GifPlayViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @end
 
@@ -16,22 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    // 1. 获取gif 文件,并使用nsdata 加载;
+    NSString *gifPath = [NSBundle.mainBundle pathForResource:@"demo.gif" ofType:nil];
+    NSData *gifData = [NSData dataWithContentsOfFile:gifPath];
+    NSLog(@"11111");
+    // 2. 使用CGImageSource 读取图片数据;
+    CGImageSourceRef imageSourceRef = CGImageSourceCreateWithData((__bridge CFDataRef)gifData, NULL);
+    // 3. 获取gif 的图片总数;
+    int imgCount = (int)CGImageSourceGetCount(imageSourceRef);
+    // 4. 根据索引获取指定位置的图片;
+    CGImageRef imgRef = CGImageSourceCreateImageAtIndex(imageSourceRef, imgCount - 1, NULL);
+    // 5. 显示图片;
+    self.imgView.image = [UIImage imageWithCGImage:imgRef];
+    
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
