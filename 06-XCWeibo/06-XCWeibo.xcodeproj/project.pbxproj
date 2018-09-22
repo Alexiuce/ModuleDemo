@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D809AE7F21560CDB00801CA0 /* WatermarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D809AE7E21560CDB00801CA0 /* WatermarkViewController.m */; };
+		D809AE8121560CEA00801CA0 /* Watermark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D809AE8021560CEA00801CA0 /* Watermark.storyboard */; };
 		D810798220FC1EA0000E97CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D810798120FC1EA0000E97CA /* AppDelegate.swift */; };
 		D810798420FC1EA0000E97CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D810798320FC1EA0000E97CA /* ViewController.swift */; };
 		D810798720FC1EA0000E97CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798520FC1EA0000E97CA /* Main.storyboard */; };
@@ -173,6 +175,9 @@
 		6581CC2A01465FD1D8B64CE2 /* Pods-Objc-UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc-UI.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objc-UI/Pods-Objc-UI.release.xcconfig"; sourceTree = "<group>"; };
 		B1917A21A3635FF970CD5A0C /* Pods-06-XCWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-06-XCWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-06-XCWeibo/Pods-06-XCWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Objc_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D809AE7D21560CDB00801CA0 /* WatermarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatermarkViewController.h; sourceTree = "<group>"; };
+		D809AE7E21560CDB00801CA0 /* WatermarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatermarkViewController.m; sourceTree = "<group>"; };
+		D809AE8021560CEA00801CA0 /* Watermark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Watermark.storyboard; sourceTree = "<group>"; };
 		D810797E20FC1EA0000E97CA /* 06-XCWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "06-XCWeibo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D810798120FC1EA0000E97CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D810798320FC1EA0000E97CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -493,6 +498,9 @@
 		D809AE7C2155F92700801CA0 /* WatermrkVideoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D809AE7D21560CDB00801CA0 /* WatermarkViewController.h */,
+				D809AE7E21560CDB00801CA0 /* WatermarkViewController.m */,
+				D809AE8021560CEA00801CA0 /* Watermark.storyboard */,
 			);
 			path = WatermrkVideoDemo;
 			sourceTree = "<group>";
@@ -1201,6 +1209,7 @@
 				D88DAE05212E310900F0B5DA /* VideoPlayer.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
+				D809AE8121560CEA00801CA0 /* Watermark.storyboard in Resources */,
 				D813D9532154703500DF3575 /* XCSubViewFrame.xib in Resources */,
 				D8B29A2921422B4C00A605BD /* Network.storyboard in Resources */,
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
@@ -1389,6 +1398,7 @@
 				D87798F12111383500611EF1 /* WMMenuItem.m in Sources */,
 				D87799142111383F00611EF1 /* NSArray+MASAdditions.m in Sources */,
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
+				D809AE7F21560CDB00801CA0 /* WatermarkViewController.m in Sources */,
 				D8B78F722149E6F2006159CA /* XCTagViewCell.m in Sources */,
 				D81E9F5821324B0400040000 /* J2Obj.m in Sources */,
 				D81E9F5A21324B0400040000 /* NetWatcher.m in Sources */,
