@@ -8,6 +8,8 @@
 
 #import "XCLabelConstraintViewController.h"
 #import "XCSubViewFrameView.h"
+#import <malloc/malloc.h>
+
 
 @interface XCLabelConstraintViewController ()
 
@@ -38,11 +40,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    XCSubViewFrameView *fv = [XCSubViewFrameView xibView];
-    [self.bottomContainerView addSubview:fv];
-    fv.frame = self.bottomContainerView.bounds;
-    self.frameView = fv;
-    NSLog(@"%@",NSStringFromCGRect(fv.imgView.frame));
+   
+    
     
     
 }
@@ -78,6 +77,28 @@
 
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    NSString *str1 = [NSString stringWithFormat:@"hello"];
+    
+    NSLog(@"str1 = %p",str1);
+    NSString *str2 = @"hello";
+    NSLog(@"str2 = %p",str2);
+    
+    char *buf = malloc(3 * 1024 * 1024);
+   
+     NSInteger size =  malloc_size((__bridge void *)str1);
+    NSLog(@"str1 memory size ==  %zd", sizeof(str1));
+    
+}
+#pragma mark - xib frame demo
+- (void)xc_xib_frame{
+    XCSubViewFrameView *fv = [XCSubViewFrameView xibView];
+    [self.bottomContainerView addSubview:fv];
+    fv.frame = self.bottomContainerView.bounds;
+    self.frameView = fv;
+    NSLog(@"%@",NSStringFromCGRect(fv.imgView.frame));
+}
 #pragma mark - UILayoutGuide
 
 - (void)guideForLayout{

@@ -490,6 +490,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D809AE7C2155F92700801CA0 /* WatermrkVideoDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WatermrkVideoDemo;
+			sourceTree = "<group>";
+		};
 		D810797520FC1EA0000E97CA = {
 			isa = PBXGroup;
 			children = (
@@ -770,6 +777,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D809AE7C2155F92700801CA0 /* WatermrkVideoDemo */,
 				D84726AA2151CA71001E98A6 /* LabelConstraint */,
 				D844C09E214741C6008BF86A /* TagCollectionView */,
 				D8B29A2721422B2800A605BD /* NetworkModule */,
