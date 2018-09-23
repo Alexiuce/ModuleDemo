@@ -51,14 +51,19 @@
         [watermarkFilter setValue:source forKey:kCIInputBackgroundImageKey];
         [watermarkFilter setValue:[watermarkImage imageByApplyingTransform:CGAffineTransformMakeScale(source.extent.size.width/watermarkImage.extent.size.width, source.extent.size.height/watermarkImage.extent.size.height)] forKey:kCIInputImageKey];
         [request finishWithImage:watermarkFilter.outputImage context:nil];
-        
+       NSLog(@"123123");
     }];
+    NSLog(@"1111111");
     
-    
-    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]initWithAsset:composition presetName:AVAssetExportPresetHighestQuality];
+    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]initWithAsset:originVideoAsset presetName:AVAssetExportPresetHighestQuality];
     exportSession.outputURL = [NSURL fileURLWithPath:@"/Users/Alexcai/Desktop/video/d.mov"];
     exportSession.outputFileType = AVFileTypeMPEG4;
-    exportSession.videoComposition = composition;
+    exportSession.videoComposition= composition;
+    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+        if (exportSession.status == AVAssetExportSessionStatusCompleted) {
+            NSLog(@"wancheng.....");
+        }
+    }];
     
     
     
