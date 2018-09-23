@@ -40,6 +40,10 @@
                                     <constraint firstAttribute="height" constant="128" id="zbS-rq-yIB"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t8Q-KM-FrT">
+                                <rect key="frame" x="38" y="344" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -52,6 +56,7 @@
                     <navigationItem key="navigationItem" id="t0a-9G-gN5"/>
                     <connections>
                         <outlet property="containerView" destination="gLy-Cp-qN6" id="4Ag-8Y-02H"/>
+                        <outlet property="imageView" destination="t8Q-KM-FrT" id="anx-en-baT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="243-V5-DWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
