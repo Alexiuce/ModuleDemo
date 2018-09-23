@@ -24,8 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     NSString *videoPath = [NSBundle.mainBundle pathForResource:@"video.mp4" ofType:nil];
-    [self addWaterPicWithVideoPath:videoPath];
+//     NSString *videoPath = [NSBundle.mainBundle pathForResource:@"video.mp4" ofType:nil];
+//    [self addWaterPicWithVideoPath:videoPath];
+    [self testCode];
    
 }
 
@@ -46,11 +47,11 @@
     
     
     //2 音频通道
-    AVMutableCompositionTrack *audioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio
-                                                                        preferredTrackID:kCMPersistentTrackID_Invalid];
-    [audioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, videoAsset.duration)
-                        ofTrack:[[videoAsset tracksWithMediaType:AVMediaTypeAudio] firstObject]
-                         atTime:kCMTimeZero error:nil];
+//    AVMutableCompositionTrack *audioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio
+//                                                                        preferredTrackID:kCMPersistentTrackID_Invalid];
+//    [audioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, videoAsset.duration)
+//                        ofTrack:[[videoAsset tracksWithMediaType:AVMediaTypeAudio] firstObject]
+//                         atTime:kCMTimeZero error:nil];
     
     //3.1 AVMutableVideoCompositionInstruction 视频轨道中的一个视频，可以缩放、旋转等
     AVMutableVideoCompositionInstruction *mainInstruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
@@ -167,7 +168,7 @@
     
     AVAsset *originVideoAsset = [AVAsset assetWithURL:[NSURL fileURLWithPath:videoPath]];
     
-    
+
     // 1. 创建可编辑的复合视频类;
     AVMutableComposition *compos = [AVMutableComposition composition];
     // 2. 准备视频轨道
@@ -179,26 +180,29 @@
     // 6. 添加资源视频轨道到可编复合类的视频轨道中;
     
     [videoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, originVideoAsset.duration) ofTrack:videoAssetTrack atTime:kCMTimeZero error:nil];
+   
     
     // 创建水印layer ,并设置水印图片
     CALayer *aLayer=[CALayer layer];
     aLayer.contents = (__bridge id _Nullable)(waterImage.CGImage);
     aLayer.frame = CGRectMake(0, 0, 90, 60);
-    
-    
+
+
     CALayer *parentLayer = [CALayer layer];
-    parentLayer.frame = CGRectMake(0, 0, 100 ,100);
+    parentLayer.frame = CGRectMake(0, 0, videoAssetTrack.naturalSize.height ,videoAssetTrack.naturalSize.width);
     CALayer *videoLayer = [CALayer layer];
-    videoLayer.backgroundColor = UIColor.clearColor.CGColor;
+
     videoLayer.frame = parentLayer.frame;
     [parentLayer addSublayer:videoLayer];
     [parentLayer addSublayer:aLayer];
-    parentLayer.backgroundColor = UIColor.yellowColor.CGColor;
+  
+    
+
     
     // 视频复合对象
     AVMutableVideoComposition *vcmp = [AVMutableVideoComposition videoComposition];
     vcmp.frameDuration= CMTimeMake(1, 24);
-    vcmp.renderSize = CGSizeMake(videoAssetTrack.naturalSize.width, videoAssetTrack.naturalSize.height);
+    vcmp.renderSize = CGSizeMake(videoAssetTrack.naturalSize.height, videoAssetTrack.naturalSize.width);
     
     vcmp.animationTool = [AVVideoCompositionCoreAnimationTool videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
     AVMutableVideoCompositionInstruction *vcins = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
@@ -206,7 +210,9 @@
     
     
     AVMutableVideoCompositionLayerInstruction *layerIns = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:videoAssetTrack];
-    [layerIns setTransform:videoAssetTrack.preferredTransform atTime:kCMTimeZero];
+    
+    [layerIns setTransform:[self videoAssetTrackTransform:videoAssetTrack] atTime:kCMTimeZero];
+//    [layerIns setOpacity:0.0 atTime:originVideoAsset.duration];
     
     vcins.layerInstructions = @[layerIns];
     vcmp.instructions = @[vcins];
@@ -238,5 +244,126 @@
     }];
 
 }
+
+
+- (CGAffineTransform)videoAssetTrackTransform:(AVAssetTrack *)videoAssetTrack {
+    int degrees = [self degressFromVideoFileWithVideoAssetTrack:videoAssetTrack];
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    if (degrees != 0) {
+        CGAffineTransform translateToCenter = CGAffineTransformIdentity;
+        if (degrees == 90) {
+            // 顺时针旋转90°
+            translateToCenter = CGAffineTransformMakeTranslation(videoAssetTrack.naturalSize.height, 0.0);
+            transform = CGAffineTransformRotate(translateToCenter, M_PI_2);
+        } else if(degrees == 180){
+            // 顺时针旋转180°
+            translateToCenter = CGAffineTransformMakeTranslation(videoAssetTrack.naturalSize.width, videoAssetTrack.naturalSize.height);
+            transform = CGAffineTransformRotate(translateToCenter, M_PI);
+        } else if(degrees == 270){
+            // 顺时针旋转270°
+            translateToCenter = CGAffineTransformMakeTranslation(0.0, videoAssetTrack.naturalSize.width);
+            transform = CGAffineTransformRotate(translateToCenter, M_PI_2 + M_PI);
+        }else if(degrees == -180){
+            // 绕x轴旋转180度
+            //仿射变换的坐标为iOS的屏幕坐标x向右为正y向下为正
+#if 1
+            //transform = CGAffineTransformTranslate(transform, videoAssetTrack.naturalSize.width, videoAssetTrack.naturalSize.height);
+            //transform = CGAffineTransformRotate(transform, 90/180.0f*M_PI); // 旋转90度
+            //transform = CGAffineTransformScale(transform, 1.0, -1.0); // 上下颠倒视频
+            //transform = CGAffineTransformScale(transform, -1.0, 1.0);  // 左右颠倒视频
+            //transform = CGAffineTransformScale(transform, 1.0, 1.0); // 使用原始大小
+            
+            //原始视频
+            //         ___
+            //        |   |
+            //        |   |
+            //     -------------------- +x
+            //    |
+            //    |
+            //    |
+            //    |
+            //    |
+            //    |
+            //    |
+            //    +y
+            
+            //transform = CGAffineTransformScale(transform, 1.0, -1.0); // 上下颠倒视频
+            
+            //     -------------------- +x
+            //    |   |   |
+            //    |   |___|
+            //    |
+            //    |
+            //    |
+            //    |
+            //    |
+            //    +y
+            
+            //transform = CGAffineTransformTranslate(transform, 0, -videoAssetTrack.naturalSize.height);// 将视频平移到原始位置
+            
+            //         ___
+            //        |   |
+            //        |   |
+            //     -------------------- +x
+            //    |
+            //    |
+            //    |
+            //    |
+            //    |
+            //    |
+            //    |
+            //    +y
+            
+            transform = CGAffineTransformScale(transform, 1.0, -1.0); // 上下颠倒视频
+            transform = CGAffineTransformTranslate(transform, 0, -videoAssetTrack.naturalSize.height);
+#else
+            transform = videoAssetTrack.preferredTransform;
+            transform = CGAffineTransformTranslate(transform, 0, -videoAssetTrack.naturalSize.height);
+#endif
+        }
+    }
+    
+#if 0 - cropVideo
+    //Here we shift the viewing square up to the TOP of the video so we only see the top
+    CGAffineTransform t1 = CGAffineTransformMakeTranslation(videoAssetTrack.naturalSize.height, 0 );
+    
+    //Use this code if you want the viewing square to be in the middle of the video
+    //CGAffineTransform t1 = CGAffineTransformMakeTranslation(videoAssetTrack.naturalSize.height, -(videoAssetTrack.naturalSize.width - videoAssetTrack.naturalSize.height) /2 );
+    
+    //Make sure the square is portrait
+    transform = CGAffineTransformRotate(t1, M_PI_2);
+#endif
+    
+    return transform;
+}
+
+- (int)degressFromVideoFileWithVideoAssetTrack:(AVAssetTrack *)videoAssetTrack {
+    int degress = 0;
+    CGAffineTransform t = videoAssetTrack.preferredTransform;
+    if(t.a == 0 && t.b == 1.0 && t.c == -1.0 && t.d == 0){
+        // Portrait
+        degress = 90;
+    } else if(t.a == 0 && t.b == -1.0 && t.c == 1.0 && t.d == 0){
+        // PortraitUpsideDown
+        degress = 270;
+    } else if(t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == 1.0){
+        // LandscapeRight
+        degress = 0;
+    } else if(t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+        // LandscapeLeft
+        degress = 180;
+    } else if(t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+        // LandscapeLeft
+        degress = 180;
+    } else if(t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+        // x-axis
+        degress = -180;
+    }
+    
+    return degress;
+}
+
+
+
 
 @end
