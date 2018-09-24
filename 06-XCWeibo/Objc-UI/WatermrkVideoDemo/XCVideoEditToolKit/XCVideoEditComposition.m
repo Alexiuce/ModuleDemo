@@ -31,17 +31,53 @@
         
         _audioTrack = [_mainComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
         
+        _videoAssetTrack = [asset tracksWithMediaType:AVMediaTypeVideo].firstObject;
+        _audioAssetTrack = [asset tracksWithMediaType:AVMediaTypeAudio].firstObject;
+        if (_videoAssetTrack) {
+            [_videoTrack insertTimeRange:_timeRange ofTrack:_videoAssetTrack atTime:kCMTimeZero error:nil];
+        }
+        if (_audioAssetTrack) {
+            [_audioTrack insertTimeRange:_timeRange ofTrack:_audioAssetTrack atTime:kCMTimeZero error:nil];            
+        }
         
-        
-        
-        
+        int videoDegress = [self degressFromVideoFileWithVideoAssetTrack:_videoAssetTrack];
+        BOOL videoIsLandscape = videoDegress == 90 || videoDegress == 270 ;
+        _renderSize = videoIsLandscape ? CGSizeMake(_videoAssetTrack.naturalSize.height, _videoAssetTrack.naturalSize.width) : _videoAssetTrack.naturalSize;
     }
     return self;
 }
 
 
-#pragma mark - lazy
-
-
+/**
+ 获取视频轨道中的视频角度信息
+ 
+ @param videoAssetTrack 视频轨道
+ @return 视频的角度值
+ */
+- (int)degressFromVideoFileWithVideoAssetTrack:(AVAssetTrack *)videoAssetTrack {
+    int degress = 0;
+    CGAffineTransform t = videoAssetTrack.preferredTransform;
+    if(t.a == 0 && t.b == 1.0 && t.c == -1.0 && t.d == 0){
+        // Portrait
+        degress = 90;
+    } else if(t.a == 0 && t.b == -1.0 && t.c == 1.0 && t.d == 0){
+        // PortraitUpsideDown
+        degress = 270;
+    } else if(t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == 1.0){
+        // LandscapeRight
+        degress = 0;
+    } else if(t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+        // LandscapeLeft
+        degress = 180;
+    } else if(t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+        // LandscapeLeft
+        degress = 180;
+    } else if(t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+        // x-axis
+        degress = -180;
+    }
+    
+    return degress;
+}
 
 @end

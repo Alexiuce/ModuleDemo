@@ -71,6 +71,7 @@
 		D84375BA2136A43A00A19364 /* XCTestMan.m in Sources */ = {isa = PBXBuildFile; fileRef = D84375B92136A43A00A19364 /* XCTestMan.m */; };
 		D8443D142158833E00AEF865 /* XCVideoEditManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8443D132158833E00AEF865 /* XCVideoEditManager.m */; };
 		D8443D172158AD2400AEF865 /* XCVideoEditComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = D8443D162158AD2400AEF865 /* XCVideoEditComposition.m */; };
+		D8443D1A2158B9D600AEF865 /* XCVideoWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = D8443D192158B9D600AEF865 /* XCVideoWatermark.m */; };
 		D844C0A0214741ED008BF86A /* TagCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D844C09F214741ED008BF86A /* TagCollectionView.storyboard */; };
 		D844C0A321474201008BF86A /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0A221474201008BF86A /* TagViewController.m */; };
 		D844C0A621474401008BF86A /* TagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D844C0A521474401008BF86A /* TagCollectionViewCell.m */; };
@@ -288,6 +289,8 @@
 		D8443D132158833E00AEF865 /* XCVideoEditManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCVideoEditManager.m; sourceTree = "<group>"; };
 		D8443D152158AD2400AEF865 /* XCVideoEditComposition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCVideoEditComposition.h; sourceTree = "<group>"; };
 		D8443D162158AD2400AEF865 /* XCVideoEditComposition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCVideoEditComposition.m; sourceTree = "<group>"; };
+		D8443D182158B9D600AEF865 /* XCVideoWatermark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCVideoWatermark.h; sourceTree = "<group>"; };
+		D8443D192158B9D600AEF865 /* XCVideoWatermark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCVideoWatermark.m; sourceTree = "<group>"; };
 		D844C09F214741ED008BF86A /* TagCollectionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TagCollectionView.storyboard; sourceTree = "<group>"; };
 		D844C0A121474201008BF86A /* TagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
 		D844C0A221474201008BF86A /* TagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
@@ -748,6 +751,8 @@
 				D8443D132158833E00AEF865 /* XCVideoEditManager.m */,
 				D8443D152158AD2400AEF865 /* XCVideoEditComposition.h */,
 				D8443D162158AD2400AEF865 /* XCVideoEditComposition.m */,
+				D8443D182158B9D600AEF865 /* XCVideoWatermark.h */,
+				D8443D192158B9D600AEF865 /* XCVideoWatermark.m */,
 			);
 			path = XCVideoEditToolKit;
 			sourceTree = "<group>";
@@ -1441,6 +1446,7 @@
 				D84375BA2136A43A00A19364 /* XCTestMan.m in Sources */,
 				D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */,
 				D87798F12111383500611EF1 /* WMMenuItem.m in Sources */,
+				D8443D1A2158B9D600AEF865 /* XCVideoWatermark.m in Sources */,
 				D87799142111383F00611EF1 /* NSArray+MASAdditions.m in Sources */,
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
 				D809AE7F21560CDB00801CA0 /* WatermarkViewController.m in Sources */,

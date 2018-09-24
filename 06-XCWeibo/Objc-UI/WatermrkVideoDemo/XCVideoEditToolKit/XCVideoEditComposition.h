@@ -42,6 +42,10 @@
  */
 @property (nonatomic, assign, readonly) CGSize renderSize;
 
+/**
+ 视频的角度
+ */
+@property (nonatomic, assign, readonly) int videoDegree;
 
 
 /**

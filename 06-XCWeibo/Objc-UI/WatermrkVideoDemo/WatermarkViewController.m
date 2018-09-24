@@ -8,6 +8,7 @@
 
 #import "WatermarkViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "XCVideoEditManager.h"
 
 @interface WatermarkViewController ()
 
@@ -69,6 +70,7 @@
     AVMutableVideoComposition *mainCompositionInst = [AVMutableVideoComposition videoComposition];
     
     AVAssetTrack *videoAssetTrack = [[videoAsset tracksWithMediaType:AVMediaTypeVideo] firstObject];
+    
     CGSize naturalSize = videoAssetTrack.naturalSize;
     
     float renderWidth, renderHeight;
