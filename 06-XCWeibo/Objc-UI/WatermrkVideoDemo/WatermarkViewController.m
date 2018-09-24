@@ -166,7 +166,10 @@
     NSString *videoPath =@"video.mp4";
     
     XCVideoEditManager *videoManager = [XCVideoEditManager defaultManager];
-    [videoManager startEditVideo:videoPath progress:nil success:^(NSString *editedSavePath) {
+    videoManager.waterImageName = @"icon_fasong";
+    [videoManager startEditVideo:videoPath progress:^(float progress) {
+        NSLog(@"progress %f",progress);
+    }  success:^(NSString *editedSavePath) {
         NSLog(@"finished ... %@",editedSavePath);
     } failure:^(NSError *error) {
         NSLog(@"%@",error.localizedDescription);

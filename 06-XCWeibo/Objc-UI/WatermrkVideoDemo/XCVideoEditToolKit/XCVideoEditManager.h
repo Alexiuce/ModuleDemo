@@ -18,13 +18,31 @@ typedef void(^XCEditedFailureBlock) (NSError *error);
 
 #pragma mark - property
 
+/**
+ 水印图片
+ */
+@property (nonatomic, copy) NSString *waterImageName ;
 
+/**
+ 水印文字
+ */
+@property (nonatomic, copy) NSString *waterText;
 
 
 #pragma mark - method
 
 + (instancetype)defaultManager;
 
+
+
+/**
+ 开始视频编辑
+
+ @param videoName 本地视频名称(非全路径)
+ @param progressBlock 进度回调 (会执行 copy 操作)
+ @param successBlock 成功回调
+ @param failureBlock 失败回调
+ */
 - (void)startEditVideo:(NSString *)videoName progress:(XCEditingProgressBlock)progressBlock success:(XCEditedSuccessBlock)successBlock failure:(XCEditedFailureBlock)failureBlock;
 
 @end

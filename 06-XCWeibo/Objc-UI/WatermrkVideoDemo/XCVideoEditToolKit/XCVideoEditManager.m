@@ -22,6 +22,12 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
 
 @property (nonatomic, strong)NSDictionary <NSNumber *,NSString*>*errorDict;
 
+@property (nonatomic, copy) XCEditingProgressBlock progressBlock;
+
+@property (nonatomic, strong)AVAssetExportSession *export;
+
+@property (nonatomic, strong)NSTimer *timer;
+
 @end
 
 
@@ -31,29 +37,29 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
     return [[self alloc]init];
 }
 
-
-
 - (void)startEditVideo:(NSString *)videoName progress:(XCEditingProgressBlock)progressBlock success:(XCEditedSuccessBlock)successBlock failure:(XCEditedFailureBlock)failureBlock{
-    // 1. 加载本地视频资源
-    AVAsset *videoAsset = [self loadLocalAsset:videoName];
-    // 2. 判断视频加载是否正常
-    if (videoAsset == nil) {
-        failureBlock? failureBlock([self errorWithCode:XCEditVideoNotFoundError]) : nil;
-        return;
-    }
-    // 3. 设置视频编辑器
-    XCVideoEditComposition *composition = [XCVideoEditComposition compositionWithAsset:videoAsset];
-    
-    UIImage *waterImage = [UIImage imageNamed:@"icon_fasong"];
-    // 4. 设置视频水印
-    XCVideoWatermark *waterMark = [XCVideoWatermark waterImageMark:waterImage withComposition:composition];
-    
-    // 5. 导出编辑后的视频
-    [self exportWaterVideo:videoName watermark:waterMark avasset:videoAsset success:successBlock];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 1. 加载本地视频资源
+        AVAsset *videoAsset = [self loadLocalAsset:videoName];
+        // 2. 判断视频加载是否正常
+        if (videoAsset == nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                failureBlock? failureBlock([self errorWithCode:XCEditVideoNotFoundError]) : nil;
+            });
+            return;
+        }
+        // 3. 设置视频编辑器
+        XCVideoEditComposition *composition = [XCVideoEditComposition compositionWithAsset:videoAsset];
+        
+        UIImage *waterImage = [UIImage imageNamed:self.waterImageName];
+        // 4. 设置视频水印
+        XCVideoWatermark *waterMark = [XCVideoWatermark waterImageMark:waterImage withComposition:composition];
+        self.progressBlock = progressBlock;
+        // 5. 导出编辑后的视频
+        [self exportWaterVideo:videoName watermark:waterMark avasset:videoAsset success:successBlock];
+    });
 }
-
-
-
+// 导出方法
 - (void)exportWaterVideo:(NSString *)name watermark:(XCVideoWatermark *)watermark avasset:(AVAsset *)video success:(XCEditedSuccessBlock)block{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -65,15 +71,34 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
     exportSession.outputFileType = AVFileTypeMPEG4;
     exportSession.shouldOptimizeForNetworkUse = YES;
     exportSession.videoComposition = watermark.videoComposition;
+    _export = exportSession;
     [self removeIfFileExist:savePath];
+    [self timer];
     [exportSession exportAsynchronouslyWithCompletionHandler:^{
         if (exportSession.status == AVAssetExportSessionStatusCompleted) {
-            block? block(savePath) : nil;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                block? block(savePath) : nil;
+            });
+            // 释放定时器
+            [self.timer invalidate];
+            self.timer = nil;
+            // 导出完成,释放progress block 防止循环引用;
+            self.progressBlock = nil;
         }else {
+            // 导出发生错误,清理文件;
             [self removeIfFileExist:savePath];
         }
     }];
     
+    
+}
+
+- (void)checkProgress{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.progressBlock) {
+            self.progressBlock(self.export.progress);
+        }        
+    });
 }
 
 - (void)removeIfFileExist:(NSString *)path{
@@ -109,5 +134,13 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
     }
     return _errorDict;
 }
+
+- (NSTimer *)timer{
+    if (_timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(checkProgress) userInfo:nil repeats:YES];
+    }
+    return _timer;
+}
+
 
 @end

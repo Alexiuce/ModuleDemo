@@ -37,6 +37,8 @@
     if (self = [super init]) {
         _waterText = waterText;
         _waterImage = image;
+        if (_waterImage == nil && _waterText == nil) {return self;}
+        
         _videoComposition = [AVMutableVideoComposition videoComposition];
         _videoComposition.frameDuration= CMTimeMake(1, 30);
         _videoComposition.renderSize = comp.renderSize ;
