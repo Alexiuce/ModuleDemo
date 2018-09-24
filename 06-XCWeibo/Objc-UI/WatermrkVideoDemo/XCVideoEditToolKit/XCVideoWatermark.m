@@ -40,12 +40,12 @@
         _videoComposition = [AVMutableVideoComposition videoComposition];
         _videoComposition.frameDuration= CMTimeMake(1, 30);
         _videoComposition.renderSize = comp.renderSize ;
-        
+        [self addWatermarkLayerToVideoComposition];
 
         
         AVMutableVideoCompositionInstruction *vcins = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
         vcins.timeRange = comp.timeRange;
-        
+    
         
         AVMutableVideoCompositionLayerInstruction *layerIns = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:comp.videoAssetTrack];
         
@@ -59,7 +59,7 @@
 }
 
 
-- (void)addWatermarkLayerToVideoComposition:(AVMutableVideoComposition *)videoCompostion{
+- (void)addWatermarkLayerToVideoComposition{
    
     // 创建水印layer ,并设置水印图片
     CALayer *aLayer=[CALayer layer];
@@ -68,7 +68,7 @@
 
     CALayer *parentLayer = [CALayer layer];
     
-    parentLayer.frame = CGRectMake(0, 0, videoCompostion.renderSize.width ,videoCompostion.renderSize.height);
+    parentLayer.frame = CGRectMake(0, 0, _videoComposition.renderSize.width ,_videoComposition.renderSize.height);
     CALayer *videoLayer = [CALayer layer];
     
     videoLayer.frame = parentLayer.frame;

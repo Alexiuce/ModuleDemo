@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 #import "XCVideoEditComposition.h"
+#import "XCVideoWatermark.h"
 
 
 typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
@@ -42,7 +43,34 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
     }
     XCVideoEditComposition *composition = [XCVideoEditComposition compositionWithAsset:videoAsset];
     
+    UIImage *waterImage = [UIImage imageNamed:@"icon_fasong"];
     
+    XCVideoWatermark *waterMark = [XCVideoWatermark waterImageMark:waterImage withComposition:composition];
+    
+    NSString *savePath = @"/Users/Alexcai/Desktop/video/d.mov";
+    
+    NSFileManager *fm = NSFileManager.defaultManager;
+    if ([fm fileExistsAtPath:savePath]) {
+        NSLog(@"video is have. then delete that");
+        if ([fm removeItemAtPath:savePath error:nil]) {
+            NSLog(@"delete is ok");
+        }else {
+            NSLog(@"delete is no error = ");
+        }
+        
+    }
+    
+    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]initWithAsset:videoAsset presetName:AVAssetExportPresetHighestQuality];
+    exportSession.outputURL = [NSURL fileURLWithPath:savePath];
+    exportSession.outputFileType = AVFileTypeMPEG4;
+    exportSession.shouldOptimizeForNetworkUse = YES;
+    exportSession.videoComposition = waterMark.videoComposition;
+    
+    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+        if (exportSession.status == AVAssetExportSessionStatusCompleted) {
+            successBlock?:successBlock(savePath);
+        }
+    }];
 }
 
 

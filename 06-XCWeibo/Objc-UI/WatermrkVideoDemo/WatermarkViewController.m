@@ -27,7 +27,8 @@
     [super viewDidLoad];
 //     NSString *videoPath = [NSBundle.mainBundle pathForResource:@"video.mp4" ofType:nil];
 //    [self addWaterPicWithVideoPath:videoPath];
-    [self testCode];
+//    [self testCode];
+    [self editManager];
    
 }
 
@@ -161,12 +162,29 @@
                                  videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
 }
 
+- (void)editManager{
+    NSString *videoPath =@"video.mp4";
+    
+    XCVideoEditManager *videoManager = [XCVideoEditManager defaultManager];
+    [videoManager startEditVideo:videoPath progress:nil success:^(NSString *editedSavePath) {
+        NSLog(@"finished ... %@",editedSavePath);
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error.localizedDescription);
+    }];
+}
 
 - (void)testCode{
     NSString *videoPath = [NSBundle.mainBundle pathForResource:@"video.mp4" ofType:nil];
     
     UIImage *waterImage = [UIImage imageNamed:@"icon_fasong"];
     
+    
+    XCVideoEditManager *videoManager = [XCVideoEditManager defaultManager];
+    [videoManager startEditVideo:videoPath progress:nil success:^(NSString *editedSavePath) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
     AVAsset *originVideoAsset = [AVAsset assetWithURL:[NSURL fileURLWithPath:videoPath]];
     

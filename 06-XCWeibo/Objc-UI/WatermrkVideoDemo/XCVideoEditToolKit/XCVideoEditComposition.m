@@ -40,8 +40,8 @@
             [_audioTrack insertTimeRange:_timeRange ofTrack:_audioAssetTrack atTime:kCMTimeZero error:nil];            
         }
         
-        int videoDegress = [self degressFromVideoFileWithVideoAssetTrack:_videoAssetTrack];
-        BOOL videoIsLandscape = videoDegress == 90 || videoDegress == 270 ;
+        _videoDegree = [self degressFromVideoFileWithVideoAssetTrack:_videoAssetTrack];
+        BOOL videoIsLandscape = _videoDegree == 90 || _videoDegree == 270 ;
         _renderSize = videoIsLandscape ? CGSizeMake(_videoAssetTrack.naturalSize.height, _videoAssetTrack.naturalSize.width) : _videoAssetTrack.naturalSize;
     }
     return self;
