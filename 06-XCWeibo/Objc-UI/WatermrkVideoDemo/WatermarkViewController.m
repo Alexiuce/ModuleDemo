@@ -242,6 +242,7 @@
     exportSession.outputFileType = AVFileTypeMPEG4;
     exportSession.shouldOptimizeForNetworkUse = YES;
     exportSession.videoComposition = vcmp;
+
     [exportSession exportAsynchronouslyWithCompletionHandler:^{
         if (exportSession.status == AVAssetExportSessionStatusCompleted) {
             NSLog(@"wancheng.....");
