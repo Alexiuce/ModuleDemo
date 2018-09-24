@@ -38,42 +38,54 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
     AVAsset *videoAsset = [self loadLocalAsset:videoName];
     // 2. 判断视频加载是否正常
     if (videoAsset == nil) {
-        failureBlock?: failureBlock([self errorWithCode:XCEditVideoNotFoundError]);
+        failureBlock? failureBlock([self errorWithCode:XCEditVideoNotFoundError]) : nil;
         return;
     }
+    // 3. 设置视频编辑器
     XCVideoEditComposition *composition = [XCVideoEditComposition compositionWithAsset:videoAsset];
     
     UIImage *waterImage = [UIImage imageNamed:@"icon_fasong"];
-    
+    // 4. 设置视频水印
     XCVideoWatermark *waterMark = [XCVideoWatermark waterImageMark:waterImage withComposition:composition];
     
-    NSString *savePath = @"/Users/Alexcai/Desktop/video/d.mov";
-    
-    NSFileManager *fm = NSFileManager.defaultManager;
-    if ([fm fileExistsAtPath:savePath]) {
-        NSLog(@"video is have. then delete that");
-        if ([fm removeItemAtPath:savePath error:nil]) {
-            NSLog(@"delete is ok");
-        }else {
-            NSLog(@"delete is no error = ");
-        }
-        
-    }
-    
-    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]initWithAsset:videoAsset presetName:AVAssetExportPresetHighestQuality];
-    exportSession.outputURL = [NSURL fileURLWithPath:savePath];
-    exportSession.outputFileType = AVFileTypeMPEG4;
-    exportSession.shouldOptimizeForNetworkUse = YES;
-    exportSession.videoComposition = waterMark.videoComposition;
-    
-    [exportSession exportAsynchronouslyWithCompletionHandler:^{
-        if (exportSession.status == AVAssetExportSessionStatusCompleted) {
-            successBlock?:successBlock(savePath);
-        }
-    }];
+    // 5. 导出编辑后的视频
+    [self exportWaterVideo:videoName watermark:waterMark avasset:videoAsset success:successBlock];
 }
 
 
+
+- (void)exportWaterVideo:(NSString *)name watermark:(XCVideoWatermark *)watermark avasset:(AVAsset *)video success:(XCEditedSuccessBlock)block{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *savePath=  [documentsDirectory stringByAppendingPathComponent:
+                          [NSString stringWithFormat:@"XCEditVideo-%@",name]];
+    
+    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]initWithAsset:video presetName:AVAssetExportPresetHighestQuality];
+    exportSession.outputURL = [NSURL fileURLWithPath:savePath];
+    exportSession.outputFileType = AVFileTypeMPEG4;
+    exportSession.shouldOptimizeForNetworkUse = YES;
+    exportSession.videoComposition = watermark.videoComposition;
+    [self removeIfFileExist:savePath];
+    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+        if (exportSession.status == AVAssetExportSessionStatusCompleted) {
+            block? block(savePath) : nil;
+        }else {
+            [self removeIfFileExist:savePath];
+        }
+    }];
+    
+}
+
+- (void)removeIfFileExist:(NSString *)path{
+    NSFileManager *fm = NSFileManager.defaultManager;
+    if ([fm fileExistsAtPath:path]) {
+        if ([fm removeItemAtPath:path error:nil]) {
+            NSLog(@"delete is ok");
+        }else {
+            NSLog(@"delete is error");
+        }
+    }
+}
 
 - (AVAsset *)loadLocalAsset:(NSString *)path{
     NSString *localPath = [NSBundle.mainBundle pathForResource:path ofType:nil];
