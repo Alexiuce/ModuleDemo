@@ -4,7 +4,7 @@
 //
 //  Created by Alexcai on 2018/9/24.
 //  Copyright © 2018年 Alexcai. All rights reserved.
-//
+//  视频编辑器
 
 #import <Foundation/Foundation.h>
 
