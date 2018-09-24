@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
 - (void)startEditVideo:(NSString *)videoName progress:(XCEditingProgressBlock)progressBlock success:(XCEditedSuccessBlock)successBlock failure:(XCEditedFailureBlock)failureBlock{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // 1. 加载本地视频资源
-        AVAsset *videoAsset = [self loadLocalAsset:videoName];
+        AVURLAsset *videoAsset = [self loadLocalAsset:videoName];
         // 2. 判断视频加载是否正常
         if (videoAsset == nil) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -112,9 +112,9 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
     }
 }
 
-- (AVAsset *)loadLocalAsset:(NSString *)path{
+- (AVURLAsset *)loadLocalAsset:(NSString *)path{
     NSString *localPath = [NSBundle.mainBundle pathForResource:path ofType:nil];
-    AVAsset *asset = [AVAsset assetWithURL:[NSURL fileURLWithPath:localPath]];
+    AVURLAsset *asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:localPath]];
     return asset;
 }
 
