@@ -181,15 +181,18 @@
     
     [videoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, originVideoAsset.duration) ofTrack:videoAssetTrack atTime:kCMTimeZero error:nil];
    
-    
+    int videoDegress = [self degressFromVideoFileWithVideoAssetTrack:videoAssetTrack];
+    BOOL videoIsLandscape = videoDegress == 90 || videoDegress == 270 ;
+    CGSize rendSize = videoIsLandscape ? CGSizeMake(videoAssetTrack.naturalSize.height, videoAssetTrack.naturalSize.width) : videoAssetTrack.naturalSize;
     // 创建水印layer ,并设置水印图片
     CALayer *aLayer=[CALayer layer];
-    aLayer.contents = (__bridge id _Nullable)(waterImage.CGImage);
+    aLayer.contents = (__bridge id )(waterImage.CGImage);
     aLayer.frame = CGRectMake(0, 0, 90, 60);
 
 
     CALayer *parentLayer = [CALayer layer];
-    parentLayer.frame = CGRectMake(0, 0, videoAssetTrack.naturalSize.height ,videoAssetTrack.naturalSize.width);
+ 
+    parentLayer.frame = CGRectMake(0, 0, rendSize.width ,rendSize.height);
     CALayer *videoLayer = [CALayer layer];
 
     videoLayer.frame = parentLayer.frame;
@@ -201,10 +204,12 @@
     
     // 视频复合对象
     AVMutableVideoComposition *vcmp = [AVMutableVideoComposition videoComposition];
-    vcmp.frameDuration= CMTimeMake(1, 24);
-    vcmp.renderSize = CGSizeMake(videoAssetTrack.naturalSize.height, videoAssetTrack.naturalSize.width);
+    vcmp.frameDuration= CMTimeMake(1, 30);
+    
+    vcmp.renderSize = rendSize;
     
     vcmp.animationTool = [AVVideoCompositionCoreAnimationTool videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
+    
     AVMutableVideoCompositionInstruction *vcins = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
     vcins.timeRange = CMTimeRangeMake(kCMTimeZero, compos.duration);
     
@@ -220,7 +225,7 @@
     
     NSString *savePath = @"/Users/Alexcai/Desktop/video/d.mov";
     
-    NSFileManager *fm = [[NSFileManager alloc] init];
+    NSFileManager *fm = NSFileManager.defaultManager;
     if ([fm fileExistsAtPath:savePath]) {
         NSLog(@"video is have. then delete that");
         if ([fm removeItemAtPath:savePath error:nil]) {
