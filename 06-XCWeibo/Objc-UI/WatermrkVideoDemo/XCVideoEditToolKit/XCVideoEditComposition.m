@@ -10,7 +10,7 @@
 
 @interface XCVideoEditComposition()
 
-@property (nonatomic, strong)AVMutableComposition *mainComposition;
+
 
 @end
 

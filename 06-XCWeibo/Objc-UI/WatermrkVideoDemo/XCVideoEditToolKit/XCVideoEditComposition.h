@@ -11,6 +11,11 @@
 @interface XCVideoEditComposition : NSObject
 
 
+
+/**
+ 媒体合成器
+ */
+@property (nonatomic, strong, readonly) AVMutableComposition *mainComposition;
 /**
  视频轨道信息
  */

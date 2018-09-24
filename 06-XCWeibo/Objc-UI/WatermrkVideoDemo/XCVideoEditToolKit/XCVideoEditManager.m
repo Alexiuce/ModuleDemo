@@ -56,7 +56,7 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
         XCVideoWatermark *waterMark = [XCVideoWatermark waterImageMark:waterImage withComposition:composition];
         self.progressBlock = progressBlock;
         // 5. 导出编辑后的视频
-        [self exportWaterVideo:videoName watermark:waterMark avasset:videoAsset success:successBlock];
+        [self exportWaterVideo:videoName watermark:waterMark avasset:composition.mainComposition success:successBlock];
     });
 }
 // 导出方法
