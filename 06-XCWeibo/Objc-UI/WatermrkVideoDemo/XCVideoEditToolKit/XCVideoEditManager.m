@@ -75,9 +75,9 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
     [self.timer fire];
     [exportSession exportAsynchronouslyWithCompletionHandler:^{
         if (exportSession.status == AVAssetExportSessionStatusCompleted) {
-            dispatch_async(dispatch_get_main_queue(), ^{
+           
                 block? block(savePath) : nil;
-            });
+           
             // 释放定时器
             [self.timer invalidate];
             self.timer = nil;
@@ -93,12 +93,9 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
 }
 
 - (void)checkProgress{
-    NSLog(@"PROGRESS");
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.progressBlock) {
-            self.progressBlock(self.export.progress);
-        }        
-    });
+    if (self.progressBlock) {
+        self.progressBlock(self.export.progress);
+    }
 }
 
 - (void)removeIfFileExist:(NSString *)path{

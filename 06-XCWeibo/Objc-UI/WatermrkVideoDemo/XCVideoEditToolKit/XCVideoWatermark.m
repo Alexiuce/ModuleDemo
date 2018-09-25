@@ -19,12 +19,12 @@
 /**
  图片layer: 显示水印图片
  */
-@property (nonatomic, strong)CALayer *pictureLayer;
+@property (nonatomic, strong) CALayer *pictureLayer;
 
 /**
  文字layer: 显示文字水印
  */
-@property (nonatomic, strong)CATextLayer *textLayer;
+@property (nonatomic, strong) CATextLayer *textLayer;
 
 @end
 
@@ -146,12 +146,12 @@
         
         //create a text layer
         _textLayer = [CATextLayer layer];
-        [_textLayer setFrame:CGRectMake(0, 100, _videoComposition.renderSize.width, 60)];
+        [_textLayer setFrame:CGRectMake(0, 0, 40, 60)];
 
         //set text attributes
         _textLayer.foregroundColor = [UIColor blackColor].CGColor;
-        _textLayer.alignmentMode = kCAAlignmentJustified;
-        _textLayer.wrapped = YES;
+        _textLayer.backgroundColor = UIColor.yellowColor.CGColor;
+
         
         //choose a font
         UIFont *font = [UIFont systemFontOfSize:15];
@@ -159,19 +159,16 @@
         //set layer font
         CFStringRef fontName = (__bridge CFStringRef)font.fontName;
         CGFontRef fontRef = CGFontCreateWithFontName(fontName);
-      
+        _textLayer.contentsScale = UIScreen.mainScreen.scale;
         _textLayer.fontSize = font.pointSize;
         _textLayer.font =  fontRef;
-        
+        CGFontRelease(fontRef);
+
         //choose some text
         NSString *text = @"Lorem ipsum dolor sit amet";
         
         //set layer text
-
-      
-        _textLayer.backgroundColor = UIColor.yellowColor.CGColor;
         _textLayer.string = text;
-        CGFontRelease(fontRef);
 
     }
     return _textLayer;
