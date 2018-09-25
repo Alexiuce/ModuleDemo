@@ -10,6 +10,9 @@
 #import <ImageIO/ImageIO.h>
 @interface GifPlayViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UIView *textView;
+
+@property (nonatomic, strong)CATextLayer *textLayer;
 
 @end
 
@@ -54,6 +57,38 @@
     self.imgView.animationImages = allImageArray;
     self.imgView.animationDuration = allPlayDuration;
     [self.imgView startAnimating];
+    
+    
+    //create a text layer
+    _textLayer = [CATextLayer layer];
+    [_textLayer setFrame:CGRectMake(0, 0, 40, 60)];
+    
+    //set text attributes
+    _textLayer.foregroundColor = [UIColor blackColor].CGColor;
+    _textLayer.backgroundColor = UIColor.yellowColor.CGColor;
+    
+    
+    //choose a font
+    UIFont *font = [UIFont systemFontOfSize:15];
+    
+    //set layer font
+    CFStringRef fontName = (__bridge CFStringRef)font.fontName;
+    CGFontRef fontRef = CGFontCreateWithFontName(fontName);
+    _textLayer.contentsScale = UIScreen.mainScreen.scale;
+    _textLayer.fontSize = font.pointSize;
+    _textLayer.font =  fontRef;
+    CGFontRelease(fontRef);
+    
+    //choose some text
+    NSString *text = @"Lorem ipsum dolor sit amet";
+    
+    //set layer text
+    _textLayer.string = text;
+    
+    _textLayer.position = CGPointZero;
+    _textLayer.anchorPoint = CGPointZero;
+    
+    [self.textView.layer addSublayer:_textLayer];
     
     
 

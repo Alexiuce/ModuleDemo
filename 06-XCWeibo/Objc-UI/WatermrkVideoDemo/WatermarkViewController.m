@@ -25,10 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//     NSString *videoPath = [NSBundle.mainBundle pathForResource:@"video.mp4" ofType:nil];
-//    [self addWaterPicWithVideoPath:videoPath];
+     NSString *videoPath = [NSBundle.mainBundle pathForResource:@"video.mp4" ofType:nil];
+    [self addWaterPicWithVideoPath:videoPath];
 //    [self testCode];
-    [self editManager];
+//    [self editManager];
    
 }
 
@@ -100,45 +100,45 @@
         }else {
             NSLog(@"delete is no error = ");
         }
-        // 5 - 视频文件输出
-        AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition
-                                                                          presetName:AVAssetExportPresetHighestQuality];
-        exporter.outputURL = [NSURL fileURLWithPath:savePath];
-        exporter.outputFileType = AVFileTypeMPEG4;
-        exporter.shouldOptimizeForNetworkUse = YES;
-        exporter.videoComposition = mainCompositionInst;
-        [exporter exportAsynchronouslyWithCompletionHandler:^{
-            if (exporter.status == AVAssetExportSessionStatusCompleted) {
-                NSLog(@"wancheng.....");
-            }
-            // 保存到相册
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//
-//                if( exporter.status == AVAssetExportSessionStatusCompleted ){
-//
-//                    UISaveVideoAtPathToSavedPhotosAlbum(myPathDocs, nil, nil, nil);
-//
-//                }else if( exporter.status == AVAssetExportSessionStatusFailed )
-//                {
-//                    NSLog(@"failed");
-//                }
-//
-//            });
-        }];
     }
+    // 5 - 视频文件输出
+    AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition
+                                                                      presetName:AVAssetExportPresetHighestQuality];
+    exporter.outputURL = [NSURL fileURLWithPath:savePath];
+    exporter.outputFileType = AVFileTypeMPEG4;
+    exporter.shouldOptimizeForNetworkUse = YES;
+    exporter.videoComposition = mainCompositionInst;
+    [exporter exportAsynchronouslyWithCompletionHandler:^{
+        if (exporter.status == AVAssetExportSessionStatusCompleted) {
+            NSLog(@"wancheng.....");
+        }
+        // 保存到相册
+        //            dispatch_async(dispatch_get_main_queue(), ^{
+        //
+        //                if( exporter.status == AVAssetExportSessionStatusCompleted ){
+        //
+        //                    UISaveVideoAtPathToSavedPhotosAlbum(myPathDocs, nil, nil, nil);
+        //
+        //                }else if( exporter.status == AVAssetExportSessionStatusFailed )
+        //                {
+        //                    NSLog(@"failed");
+        //                }
+        //
+        //            });
+    }];
     
 }
 
 
 - (void)applyVideoEffectsToComposition:(AVMutableVideoComposition *)composition size:(CGSize)size{
     // 文字
-    //    CATextLayer *subtitle1Text = [[CATextLayer alloc] init];
-    //    //    [subtitle1Text setFont:@"Helvetica-Bold"];
-    //    [subtitle1Text setFontSize:36];
-    //    [subtitle1Text setFrame:CGRectMake(10, size.height-10-100, size.width, 100)];
-    //    [subtitle1Text setString:@"ZHIMABAOBAO"];
-    //    //    [subtitle1Text setAlignmentMode:kCAAlignmentCenter];
-    //    [subtitle1Text setForegroundColor:[[UIColor whiteColor] CGColor]];
+        CATextLayer *subtitle1Text = [[CATextLayer alloc] init];
+        //    [subtitle1Text setFont:@"Helvetica-Bold"];
+        [subtitle1Text setFontSize:36];
+        [subtitle1Text setFrame:CGRectMake(10, size.height-10-100, size.width, 100)];
+        [subtitle1Text setString:@"ZHIMABAOBAO"];
+        //    [subtitle1Text setAlignmentMode:kCAAlignmentCenter];
+        [subtitle1Text setForegroundColor:[[UIColor whiteColor] CGColor]];
     
     //图片
     CALayer*picLayer = [CALayer layer];

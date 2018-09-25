@@ -169,6 +169,8 @@
         
         //set layer text
         _textLayer.string = text;
+        _textLayer.position = CGPointZero;
+        _textLayer.anchorPoint = CGPointZero;
 
     }
     return _textLayer;
