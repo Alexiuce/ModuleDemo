@@ -62,7 +62,8 @@
         AVMutableVideoCompositionLayerInstruction *layerIns = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:comp.videoAssetTrack];
         
         [layerIns setTransform:[self videoAssetTrackTransform:comp.videoDegree naturalSize:comp.videoAssetTrack.naturalSize] atTime:kCMTimeZero];
-        //    [layerIns setOpacity:0.0 atTime:originVideoAsset.duration];
+        
+//        [layerIns setOpacity:1.0 atTime:comp.timeRange.duration];
         
         vcins.layerInstructions = @[layerIns];
         _videoComposition.instructions = @[vcins];
@@ -92,7 +93,9 @@
     if (self.waterImage != nil) {
         [parentLayer addSublayer:self.pictureLayer];
     }
-  
+    // 设置坐标翻转(默认(0,0)在左下角,翻转后在左上角)
+    parentLayer.geometryFlipped = YES;
+    
     _videoComposition.animationTool = [AVVideoCompositionCoreAnimationTool videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
 }
 
@@ -146,13 +149,14 @@
         
         //create a text layer
         _textLayer = [CATextLayer layer];
-        [_textLayer setFrame:CGRectMake(0, 0, 40, 60)];
-
-        //set text attributes
-        _textLayer.foregroundColor = [UIColor blackColor].CGColor;
-        _textLayer.backgroundColor = UIColor.yellowColor.CGColor;
-
         
+        _textLayer.position = CGPointZero;
+        _textLayer.anchorPoint = CGPointZero;
+        _textLayer.alignmentMode = kCAAlignmentCenter;
+        //set text attributes
+        _textLayer.foregroundColor = UIColor.whiteColor.CGColor;
+//        _textLayer.backgroundColor = UIColor.yellowColor.CGColor;
+
         //choose a font
         UIFont *font = [UIFont systemFontOfSize:15];
         
@@ -165,12 +169,19 @@
         CGFontRelease(fontRef);
 
         //choose some text
-        NSString *text = @"Lorem ipsum dolor sit amet";
+        NSString *text = self.waterText;
         
         //set layer text
         _textLayer.string = text;
-        _textLayer.position = CGPointZero;
-        _textLayer.anchorPoint = CGPointZero;
+      
+        
+        // 计算文字宽度
+        CGRect textRect = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, 60) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+        
+        _textLayer.bounds = CGRectMake(0, 0, textRect.size.width, 60);
+        
+        [_textLayer displayIfNeeded];
+        
 
     }
     return _textLayer;

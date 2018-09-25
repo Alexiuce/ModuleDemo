@@ -25,10 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     NSString *videoPath = [NSBundle.mainBundle pathForResource:@"video.mp4" ofType:nil];
-    [self addWaterPicWithVideoPath:videoPath];
+//     NSString *videoPath = [NSBundle.mainBundle pathForResource:@"video.mp4" ofType:nil];
+//    [self addWaterPicWithVideoPath:videoPath];
 //    [self testCode];
-//    [self editManager];
+    [self editManager];
    
 }
 
@@ -141,15 +141,29 @@
 //    [subtitle1Text setForegroundColor:[[UIColor whiteColor] CGColor]];
 //    [subtitle1Text setBackgroundColor:UIColor.orangeColor.CGColor];
 //    [subtitle1Text setNeedsDisplay];
+    UIFont *font = [UIFont systemFontOfSize:60.0];
+    CATextLayer *aLayer = [[CATextLayer alloc] init];
+    [aLayer setFontSize:60];
+    [aLayer setString:@"HHHHHHOOOOLLL"];
+    [aLayer setAlignmentMode:kCAAlignmentCenter];
+    [aLayer setForegroundColor:[[UIColor greenColor] CGColor]];
+    [aLayer setBackgroundColor:UIColor.clearColor.CGColor];
+    CGSize textSize = [@"HHHHHHOOOOLLL" sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName, nil]];
+    aLayer.bounds = CGRectMake(0,0, textSize.width, textSize.height);
     
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, 60), NO, 0);
-    [@"Hello" drawInRect:CGRectMake(0, 0, size.width, 60) withAttributes:nil];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    aLayer.anchorPoint = CGPointMake(0.0, 0.0);
+    [aLayer displayIfNeeded];
     
-    CALayer *textImageLayer = [CALayer layer];
-    textImageLayer.contents = (__bridge id _Nullable)(image.CGImage);
-    textImageLayer.frame = CGRectMake(0, 100, size.width, 60);
+
+    // 文字转图片
+//    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, 60), NO, 0);
+//    [@"Hello" drawInRect:CGRectMake(0, 0, size.width, 60) withAttributes:nil];
+//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+    
+//    CALayer *textImageLayer = [CALayer layer];
+//    textImageLayer.contents = (__bridge id _Nullable)(image.CGImage);
+//    textImageLayer.frame = CGRectMake(0, 100, size.width, 60);
 //    textImageLayer.backgroundColor = UIColor.redColor.CGColor;
    
     //图片
@@ -159,10 +173,11 @@
     
     // 2 - The usual overlay
     CALayer *overlayLayer = [CALayer layer];
-    [overlayLayer addSublayer:textImageLayer];
     [overlayLayer addSublayer:picLayer];
+    [overlayLayer addSublayer:aLayer];
     overlayLayer.frame = CGRectMake(0, 0, size.width, size.height);
     [overlayLayer setMasksToBounds:YES];
+//    overlayLayer.backgroundColor = UIColor.grayColor.CGColor;
     
     CALayer *parentLayer = [CALayer layer];
     CALayer *videoLayer = [CALayer layer];
@@ -171,6 +186,7 @@
     [parentLayer addSublayer:videoLayer];
     [parentLayer addSublayer:overlayLayer];
     
+    parentLayer.geometryFlipped = YES;
     composition.animationTool = [AVVideoCompositionCoreAnimationTool
                                  videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
 }
