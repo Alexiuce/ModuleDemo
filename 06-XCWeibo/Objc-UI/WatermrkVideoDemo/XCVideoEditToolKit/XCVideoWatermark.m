@@ -16,6 +16,16 @@
 @property (nonatomic, strong)UIImage *waterImage;
 @property (nonatomic, copy) NSString *waterText;
 
+/**
+ 图片layer: 显示水印图片
+ */
+@property (nonatomic, strong)CALayer *pictureLayer;
+
+/**
+ 文字layer: 显示文字水印
+ */
+@property (nonatomic, strong)CATextLayer *textLayer;
+
 @end
 
 @implementation XCVideoWatermark
@@ -63,19 +73,26 @@
 
 - (void)addWatermarkLayerToVideoComposition{
    
-    // 创建水印layer ,并设置水印图片
-    CALayer *aLayer=[CALayer layer];
-    aLayer.contents = (__bridge id )(_waterImage.CGImage);
-    aLayer.frame = CGRectMake(0, 0, 90, 60);
-
+    CGFloat videoWidth = _videoComposition.renderSize.width;
+    CGFloat videoHeight = _videoComposition.renderSize.height;
+    
     CALayer *parentLayer = [CALayer layer];
+    parentLayer.frame = CGRectMake(0, 0, videoWidth ,videoHeight);
     
-    parentLayer.frame = CGRectMake(0, 0, _videoComposition.renderSize.width ,_videoComposition.renderSize.height);
     CALayer *videoLayer = [CALayer layer];
-    
     videoLayer.frame = parentLayer.frame;
+    
     [parentLayer addSublayer:videoLayer];
-    [parentLayer addSublayer:aLayer];
+    
+    // 文字
+    if (self.waterText != nil) {
+        [parentLayer addSublayer:self.textLayer];
+    }
+    // 图片
+    if (self.waterImage != nil) {
+        [parentLayer addSublayer:self.pictureLayer];
+    }
+  
     _videoComposition.animationTool = [AVVideoCompositionCoreAnimationTool videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
 }
 
@@ -112,5 +129,52 @@
     return transform;
 }
 
+
+#pragma mark - lazy getter method
+
+- (CALayer *)pictureLayer{
+    if (_pictureLayer == nil) {
+        _pictureLayer = [CALayer layer];
+        _pictureLayer.contents = (__bridge id )(_waterImage.CGImage);
+        _pictureLayer.frame = CGRectMake(100, 0, 90, 60);
+    }
+    return _pictureLayer;
+}
+
+- (CATextLayer *)textLayer{
+    if (_textLayer == nil) {
+        
+        //create a text layer
+        _textLayer = [CATextLayer layer];
+        [_textLayer setFrame:CGRectMake(0, 100, _videoComposition.renderSize.width, 60)];
+
+        //set text attributes
+        _textLayer.foregroundColor = [UIColor blackColor].CGColor;
+        _textLayer.alignmentMode = kCAAlignmentJustified;
+        _textLayer.wrapped = YES;
+        
+        //choose a font
+        UIFont *font = [UIFont systemFontOfSize:15];
+        
+        //set layer font
+        CFStringRef fontName = (__bridge CFStringRef)font.fontName;
+        CGFontRef fontRef = CGFontCreateWithFontName(fontName);
+      
+        _textLayer.fontSize = font.pointSize;
+        _textLayer.font =  fontRef;
+        
+        //choose some text
+        NSString *text = @"Lorem ipsum dolor sit amet";
+        
+        //set layer text
+
+      
+        _textLayer.backgroundColor = UIColor.yellowColor.CGColor;
+        _textLayer.string = text;
+        CGFontRelease(fontRef);
+
+    }
+    return _textLayer;
+}
 
 @end

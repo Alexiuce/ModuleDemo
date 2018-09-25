@@ -38,7 +38,6 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
 }
 
 - (void)startEditVideo:(NSString *)videoName progress:(XCEditingProgressBlock)progressBlock success:(XCEditedSuccessBlock)successBlock failure:(XCEditedFailureBlock)failureBlock{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // 1. 加载本地视频资源
         AVURLAsset *videoAsset = [self loadLocalAsset:videoName];
         // 2. 判断视频加载是否正常
@@ -53,11 +52,11 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
         
         UIImage *waterImage = [UIImage imageNamed:self.waterImageName];
         // 4. 设置视频水印
-        XCVideoWatermark *waterMark = [XCVideoWatermark waterImageMark:waterImage withComposition:composition];
+        XCVideoWatermark *waterMark = [XCVideoWatermark watermark:waterImage text:self.waterText withComposition:composition];
+        // 4.1 进度回调block
         self.progressBlock = progressBlock;
         // 5. 导出编辑后的视频
         [self exportWaterVideo:videoName watermark:waterMark avasset:composition.mainComposition success:successBlock];
-    });
 }
 // 导出方法
 - (void)exportWaterVideo:(NSString *)name watermark:(XCVideoWatermark *)watermark avasset:(AVAsset *)video success:(XCEditedSuccessBlock)block{
@@ -73,7 +72,7 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
     exportSession.videoComposition = watermark.videoComposition;
     _export = exportSession;
     [self removeIfFileExist:savePath];
-    [self timer];
+    [self.timer fire];
     [exportSession exportAsynchronouslyWithCompletionHandler:^{
         if (exportSession.status == AVAssetExportSessionStatusCompleted) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -94,6 +93,7 @@ typedef NS_ENUM(NSInteger,XCEditVideoErroeCode) {
 }
 
 - (void)checkProgress{
+    NSLog(@"PROGRESS");
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.progressBlock) {
             self.progressBlock(self.export.progress);

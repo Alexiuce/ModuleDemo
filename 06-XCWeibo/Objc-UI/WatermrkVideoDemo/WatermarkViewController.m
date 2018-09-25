@@ -167,6 +167,7 @@
     
     XCVideoEditManager *videoManager = [XCVideoEditManager defaultManager];
     videoManager.waterImageName = @"icon_fasong";
+    videoManager.waterText = @"This ME";
     [videoManager startEditVideo:videoPath progress:^(float progress) {
         NSLog(@"progress %f",progress);
     }  success:^(NSString *editedSavePath) {
