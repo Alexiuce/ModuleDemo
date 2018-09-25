@@ -132,14 +132,26 @@
 
 - (void)applyVideoEffectsToComposition:(AVMutableVideoComposition *)composition size:(CGSize)size{
     // 文字
-        CATextLayer *subtitle1Text = [[CATextLayer alloc] init];
-        //    [subtitle1Text setFont:@"Helvetica-Bold"];
-        [subtitle1Text setFontSize:36];
-        [subtitle1Text setFrame:CGRectMake(10, size.height-10-100, size.width, 100)];
-        [subtitle1Text setString:@"ZHIMABAOBAO"];
-        //    [subtitle1Text setAlignmentMode:kCAAlignmentCenter];
-        [subtitle1Text setForegroundColor:[[UIColor whiteColor] CGColor]];
+//    CATextLayer *subtitle1Text = [[CATextLayer alloc] init];
+//    //    [subtitle1Text setFont:@"Helvetica-Bold"];
+//    [subtitle1Text setFontSize:15];
+//    [subtitle1Text setFrame:CGRectMake(10, size.height-10-100, size.width, 100)];
+//    [subtitle1Text setString:@"HELLO WROLD"];
+//    //    [subtitle1Text setAlignmentMode:kCAAlignmentCenter];
+//    [subtitle1Text setForegroundColor:[[UIColor whiteColor] CGColor]];
+//    [subtitle1Text setBackgroundColor:UIColor.orangeColor.CGColor];
+//    [subtitle1Text setNeedsDisplay];
     
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, 60), NO, 0);
+    [@"Hello" drawInRect:CGRectMake(0, 0, size.width, 60) withAttributes:nil];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    CALayer *textImageLayer = [CALayer layer];
+    textImageLayer.contents = (__bridge id _Nullable)(image.CGImage);
+    textImageLayer.frame = CGRectMake(0, 100, size.width, 60);
+//    textImageLayer.backgroundColor = UIColor.redColor.CGColor;
+   
     //图片
     CALayer*picLayer = [CALayer layer];
     picLayer.contents = (id)[UIImage imageNamed:@"icon_fasong"].CGImage;
@@ -147,6 +159,7 @@
     
     // 2 - The usual overlay
     CALayer *overlayLayer = [CALayer layer];
+    [overlayLayer addSublayer:textImageLayer];
     [overlayLayer addSublayer:picLayer];
     overlayLayer.frame = CGRectMake(0, 0, size.width, size.height);
     [overlayLayer setMasksToBounds:YES];
