@@ -160,6 +160,8 @@
 		D8EF847B2110342E0095F19E /* FirstTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF84792110342E0095F19E /* FirstTableViewController.xib */; };
 		D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF847D2110344A0095F19E /* SecTableViewController.m */; };
 		D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF847E2110344A0095F19E /* SecTableViewController.xib */; };
+		D8FD5B49215B0B0A0086E9CB /* XCGradientController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FD5B48215B0B0A0086E9CB /* XCGradientController.m */; };
+		D8FD5B4B215B0B3E0086E9CB /* Gradient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8FD5B4A215B0B3E0086E9CB /* Gradient.storyboard */; };
 		FCB73D74692EF1711B2B9796 /* Pods_Objc_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */; };
 /* End PBXBuildFile section */
 
@@ -449,6 +451,9 @@
 		D8EF847C2110344A0095F19E /* SecTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecTableViewController.h; sourceTree = "<group>"; };
 		D8EF847D2110344A0095F19E /* SecTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecTableViewController.m; sourceTree = "<group>"; };
 		D8EF847E2110344A0095F19E /* SecTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecTableViewController.xib; sourceTree = "<group>"; };
+		D8FD5B47215B0B0A0086E9CB /* XCGradientController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCGradientController.h; sourceTree = "<group>"; };
+		D8FD5B48215B0B0A0086E9CB /* XCGradientController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCGradientController.m; sourceTree = "<group>"; };
+		D8FD5B4A215B0B3E0086E9CB /* Gradient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gradient.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -829,6 +834,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8FD5B44215B0A790086E9CB /* GradientLayerDemo */,
 				D809AE822156169400801CA0 /* GifPlayDemo */,
 				D809AE7C2155F92700801CA0 /* WatermrkVideoDemo */,
 				D84726AA2151CA71001E98A6 /* LabelConstraint */,
@@ -1111,6 +1117,16 @@
 			path = PageViewController;
 			sourceTree = "<group>";
 		};
+		D8FD5B44215B0A790086E9CB /* GradientLayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8FD5B47215B0B0A0086E9CB /* XCGradientController.h */,
+				D8FD5B48215B0B0A0086E9CB /* XCGradientController.m */,
+				D8FD5B4A215B0B3E0086E9CB /* Gradient.storyboard */,
+			);
+			path = GradientLayerDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1245,6 +1261,7 @@
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D84726AC2151CA8D001E98A6 /* LabelConstraint.storyboard in Resources */,
 				D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */,
+				D8FD5B4B215B0B3E0086E9CB /* Gradient.storyboard in Resources */,
 				D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */,
 				D86CEF4720FF415F009BB583 /* HelloView.xib in Resources */,
 				D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */,
@@ -1382,6 +1399,7 @@
 				D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */,
 				D8B78F6F2149E550006159CA /* XCTagViewFlowLayout.m in Sources */,
 				D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */,
+				D8FD5B49215B0B0A0086E9CB /* XCGradientController.m in Sources */,
 				D81E9F6421324B0400040000 /* CFDanmakuInfo.m in Sources */,
 				D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */,
 				D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */,
