@@ -13,6 +13,19 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.bounds = (CGRect){CGPointZero,CGSizeMake(100, 100)};
+    gradientLayer.position = self.view.center;
+    [self.view.layer addSublayer:gradientLayer];
+    
+    gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor,
+                             (__bridge id)[UIColor blueColor].CGColor];
+    
+    gradientLayer.startPoint = CGPointZero;
+    
+    gradientLayer.endPoint = CGPointMake(1, 0);
+    
+    
 }
 
 @end
