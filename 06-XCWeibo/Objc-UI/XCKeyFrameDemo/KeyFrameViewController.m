@@ -9,6 +9,7 @@
 #import "KeyFrameViewController.h"
 
 @interface KeyFrameViewController ()
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 
@@ -16,7 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+    CALayer *layer = [CALayer layer];
+    
+    layer.bounds = (CGRect){{0,0},{48,32}};
+    layer.backgroundColor = UIColor.redColor.CGColor;
+    layer.anchorPoint = CGPointZero;
+    
+    [self.containerView.layer addSublayer:layer];
+    
+    
+    
+    
+    
 }
 
 
