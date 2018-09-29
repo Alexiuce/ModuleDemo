@@ -137,6 +137,11 @@
 		D8A0E994212A3D6600D8969F /* XCSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A0E993212A3D6600D8969F /* XCSearch.storyboard */; };
 		D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E996212A3D8000D8969F /* XCSearchViewController.m */; };
 		D8A0E99A212A448E00D8969F /* XCSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A0E999212A448E00D8969F /* XCSearchTableViewController.m */; };
+		D8A63CB4215E5B5F004DEDA8 /* SelfSuper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A63CB3215E5B5F004DEDA8 /* SelfSuper.storyboard */; };
+		D8A63CB7215E5B76004DEDA8 /* XCSelfSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A63CB6215E5B76004DEDA8 /* XCSelfSuperViewController.m */; };
+		D8A63CBA215E5BDC004DEDA8 /* XCPersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A63CB9215E5BDC004DEDA8 /* XCPersonView.m */; };
+		D8A63CBD215E5BF4004DEDA8 /* XCSonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A63CBC215E5BF4004DEDA8 /* XCSonView.m */; };
+		D8A63CC0215E5C0E004DEDA8 /* XCSubSonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A63CBF215E5C0E004DEDA8 /* XCSubSonView.m */; };
 		D8AECB62212CDFDE00BB7FE6 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AECB61212CDFDE00BB7FE6 /* NSString+MD5.m */; };
 		D8B29A222141F81F00A605BD /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B29A212141F81F00A605BD /* StackViewController.m */; };
 		D8B29A242141F82C00A605BD /* Stack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B29A232141F82C00A605BD /* Stack.storyboard */; };
@@ -414,6 +419,15 @@
 		D8A0E996212A3D8000D8969F /* XCSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSearchViewController.m; sourceTree = "<group>"; };
 		D8A0E998212A448E00D8969F /* XCSearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSearchTableViewController.h; sourceTree = "<group>"; };
 		D8A0E999212A448E00D8969F /* XCSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSearchTableViewController.m; sourceTree = "<group>"; };
+		D8A63CB3215E5B5F004DEDA8 /* SelfSuper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelfSuper.storyboard; sourceTree = "<group>"; };
+		D8A63CB5215E5B76004DEDA8 /* XCSelfSuperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSelfSuperViewController.h; sourceTree = "<group>"; };
+		D8A63CB6215E5B76004DEDA8 /* XCSelfSuperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSelfSuperViewController.m; sourceTree = "<group>"; };
+		D8A63CB8215E5BDC004DEDA8 /* XCPersonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPersonView.h; sourceTree = "<group>"; };
+		D8A63CB9215E5BDC004DEDA8 /* XCPersonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPersonView.m; sourceTree = "<group>"; };
+		D8A63CBB215E5BF4004DEDA8 /* XCSonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSonView.h; sourceTree = "<group>"; };
+		D8A63CBC215E5BF4004DEDA8 /* XCSonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSonView.m; sourceTree = "<group>"; };
+		D8A63CBE215E5C0E004DEDA8 /* XCSubSonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSubSonView.h; sourceTree = "<group>"; };
+		D8A63CBF215E5C0E004DEDA8 /* XCSubSonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSubSonView.m; sourceTree = "<group>"; };
 		D8AECB60212CDFDE00BB7FE6 /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		D8AECB61212CDFDE00BB7FE6 /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		D8B29A202141F81F00A605BD /* StackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
@@ -834,6 +848,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8A63CB2215E5B3D004DEDA8 /* XCSelfSuperDemo */,
 				D8FD5B44215B0A790086E9CB /* GradientLayerDemo */,
 				D809AE822156169400801CA0 /* GifPlayDemo */,
 				D809AE7C2155F92700801CA0 /* WatermrkVideoDemo */,
@@ -993,6 +1008,22 @@
 				D8AECB61212CDFDE00BB7FE6 /* NSString+MD5.m */,
 			);
 			path = XCSerachBar;
+			sourceTree = "<group>";
+		};
+		D8A63CB2215E5B3D004DEDA8 /* XCSelfSuperDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8A63CB3215E5B5F004DEDA8 /* SelfSuper.storyboard */,
+				D8A63CB5215E5B76004DEDA8 /* XCSelfSuperViewController.h */,
+				D8A63CB6215E5B76004DEDA8 /* XCSelfSuperViewController.m */,
+				D8A63CB8215E5BDC004DEDA8 /* XCPersonView.h */,
+				D8A63CB9215E5BDC004DEDA8 /* XCPersonView.m */,
+				D8A63CBB215E5BF4004DEDA8 /* XCSonView.h */,
+				D8A63CBC215E5BF4004DEDA8 /* XCSonView.m */,
+				D8A63CBE215E5C0E004DEDA8 /* XCSubSonView.h */,
+				D8A63CBF215E5C0E004DEDA8 /* XCSubSonView.m */,
+			);
+			path = XCSelfSuperDemo;
 			sourceTree = "<group>";
 		};
 		D8B29A1F2141F80000A605BD /* StackView */ = {
@@ -1280,6 +1311,7 @@
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
 				D8E4ADCC2140A7400004BBB0 /* ScrollviewAutolayout.storyboard in Resources */,
 				D81E9F5D21324B0400040000 /* SuperPlayer.bundle in Resources */,
+				D8A63CB4215E5B5F004DEDA8 /* SelfSuper.storyboard in Resources */,
 				D84C41AC2126A5920036E778 /* Navigation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1398,6 +1430,7 @@
 				D83DA3AC212954A000388078 /* XCPresentationController.m in Sources */,
 				D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */,
 				D8B78F6F2149E550006159CA /* XCTagViewFlowLayout.m in Sources */,
+				D8A63CC0215E5C0E004DEDA8 /* XCSubSonView.m in Sources */,
 				D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */,
 				D8FD5B49215B0B0A0086E9CB /* XCGradientController.m in Sources */,
 				D81E9F6421324B0400040000 /* CFDanmakuInfo.m in Sources */,
@@ -1430,6 +1463,7 @@
 				D87799172111383F00611EF1 /* MASViewConstraint.m in Sources */,
 				D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */,
 				D84726AF2151CAA6001E98A6 /* XCLabelConstraintViewController.m in Sources */,
+				D8A63CBD215E5BF4004DEDA8 /* XCSonView.m in Sources */,
 				D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */,
 				D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */,
 				D82B003C212020300066C32E /* DetailViewController.m in Sources */,
@@ -1443,6 +1477,7 @@
 				D87799112111383F00611EF1 /* MASCompositeConstraint.m in Sources */,
 				D81E9F5521324B0400040000 /* UINavigationController+ZFPlayerRotation.m in Sources */,
 				D8AECB62212CDFDE00BB7FE6 /* NSString+MD5.m in Sources */,
+				D8A63CBA215E5BDC004DEDA8 /* XCPersonView.m in Sources */,
 				D809AE87215616BE00801CA0 /* GifPlayViewController.m in Sources */,
 				D8A0E99A212A448E00D8969F /* XCSearchTableViewController.m in Sources */,
 				D87799132111383F00611EF1 /* MASLayoutConstraint.m in Sources */,
@@ -1477,6 +1512,7 @@
 				D81E9F5621324B0400040000 /* UIViewController+ZFPlayerRotation.m in Sources */,
 				D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */,
 				D818D07D210AB5890002C03E /* PersonViewController.m in Sources */,
+				D8A63CB7215E5B76004DEDA8 /* XCSelfSuperViewController.m in Sources */,
 				D82B00452120281C0066C32E /* SDYWebTabController.m in Sources */,
 				D8443D172158AD2400AEF865 /* XCVideoEditComposition.m in Sources */,
 				D81AA1F32125A768008A887F /* XMSNoHightLightButton.m in Sources */,

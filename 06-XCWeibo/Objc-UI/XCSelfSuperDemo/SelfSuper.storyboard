@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CLR-SF-4i0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RCG-be-hat">
+            <objects>
+                <navigationController id="CLR-SF-4i0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4sS-F5-QXC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="p88-d2-2TJ" kind="relationship" relationship="rootViewController" id="sxS-Kh-LlI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRF-HB-5p6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1305" y="51"/>
+        </scene>
+        <!--Self Super View Controller-->
+        <scene sceneID="JfW-3d-gwW">
+            <objects>
+                <viewController id="p88-d2-2TJ" customClass="XCSelfSuperViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o2a-CF-R9C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-dU-rfJ">
+                                <rect key="frame" x="0.0" y="160" width="375" height="111"/>
+                                <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="aI3-8O-1ld"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uk9-dU-rfJ" firstAttribute="leading" secondItem="Idr-PW-nrO" secondAttribute="leading" id="51e-Dx-01f"/>
+                            <constraint firstItem="uk9-dU-rfJ" firstAttribute="trailing" secondItem="Idr-PW-nrO" secondAttribute="trailing" id="a0P-F2-AEo"/>
+                            <constraint firstItem="uk9-dU-rfJ" firstAttribute="top" secondItem="Idr-PW-nrO" secondAttribute="top" constant="96" id="hq0-vD-LsW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Idr-PW-nrO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sQZ-zL-cA0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYE-Ex-Esk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602.39999999999998" y="50.824587706146929"/>
+        </scene>
+    </scenes>
+</document>
