@@ -11,6 +11,8 @@
 @interface KeyFrameViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
+@property (nonatomic, weak) CALayer *animateLayer;
+
 @end
 
 @implementation KeyFrameViewController
@@ -25,11 +27,23 @@
     layer.anchorPoint = CGPointZero;
     
     [self.containerView.layer addSublayer:layer];
+    _animateLayer = layer;
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     
+    NSValue *v1 =  [NSValue valueWithCGPoint:CGPointMake(0, 0)];
+    NSValue *v2 = [NSValue valueWithCGPoint:CGPointMake(80, 0)];
+    NSValue *v3 = [NSValue valueWithCGPoint:CGPointMake(80, 100)];
+    NSValue *v4 = [NSValue valueWithCGPoint:CGPointMake(200, 100)];
+    NSValue *v5 = [NSValue valueWithCGPoint:CGPointMake(200, 200)];
     
+    keyAnimation.values = @[v1,v2,v3,v4,v5];
+    keyAnimation.duration = 8;
     
-    
-    
+    [self.animateLayer addAnimation:keyAnimation forKey:nil];
 }
 
 
