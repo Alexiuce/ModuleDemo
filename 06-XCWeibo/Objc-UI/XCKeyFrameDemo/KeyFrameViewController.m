@@ -31,7 +31,8 @@
 
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     
     NSValue *v1 =  [NSValue valueWithCGPoint:CGPointMake(0, 0)];
@@ -42,6 +43,7 @@
     
     keyAnimation.values = @[v1,v2,v3,v4,v5];
     keyAnimation.duration = 8;
+    keyAnimation.repeatCount = MAXFLOAT;
     
     [self.animateLayer addAnimation:keyAnimation forKey:nil];
 }
