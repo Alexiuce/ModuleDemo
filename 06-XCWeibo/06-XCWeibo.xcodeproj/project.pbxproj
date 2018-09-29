@@ -165,6 +165,8 @@
 		D8EF847B2110342E0095F19E /* FirstTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF84792110342E0095F19E /* FirstTableViewController.xib */; };
 		D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF847D2110344A0095F19E /* SecTableViewController.m */; };
 		D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF847E2110344A0095F19E /* SecTableViewController.xib */; };
+		D8F4D97B215F161F003CB693 /* Keyframe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F4D97A215F161F003CB693 /* Keyframe.storyboard */; };
+		D8F4D97E215F1645003CB693 /* KeyFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4D97D215F1645003CB693 /* KeyFrameViewController.m */; };
 		D8FD5B49215B0B0A0086E9CB /* XCGradientController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FD5B48215B0B0A0086E9CB /* XCGradientController.m */; };
 		D8FD5B4B215B0B3E0086E9CB /* Gradient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8FD5B4A215B0B3E0086E9CB /* Gradient.storyboard */; };
 		FCB73D74692EF1711B2B9796 /* Pods_Objc_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5B04543719C12DB382F74F /* Pods_Objc_UI.framework */; };
@@ -465,6 +467,9 @@
 		D8EF847C2110344A0095F19E /* SecTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecTableViewController.h; sourceTree = "<group>"; };
 		D8EF847D2110344A0095F19E /* SecTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecTableViewController.m; sourceTree = "<group>"; };
 		D8EF847E2110344A0095F19E /* SecTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecTableViewController.xib; sourceTree = "<group>"; };
+		D8F4D97A215F161F003CB693 /* Keyframe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keyframe.storyboard; sourceTree = "<group>"; };
+		D8F4D97C215F1645003CB693 /* KeyFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyFrameViewController.h; sourceTree = "<group>"; };
+		D8F4D97D215F1645003CB693 /* KeyFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyFrameViewController.m; sourceTree = "<group>"; };
 		D8FD5B47215B0B0A0086E9CB /* XCGradientController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCGradientController.h; sourceTree = "<group>"; };
 		D8FD5B48215B0B0A0086E9CB /* XCGradientController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCGradientController.m; sourceTree = "<group>"; };
 		D8FD5B4A215B0B3E0086E9CB /* Gradient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gradient.storyboard; sourceTree = "<group>"; };
@@ -848,6 +853,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8F4D979215F15E3003CB693 /* XCKeyFrameDemo */,
 				D8A63CB2215E5B3D004DEDA8 /* XCSelfSuperDemo */,
 				D8FD5B44215B0A790086E9CB /* GradientLayerDemo */,
 				D809AE822156169400801CA0 /* GifPlayDemo */,
@@ -1148,6 +1154,16 @@
 			path = PageViewController;
 			sourceTree = "<group>";
 		};
+		D8F4D979215F15E3003CB693 /* XCKeyFrameDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4D97A215F161F003CB693 /* Keyframe.storyboard */,
+				D8F4D97C215F1645003CB693 /* KeyFrameViewController.h */,
+				D8F4D97D215F1645003CB693 /* KeyFrameViewController.m */,
+			);
+			path = XCKeyFrameDemo;
+			sourceTree = "<group>";
+		};
 		D8FD5B44215B0A790086E9CB /* GradientLayerDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1310,6 +1326,7 @@
 				D8B29A2921422B4C00A605BD /* Network.storyboard in Resources */,
 				D84BD00D21210756003C819F /* SDYStrategyBottomInputView.xib in Resources */,
 				D8E4ADCC2140A7400004BBB0 /* ScrollviewAutolayout.storyboard in Resources */,
+				D8F4D97B215F161F003CB693 /* Keyframe.storyboard in Resources */,
 				D81E9F5D21324B0400040000 /* SuperPlayer.bundle in Resources */,
 				D8A63CB4215E5B5F004DEDA8 /* SelfSuper.storyboard in Resources */,
 				D84C41AC2126A5920036E778 /* Navigation.storyboard in Resources */,
@@ -1458,6 +1475,7 @@
 				D87799102111383F00611EF1 /* ViewController+MASAdditions.m in Sources */,
 				D88D70B421158D6F00858B62 /* ANViewController.m in Sources */,
 				D86CEF3720FF4120009BB583 /* ViewController.m in Sources */,
+				D8F4D97E215F1645003CB693 /* KeyFrameViewController.m in Sources */,
 				D8E4ADCF2140A76F0004BBB0 /* SALViewController.m in Sources */,
 				D87799152111383F00611EF1 /* View+MASAdditions.m in Sources */,
 				D87799172111383F00611EF1 /* MASViewConstraint.m in Sources */,
