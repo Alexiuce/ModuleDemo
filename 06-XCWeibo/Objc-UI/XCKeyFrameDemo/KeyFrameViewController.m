@@ -43,6 +43,7 @@
     
     keyAnimation.values = @[v1,v2,v3,v4,v5];
     keyAnimation.duration = 8;
+    keyAnimation.keyTimes = @[@0,@0.5,@0.2,@1];
     keyAnimation.repeatCount = MAXFLOAT;
     
     [self.animateLayer addAnimation:keyAnimation forKey:nil];
