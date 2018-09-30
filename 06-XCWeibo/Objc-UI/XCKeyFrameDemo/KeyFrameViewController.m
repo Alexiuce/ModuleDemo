@@ -38,7 +38,7 @@
 
 
 - (void)baseAnimate{
-    CAAnimationGroup *animGroup = [CAAnimationGroup animation];
+//    CAAnimationGroup *animGroup = [CAAnimationGroup animation];
     
     
     CABasicAnimation *anim1 = [CABasicAnimation animationWithKeyPath:@"position"];
@@ -50,10 +50,10 @@
     anim1.autoreverses = YES;
     
 //    CABasicAnimation *anim2 = [CABasicAnimation animationWithKeyPath:@"position"];
-    animGroup.animations = @[anim1];
+//    animGroup.animations = @[anim1];
     
     
-    [self.animateLayer addAnimation:animGroup forKey:nil];
+    [self.animateLayer addAnimation:anim1 forKey:nil];
     
     
     
