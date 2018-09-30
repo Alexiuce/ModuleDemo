@@ -13,6 +13,13 @@
 
 @property (nonatomic, weak) CALayer *animateLayer;
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+
+@property (nonatomic, strong)CADisplayLink *displayLink;
+
+@property (nonatomic, strong) NSDateFormatter *dateFormater;
+
 @end
 
 @implementation KeyFrameViewController
@@ -28,6 +35,12 @@
     layer.position = CGPointMake(-48, 0);
     [self.containerView.layer addSublayer:layer];
     _animateLayer = layer;
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(timeLabel_update)];
+    [self.displayLink addToRunLoop:NSRunLoop.currentRunLoop forMode:NSRunLoopCommonModes];
+    
+    self.dateFormater = [[NSDateFormatter alloc]init];
+    
+    self.dateFormater.dateFormat = @"HH:mm:ss";
 
 }
 
@@ -36,6 +49,12 @@
     
 }
 
+
+- (void)timeLabel_update{
+    NSDate *date = [NSDate date];
+    NSString *dateText = [self.dateFormater stringFromDate:date];
+    self.timeLabel.text = dateText;
+}
 
 - (void)baseAnimate{
 //    CAAnimationGroup *animGroup = [CAAnimationGroup animation];
@@ -70,12 +89,9 @@
     NSValue *v1 =  [NSValue valueWithCGPoint:CGPointMake(-48, 0)];
     NSValue *v2 = [NSValue valueWithCGPoint:CGPointMake(80, 0)];
     NSValue *v3 = [NSValue valueWithCGPoint:CGPointMake(80.1, 0)];
-
-    
-    
     keyAnimation.values = @[v1,v2,v3];
     keyAnimation.duration = 2.3;
-    keyAnimation.keyTimes = @[@0,@0.13,@0.87];
+    keyAnimation.keyTimes = @[@0,@0.13,@1];
 //    keyAnimation.repeatCount = MAXFLOAT;
     keyAnimation.autoreverses = YES;
     

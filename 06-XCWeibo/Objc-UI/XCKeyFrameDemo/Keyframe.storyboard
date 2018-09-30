@@ -51,12 +51,24 @@
                                     <segue destination="lFO-CJ-hRC" kind="show" id="gAv-XP-arU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-4S-bnt">
+                                <rect key="frame" x="0.0" y="444" width="375" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="YjA-Rg-ZPm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="EPZ-4S-bnt" firstAttribute="leading" secondItem="r1K-Gj-n46" secondAttribute="leading" id="7ZB-b3-U7I"/>
+                            <constraint firstItem="EPZ-4S-bnt" firstAttribute="trailing" secondItem="r1K-Gj-n46" secondAttribute="trailing" id="EVF-fN-Lbr"/>
                             <constraint firstItem="ZbL-ws-SIY" firstAttribute="top" secondItem="r1K-Gj-n46" secondAttribute="top" id="LkQ-Ep-gtk"/>
                             <constraint firstItem="ZbL-ws-SIY" firstAttribute="leading" secondItem="r1K-Gj-n46" secondAttribute="leading" id="OVg-JY-Vbd"/>
                             <constraint firstItem="r1K-Gj-n46" firstAttribute="trailing" secondItem="lqh-R7-UmA" secondAttribute="trailing" constant="16" id="Ydb-19-4lI"/>
+                            <constraint firstItem="EPZ-4S-bnt" firstAttribute="top" secondItem="ZbL-ws-SIY" secondAttribute="bottom" constant="160" id="Z2O-R2-pFV"/>
                             <constraint firstItem="ZbL-ws-SIY" firstAttribute="trailing" secondItem="r1K-Gj-n46" secondAttribute="trailing" id="diG-jq-54V"/>
                             <constraint firstItem="r1K-Gj-n46" firstAttribute="bottom" secondItem="lqh-R7-UmA" secondAttribute="bottom" constant="85" id="jzp-zv-aSM"/>
                         </constraints>
@@ -65,6 +77,7 @@
                     <navigationItem key="navigationItem" id="FWW-fO-GeC"/>
                     <connections>
                         <outlet property="containerView" destination="ZbL-ws-SIY" id="PzM-wX-hbg"/>
+                        <outlet property="timeLabel" destination="EPZ-4S-bnt" id="Sao-Tk-sDS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i89-Og-gzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
