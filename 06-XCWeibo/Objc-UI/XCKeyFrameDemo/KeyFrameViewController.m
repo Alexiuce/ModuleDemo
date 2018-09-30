@@ -89,11 +89,12 @@
     NSValue *v1 =  [NSValue valueWithCGPoint:CGPointMake(-48, 0)];
     NSValue *v2 = [NSValue valueWithCGPoint:CGPointMake(80, 0)];
     NSValue *v3 = [NSValue valueWithCGPoint:CGPointMake(80.1, 0)];
-    keyAnimation.values = @[v1,v2,v3];
-    keyAnimation.duration = 2.3;
-    keyAnimation.keyTimes = @[@0,@0.13,@1];
+    NSValue *v4 = [NSValue valueWithCGPoint:CGPointMake(-48, 0)];
+    keyAnimation.values = @[v1,v2,v3,v4];
+    keyAnimation.duration = 2.6;
+    keyAnimation.keyTimes = @[@0.0,@(3/26.0),@(20/26.0),@1.0];
 //    keyAnimation.repeatCount = MAXFLOAT;
-    keyAnimation.autoreverses = YES;
+//    keyAnimation.autoreverses = YES;
     
     [self.animateLayer addAnimation:keyAnimation forKey:nil];
 }
