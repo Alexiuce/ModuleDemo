@@ -1241,7 +1241,7 @@ static UISlider * _volumeSlider;
 
 -(void) onPlayEvent:(TXVodPlayer *)player event:(int)EvtID withParam:(NSDictionary*)param
 {
-    NSDictionary* dict = param;
+//    NSDictionary* dict = param;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         

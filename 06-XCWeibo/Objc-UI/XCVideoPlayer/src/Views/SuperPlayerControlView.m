@@ -951,7 +951,7 @@ static const CGFloat SuperPlayerControlBarAutoFadeOutTimeInterval = 0.15f;
         [_backLiveBtn setTitle:@"返回直播" forState:UIControlStateNormal];
         _backLiveBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         UIImage *image = SuperPlayerImage(@"qg_online_bg");
-        CGFloat width = image.size.width;
+//        CGFloat width = image.size.width;
         CGFloat height = image.size.height;
         
         UIImage *resizableImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(height * 0.5, height * 0.5, height * 0.5, height * 0.5)];

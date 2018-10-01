@@ -85,10 +85,10 @@
     NSString *str2 = @"hello";
     NSLog(@"str2 = %p",str2);
     
-    char *buf = malloc(3 * 1024 * 1024);
+//    char *buf = malloc(3 * 1024 * 1024);
    
-     NSInteger size =  malloc_size((__bridge void *)str1);
-    NSLog(@"str1 memory size ==  %zd", sizeof(str1));
+//     NSInteger size =  malloc_size((__bridge void *)str1);
+//    NSLog(@"str1 memory size ==  %zd", sizeof(str1));
     
 }
 #pragma mark - xib frame demo

@@ -560,6 +560,13 @@
 			path = GifPlayDemo;
 			sourceTree = "<group>";
 		};
+		D80C16712161F41D00BC90A9 /* XCNetworkModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XCNetworkModule;
+			sourceTree = "<group>";
+		};
 		D810797520FC1EA0000E97CA = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +860,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D80C16712161F41D00BC90A9 /* XCNetworkModule */,
 				D8F4D979215F15E3003CB693 /* XCKeyFrameDemo */,
 				D8A63CB2215E5B3D004DEDA8 /* XCSelfSuperDemo */,
 				D8FD5B44215B0A790086E9CB /* GradientLayerDemo */,
