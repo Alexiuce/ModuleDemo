@@ -87,6 +87,9 @@
 }
 
 - (void)keyframeAnimate{
+    
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     
     NSValue *v1 =  [NSValue valueWithCGPoint:CGPointMake(-48, 0)];
@@ -97,15 +100,21 @@
     keyAnimation.values = @[v1,v2,v3,v4,v5];
     keyAnimation.duration = 4.6;
     keyAnimation.keyTimes = @[@0.0,@(3/46.0),@(20/46.0),@(23/46.0),@1.0];
-    keyAnimation.repeatCount = MAXFLOAT;
+//    keyAnimation.repeatCount = MAXFLOAT;
 //    keyAnimation.autoreverses = YES;
     
     CABasicAnimation *alphAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    alphAnimation.fromValue = @0;
-    alphAnimation.toValue = @1;
-    alphAnimation.duration = 2.3;
+    alphAnimation.fromValue = @(0);
+    alphAnimation.toValue = @(1);
+    alphAnimation.duration = 0.3;
+   
     
-    [self.animateLayer addAnimation:keyAnimation forKey:nil];
+    group.animations = @[keyAnimation,alphAnimation];
+    group.duration = 4.6;
+    group.repeatCount = MAXFLOAT;
+    
+    
+    [self.animateLayer addAnimation:group forKey:nil];
 }
 
 
