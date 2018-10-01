@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSDateFormatter *dateFormater;
 
+
+
 @end
 
 @implementation KeyFrameViewController
@@ -46,6 +48,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    [self keyframeAnimate];
     
 }
 
@@ -90,11 +93,17 @@
     NSValue *v2 = [NSValue valueWithCGPoint:CGPointMake(80, 0)];
     NSValue *v3 = [NSValue valueWithCGPoint:CGPointMake(80.1, 0)];
     NSValue *v4 = [NSValue valueWithCGPoint:CGPointMake(-48, 0)];
-    keyAnimation.values = @[v1,v2,v3,v4];
-    keyAnimation.duration = 2.6;
-    keyAnimation.keyTimes = @[@0.0,@(3/26.0),@(20/26.0),@1.0];
-//    keyAnimation.repeatCount = MAXFLOAT;
+    NSValue *v5 = [NSValue valueWithCGPoint:CGPointMake(-49, 0)];
+    keyAnimation.values = @[v1,v2,v3,v4,v5];
+    keyAnimation.duration = 4.6;
+    keyAnimation.keyTimes = @[@0.0,@(3/46.0),@(20/46.0),@(23/46.0),@1.0];
+    keyAnimation.repeatCount = MAXFLOAT;
 //    keyAnimation.autoreverses = YES;
+    
+    CABasicAnimation *alphAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    alphAnimation.fromValue = @0;
+    alphAnimation.toValue = @1;
+    alphAnimation.duration = 2.3;
     
     [self.animateLayer addAnimation:keyAnimation forKey:nil];
 }
