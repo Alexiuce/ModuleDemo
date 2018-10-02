@@ -14,9 +14,12 @@
 
 @implementation XCRequestGenerator
 
-- (NSURL *)generateRequest:(RequestModel *)model{
+- (NSURLRequest *)generateRequest:(RequestModel *)model{
 
-    return nil;
+    NSURL *url = [NSURL URLWithString:model.apiMethodPath];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    return request;
 }
 
 - (void)test{
