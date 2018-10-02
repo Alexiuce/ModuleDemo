@@ -7,6 +7,7 @@
 //
 
 #import "NetworkViewController.h"
+#import "XCRequestGenerator.h"
 
 @interface NetworkViewController ()
 

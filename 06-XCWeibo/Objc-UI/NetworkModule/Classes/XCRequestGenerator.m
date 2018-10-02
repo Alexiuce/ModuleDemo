@@ -9,14 +9,18 @@
 #import "XCRequestGenerator.h"
 #import "RequestModel.h"
 
+
+
+
 @implementation XCRequestGenerator
 
-
-
 - (NSURL *)generateRequest:(RequestModel *)model{
-    
-    
+
     return nil;
+}
+
+- (void)test{
+    
 }
 
 @end
