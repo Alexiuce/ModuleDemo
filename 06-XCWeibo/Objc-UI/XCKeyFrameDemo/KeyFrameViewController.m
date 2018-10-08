@@ -98,7 +98,7 @@
     NSValue *v4 = [NSValue valueWithCGPoint:CGPointMake(-48, 0)];
     NSValue *v5 = [NSValue valueWithCGPoint:CGPointMake(-49, 0)];
     keyAnimation.values = @[v1,v2,v3,v4,v5];
-    keyAnimation.duration = 4.6;
+//    keyAnimation.duration = 4.6;
     keyAnimation.keyTimes = @[@0.0,@(3/46.0),@(20/46.0),@(23/46.0),@1.0];
 //    keyAnimation.repeatCount = MAXFLOAT;
 //    keyAnimation.autoreverses = YES;
@@ -106,7 +106,7 @@
     CABasicAnimation *alphAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     alphAnimation.fromValue = @(0);
     alphAnimation.toValue = @(1);
-    alphAnimation.duration = 0.3;
+    alphAnimation.duration = 1;
    
     
     group.animations = @[keyAnimation,alphAnimation];
