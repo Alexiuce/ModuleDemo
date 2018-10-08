@@ -120,6 +120,8 @@
 		D87799172111383F00611EF1 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D877990D2111383F00611EF1 /* MASViewConstraint.m */; };
 		D87799182111383F00611EF1 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = D877990E2111383F00611EF1 /* MASViewAttribute.m */; };
 		D877991B211139D600611EF1 /* PageScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D877991A211139D600611EF1 /* PageScrollerView.m */; };
+		D877A135216ADF6700DC3E9D /* HttpRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D877A134216ADF6700DC3E9D /* HttpRequestViewController.m */; };
+		D877A137216ADF7D00DC3E9D /* HttpController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D877A136216ADF7D00DC3E9D /* HttpController.storyboard */; };
 		D87E62D72124F664007C5D35 /* TableVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87E62D62124F664007C5D35 /* TableVideo.storyboard */; };
 		D87E62DA2124F6A4007C5D35 /* TableVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E62D92124F6A4007C5D35 /* TableVideoController.m */; };
 		D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E62DC2124F6D2007C5D35 /* TableVideoCell.m */; };
@@ -394,6 +396,9 @@
 		D877990E2111383F00611EF1 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		D8779919211139D600611EF1 /* PageScrollerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageScrollerView.h; sourceTree = "<group>"; };
 		D877991A211139D600611EF1 /* PageScrollerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageScrollerView.m; sourceTree = "<group>"; };
+		D877A133216ADF6700DC3E9D /* HttpRequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestViewController.h; sourceTree = "<group>"; };
+		D877A134216ADF6700DC3E9D /* HttpRequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpRequestViewController.m; sourceTree = "<group>"; };
+		D877A136216ADF7D00DC3E9D /* HttpController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HttpController.storyboard; sourceTree = "<group>"; };
 		D87E62D62124F664007C5D35 /* TableVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableVideo.storyboard; sourceTree = "<group>"; };
 		D87E62D82124F6A4007C5D35 /* TableVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableVideoController.h; sourceTree = "<group>"; };
 		D87E62D92124F6A4007C5D35 /* TableVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableVideoController.m; sourceTree = "<group>"; };
@@ -566,6 +571,9 @@
 		D80C16712161F41D00BC90A9 /* XCNetworkModule */ = {
 			isa = PBXGroup;
 			children = (
+				D877A133216ADF6700DC3E9D /* HttpRequestViewController.h */,
+				D877A134216ADF6700DC3E9D /* HttpRequestViewController.m */,
+				D877A136216ADF7D00DC3E9D /* HttpController.storyboard */,
 			);
 			path = XCNetworkModule;
 			sourceTree = "<group>";
@@ -1343,6 +1351,7 @@
 				D81E9F5D21324B0400040000 /* SuperPlayer.bundle in Resources */,
 				D8A63CB4215E5B5F004DEDA8 /* SelfSuper.storyboard in Resources */,
 				D84C41AC2126A5920036E778 /* Navigation.storyboard in Resources */,
+				D877A137216ADF7D00DC3E9D /* HttpController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1470,6 +1479,7 @@
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
 				D8B78F6C2149E3D8006159CA /* XCTagView.m in Sources */,
 				D81E9F6121324B0400040000 /* MMMaterialDesignSpinner.m in Sources */,
+				D877A135216ADF6700DC3E9D /* HttpRequestViewController.m in Sources */,
 				D81E9F5E21324B0400040000 /* SuperPlayerView.m in Sources */,
 				D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
