@@ -57,6 +57,9 @@
     });
     dispatch_resume(_gcd_timer);
     
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(dealTimer:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(dealTimer:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    
     //1.队列
 //    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
 //    //2.创建定时器
@@ -87,6 +90,11 @@
     NSLog(@"111111");
     self.timerCount++;
     self.textLayer.string = [NSString stringWithFormat:@"%zd",self.timerCount];
+}
+
+
+- (void)dealTimer:(NSNotification *)noti{
+    NSLog(@"%@",noti.name);
 }
 
 - (void)dealloc{
