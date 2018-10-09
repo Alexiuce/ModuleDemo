@@ -127,6 +127,8 @@
 		D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E62DC2124F6D2007C5D35 /* TableVideoCell.m */; };
 		D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87EDEAE210EB53200D09FC1 /* Second.storyboard */; };
 		D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87EDEB1210EB62500D09FC1 /* SecondViewController.m */; };
+		D8854FF5216C286A00862BDA /* XCTimerLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8854FF4216C286A00862BDA /* XCTimerLabelViewController.m */; };
+		D8854FF7216C287C00862BDA /* TimerLabel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8854FF6216C287C00862BDA /* TimerLabel.storyboard */; };
 		D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D709C21152F5F00858B62 /* WSServerGameCell.m */; };
 		D88D709F21152F5F00858B62 /* WSServerGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88D709D21152F5F00858B62 /* WSServerGameCell.xib */; };
 		D88D70A2211537A600858B62 /* WSServerGameCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70A1211537A600858B62 /* WSServerGameCollectionView.m */; };
@@ -407,6 +409,9 @@
 		D87EDEAE210EB53200D09FC1 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		D87EDEB0210EB62500D09FC1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D87EDEB1210EB62500D09FC1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D8854FF3216C286A00862BDA /* XCTimerLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimerLabelViewController.h; sourceTree = "<group>"; };
+		D8854FF4216C286A00862BDA /* XCTimerLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimerLabelViewController.m; sourceTree = "<group>"; };
+		D8854FF6216C287C00862BDA /* TimerLabel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerLabel.storyboard; sourceTree = "<group>"; };
 		D88D709B21152F5F00858B62 /* WSServerGameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSServerGameCell.h; sourceTree = "<group>"; };
 		D88D709C21152F5F00858B62 /* WSServerGameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSServerGameCell.m; sourceTree = "<group>"; };
 		D88D709D21152F5F00858B62 /* WSServerGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WSServerGameCell.xib; sourceTree = "<group>"; };
@@ -871,6 +876,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8854FF2216C284A00862BDA /* XCTimerLabelDemo */,
 				D844C09E214741C6008BF86A /* TagCollectionView */,
 				D80C16712161F41D00BC90A9 /* XCNetworkModule */,
 				D8F4D979215F15E3003CB693 /* XCKeyFrameDemo */,
@@ -989,6 +995,16 @@
 				D87E62DC2124F6D2007C5D35 /* TableVideoCell.m */,
 			);
 			path = TableViewVideo;
+			sourceTree = "<group>";
+		};
+		D8854FF2216C284A00862BDA /* XCTimerLabelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8854FF6216C287C00862BDA /* TimerLabel.storyboard */,
+				D8854FF3216C286A00862BDA /* XCTimerLabelViewController.h */,
+				D8854FF4216C286A00862BDA /* XCTimerLabelViewController.m */,
+			);
+			path = XCTimerLabelDemo;
 			sourceTree = "<group>";
 		};
 		D88D70AF21158D2E00858B62 /* AnimationViewDemo */ = {
@@ -1326,6 +1342,7 @@
 				D81AA1ED21259F83008A887F /* XMSSliderView.xib in Resources */,
 				D809AE8B2156637000801CA0 /* video.mp4 in Resources */,
 				D81E9F5B21324B0400040000 /* README.md in Resources */,
+				D8854FF7216C287C00862BDA /* TimerLabel.storyboard in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D84726AC2151CA8D001E98A6 /* LabelConstraint.storyboard in Resources */,
 				D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */,
@@ -1538,6 +1555,7 @@
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
 				D88DAE08212E312300F0B5DA /* XCVideoViewController.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
+				D8854FF5216C286A00862BDA /* XCTimerLabelViewController.m in Sources */,
 				D84375BA2136A43A00A19364 /* XCTestMan.m in Sources */,
 				D849719D212058F2007AA201 /* SDYUserTopView.m in Sources */,
 				D87798F12111383500611EF1 /* WMMenuItem.m in Sources */,
