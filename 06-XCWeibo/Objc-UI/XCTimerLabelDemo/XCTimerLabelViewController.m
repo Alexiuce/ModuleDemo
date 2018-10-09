@@ -13,6 +13,9 @@
 
 @property (nonatomic, strong) NSTimer *timer;  // 定时器
 
+@property (nonatomic, assign) NSUInteger timerCount;  // 计时数
+@property (nonatomic, weak) CATextLayer *textLayer;
+
 @end
 
 @implementation XCTimerLabelViewController
@@ -20,13 +23,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.timerLabel.backgroundColor = UIColor.yellowColor;
+    
+    CATextLayer *textLayer = [CATextLayer layer];
+    textLayer.bounds = self.timerLabel.bounds;
+    textLayer.string = @"123";
+    textLayer.backgroundColor = UIColor.redColor.CGColor;
+    textLayer.anchorPoint = CGPointZero;
+    [self.timerLabel.layer addSublayer:textLayer];
+    _textLayer = textLayer;
+    
+    
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDownTimer) userInfo:nil repeats:YES];
     
-    // Do any additional setup after loading the view.
 }
 
 - (void)countDownTimer{
     NSLog(@"111111");
+    self.timerCount++;
+    self.textLayer.string = [NSString stringWithFormat:@"%zd",self.timerCount];
 }
 
 - (void)dealloc{
