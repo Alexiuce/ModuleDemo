@@ -9,6 +9,7 @@
 #import "XCTimerLabelViewController.h"
 
 @interface XCTimerLabelViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 
 @end
 
