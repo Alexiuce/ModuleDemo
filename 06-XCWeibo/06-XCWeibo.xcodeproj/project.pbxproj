@@ -129,6 +129,8 @@
 		D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87EDEB1210EB62500D09FC1 /* SecondViewController.m */; };
 		D8854FF5216C286A00862BDA /* XCTimerLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8854FF4216C286A00862BDA /* XCTimerLabelViewController.m */; };
 		D8854FF7216C287C00862BDA /* TimerLabel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8854FF6216C287C00862BDA /* TimerLabel.storyboard */; };
+		D88CEAA6216C92960073158B /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88CEAA5216C92950073158B /* DatePicker.storyboard */; };
+		D88CEAA9216C92B90073158B /* XCDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CEAA8216C92B90073158B /* XCDatePickerViewController.m */; };
 		D88D709E21152F5F00858B62 /* WSServerGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D709C21152F5F00858B62 /* WSServerGameCell.m */; };
 		D88D709F21152F5F00858B62 /* WSServerGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88D709D21152F5F00858B62 /* WSServerGameCell.xib */; };
 		D88D70A2211537A600858B62 /* WSServerGameCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D70A1211537A600858B62 /* WSServerGameCollectionView.m */; };
@@ -412,6 +414,9 @@
 		D8854FF3216C286A00862BDA /* XCTimerLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimerLabelViewController.h; sourceTree = "<group>"; };
 		D8854FF4216C286A00862BDA /* XCTimerLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimerLabelViewController.m; sourceTree = "<group>"; };
 		D8854FF6216C287C00862BDA /* TimerLabel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerLabel.storyboard; sourceTree = "<group>"; };
+		D88CEAA5216C92950073158B /* DatePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
+		D88CEAA7216C92B90073158B /* XCDatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDatePickerViewController.h; sourceTree = "<group>"; };
+		D88CEAA8216C92B90073158B /* XCDatePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDatePickerViewController.m; sourceTree = "<group>"; };
 		D88D709B21152F5F00858B62 /* WSServerGameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSServerGameCell.h; sourceTree = "<group>"; };
 		D88D709C21152F5F00858B62 /* WSServerGameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSServerGameCell.m; sourceTree = "<group>"; };
 		D88D709D21152F5F00858B62 /* WSServerGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WSServerGameCell.xib; sourceTree = "<group>"; };
@@ -876,6 +881,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D88CEAA4216C926E0073158B /* XCDataPickerDemo */,
 				D8854FF2216C284A00862BDA /* XCTimerLabelDemo */,
 				D844C09E214741C6008BF86A /* TagCollectionView */,
 				D80C16712161F41D00BC90A9 /* XCNetworkModule */,
@@ -1005,6 +1011,16 @@
 				D8854FF4216C286A00862BDA /* XCTimerLabelViewController.m */,
 			);
 			path = XCTimerLabelDemo;
+			sourceTree = "<group>";
+		};
+		D88CEAA4216C926E0073158B /* XCDataPickerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D88CEAA5216C92950073158B /* DatePicker.storyboard */,
+				D88CEAA7216C92B90073158B /* XCDatePickerViewController.h */,
+				D88CEAA8216C92B90073158B /* XCDatePickerViewController.m */,
+			);
+			path = XCDataPickerDemo;
 			sourceTree = "<group>";
 		};
 		D88D70AF21158D2E00858B62 /* AnimationViewDemo */ = {
@@ -1369,6 +1385,7 @@
 				D8A63CB4215E5B5F004DEDA8 /* SelfSuper.storyboard in Resources */,
 				D84C41AC2126A5920036E778 /* Navigation.storyboard in Resources */,
 				D877A137216ADF7D00DC3E9D /* HttpController.storyboard in Resources */,
+				D88CEAA6216C92960073158B /* DatePicker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1501,6 +1518,7 @@
 				D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D87798F42111383500611EF1 /* WMProgressView.m in Sources */,
+				D88CEAA9216C92B90073158B /* XCDatePickerViewController.m in Sources */,
 				D84BD01021210766003C819F /* SDYStrategyBottomInputView.m in Sources */,
 				D81E9F6321324B0400040000 /* CFDanmaku.m in Sources */,
 				D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */,
