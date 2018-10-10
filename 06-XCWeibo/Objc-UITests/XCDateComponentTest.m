@@ -8,6 +8,10 @@
 
 #import <XCTest/XCTest.h>
 
+
+#define onExit __strong void(^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^
+
+
 @interface XCDateComponentTest : XCTestCase
 
 @property (nonatomic, strong)NSArray <NSString *>*allDateInfo;
@@ -15,6 +19,12 @@
 @end
 
 @implementation XCDateComponentTest
+
+// void(^block)(void)的指针是void(^*block)(void)
+static void blockCleanUp(__strong void(^*block)(void)) {
+    (*block)();
+}
+
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -30,6 +40,17 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    int a = 0;
+
+    void (^MyBlock)(void) = ^{
+        NSLog(@"this is my block code");
+    };
+    
+    onExit{
+        NSLog(@"hello exit");
+    };
+    a++;
+    NSLog(@"a = %d",a);
 }
 
 - (void)testPerformanceExample {
