@@ -20,10 +20,16 @@
     // Do any additional setup after loading the view.
     
     NSDate *date = [NSDate date];
-    
+    NSDate *after7date = [[NSDate alloc] initWithTimeInterval:7 *24 * 60 *60 sinceDate:date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit dateFlag = NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
     
-    [calendar ]
+    NSDateComponents *dateComponents =  [calendar components:dateFlag fromDate:date];
+    
+    NSLog(@"%zd,%zd: %zd-%zd",dateComponents.month,dateComponents.day,dateComponents.hour,dateComponents.minute);
+    NSDateComponents *after7dateComponents = [calendar components:dateFlag fromDate:after7date];
+    NSLog(@"%zd,%zd: %zd-%zd",after7dateComponents.month,after7dateComponents.day,after7dateComponents.hour,after7dateComponents.minute);
+   
     
     
     
