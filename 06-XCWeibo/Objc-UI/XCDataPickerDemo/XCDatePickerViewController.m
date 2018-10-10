@@ -30,9 +30,6 @@
     NSDateComponents *after7dateComponents = [calendar components:dateFlag fromDate:after7date];
     NSLog(@"%zd,%zd: %zd-%zd",after7dateComponents.month,after7dateComponents.day,after7dateComponents.hour,after7dateComponents.minute);
    
-    
-    
-    
 }
 
 /*
