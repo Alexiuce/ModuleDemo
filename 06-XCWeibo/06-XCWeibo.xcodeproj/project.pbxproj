@@ -127,6 +127,7 @@
 		D87E62DD2124F6D2007C5D35 /* TableVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E62DC2124F6D2007C5D35 /* TableVideoCell.m */; };
 		D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87EDEAE210EB53200D09FC1 /* Second.storyboard */; };
 		D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87EDEB1210EB62500D09FC1 /* SecondViewController.m */; };
+		D88205EC216ED25C0082E250 /* XCMoveableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D88205EB216ED25C0082E250 /* XCMoveableView.m */; };
 		D8854FF5216C286A00862BDA /* XCTimerLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8854FF4216C286A00862BDA /* XCTimerLabelViewController.m */; };
 		D8854FF7216C287C00862BDA /* TimerLabel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8854FF6216C287C00862BDA /* TimerLabel.storyboard */; };
 		D88CEAA6216C92960073158B /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88CEAA5216C92950073158B /* DatePicker.storyboard */; };
@@ -162,6 +163,8 @@
 		D8B78F752149EE51006159CA /* XCTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B78F742149EE51006159CA /* XCTagViewController.m */; };
 		D8CBC7B1216D899300882288 /* Objc_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBC7B0216D899300882288 /* Objc_UITests.m */; };
 		D8CBC7B9216D89EA00882288 /* XCDateComponentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBC7B8216D89EA00882288 /* XCDateComponentTest.m */; };
+		D8D336BE216ED0F200587CB6 /* XCMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D336BD216ED0F200587CB6 /* XCMoveViewController.m */; };
+		D8D336C0216ED10100587CB6 /* MoveView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D336BF216ED10100587CB6 /* MoveView.storyboard */; };
 		D8DAE066E9A5A49D627EBFDC /* Pods_06_XCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063D3E9B071AD8D23B219524 /* Pods_06_XCWeibo.framework */; };
 		D8DE091B2123B337005F1214 /* CycleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DE091A2123B337005F1214 /* CycleView.storyboard */; };
 		D8DE091E2123B38D005F1214 /* XCCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DE091D2123B38D005F1214 /* XCCycleController.m */; };
@@ -423,6 +426,8 @@
 		D87EDEAE210EB53200D09FC1 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		D87EDEB0210EB62500D09FC1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D87EDEB1210EB62500D09FC1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D88205EA216ED25C0082E250 /* XCMoveableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCMoveableView.h; sourceTree = "<group>"; };
+		D88205EB216ED25C0082E250 /* XCMoveableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCMoveableView.m; sourceTree = "<group>"; };
 		D8854FF3216C286A00862BDA /* XCTimerLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimerLabelViewController.h; sourceTree = "<group>"; };
 		D8854FF4216C286A00862BDA /* XCTimerLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimerLabelViewController.m; sourceTree = "<group>"; };
 		D8854FF6216C287C00862BDA /* TimerLabel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerLabel.storyboard; sourceTree = "<group>"; };
@@ -484,6 +489,9 @@
 		D8CBC7B0216D899300882288 /* Objc_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objc_UITests.m; sourceTree = "<group>"; };
 		D8CBC7B2216D899300882288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8CBC7B8216D89EA00882288 /* XCDateComponentTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDateComponentTest.m; sourceTree = "<group>"; };
+		D8D336BC216ED0F200587CB6 /* XCMoveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCMoveViewController.h; sourceTree = "<group>"; };
+		D8D336BD216ED0F200587CB6 /* XCMoveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCMoveViewController.m; sourceTree = "<group>"; };
+		D8D336BF216ED10100587CB6 /* MoveView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoveView.storyboard; sourceTree = "<group>"; };
 		D8DE091A2123B337005F1214 /* CycleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CycleView.storyboard; sourceTree = "<group>"; };
 		D8DE091C2123B38D005F1214 /* XCCycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCycleController.h; sourceTree = "<group>"; };
 		D8DE091D2123B38D005F1214 /* XCCycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCycleController.m; sourceTree = "<group>"; };
@@ -906,6 +914,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8D336BB216ED0D500587CB6 /* XCMoveViewDemo */,
 				D88CEAA4216C926E0073158B /* XCDataPickerDemo */,
 				D8854FF2216C284A00862BDA /* XCTimerLabelDemo */,
 				D844C09E214741C6008BF86A /* TagCollectionView */,
@@ -1172,6 +1181,18 @@
 			path = "Objc-UITests";
 			sourceTree = "<group>";
 		};
+		D8D336BB216ED0D500587CB6 /* XCMoveViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8D336BC216ED0F200587CB6 /* XCMoveViewController.h */,
+				D8D336BD216ED0F200587CB6 /* XCMoveViewController.m */,
+				D88205EA216ED25C0082E250 /* XCMoveableView.h */,
+				D88205EB216ED25C0082E250 /* XCMoveableView.m */,
+				D8D336BF216ED10100587CB6 /* MoveView.storyboard */,
+			);
+			path = XCMoveViewDemo;
+			sourceTree = "<group>";
+		};
 		D8DE09192123B31E005F1214 /* CycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1431,6 +1452,7 @@
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
 				D88DAE05212E310900F0B5DA /* VideoPlayer.storyboard in Resources */,
 				D86CEF3C20FF4121009BB583 /* Assets.xcassets in Resources */,
+				D8D336C0216ED10100587CB6 /* MoveView.storyboard in Resources */,
 				D86CEF3A20FF4120009BB583 /* Main.storyboard in Resources */,
 				D809AE84215616B000801CA0 /* GifPlay.storyboard in Resources */,
 				D809AE8121560CEA00801CA0 /* Watermark.storyboard in Resources */,
@@ -1592,6 +1614,7 @@
 				D877991B211139D600611EF1 /* PageScrollerView.m in Sources */,
 				D87798F02111383500611EF1 /* WMPageController.m in Sources */,
 				D818D085210ABD6C0002C03E /* TransController.m in Sources */,
+				D88205EC216ED25C0082E250 /* XCMoveableView.m in Sources */,
 				D88D70A2211537A600858B62 /* WSServerGameCollectionView.m in Sources */,
 				D84C41B32126A6400036E778 /* NavHomeViewController.m in Sources */,
 				D81E9F5F21324B0400040000 /* MoreContentView.m in Sources */,
@@ -1607,6 +1630,7 @@
 				D8A63CBD215E5BF4004DEDA8 /* XCSonView.m in Sources */,
 				D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */,
 				D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */,
+				D8D336BE216ED0F200587CB6 /* XCMoveViewController.m in Sources */,
 				D82B003C212020300066C32E /* DetailViewController.m in Sources */,
 				D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */,
 				D81E9F5921324B0400040000 /* DataReport.m in Sources */,
