@@ -177,6 +177,9 @@
 		D8EF847B2110342E0095F19E /* FirstTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF84792110342E0095F19E /* FirstTableViewController.xib */; };
 		D8EF847F2110344A0095F19E /* SecTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EF847D2110344A0095F19E /* SecTableViewController.m */; };
 		D8EF84802110344A0095F19E /* SecTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EF847E2110344A0095F19E /* SecTableViewController.xib */; };
+		D8F3415F216F34E100D53BB4 /* PushTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F3415E216F34E100D53BB4 /* PushTransition.storyboard */; };
+		D8F34162216F350500D53BB4 /* XCPushAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F34161216F350500D53BB4 /* XCPushAnimationViewController.m */; };
+		D8F34165216F37BD00D53BB4 /* XCTransitionPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F34164216F37BD00D53BB4 /* XCTransitionPushManager.m */; };
 		D8F4D97B215F161F003CB693 /* Keyframe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F4D97A215F161F003CB693 /* Keyframe.storyboard */; };
 		D8F4D97E215F1645003CB693 /* KeyFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4D97D215F1645003CB693 /* KeyFrameViewController.m */; };
 		D8FD5B49215B0B0A0086E9CB /* XCGradientController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FD5B48215B0B0A0086E9CB /* XCGradientController.m */; };
@@ -509,6 +512,11 @@
 		D8EF847C2110344A0095F19E /* SecTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecTableViewController.h; sourceTree = "<group>"; };
 		D8EF847D2110344A0095F19E /* SecTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecTableViewController.m; sourceTree = "<group>"; };
 		D8EF847E2110344A0095F19E /* SecTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecTableViewController.xib; sourceTree = "<group>"; };
+		D8F3415E216F34E100D53BB4 /* PushTransition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PushTransition.storyboard; sourceTree = "<group>"; };
+		D8F34160216F350500D53BB4 /* XCPushAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPushAnimationViewController.h; sourceTree = "<group>"; };
+		D8F34161216F350500D53BB4 /* XCPushAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPushAnimationViewController.m; sourceTree = "<group>"; };
+		D8F34163216F37BD00D53BB4 /* XCTransitionPushManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTransitionPushManager.h; sourceTree = "<group>"; };
+		D8F34164216F37BD00D53BB4 /* XCTransitionPushManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTransitionPushManager.m; sourceTree = "<group>"; };
 		D8F4D97A215F161F003CB693 /* Keyframe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keyframe.storyboard; sourceTree = "<group>"; };
 		D8F4D97C215F1645003CB693 /* KeyFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyFrameViewController.h; sourceTree = "<group>"; };
 		D8F4D97D215F1645003CB693 /* KeyFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyFrameViewController.m; sourceTree = "<group>"; };
@@ -914,6 +922,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8F3415D216F34A300D53BB4 /* XCNavigationPushAnimationDemo */,
 				D8D336BB216ED0D500587CB6 /* XCMoveViewDemo */,
 				D88CEAA4216C926E0073158B /* XCDataPickerDemo */,
 				D8854FF2216C284A00862BDA /* XCTimerLabelDemo */,
@@ -1263,6 +1272,18 @@
 			path = PageViewController;
 			sourceTree = "<group>";
 		};
+		D8F3415D216F34A300D53BB4 /* XCNavigationPushAnimationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8F3415E216F34E100D53BB4 /* PushTransition.storyboard */,
+				D8F34160216F350500D53BB4 /* XCPushAnimationViewController.h */,
+				D8F34161216F350500D53BB4 /* XCPushAnimationViewController.m */,
+				D8F34163216F37BD00D53BB4 /* XCTransitionPushManager.h */,
+				D8F34164216F37BD00D53BB4 /* XCTransitionPushManager.m */,
+			);
+			path = XCNavigationPushAnimationDemo;
+			sourceTree = "<group>";
+		};
 		D8F4D979215F15E3003CB693 /* XCKeyFrameDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1436,6 +1457,7 @@
 				D867D3862127AA5D007E9AD2 /* SafeArea.storyboard in Resources */,
 				D81AA1ED21259F83008A887F /* XMSSliderView.xib in Resources */,
 				D809AE8B2156637000801CA0 /* video.mp4 in Resources */,
+				D8F3415F216F34E100D53BB4 /* PushTransition.storyboard in Resources */,
 				D81E9F5B21324B0400040000 /* README.md in Resources */,
 				D8854FF7216C287C00862BDA /* TimerLabel.storyboard in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
@@ -1597,6 +1619,7 @@
 				D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */,
 				D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */,
 				D84375B42136933700A19364 /* XCInvocationController.m in Sources */,
+				D8F34162216F350500D53BB4 /* XCPushAnimationViewController.m in Sources */,
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
 				D8B78F6C2149E3D8006159CA /* XCTagView.m in Sources */,
 				D81E9F6121324B0400040000 /* MMMaterialDesignSpinner.m in Sources */,
@@ -1676,6 +1699,7 @@
 				D81E9F5321324B0400040000 /* SuperPlayerGlobleConfig.m in Sources */,
 				D8B78F752149EE51006159CA /* XCTagViewController.m in Sources */,
 				D844C0A921475059008BF86A /* MYFlowLayout.m in Sources */,
+				D8F34165216F37BD00D53BB4 /* XCTransitionPushManager.m in Sources */,
 				D81E9F5621324B0400040000 /* UIViewController+ZFPlayerRotation.m in Sources */,
 				D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */,
 				D818D07D210AB5890002C03E /* PersonViewController.m in Sources */,
