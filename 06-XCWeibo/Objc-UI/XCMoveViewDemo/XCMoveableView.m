@@ -23,8 +23,16 @@
     CGFloat offsetX = curP.x - preP.x;
     CGFloat offsetY = curP.y - preP.y;
     
-    //平移
-    self.transform = CGAffineTransformTranslate(self.transform, offsetX, offsetY);
+    NSLog(@"offsetX =%f, offsetY = %f",offsetX,offsetY);
+    
+    CGFloat ScreenWidth = UIScreen.mainScreen.bounds.size.width;
+    CGFloat newX = self.frame.origin.x + offsetX;
+    CGFloat newY = self.frame.origin.y + offsetY;
+    newX = MAX(newX, 0);
+    newX = MIN(newX, ScreenWidth - self.bounds.size.width);
+    
+    self.frame = CGRectMake(newX, newY, self.bounds.size.width, self.bounds.size.height);
+    
 }
 
 @end
