@@ -23,13 +23,18 @@
     CGFloat offsetX = curP.x - preP.x;
     CGFloat offsetY = curP.y - preP.y;
     
-    NSLog(@"offsetX =%f, offsetY = %f",offsetX,offsetY);
-    
     CGFloat ScreenWidth = UIScreen.mainScreen.bounds.size.width;
+    CGFloat ScreenHeight = UIScreen.mainScreen.bounds.size.height;
     CGFloat newX = self.frame.origin.x + offsetX;
     CGFloat newY = self.frame.origin.y + offsetY;
-    newX = MAX(newX, 0);
-    newX = MIN(newX, ScreenWidth - self.bounds.size.width);
+    
+    newX = MAX(newX, 0);  // 设置x最小值不低于0;
+    newX = MIN(newX, ScreenWidth - self.bounds.size.width);  // 设置x最大值不超过屏幕宽度 - 自身宽度;
+    
+    newY = MAX(newY, 0);
+    newY = MIN(newY, ScreenHeight - self.bounds.size.height);
+    
+    
     
     self.frame = CGRectMake(newX, newY, self.bounds.size.width, self.bounds.size.height);
     
