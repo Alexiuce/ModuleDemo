@@ -58,6 +58,7 @@
 		D81E9F6221324B0400040000 /* CFDanmakuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F4D21324B0400040000 /* CFDanmakuView.m */; };
 		D81E9F6321324B0400040000 /* CFDanmaku.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F4F21324B0400040000 /* CFDanmaku.m */; };
 		D81E9F6421324B0400040000 /* CFDanmakuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E9F5221324B0400040000 /* CFDanmakuInfo.m */; };
+		D829F22221702A3900F199EB /* RedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D829F22121702A3900F199EB /* RedViewController.m */; };
 		D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B002D212006600066C32E /* XCWebTableController+WebTab.m */; };
 		D82B003C212020300066C32E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003B212020300066C32E /* DetailViewController.m */; };
 		D82B003F2120208B0066C32E /* UIView+HSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D82B003E2120208B0066C32E /* UIView+HSKit.m */; };
@@ -298,6 +299,8 @@
 		D81E9F5021324B0400040000 /* CFDanmakuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDanmakuView.h; sourceTree = "<group>"; };
 		D81E9F5121324B0400040000 /* CFDanmaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDanmaku.h; sourceTree = "<group>"; };
 		D81E9F5221324B0400040000 /* CFDanmakuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDanmakuInfo.m; sourceTree = "<group>"; };
+		D829F22021702A3900F199EB /* RedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedViewController.h; sourceTree = "<group>"; };
+		D829F22121702A3900F199EB /* RedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedViewController.m; sourceTree = "<group>"; };
 		D82B002C212006600066C32E /* XCWebTableController+WebTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCWebTableController+WebTab.h"; sourceTree = "<group>"; };
 		D82B002D212006600066C32E /* XCWebTableController+WebTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCWebTableController+WebTab.m"; sourceTree = "<group>"; };
 		D82B003A212020300066C32E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -1280,6 +1283,8 @@
 				D8F34161216F350500D53BB4 /* XCPushAnimationViewController.m */,
 				D8F34163216F37BD00D53BB4 /* XCTransitionPushManager.h */,
 				D8F34164216F37BD00D53BB4 /* XCTransitionPushManager.m */,
+				D829F22021702A3900F199EB /* RedViewController.h */,
+				D829F22121702A3900F199EB /* RedViewController.m */,
 			);
 			path = XCNavigationPushAnimationDemo;
 			sourceTree = "<group>";
@@ -1652,6 +1657,7 @@
 				D84726AF2151CAA6001E98A6 /* XCLabelConstraintViewController.m in Sources */,
 				D8A63CBD215E5BF4004DEDA8 /* XCSonView.m in Sources */,
 				D82B002E212006600066C32E /* XCWebTableController+WebTab.m in Sources */,
+				D829F22221702A3900F199EB /* RedViewController.m in Sources */,
 				D82B00442120281C0066C32E /* SDYWebTabController+SDYWebTab.m in Sources */,
 				D8D336BE216ED0F200587CB6 /* XCMoveViewController.m in Sources */,
 				D82B003C212020300066C32E /* DetailViewController.m in Sources */,

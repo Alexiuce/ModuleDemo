@@ -34,10 +34,14 @@
     
     self.transitionContext = transitionContext;
     
+    
+    NSString *fromControllerKey = self.isPOP ? UITransitionContextToViewControllerKey : UITransitionContextFromViewControllerKey;
+    NSString *toControllerKey = self.isPOP ? UITransitionContextFromViewControllerKey : UITransitionContextToViewControllerKey;
+    
     //获取源控制器 注意不要写成 UITransitionContextFromViewKey
-    XCPushAnimationViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    XCPushAnimationViewController *fromVc = [transitionContext viewControllerForKey:fromControllerKey];
     //获取目标控制器 注意不要写成 UITransitionContextToViewKey
-    UIViewController *toVc = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *toVc = [transitionContext viewControllerForKey:toControllerKey];
     
     //获得容器视图
     UIView *containView = [transitionContext containerView];
@@ -59,7 +63,7 @@
             finalPoint = CGPointMake(0, CGRectGetMaxY(toVc.view.frame));
         }else{
             //第四象限
-            finalPoint = CGPointMake(0, 0);
+            finalPoint = CGPointZero;
         }
     }else{
         if (button.frame.origin.y < (toVc.view.bounds.size.height / 2)) {
@@ -82,8 +86,15 @@
     toVc.view.layer.mask = maskLayer;
     
     CABasicAnimation *maskAnimation =[CABasicAnimation animationWithKeyPath:@"path"];
-    maskAnimation.fromValue = (__bridge id)startPath.CGPath;
-    maskAnimation.toValue = (__bridge id)endPath.CGPath;
+    if (self.isPOP) {
+        maskAnimation.fromValue = (__bridge id)endPath.CGPath;
+        maskAnimation.toValue = (__bridge id)startPath.CGPath;
+
+    }else{
+        maskAnimation.fromValue = (__bridge id)startPath.CGPath;
+        maskAnimation.toValue = (__bridge id)endPath.CGPath;
+        
+    }
     maskAnimation.duration = [self transitionDuration:transitionContext];
     maskAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     maskAnimation.delegate = self;

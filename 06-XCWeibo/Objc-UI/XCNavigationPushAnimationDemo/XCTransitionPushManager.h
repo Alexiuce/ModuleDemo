@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XCTransitionPushManager : NSObject<UIViewControllerAnimatedTransitioning>
 
+@property (nonatomic, assign) BOOL isPOP;
+
 @end
 
 NS_ASSUME_NONNULL_END
