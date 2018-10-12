@@ -26,21 +26,47 @@
             </objects>
             <point key="canvasLocation" x="-1273" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Push Animation View Controller-->
         <scene sceneID="z8r-3F-6wB">
             <objects>
-                <viewController id="RD2-dB-ely" sceneMemberID="viewController">
+                <viewController id="RD2-dB-ely" customClass="XCPushAnimationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qtk-kg-hOI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzr-BC-jTd">
+                                <rect key="frame" x="38" y="137" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZSV-jJ-ltT"/>
                     </view>
                     <navigationItem key="navigationItem" id="GIn-Mp-fk1"/>
+                    <connections>
+                        <outlet property="fromButton" destination="gzr-BC-jTd" id="iiU-pJ-s4p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UqX-aJ-bdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="134"/>
+            <point key="canvasLocation" x="-452" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sjA-ZZ-qcU">
+            <objects>
+                <viewController id="GJC-ME-NmQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ldm-yU-64W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="sVH-jD-gt4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zlO-U3-ZVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="134"/>
         </scene>
     </scenes>
 </document>

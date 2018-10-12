@@ -7,10 +7,12 @@
 //
 
 #import "XCTransitionPushManager.h"
+#import "XCPushAnimationViewController.h"
 
-@interface XCTransitionPushManager()
+@interface XCTransitionPushManager()<CAAnimationDelegate>
 
-//@property (nonatomic, strong)id<UIViewControllerContextTransitioning> *transitionContext;
+@property (nonatomic, strong) id<UIViewControllerContextTransitioning> transitionContext;
+
 
 @end
 
@@ -30,10 +32,10 @@
  */
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     
-//    self.transitionContext = transitionContext;
+    self.transitionContext = transitionContext;
     
     //获取源控制器 注意不要写成 UITransitionContextFromViewKey
-    UIViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    XCPushAnimationViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     //获取目标控制器 注意不要写成 UITransitionContextToViewKey
     UIViewController *toVc = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
@@ -43,7 +45,7 @@
     [containView addSubview:fromVc.view];
     [containView addSubview:toVc.view];
     
-    UIButton *button = fromVc.button;
+    UIButton *button = fromVc.fromButton;
     //绘制圆形
     UIBezierPath *startPath = [UIBezierPath bezierPathWithOvalInRect:button.frame];
     
@@ -89,4 +91,15 @@
     
 }
 
+
+#pragma mark -- CAAnimationDelegate --
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    
+    //告诉 iOS 这个 transition 完成
+    [self.transitionContext completeTransition:YES];
+    [self.transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view.layer.mask = nil;
+    [self.transitionContext viewControllerForKey:UITransitionContextToViewControllerKey].view.layer.mask = nil;
+    
+}
 @end
