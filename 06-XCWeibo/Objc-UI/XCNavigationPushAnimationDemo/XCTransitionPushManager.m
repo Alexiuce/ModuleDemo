@@ -10,7 +10,7 @@
 
 @interface XCTransitionPushManager()
 
-@property (nonatomic, strong)id<UIViewControllerContextTransitioning> *transitionContext;
+//@property (nonatomic, strong)id<UIViewControllerContextTransitioning> *transitionContext;
 
 @end
 
@@ -30,12 +30,12 @@
  */
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     
-    self.transitionContext = transitionContext;
+//    self.transitionContext = transitionContext;
     
     //获取源控制器 注意不要写成 UITransitionContextFromViewKey
-    LRTransitionPushController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     //获取目标控制器 注意不要写成 UITransitionContextToViewKey
-    LRTransitionPopController *toVc = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *toVc = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     //获得容器视图
     UIView *containView = [transitionContext containerView];
