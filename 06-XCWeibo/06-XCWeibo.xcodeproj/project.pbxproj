@@ -20,6 +20,8 @@
 		D810798C20FC1EA1000E97CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798A20FC1EA1000E97CA /* LaunchScreen.storyboard */; };
 		D813D9532154703500DF3575 /* XCSubViewFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = D813D9522154703500DF3575 /* XCSubViewFrame.xib */; };
 		D813D9562154705A00DF3575 /* XCSubViewFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D813D9552154705A00DF3575 /* XCSubViewFrameView.m */; };
+		D81429DD217197D8004F827D /* URLProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81429DC217197D8004F827D /* URLProtocolViewController.m */; };
+		D81429DF217197EB004F827D /* URLProtocol.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81429DE217197EB004F827D /* URLProtocol.storyboard */; };
 		D818D079210AA24A0002C03E /* DemoMan.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D078210AA24A0002C03E /* DemoMan.m */; };
 		D818D07D210AB5890002C03E /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D07B210AB5890002C03E /* PersonViewController.m */; };
 		D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D818D07C210AB5890002C03E /* PersonViewController.xib */; };
@@ -235,6 +237,9 @@
 		D813D9522154703500DF3575 /* XCSubViewFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCSubViewFrame.xib; sourceTree = "<group>"; };
 		D813D9542154705A00DF3575 /* XCSubViewFrameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSubViewFrameView.h; sourceTree = "<group>"; };
 		D813D9552154705A00DF3575 /* XCSubViewFrameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSubViewFrameView.m; sourceTree = "<group>"; };
+		D81429DB217197D8004F827D /* URLProtocolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLProtocolViewController.h; sourceTree = "<group>"; };
+		D81429DC217197D8004F827D /* URLProtocolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLProtocolViewController.m; sourceTree = "<group>"; };
+		D81429DE217197EB004F827D /* URLProtocol.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = URLProtocol.storyboard; sourceTree = "<group>"; };
 		D818D077210AA24A0002C03E /* DemoMan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMan.h; sourceTree = "<group>"; };
 		D818D078210AA24A0002C03E /* DemoMan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMan.m; sourceTree = "<group>"; };
 		D818D07A210AB5890002C03E /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
@@ -677,6 +682,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D81429DA217197B3004F827D /* XCURLProtocolDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D81429DB217197D8004F827D /* URLProtocolViewController.h */,
+				D81429DC217197D8004F827D /* URLProtocolViewController.m */,
+				D81429DE217197EB004F827D /* URLProtocol.storyboard */,
+			);
+			path = XCURLProtocolDemo;
+			sourceTree = "<group>";
+		};
 		D818D07F210ABA1B0002C03E /* TransitionAnimationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -925,6 +940,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D81429DA217197B3004F827D /* XCURLProtocolDemo */,
 				D8F3415D216F34A300D53BB4 /* XCNavigationPushAnimationDemo */,
 				D8D336BB216ED0D500587CB6 /* XCMoveViewDemo */,
 				D88CEAA4216C926E0073158B /* XCDataPickerDemo */,
@@ -1464,6 +1480,7 @@
 				D809AE8B2156637000801CA0 /* video.mp4 in Resources */,
 				D8F3415F216F34E100D53BB4 /* PushTransition.storyboard in Resources */,
 				D81E9F5B21324B0400040000 /* README.md in Resources */,
+				D81429DF217197EB004F827D /* URLProtocol.storyboard in Resources */,
 				D8854FF7216C287C00862BDA /* TimerLabel.storyboard in Resources */,
 				D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */,
 				D84726AC2151CA8D001E98A6 /* LabelConstraint.storyboard in Resources */,
@@ -1631,6 +1648,7 @@
 				D877A135216ADF6700DC3E9D /* HttpRequestViewController.m in Sources */,
 				D81E9F5E21324B0400040000 /* SuperPlayerView.m in Sources */,
 				D853EEB8211E622300DED0AD /* XCWebTableController.m in Sources */,
+				D81429DD217197D8004F827D /* URLProtocolViewController.m in Sources */,
 				D8EF847521102E2F0095F19E /* XCPageViewController.m in Sources */,
 				D87798F42111383500611EF1 /* WMProgressView.m in Sources */,
 				D88CEAA9216C92B90073158B /* XCDatePickerViewController.m in Sources */,
