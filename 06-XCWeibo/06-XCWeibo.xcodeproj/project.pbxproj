@@ -22,6 +22,8 @@
 		D813D9562154705A00DF3575 /* XCSubViewFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D813D9552154705A00DF3575 /* XCSubViewFrameView.m */; };
 		D81429DD217197D8004F827D /* URLProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81429DC217197D8004F827D /* URLProtocolViewController.m */; };
 		D81429DF217197EB004F827D /* URLProtocol.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81429DE217197EB004F827D /* URLProtocol.storyboard */; };
+		D81429E22171ABB8004F827D /* Dynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81429E12171ABB8004F827D /* Dynamic.storyboard */; };
+		D81429E52171ABC7004F827D /* XCUIDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81429E42171ABC7004F827D /* XCUIDynamicViewController.m */; };
 		D818D079210AA24A0002C03E /* DemoMan.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D078210AA24A0002C03E /* DemoMan.m */; };
 		D818D07D210AB5890002C03E /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D07B210AB5890002C03E /* PersonViewController.m */; };
 		D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D818D07C210AB5890002C03E /* PersonViewController.xib */; };
@@ -240,6 +242,9 @@
 		D81429DB217197D8004F827D /* URLProtocolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLProtocolViewController.h; sourceTree = "<group>"; };
 		D81429DC217197D8004F827D /* URLProtocolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLProtocolViewController.m; sourceTree = "<group>"; };
 		D81429DE217197EB004F827D /* URLProtocol.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = URLProtocol.storyboard; sourceTree = "<group>"; };
+		D81429E12171ABB8004F827D /* Dynamic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dynamic.storyboard; sourceTree = "<group>"; };
+		D81429E32171ABC7004F827D /* XCUIDynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCUIDynamicViewController.h; sourceTree = "<group>"; };
+		D81429E42171ABC7004F827D /* XCUIDynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCUIDynamicViewController.m; sourceTree = "<group>"; };
 		D818D077210AA24A0002C03E /* DemoMan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMan.h; sourceTree = "<group>"; };
 		D818D078210AA24A0002C03E /* DemoMan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMan.m; sourceTree = "<group>"; };
 		D818D07A210AB5890002C03E /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
@@ -692,6 +697,16 @@
 			path = XCURLProtocolDemo;
 			sourceTree = "<group>";
 		};
+		D81429E02171AB9C004F827D /* XCUIDynamicDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D81429E12171ABB8004F827D /* Dynamic.storyboard */,
+				D81429E32171ABC7004F827D /* XCUIDynamicViewController.h */,
+				D81429E42171ABC7004F827D /* XCUIDynamicViewController.m */,
+			);
+			path = XCUIDynamicDemo;
+			sourceTree = "<group>";
+		};
 		D818D07F210ABA1B0002C03E /* TransitionAnimationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -940,6 +955,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D81429E02171AB9C004F827D /* XCUIDynamicDemo */,
 				D81429DA217197B3004F827D /* XCURLProtocolDemo */,
 				D8F3415D216F34A300D53BB4 /* XCNavigationPushAnimationDemo */,
 				D8D336BB216ED0D500587CB6 /* XCMoveViewDemo */,
@@ -1467,6 +1483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84375B12136931A00A19364 /* XCInvocation.storyboard in Resources */,
+				D81429E22171ABB8004F827D /* Dynamic.storyboard in Resources */,
 				D87EDEAF210EB53200D09FC1 /* Second.storyboard in Resources */,
 				D86CEF3F20FF4121009BB583 /* LaunchScreen.storyboard in Resources */,
 				D81AA1E821259A5A008A887F /* switch.storyboard in Resources */,
@@ -1707,6 +1724,7 @@
 				D86CEF3420FF4120009BB583 /* AppDelegate.m in Sources */,
 				D8B29A2C21422B5D00A605BD /* NetworkViewController.m in Sources */,
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
+				D81429E52171ABC7004F827D /* XCUIDynamicViewController.m in Sources */,
 				D88DAE08212E312300F0B5DA /* XCVideoViewController.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
 				D8854FF5216C286A00862BDA /* XCTimerLabelViewController.m in Sources */,
