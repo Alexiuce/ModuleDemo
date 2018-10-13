@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSURLProtocol
     // Do any additional setup after loading the view.
 }
 #pragma mark - IBAction Event Handler
