@@ -9,6 +9,7 @@
 #import "URLProtocolViewController.h"
 
 @interface URLProtocolViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *requestButton;
 
 @end
 
@@ -18,15 +19,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+#pragma mark - IBAction Event Handler
+/** 点击网络请求按钮事件处理 */
+- (IBAction)clickRequestButtonEvent:(UIButton *)sender {
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
