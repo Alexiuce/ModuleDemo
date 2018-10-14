@@ -7,9 +7,12 @@
 //
 
 #import "URLProtocolViewController.h"
+#import "AFNetworking.h"
 
 @interface URLProtocolViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
+
+@property (nonatomic, strong)NSURLSession *session;
 
 @end
 
@@ -25,18 +28,29 @@
 - (IBAction)clickRequestButtonEvent:(UIButton *)sender {
 
     
-    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    NSURLSession *session = [[NSURLSession alloc]init];
-   
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    
+    [manager POST:@"http://www.baidu.com" parameters:nil constructingBodyWithBlock:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",result);
-        
+        NSLog(@"%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error.localizedDescription);
     }];
-    [dataTask resume];
+    
+    
+//    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//
+//    self.session = [[NSURLSession alloc]init];
+//
+//    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//        NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+//        NSLog(@"%@",result);
+//
+//    }];
+//    [dataTask resume];
 
 }
 
