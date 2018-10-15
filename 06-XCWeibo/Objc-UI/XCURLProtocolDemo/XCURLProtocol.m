@@ -37,6 +37,7 @@
 - (void)startLoading{
     
     NSMutableURLRequest *request = [self.request mutableCopy];
+    request.URL = [NSURL URLWithString:@"http://www.httpbin.org/get"];
     [NSURLProtocol setProperty:@YES forKey:request.URL.absoluteString inRequest:request];
     
     NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;

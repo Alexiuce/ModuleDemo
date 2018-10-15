@@ -8,6 +8,7 @@
 
 #import "URLProtocolViewController.h"
 #import "AFNetworking.h"
+#import "XCURLProtocol.h"
 
 @interface URLProtocolViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
@@ -41,9 +42,11 @@
     
     NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//
+
+    NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;
+    config.protocolClasses = @[[XCURLProtocol class]];
     self.session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
-//
+
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 
         NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
