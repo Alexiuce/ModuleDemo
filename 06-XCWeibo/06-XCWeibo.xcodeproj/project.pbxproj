@@ -13,6 +13,7 @@
 		D809AE87215616BE00801CA0 /* GifPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D809AE86215616BE00801CA0 /* GifPlayViewController.m */; };
 		D809AE89215618DC00801CA0 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D809AE88215618DC00801CA0 /* demo.gif */; };
 		D809AE8B2156637000801CA0 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D809AE8A2156637000801CA0 /* video.mp4 */; };
+		D80EFA93217414E900B860E7 /* XCURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D80EFA92217414E900B860E7 /* XCURLProtocol.m */; };
 		D810798220FC1EA0000E97CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D810798120FC1EA0000E97CA /* AppDelegate.swift */; };
 		D810798420FC1EA0000E97CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D810798320FC1EA0000E97CA /* ViewController.swift */; };
 		D810798720FC1EA0000E97CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D810798520FC1EA0000E97CA /* Main.storyboard */; };
@@ -229,6 +230,8 @@
 		D809AE86215616BE00801CA0 /* GifPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifPlayViewController.m; sourceTree = "<group>"; };
 		D809AE88215618DC00801CA0 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		D809AE8A2156637000801CA0 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		D80EFA91217414E900B860E7 /* XCURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCURLProtocol.h; sourceTree = "<group>"; };
+		D80EFA92217414E900B860E7 /* XCURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCURLProtocol.m; sourceTree = "<group>"; };
 		D810797E20FC1EA0000E97CA /* 06-XCWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "06-XCWeibo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D810798120FC1EA0000E97CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D810798320FC1EA0000E97CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -692,6 +695,8 @@
 			children = (
 				D81429DB217197D8004F827D /* URLProtocolViewController.h */,
 				D81429DC217197D8004F827D /* URLProtocolViewController.m */,
+				D80EFA91217414E900B860E7 /* XCURLProtocol.h */,
+				D80EFA92217414E900B860E7 /* XCURLProtocol.m */,
 				D81429DE217197EB004F827D /* URLProtocol.storyboard */,
 			);
 			path = XCURLProtocolDemo;
@@ -1657,6 +1662,7 @@
 				D81E9F6421324B0400040000 /* CFDanmakuInfo.m in Sources */,
 				D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */,
 				D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */,
+				D80EFA93217414E900B860E7 /* XCURLProtocol.m in Sources */,
 				D84375B42136933700A19364 /* XCInvocationController.m in Sources */,
 				D8F34162216F350500D53BB4 /* XCPushAnimationViewController.m in Sources */,
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
