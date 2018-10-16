@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+//    [NSURLProtocol registerClass:[XCURLProtocol class]];
     
 }
 #pragma mark - IBAction Event Handler
@@ -45,7 +46,7 @@
 
     NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;
     config.protocolClasses = @[[XCURLProtocol class]];
-    self.session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
+    self.session = [NSURLSession sessionWithConfiguration:config];
 
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 

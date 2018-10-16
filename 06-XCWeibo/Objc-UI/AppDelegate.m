@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "XCURLProtocolDemo/XCURLProtocol.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [NSURLProtocol registerClass:[XCURLProtocol class]];
+   
     return YES;
 }
 

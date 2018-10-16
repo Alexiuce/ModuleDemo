@@ -9,9 +9,11 @@
 #import "XCURLProtocol.h"
 
 
-@interface XCURLProtocol ()
+@interface XCURLProtocol ()<NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSessionDataTask *xc_dataTask;
+
+@property (nonatomic, strong) NSURLSession *xc_session;
 
 @end
 
@@ -37,20 +39,13 @@
 - (void)startLoading{
     
     NSMutableURLRequest *request = [self.request mutableCopy];
-    request.URL = [NSURL URLWithString:@"http://www.httpbin.org/get"];
+    request.URL = [NSURL URLWithString:@"https://www.163.com"];
     [NSURLProtocol setProperty:@YES forKey:request.URL.absoluteString inRequest:request];
     
     NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-    self.xc_dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        if (error) {
-            [self.client URLProtocol:self didFailWithError:error];
-        }else{
-            [self.client URLProtocol:self didLoadData:data];
-        }
-        
-    }];
+    self.xc_session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:NSOperationQueue.mainQueue];
+  
+    self.xc_dataTask = [self.xc_session dataTaskWithRequest:request];
     
     [self.xc_dataTask resume];
 }
@@ -59,10 +54,11 @@
     return [super requestIsCacheEquivalent:a toRequest:b];
 }
 
-
 - (void)stopLoading{
-    [super stopLoading];
+    [self.xc_dataTask cancel];
 }
+#pragma mark -NSURLSessionDelegate
+
 
 
 
