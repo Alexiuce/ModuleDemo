@@ -11,7 +11,7 @@
 
 @interface XCURLProtocol ()
 
-@property (nonatomic, strong)NSURLRequest *request;
+@property (nonatomic, strong) NSURLSessionDataTask *xc_dataTask;
 
 @end
 
@@ -42,7 +42,7 @@
     
     NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    self.xc_dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) {
             [self.client URLProtocol:self didFailWithError:error];
@@ -52,11 +52,16 @@
         
     }];
     
-    [task resume];
+    [self.xc_dataTask resume];
 }
 
++ (BOOL)requestIsCacheEquivalent:(NSURLRequest *)a toRequest:(NSURLRequest *)b{
+    return [super requestIsCacheEquivalent:a toRequest:b];
+}
+
+
 - (void)stopLoading{
-    
+    [super stopLoading];
 }
 
 
