@@ -9,7 +9,7 @@
 #import "XCURLProtocol.h"
 
 
-@interface XCURLProtocol ()<NSURLSessionDelegate>
+@interface XCURLProtocol ()<NSURLSessionDelegate,NSURLSessionTaskDelegate>
 
 @property (nonatomic, strong) NSURLSessionDataTask *xc_dataTask;
 
@@ -27,7 +27,7 @@
     }
     
     NSString *scheme = request.URL.scheme;
-    NSLog(@"url scheme == %@",scheme);
+    NSLog(@"url scheme == %@",request.URL.absoluteString);
     return  [scheme hasPrefix:@"http"] || [scheme hasPrefix:@"https"];
 }
 
@@ -58,6 +58,20 @@
     [self.xc_dataTask cancel];
 }
 #pragma mark -NSURLSessionDelegate
+
+
+#pragma mark -NSURLSessionTaskDelegate
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
+    [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
+    
+    completionHandler(NSURLSessionResponseAllow);
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    [self.client URLProtocol:self didLoadData:data];
+    NSString *dataText = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"response data == %@",dataText);
+}
 
 
 
