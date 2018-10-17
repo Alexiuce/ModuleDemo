@@ -7,8 +7,9 @@
 //
 
 #import "XCSelectedItemViewController.h"
+#import "SelectedItemCollectionViewCell.h"
 
-@interface XCSelectedItemViewController ()<UICollectionViewDataSource>
+@interface XCSelectedItemViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -33,9 +34,16 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell =  [collectionView dequeueReusableCellWithReuseIdentifier:@"item_collection" forIndexPath:indexPath];
+    SelectedItemCollectionViewCell *cell =  [collectionView dequeueReusableCellWithReuseIdentifier:@"item_collection" forIndexPath:indexPath];
+    cell.nameLabel.text = _dataArray[indexPath.item];
     
     return cell;
+}
+
+#pragma mark -UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(100, 30);
 }
 
 @end

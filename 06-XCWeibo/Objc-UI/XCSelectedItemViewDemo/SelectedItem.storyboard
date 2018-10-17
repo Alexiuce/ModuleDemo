@@ -21,36 +21,44 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou4-eJ-12E">
                                 <rect key="frame" x="0.0" y="123" width="375" height="177"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Yr-d2-3Sn">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Yr-d2-3Sn">
                                         <rect key="frame" x="73" y="59" width="229" height="58"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BdM-VP-PKS">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BdM-VP-PKS">
                                             <size key="itemSize" width="55" height="56"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item_collection" id="fLl-B9-10a">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="56"/>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item_collection" id="fLl-B9-10a" customClass="SelectedItemCollectionViewCell">
+                                                <rect key="frame" x="0.0" y="1" width="55" height="56"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="56"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-qB-OtK">
-                                                            <rect key="frame" x="6" y="20" width="42" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-qB-OtK">
+                                                            <rect key="frame" x="6.5" y="17.5" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </view>
+                                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="G9V-qB-OtK" firstAttribute="centerX" secondItem="fLl-B9-10a" secondAttribute="centerX" id="j7L-0V-pV4"/>
+                                                    <constraint firstItem="G9V-qB-OtK" firstAttribute="centerY" secondItem="fLl-B9-10a" secondAttribute="centerY" id="zLS-pC-1Aj"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="nameLabel" destination="G9V-qB-OtK" id="pzH-v6-7YW"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>
                                             <outlet property="dataSource" destination="36P-Qp-8wc" id="cnY-CX-WwJ"/>
+                                            <outlet property="delegate" destination="36P-Qp-8wc" id="bwc-Gz-xIw"/>
                                         </connections>
                                     </collectionView>
                                 </subviews>

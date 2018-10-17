@@ -116,6 +116,7 @@
 		D873F02D2176B3DD00FF66C3 /* XCBaseFoundationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873F02C2176B3DD00FF66C3 /* XCBaseFoundationController.swift */; };
 		D873F0302176B76600FF66C3 /* SelectedItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D873F02F2176B76600FF66C3 /* SelectedItem.storyboard */; };
 		D873F0332176B77900FF66C3 /* XCSelectedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D873F0322176B77900FF66C3 /* XCSelectedItemViewController.m */; };
+		D873F0362176BD2500FF66C3 /* SelectedItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D873F0352176BD2500FF66C3 /* SelectedItemCollectionViewCell.m */; };
 		D8771910214F27EA0087DEC5 /* XCResponseChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */; };
 		D8771913214F2B480087DEC5 /* OneResponser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8771912214F2B480087DEC5 /* OneResponser.m */; };
 		D8771916214F2B590087DEC5 /* TwoResponser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8771915214F2B590087DEC5 /* TwoResponser.m */; };
@@ -420,6 +421,8 @@
 		D873F02F2176B76600FF66C3 /* SelectedItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedItem.storyboard; sourceTree = "<group>"; };
 		D873F0312176B77900FF66C3 /* XCSelectedItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSelectedItemViewController.h; sourceTree = "<group>"; };
 		D873F0322176B77900FF66C3 /* XCSelectedItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSelectedItemViewController.m; sourceTree = "<group>"; };
+		D873F0342176BD2500FF66C3 /* SelectedItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectedItemCollectionViewCell.h; sourceTree = "<group>"; };
+		D873F0352176BD2500FF66C3 /* SelectedItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectedItemCollectionViewCell.m; sourceTree = "<group>"; };
 		D877190D214F27440087DEC5 /* XCResponseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseProtocol.h; sourceTree = "<group>"; };
 		D877190E214F27EA0087DEC5 /* XCResponseChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseChainManager.h; sourceTree = "<group>"; };
 		D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCResponseChainManager.m; sourceTree = "<group>"; };
@@ -1090,6 +1093,8 @@
 				D873F02F2176B76600FF66C3 /* SelectedItem.storyboard */,
 				D873F0312176B77900FF66C3 /* XCSelectedItemViewController.h */,
 				D873F0322176B77900FF66C3 /* XCSelectedItemViewController.m */,
+				D873F0342176BD2500FF66C3 /* SelectedItemCollectionViewCell.h */,
+				D873F0352176BD2500FF66C3 /* SelectedItemCollectionViewCell.m */,
 			);
 			path = XCSelectedItemViewDemo;
 			sourceTree = "<group>";
@@ -1888,6 +1893,7 @@
 				D88D70A52115397300858B62 /* WSServerGameDataSource.m in Sources */,
 				D81429E52171ABC7004F827D /* XCUIDynamicViewController.m in Sources */,
 				D88DAE08212E312300F0B5DA /* XCVideoViewController.m in Sources */,
+				D873F0362176BD2500FF66C3 /* SelectedItemCollectionViewCell.m in Sources */,
 				D8EF847A2110342E0095F19E /* FirstTableViewController.m in Sources */,
 				D8854FF5216C286A00862BDA /* XCTimerLabelViewController.m in Sources */,
 				D84375BA2136A43A00A19364 /* XCTestMan.m in Sources */,
