@@ -51,6 +51,12 @@
                                                     <constraint firstItem="G9V-qB-OtK" firstAttribute="centerX" secondItem="fLl-B9-10a" secondAttribute="centerX" id="j7L-0V-pV4"/>
                                                     <constraint firstItem="G9V-qB-OtK" firstAttribute="centerY" secondItem="fLl-B9-10a" secondAttribute="centerY" id="zLS-pC-1Aj"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="nameLabel" destination="G9V-qB-OtK" id="pzH-v6-7YW"/>
                                                 </connections>
