@@ -114,6 +114,8 @@
 		D873F0212176B36E00FF66C3 /* Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873F0202176B36E00FF66C3 /* Swift_UITests.swift */; };
 		D873F02B2176B3BF00FF66C3 /* SBaseFoundation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D873F02A2176B3BF00FF66C3 /* SBaseFoundation.storyboard */; };
 		D873F02D2176B3DD00FF66C3 /* XCBaseFoundationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873F02C2176B3DD00FF66C3 /* XCBaseFoundationController.swift */; };
+		D873F0302176B76600FF66C3 /* SelectedItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D873F02F2176B76600FF66C3 /* SelectedItem.storyboard */; };
+		D873F0332176B77900FF66C3 /* XCSelectedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D873F0322176B77900FF66C3 /* XCSelectedItemViewController.m */; };
 		D8771910214F27EA0087DEC5 /* XCResponseChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */; };
 		D8771913214F2B480087DEC5 /* OneResponser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8771912214F2B480087DEC5 /* OneResponser.m */; };
 		D8771916214F2B590087DEC5 /* TwoResponser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8771915214F2B590087DEC5 /* TwoResponser.m */; };
@@ -415,6 +417,9 @@
 		D873F0222176B36E00FF66C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D873F02A2176B3BF00FF66C3 /* SBaseFoundation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBaseFoundation.storyboard; sourceTree = "<group>"; };
 		D873F02C2176B3DD00FF66C3 /* XCBaseFoundationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCBaseFoundationController.swift; sourceTree = "<group>"; };
+		D873F02F2176B76600FF66C3 /* SelectedItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedItem.storyboard; sourceTree = "<group>"; };
+		D873F0312176B77900FF66C3 /* XCSelectedItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSelectedItemViewController.h; sourceTree = "<group>"; };
+		D873F0322176B77900FF66C3 /* XCSelectedItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSelectedItemViewController.m; sourceTree = "<group>"; };
 		D877190D214F27440087DEC5 /* XCResponseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseProtocol.h; sourceTree = "<group>"; };
 		D877190E214F27EA0087DEC5 /* XCResponseChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseChainManager.h; sourceTree = "<group>"; };
 		D877190F214F27EA0087DEC5 /* XCResponseChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCResponseChainManager.m; sourceTree = "<group>"; };
@@ -1005,6 +1010,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D873F02E2176B73000FF66C3 /* XCSelectedItemViewDemo */,
 				D81429E02171AB9C004F827D /* XCUIDynamicDemo */,
 				D81429DA217197B3004F827D /* XCURLProtocolDemo */,
 				D8F3415D216F34A300D53BB4 /* XCNavigationPushAnimationDemo */,
@@ -1076,6 +1082,16 @@
 				D873F02C2176B3DD00FF66C3 /* XCBaseFoundationController.swift */,
 			);
 			path = XCBaseFoundation;
+			sourceTree = "<group>";
+		};
+		D873F02E2176B73000FF66C3 /* XCSelectedItemViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D873F02F2176B76600FF66C3 /* SelectedItem.storyboard */,
+				D873F0312176B77900FF66C3 /* XCSelectedItemViewController.h */,
+				D873F0322176B77900FF66C3 /* XCSelectedItemViewController.m */,
+			);
+			path = XCSelectedItemViewDemo;
 			sourceTree = "<group>";
 		};
 		D877190C214F271C0087DEC5 /* ResponseChain */ = {
@@ -1634,6 +1650,7 @@
 				D853EEB4211E61BD00DED0AD /* XCWebTable.storyboard in Resources */,
 				D88D70B121158D4A00858B62 /* AnimationDemo.storyboard in Resources */,
 				D8B29A242141F82C00A605BD /* Stack.storyboard in Resources */,
+				D873F0302176B76600FF66C3 /* SelectedItem.storyboard in Resources */,
 				D8A0E994212A3D6600D8969F /* XCSearch.storyboard in Resources */,
 				D87E62D72124F664007C5D35 /* TableVideo.storyboard in Resources */,
 				D8EF8469211012990095F19E /* page.storyboard in Resources */,
@@ -1881,6 +1898,7 @@
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
 				D809AE7F21560CDB00801CA0 /* WatermarkViewController.m in Sources */,
 				D8B78F722149E6F2006159CA /* XCTagViewCell.m in Sources */,
+				D873F0332176B77900FF66C3 /* XCSelectedItemViewController.m in Sources */,
 				D81E9F5821324B0400040000 /* J2Obj.m in Sources */,
 				D81E9F5A21324B0400040000 /* NetWatcher.m in Sources */,
 				D81E9F5321324B0400040000 /* SuperPlayerGlobleConfig.m in Sources */,
