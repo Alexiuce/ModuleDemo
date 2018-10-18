@@ -13,14 +13,22 @@ class XCBaseFoundationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("hello swift")
         
         
         let originalString = "hello world"
-        
+        print(originalString.count)
+        /**遍历*/
         originalString.forEach {
             print($0)
         }
+        /* 子串*/
+        let starIndex = originalString.index(originalString.startIndex, offsetBy: 3)
+        let subString = originalString[starIndex..<originalString.endIndex]
+        
+        print(subString)
+        
+        
+        
     }
 
 }
