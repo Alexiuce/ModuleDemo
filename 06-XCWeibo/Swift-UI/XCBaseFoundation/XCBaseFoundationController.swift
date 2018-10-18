@@ -17,18 +17,24 @@ class XCBaseFoundationController: UIViewController {
         
         let originalString = "hello world"
         print(originalString.count)
+        
         /**遍历*/
         originalString.forEach {
             print($0)
         }
+        
         /* 子串*/
         let starIndex = originalString.index(originalString.startIndex, offsetBy: 3)
         let subString = originalString[starIndex..<originalString.endIndex]
-        
         print(subString)
         
+        /** 追加 */
+        let newString = originalString.appending("not bad")
+        print(newString)
         
-        
+        /** 替换 */
+        let replaceString = originalString.replacingOccurrences(of: "hel", with: "Hel")
+        print(replaceString)
     }
 
 }
