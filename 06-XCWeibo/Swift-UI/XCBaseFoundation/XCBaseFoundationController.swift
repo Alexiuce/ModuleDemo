@@ -14,7 +14,13 @@ class XCBaseFoundationController: UIViewController {
         super.viewDidLoad()
 
         print("hello swift")
-        // Do any additional setup after loading the view.
+        
+        
+        let originalString = "hello world"
+        
+        originalString.forEach {
+            print($0)
+        }
     }
 
 }
