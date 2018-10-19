@@ -7,6 +7,7 @@
 //
 
 #import "XCPromiseViewController.h"
+#import <PromiseKit/NSURLSession+AnyPromise.h>
 
 @interface XCPromiseViewController ()
 
@@ -16,6 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
+    NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
+    
+    
+//    [[session dataTaskWithRequest:request1 completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        NSLog(@"adfasdfasdf");
+//    }] resume] ;
+    
+    [session promiseDataTaskWithRequest:request1].then(^(id data1){
+        return [AnyPromise promiseWithValue:@"ok"];
+    }).then(^(NSString *result){
+        NSLog(@"%@",result);
+    });
     // Do any additional setup after loading the view.
 }
 
