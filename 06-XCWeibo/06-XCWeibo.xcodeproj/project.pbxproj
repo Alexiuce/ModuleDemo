@@ -178,6 +178,8 @@
 		D8B78F6F2149E550006159CA /* XCTagViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B78F6E2149E550006159CA /* XCTagViewFlowLayout.m */; };
 		D8B78F722149E6F2006159CA /* XCTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B78F712149E6F2006159CA /* XCTagViewCell.m */; };
 		D8B78F752149EE51006159CA /* XCTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B78F742149EE51006159CA /* XCTagViewController.m */; };
+		D8B9FB152179579600C03F39 /* XCPromiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B9FB142179579600C03F39 /* XCPromiseViewController.m */; };
+		D8B9FB17217957AA00C03F39 /* PromiseKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B9FB16217957AA00C03F39 /* PromiseKit.storyboard */; };
 		D8CBC7B1216D899300882288 /* Objc_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBC7B0216D899300882288 /* Objc_UITests.m */; };
 		D8CBC7B9216D89EA00882288 /* XCDateComponentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBC7B8216D89EA00882288 /* XCDateComponentTest.m */; };
 		D8D336BE216ED0F200587CB6 /* XCMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D336BD216ED0F200587CB6 /* XCMoveViewController.m */; };
@@ -539,6 +541,9 @@
 		D8B78F712149E6F2006159CA /* XCTagViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTagViewCell.m; sourceTree = "<group>"; };
 		D8B78F732149EE51006159CA /* XCTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTagViewController.h; sourceTree = "<group>"; };
 		D8B78F742149EE51006159CA /* XCTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTagViewController.m; sourceTree = "<group>"; };
+		D8B9FB132179579600C03F39 /* XCPromiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPromiseViewController.h; sourceTree = "<group>"; };
+		D8B9FB142179579600C03F39 /* XCPromiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPromiseViewController.m; sourceTree = "<group>"; };
+		D8B9FB16217957AA00C03F39 /* PromiseKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PromiseKit.storyboard; sourceTree = "<group>"; };
 		D8CBC7AE216D899300882288 /* Objc-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Objc-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CBC7B0216D899300882288 /* Objc_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objc_UITests.m; sourceTree = "<group>"; };
 		D8CBC7B2216D899300882288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1013,6 +1018,7 @@
 		D86CEF3120FF4120009BB583 /* Objc-UI */ = {
 			isa = PBXGroup;
 			children = (
+				D8B9FB122179577000C03F39 /* XCPromiseDemo */,
 				D873F02E2176B73000FF66C3 /* XCSelectedItemViewDemo */,
 				D81429E02171AB9C004F827D /* XCUIDynamicDemo */,
 				D81429DA217197B3004F827D /* XCURLProtocolDemo */,
@@ -1316,6 +1322,16 @@
 				D8B78F6E2149E550006159CA /* XCTagViewFlowLayout.m */,
 			);
 			path = TagView;
+			sourceTree = "<group>";
+		};
+		D8B9FB122179577000C03F39 /* XCPromiseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8B9FB132179579600C03F39 /* XCPromiseViewController.h */,
+				D8B9FB142179579600C03F39 /* XCPromiseViewController.m */,
+				D8B9FB16217957AA00C03F39 /* PromiseKit.storyboard */,
+			);
+			path = XCPromiseDemo;
 			sourceTree = "<group>";
 		};
 		D8CBC7AF216D899300882288 /* Objc-UITests */ = {
@@ -1643,6 +1659,7 @@
 				D81AA1ED21259F83008A887F /* XMSSliderView.xib in Resources */,
 				D809AE8B2156637000801CA0 /* video.mp4 in Resources */,
 				D8F3415F216F34E100D53BB4 /* PushTransition.storyboard in Resources */,
+				D8B9FB17217957AA00C03F39 /* PromiseKit.storyboard in Resources */,
 				D81E9F5B21324B0400040000 /* README.md in Resources */,
 				D81429DF217197EB004F827D /* URLProtocol.storyboard in Resources */,
 				D8854FF7216C287C00862BDA /* TimerLabel.storyboard in Resources */,
@@ -1810,6 +1827,7 @@
 				D844C0A621474401008BF86A /* TagCollectionViewCell.m in Sources */,
 				D84375B72136944300A19364 /* XCStrategyManager.m in Sources */,
 				D81E9F6021324B0400040000 /* SuperPlayerControlView.m in Sources */,
+				D8B9FB152179579600C03F39 /* XCPromiseViewController.m in Sources */,
 				D8B29A3021422C6600A605BD /* RequestModel.m in Sources */,
 				D867D3892127AAE9007E9AD2 /* SafeTableViewController.m in Sources */,
 				D87798F32111383500611EF1 /* WMMenuView.m in Sources */,
