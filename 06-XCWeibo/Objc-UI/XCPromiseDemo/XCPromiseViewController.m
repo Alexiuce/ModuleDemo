@@ -30,9 +30,12 @@
 //    }] resume] ;
     
     [session promiseDataTaskWithRequest:request1].then(^(id data1){
-        return [AnyPromise promiseWithValue:@"ok"];
-    }).then(^(NSString *result){
-        NSLog(@"%@",result);
+        return [self postURL:nil];
+    }).then(^(id data2){
+        
+        NSString *string = [[NSString alloc]initWithData:data2 encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",string);
+        
     });
     // Do any additional setup after loading the view.
 }
@@ -46,5 +49,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (AnyPromise *)postURL:(NSString *)url{
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolver) {
+        NSURLSession *s = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
+        
+        NSURL *url = [NSURL URLWithString:@"http://httpbin.org/get"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [[s dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error) {
+                resolver(error);
+            }else{
+                resolver(data);
+            }
+        }]resume] ;
+    }];
+}
 
 @end
