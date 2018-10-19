@@ -30,12 +30,14 @@
 //    }] resume] ;
     
     [session promiseDataTaskWithRequest:request1].then(^(id data1){
-        return [self postURL:nil];
-    }).then(^(id data2){
-        
+        return [self fetchData];
+    }).then(^(id data2,NSError* error){
+        NSLog(@"%@",error);
         NSString *string = [[NSString alloc]initWithData:data2 encoding:NSUTF8StringEncoding];
         NSLog(@"%@",string);
         
+    }).catch(^(NSError *myError){
+        NSLog(@"adfdsf");
     });
     // Do any additional setup after loading the view.
 }
@@ -66,4 +68,17 @@
     }];
 }
 
+
+- (AnyPromise *)fetchData{
+    return [AnyPromise promiseWithAdapterBlock:^(PMKAdapter  _Nonnull adapter) {
+        NSURLSession *s = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
+        
+        NSURL *url = [NSURL URLWithString:@"http://httpbin.org/get"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [[s dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            NSError *e = [NSError errorWithDomain:NSCocoaErrorDomain code:100 userInfo:nil];
+            adapter(nil,e);
+        }]resume] ;
+    }];
+}
 @end
