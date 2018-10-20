@@ -13,7 +13,15 @@ class XCBaseFoundationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var a: Array<Any> = [1,3,5,2,6]
         
+        let sortA = mySort(array: &a) { (a, b) -> Bool in
+            a > b
+        }
+        
+        sortA.forEach {
+            print($0)
+        }
         
     }
 
@@ -52,7 +60,19 @@ extension XCBaseFoundationController{
     ///   - array: 需要排序的数组
     ///   - sortFunc: 排序算法
     /// - Returns: 排序好的数组
-    fileprivate func mySort(array:Array<Any>, sortFunc:(Int,Int)->Bool) -> Array<Any> {
+    fileprivate func mySort(array:inout Array<Any>, sortFunc:(Int,Int)->Bool) -> Array<Any> {
+        for indexI in array.indices{
+            if indexI == array.count - 1 {
+                break
+            }
+            for indexJ in 0...(array.count - 1 - indexI - 1){
+                if sortFunc(indexJ,indexJ + 1){
+                    
+                }else{
+                    array.swapAt(indexJ, indexJ + 1)
+                }
+            }
+        }
         return array
     }
     
