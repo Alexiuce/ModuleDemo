@@ -62,6 +62,7 @@ extension XCBaseFoundationController{
     /// - Returns: 排序好的数组
     fileprivate func mySort(array:inout Array<Any>, sortFunc:(Int,Int)->Bool) -> Array<Any> {
         for indexI in array.indices{
+            print("indexI = \(indexI)")
             if indexI == array.count - 1 {
                 break
             }
