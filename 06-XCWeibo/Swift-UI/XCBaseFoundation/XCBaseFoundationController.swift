@@ -15,6 +15,13 @@ class XCBaseFoundationController: UIViewController {
 
         
         
+    }
+
+}
+
+
+extension XCBaseFoundationController{
+   fileprivate  func stringBaseMethodDemo()  {
         let originalString = "hello world"
         print(originalString.count)
         
@@ -35,6 +42,18 @@ class XCBaseFoundationController: UIViewController {
         /** 替换 */
         let replaceString = originalString.replacingOccurrences(of: "hel", with: "Hel")
         print(replaceString)
+        
     }
-
+    
+    
+    /// 自定义数组排序: 支持存储任意对象的数组
+    ///
+    /// - Parameters:
+    ///   - array: 需要排序的数组
+    ///   - sortFunc: 排序算法
+    /// - Returns: 排序好的数组
+    fileprivate func mySort(array:Array<Any>, sortFunc:(Int,Int)->Bool) -> Array<Any> {
+        return array
+    }
+    
 }
