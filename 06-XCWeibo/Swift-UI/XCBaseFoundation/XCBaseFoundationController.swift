@@ -14,11 +14,9 @@ class XCBaseFoundationController: UIViewController {
         super.viewDidLoad()
 
         var a: Array<Any> = [1,3,5,2,6]
-        let b = a;
     
-        _ = mySort(array: &a) { (beginIndex,nextIndex) -> Bool in
-            
-            (b[beginIndex] as! Int) > (b[nextIndex] as! Int)
+        _ = mySort(array: &a) { (v1,v2) -> Bool in
+            v1 > v2
         }
         
         a.forEach {
