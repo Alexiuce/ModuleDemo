@@ -23,18 +23,25 @@
 
 #pragma mark - IBAction
 - (IBAction)clickButton:(UIButton *)sender {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    NSString *t = @"on....then";
+    [[self fetchStep1].thenOn(queue, t){
+        NSLog(@"%@",NSThread);
+    }];
     
-    [self fetchStep1].then(^(id data1){
-        return [self fetchData];
-    }).then(^(id data2){
-        //        NSLog(@"%@",error);
-        NSLog(@"%@",NSThread.currentThread);
-        NSString *string = [[NSString alloc]initWithData:data2 encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",string);
-        
-    }).catch(^(NSError *myError){
-        NSLog(@"adfdsf");
-    });
+    
+    
+//    [self fetchStep1].then(^(id data1){
+//        return [self fetchData];
+//    }).then(^(id data2){
+//        //        NSLog(@"%@",error);
+//        NSLog(@"%@",NSThread.currentThread);
+//        NSString *string = [[NSString alloc]initWithData:data2 encoding:NSUTF8StringEncoding];
+//        NSLog(@"%@",string);
+//
+//    }).catch(^(NSError *myError){
+//        NSLog(@"adfdsf");
+//    });
 }
 
 
