@@ -18,39 +18,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
+}
+
+#pragma mark - IBAction
+- (IBAction)clickButton:(UIButton *)sender {
     
-    
-    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
-    NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
-    
-    
-//    [[session dataTaskWithRequest:request1 completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        NSLog(@"adfasdfasdf");
-//    }] resume] ;
-    
-    [session promiseDataTaskWithRequest:request1].then(^(id data1){
+    [self fetchStep1].then(^(id data1){
         return [self fetchData];
-    }).then(^(id data2,NSError* error){
-        NSLog(@"%@",error);
+    }).then(^(id data2){
+        //        NSLog(@"%@",error);
+        NSLog(@"%@",NSThread.currentThread);
         NSString *string = [[NSString alloc]initWithData:data2 encoding:NSUTF8StringEncoding];
         NSLog(@"%@",string);
         
     }).catch(^(NSError *myError){
         NSLog(@"adfdsf");
     });
-    // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (AnyPromise *)fetchStep1{
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
+    NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
+    
+    
+    //    [[session dataTaskWithRequest:request1 completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    //        NSLog(@"adfasdfasdf");
+    //    }] resume] ;
+    return [session promiseDataTaskWithRequest:request1];
+    
 }
-*/
 
 - (AnyPromise *)postURL:(NSString *)url{
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolver) {
@@ -76,8 +74,8 @@
         NSURL *url = [NSURL URLWithString:@"http://httpbin.org/get"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [[s dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            NSError *e = [NSError errorWithDomain:NSCocoaErrorDomain code:100 userInfo:nil];
-            adapter(nil,e);
+//            NSError *e = [NSError errorWithDomain:NSCocoaErrorDomain code:100 userInfo:nil];
+            adapter(data,nil);
         }]resume] ;
     }];
 }
