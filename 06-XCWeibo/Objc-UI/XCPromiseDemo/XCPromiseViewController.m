@@ -24,10 +24,11 @@
 #pragma mark - IBAction
 - (IBAction)clickButton:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    NSString *t = @"on....then";
-    [[self fetchStep1].thenOn(queue, t){
-        NSLog(@"%@",NSThread);
-    }];
+    
+    [self fetchStep1].thenOn(queue,^(NSString *response){
+        NSLog(@"thread = %@",NSThread.currentThread);
+        NSLog(@"resulut =  %@",response);
+    });
     
     
     
