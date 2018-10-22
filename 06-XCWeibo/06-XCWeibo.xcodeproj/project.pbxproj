@@ -30,6 +30,7 @@
 		D818D07E210AB5890002C03E /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D818D07C210AB5890002C03E /* PersonViewController.xib */; };
 		D818D082210ABA930002C03E /* TransAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D081210ABA930002C03E /* TransAnimationManager.m */; };
 		D818D085210ABD6C0002C03E /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D084210ABD6C0002C03E /* TransController.m */; };
+		D81A1CFA217D536300EC2245 /* XCSubPromiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1CF9217D536300EC2245 /* XCSubPromiseViewController.m */; };
 		D81AA1E821259A5A008A887F /* switch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81AA1E721259A5A008A887F /* switch.storyboard */; };
 		D81AA1EB21259A80008A887F /* XCSwitchDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AA1EA21259A80008A887F /* XCSwitchDemoController.m */; };
 		D81AA1ED21259F83008A887F /* XMSSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AA1EC21259F83008A887F /* XMSSliderView.xib */; };
@@ -277,6 +278,8 @@
 		D818D081210ABA930002C03E /* TransAnimationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransAnimationManager.m; sourceTree = "<group>"; };
 		D818D083210ABD6C0002C03E /* TransController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
 		D818D084210ABD6C0002C03E /* TransController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
+		D81A1CF8217D536300EC2245 /* XCSubPromiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSubPromiseViewController.h; sourceTree = "<group>"; };
+		D81A1CF9217D536300EC2245 /* XCSubPromiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSubPromiseViewController.m; sourceTree = "<group>"; };
 		D81AA1E721259A5A008A887F /* switch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = switch.storyboard; sourceTree = "<group>"; };
 		D81AA1E921259A80008A887F /* XCSwitchDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSwitchDemoController.h; sourceTree = "<group>"; };
 		D81AA1EA21259A80008A887F /* XCSwitchDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSwitchDemoController.m; sourceTree = "<group>"; };
@@ -1329,6 +1332,8 @@
 			children = (
 				D8B9FB132179579600C03F39 /* XCPromiseViewController.h */,
 				D8B9FB142179579600C03F39 /* XCPromiseViewController.m */,
+				D81A1CF8217D536300EC2245 /* XCSubPromiseViewController.h */,
+				D81A1CF9217D536300EC2245 /* XCSubPromiseViewController.m */,
 				D8B9FB16217957AA00C03F39 /* PromiseKit.storyboard */,
 			);
 			path = XCPromiseDemo;
@@ -1922,6 +1927,7 @@
 				D818D079210AA24A0002C03E /* DemoMan.m in Sources */,
 				D809AE7F21560CDB00801CA0 /* WatermarkViewController.m in Sources */,
 				D8B78F722149E6F2006159CA /* XCTagViewCell.m in Sources */,
+				D81A1CFA217D536300EC2245 /* XCSubPromiseViewController.m in Sources */,
 				D873F0332176B77900FF66C3 /* XCSelectedItemViewController.m in Sources */,
 				D81E9F5821324B0400040000 /* J2Obj.m in Sources */,
 				D81E9F5A21324B0400040000 /* NetWatcher.m in Sources */,
