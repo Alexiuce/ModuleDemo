@@ -8,6 +8,7 @@
 
 #import "XCPromiseViewController.h"
 #import <PromiseKit/NSURLSession+AnyPromise.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface XCPromiseViewController ()
 
@@ -23,12 +24,15 @@
 
 #pragma mark - IBAction
 - (IBAction)clickButton:(UIButton *)sender {
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    
-    [self fetchStep1].thenOn(queue,^(NSString *response){
-        NSLog(@"thread = %@",NSThread.currentThread);
-        NSLog(@"resulut =  %@",response);
+    [self afn_fetchData].then(^(id response){
+        NSLog(@"%@",response);
     });
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//
+//    [self fetchStep1].thenOn(queue,^(NSString *response){
+//        NSLog(@"thread = %@",NSThread.currentThread);
+//        NSLog(@"resulut =  %@",response);
+//    });
     
     
     
@@ -86,5 +90,21 @@
             adapter(data,nil);
         }]resume] ;
     }];
+}
+
+
+- (AnyPromise *)afn_fetchData{
+    
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolver) {
+        
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        [manager POST:@"http://httpbin.org/post" parameters:@{@"afn_1":@"hello promise"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            resolver(responseObject);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            resolver(nil);
+        }];
+        
+    }];
+    
 }
 @end
