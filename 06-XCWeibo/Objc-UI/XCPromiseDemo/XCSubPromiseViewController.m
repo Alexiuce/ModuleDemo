@@ -10,6 +10,7 @@
 
 #import <PromiseKit/PromiseKit.h>
 #import <AFNetworking/AFNetworking.h>
+#import "XCPromiseManager.h"
 
 
 @interface XCSubPromiseViewController ()
@@ -17,13 +18,23 @@
 @property (nonatomic, assign) NSUInteger loadIndex;
 @property (nonatomic, strong)AnyPromise *myPromise;
 
+@property (nonatomic, strong) XCPromiseManager *m_manager;
+
 @end
 
 @implementation XCSubPromiseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.m_manager = [XCPromiseManager managerWithBlock:^(id obj) {
+        NSLog(@"view did load");
+        NSLog(@"%@",obj);
+    }];
+    self.m_manager.doAfter(^(id obj){
+        NSLog(@"do after manager");
+    });
+    
 }
 
 

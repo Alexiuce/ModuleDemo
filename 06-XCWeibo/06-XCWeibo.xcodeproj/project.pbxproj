@@ -181,6 +181,7 @@
 		D8B78F752149EE51006159CA /* XCTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B78F742149EE51006159CA /* XCTagViewController.m */; };
 		D8B9FB152179579600C03F39 /* XCPromiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B9FB142179579600C03F39 /* XCPromiseViewController.m */; };
 		D8B9FB17217957AA00C03F39 /* PromiseKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B9FB16217957AA00C03F39 /* PromiseKit.storyboard */; };
+		D8C71BEE217EA0D8009D7EB0 /* XCPromiseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C71BED217EA0D8009D7EB0 /* XCPromiseManager.m */; };
 		D8CBC7B1216D899300882288 /* Objc_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBC7B0216D899300882288 /* Objc_UITests.m */; };
 		D8CBC7B9216D89EA00882288 /* XCDateComponentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBC7B8216D89EA00882288 /* XCDateComponentTest.m */; };
 		D8D336BE216ED0F200587CB6 /* XCMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D336BD216ED0F200587CB6 /* XCMoveViewController.m */; };
@@ -547,6 +548,8 @@
 		D8B9FB132179579600C03F39 /* XCPromiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPromiseViewController.h; sourceTree = "<group>"; };
 		D8B9FB142179579600C03F39 /* XCPromiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPromiseViewController.m; sourceTree = "<group>"; };
 		D8B9FB16217957AA00C03F39 /* PromiseKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PromiseKit.storyboard; sourceTree = "<group>"; };
+		D8C71BEC217EA0D8009D7EB0 /* XCPromiseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPromiseManager.h; sourceTree = "<group>"; };
+		D8C71BED217EA0D8009D7EB0 /* XCPromiseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPromiseManager.m; sourceTree = "<group>"; };
 		D8CBC7AE216D899300882288 /* Objc-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Objc-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CBC7B0216D899300882288 /* Objc_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objc_UITests.m; sourceTree = "<group>"; };
 		D8CBC7B2216D899300882288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1335,6 +1338,8 @@
 				D81A1CF8217D536300EC2245 /* XCSubPromiseViewController.h */,
 				D81A1CF9217D536300EC2245 /* XCSubPromiseViewController.m */,
 				D8B9FB16217957AA00C03F39 /* PromiseKit.storyboard */,
+				D8C71BEC217EA0D8009D7EB0 /* XCPromiseManager.h */,
+				D8C71BED217EA0D8009D7EB0 /* XCPromiseManager.m */,
 			);
 			path = XCPromiseDemo;
 			sourceTree = "<group>";
@@ -1847,6 +1852,7 @@
 				D81AA1F021259FAD008A887F /* XMSSliderView.m in Sources */,
 				D8A0E997212A3D8000D8969F /* XCSearchViewController.m in Sources */,
 				D80EFA93217414E900B860E7 /* XCURLProtocol.m in Sources */,
+				D8C71BEE217EA0D8009D7EB0 /* XCPromiseManager.m in Sources */,
 				D84375B42136933700A19364 /* XCInvocationController.m in Sources */,
 				D8F34162216F350500D53BB4 /* XCPushAnimationViewController.m in Sources */,
 				D87EDEB2210EB62500D09FC1 /* SecondViewController.m in Sources */,
