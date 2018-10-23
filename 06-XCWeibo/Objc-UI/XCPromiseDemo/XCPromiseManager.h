@@ -10,9 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+typedef void(^XCPromiseBlock)(id);
+
+
 @interface XCPromiseManager : NSObject
 
-+ (instancetype)managerWithBlock:(void (^)(id))block;
++ (instancetype)managerWithBlock:(void (^)(XCPromiseBlock resolver))block;
 
 
 

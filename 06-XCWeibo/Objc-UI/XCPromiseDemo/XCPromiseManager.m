@@ -10,7 +10,7 @@
 
 @interface XCPromiseManager ()
 
-@property (nonatomic, strong) void (^m_block)(id _Nonnull);
+@property (nonatomic, strong) XCPromiseBlock m_block;
 
 @end
 
@@ -18,11 +18,11 @@
 @implementation XCPromiseManager
 
 
-+ (instancetype)managerWithBlock:(void (^)(id _Nonnull))block{
++ (instancetype)managerWithBlock:(void (^)(XCPromiseBlock _Nonnull))block{
     return [[self alloc]initWithBlock:block];
 }
 
-- (instancetype)initWithBlock:(void (^)(id _Nonnull))block{
+- (instancetype)initWithBlock:(void (^)(XCPromiseBlock _Nonnull))block{
     if (self = [super init]) {
         self.m_block = block;
     }
@@ -32,7 +32,7 @@
 
 - (void (^)(id p_block))doAfter{
     return ^(id block){
-        self.m_block(@"xxoo");
+        
     };
 }
 

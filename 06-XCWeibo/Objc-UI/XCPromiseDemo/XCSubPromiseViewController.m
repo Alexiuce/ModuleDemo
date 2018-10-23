@@ -27,12 +27,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.m_manager = [XCPromiseManager managerWithBlock:^(id obj) {
-        NSLog(@"view did load");
-        NSLog(@"%@",obj);
+    self.m_manager = [XCPromiseManager managerWithBlock:^(XCPromiseBlock  _Nonnull resolver) {
+        NSLog(@"did load");
+        resolver(@"good ~");
     }];
+    
     self.m_manager.doAfter(^(id obj){
         NSLog(@"do after manager");
+        NSLog(@"obj == %@",obj);
     });
     
 }
