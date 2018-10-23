@@ -44,7 +44,7 @@
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         self.loadIndex = 1;
         
-        [manager POST:@"" parameters:@{} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [manager POST:@"http://httpbin.org/post" parameters:@{} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
             resolver(responseObject);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
