@@ -12,17 +12,18 @@
 
 @property (nonatomic, strong) XCPromiseBlock m_block;
 
+
 @end
 
 
 @implementation XCPromiseManager
 
 
-+ (instancetype)managerWithBlock:(void (^)(XCPromiseBlock _Nonnull))block{
++ (instancetype)managerWithBlock:(void (^)(XCPromiseBlock))block{
     return [[self alloc]initWithBlock:block];
 }
 
-- (instancetype)initWithBlock:(void (^)(XCPromiseBlock _Nonnull))block{
+- (instancetype)initWithBlock:(void (^)(XCPromiseBlock))block{
     if (self = [super init]) {
         self.m_block = block;
     }
@@ -30,9 +31,11 @@
 }
 
 
-- (void (^)(id p_block))doAfter{
-    return ^(id block){
-        
+- (void (^)(id))doAfter{
+    return ^(id obj){
+//        if (self.m_block) {
+//            self.m_block();
+//        }
     };
 }
 

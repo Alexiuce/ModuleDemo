@@ -19,7 +19,6 @@ typedef void(^XCPromiseBlock)(id);
 + (instancetype)managerWithBlock:(void (^)(XCPromiseBlock resolver))block;
 
 
-
 - (void (^)(id p_block))doAfter;
 
 @end
