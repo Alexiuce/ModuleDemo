@@ -19,22 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
-    format.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    NSDate *date = [format dateFromString:@"2018-10-17 23:10:00"];
-    // 半小时后的 时间;
-    NSDate *halfHourDate = [[NSDate alloc] initWithTimeInterval:30 * 60 sinceDate:date];
-    
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    calendar.timeZone = format.timeZone;
-    NSCalendarUnit dateFlag = NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
-    
-    NSDateComponents *dateComponents =  [calendar components:dateFlag fromDate:halfHourDate];
-    NSInteger h = dateComponents.hour;
-    NSInteger m  = dateComponents.minute;
-    NSLog(@"%zd %zd",h,m);
 }
 
 #pragma mark - IBAction
@@ -121,5 +105,24 @@
         
     }];
     
+}
+
+
+- (void)xc_nsdateDemo{
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
+    format.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *date = [format dateFromString:@"2018-10-17 23:10:00"];
+    // 半小时后的 时间;
+    NSDate *halfHourDate = [[NSDate alloc] initWithTimeInterval:30 * 60 sinceDate:date];
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    calendar.timeZone = format.timeZone;
+    NSCalendarUnit dateFlag = NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
+    
+    NSDateComponents *dateComponents =  [calendar components:dateFlag fromDate:halfHourDate];
+    NSInteger h = dateComponents.hour;
+    NSInteger m  = dateComponents.minute;
+    NSLog(@"%zd %zd",h,m);
 }
 @end
