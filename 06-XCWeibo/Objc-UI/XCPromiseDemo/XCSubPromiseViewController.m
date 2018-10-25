@@ -24,6 +24,12 @@
 
 @implementation XCSubPromiseViewController
 
+
+- (void)loadView{
+    [super loadView];
+    NSLog(@"%s",__FUNCTION__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

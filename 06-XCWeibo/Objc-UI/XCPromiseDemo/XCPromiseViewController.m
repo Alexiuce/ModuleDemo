@@ -9,8 +9,11 @@
 #import "XCPromiseViewController.h"
 #import <PromiseKit/NSURLSession+AnyPromise.h>
 #import <AFNetworking/AFNetworking.h>
+#import "XCSubPromiseViewController.h"
 
 @interface XCPromiseViewController ()
+
+@property (nonatomic, strong) XCSubPromiseViewController *subVc;
 
 @end
 
@@ -18,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.subVc = [[XCSubPromiseViewController alloc]init];
 }
 
 #pragma mark - IBAction
