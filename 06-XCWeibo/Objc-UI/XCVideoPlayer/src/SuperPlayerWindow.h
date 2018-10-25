@@ -10,7 +10,7 @@
 
 @class SuperPlayerView;
 
-typedef void(^SuperPlayerWindowEventHandler)();
+typedef void(^SuperPlayerWindowEventHandler)(void);
 
 @interface SuperPlayerWindow : UIWindow
 
