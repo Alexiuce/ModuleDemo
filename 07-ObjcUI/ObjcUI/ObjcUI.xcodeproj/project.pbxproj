@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E28218293A200BD30EF /* AppDelegate.m */; };
-		D86A9E2C218293A200BD30EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E2B218293A200BD30EF /* ViewController.m */; };
 		D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E2D218293A200BD30EF /* Main.storyboard */; };
 		D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E30218293A300BD30EF /* Assets.xcassets */; };
 		D86A9E34218293A300BD30EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E32218293A300BD30EF /* LaunchScreen.storyboard */; };
 		D86A9E37218293A300BD30EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E36218293A300BD30EF /* main.m */; };
 		D86A9E41218293A300BD30EF /* ObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E40218293A300BD30EF /* ObjcUITests.m */; };
+		D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E502182950C00BD30EF /* XCFlowLayoutViewController.m */; };
+		D86A9E532182951E00BD30EF /* XCFlowLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +31,6 @@
 		D86A9E24218293A200BD30EF /* ObjcUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86A9E27218293A200BD30EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86A9E28218293A200BD30EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D86A9E2A218293A200BD30EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D86A9E2B218293A200BD30EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D86A9E2E218293A200BD30EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D86A9E30218293A300BD30EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D86A9E33218293A300BD30EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +39,9 @@
 		D86A9E3C218293A300BD30EF /* ObjcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86A9E40218293A300BD30EF /* ObjcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcUITests.m; sourceTree = "<group>"; };
 		D86A9E42218293A300BD30EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86A9E4F2182950C00BD30EF /* XCFlowLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCFlowLayoutViewController.h; sourceTree = "<group>"; };
+		D86A9E502182950C00BD30EF /* XCFlowLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCFlowLayoutViewController.m; sourceTree = "<group>"; };
+		D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCFlowLayout.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +83,10 @@
 		D86A9E26218293A200BD30EF /* ObjcUI */ = {
 			isa = PBXGroup;
 			children = (
-				D86A9E4C218293F200BD30EF /* SupportFiles */,
+				D86A9E4D218294C200BD30EF /* Classes */,
 				D86A9E4B218293DC00BD30EF /* AppDelegate */,
-				D86A9E2A218293A200BD30EF /* ViewController.h */,
-				D86A9E2B218293A200BD30EF /* ViewController.m */,
-				D86A9E2D218293A200BD30EF /* Main.storyboard */,
+				D86A9E4C218293F200BD30EF /* SupportFiles */,
 				D86A9E30218293A300BD30EF /* Assets.xcassets */,
-				D86A9E32218293A300BD30EF /* LaunchScreen.storyboard */,
 			);
 			path = ObjcUI;
 			sourceTree = "<group>";
@@ -114,9 +113,29 @@
 			isa = PBXGroup;
 			children = (
 				D86A9E35218293A300BD30EF /* Info.plist */,
+				D86A9E2D218293A200BD30EF /* Main.storyboard */,
+				D86A9E32218293A300BD30EF /* LaunchScreen.storyboard */,
 				D86A9E36218293A300BD30EF /* main.m */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		D86A9E4D218294C200BD30EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D86A9E4E218294CD00BD30EF /* UICollectionViewFlowLayout */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D86A9E4E218294CD00BD30EF /* UICollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D86A9E4F2182950C00BD30EF /* XCFlowLayoutViewController.h */,
+				D86A9E502182950C00BD30EF /* XCFlowLayoutViewController.m */,
+				D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */,
+			);
+			path = UICollectionViewFlowLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +221,7 @@
 				D86A9E34218293A300BD30EF /* LaunchScreen.storyboard in Resources */,
 				D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */,
 				D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */,
+				D86A9E532182951E00BD30EF /* XCFlowLayout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D86A9E2C218293A200BD30EF /* ViewController.m in Sources */,
 				D86A9E37218293A300BD30EF /* main.m in Sources */,
+				D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */,
 				D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AAV8FD48R9;
-				INFOPLIST_FILE = ObjcUI/Info.plist;
+				INFOPLIST_FILE = ObjcUI/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AAV8FD48R9;
-				INFOPLIST_FILE = ObjcUI/Info.plist;
+				INFOPLIST_FILE = ObjcUI/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

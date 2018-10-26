@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  XCFlowLayoutViewController.h
 //  ObjcUI
 //
 //  Created by Alexcai on 2018/10/26.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface XCFlowLayoutViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
