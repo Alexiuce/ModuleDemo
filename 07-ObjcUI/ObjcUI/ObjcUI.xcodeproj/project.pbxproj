@@ -10,6 +10,9 @@
 		61922D50548995F5621ED65F /* libPods-ObjcUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C30D09AEAB2058676E579C /* libPods-ObjcUI.a */; };
 		D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */; };
 		D865D8E02184765F00F6B1E2 /* XCReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865D8DF2184765F00F6B1E2 /* XCReplicatorLayerViewController.m */; };
+		D865D8E421847C1C00F6B1E2 /* XCMusicManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865D8E321847C1C00F6B1E2 /* XCMusicManagerViewController.m */; };
+		D865D8E621847C2C00F6B1E2 /* MusicManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D865D8E521847C2C00F6B1E2 /* MusicManager.storyboard */; };
+		D865D8E921847C8400F6B1E2 /* XCMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D865D8E821847C8400F6B1E2 /* XCMusicManager.m */; };
 		D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E28218293A200BD30EF /* AppDelegate.m */; };
 		D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E2D218293A200BD30EF /* Main.storyboard */; };
 		D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E30218293A300BD30EF /* Assets.xcassets */; };
@@ -37,6 +40,11 @@
 		D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReplicatorLayer.storyboard; sourceTree = "<group>"; };
 		D865D8DE2184765F00F6B1E2 /* XCReplicatorLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCReplicatorLayerViewController.h; sourceTree = "<group>"; };
 		D865D8DF2184765F00F6B1E2 /* XCReplicatorLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCReplicatorLayerViewController.m; sourceTree = "<group>"; };
+		D865D8E221847C1C00F6B1E2 /* XCMusicManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCMusicManagerViewController.h; sourceTree = "<group>"; };
+		D865D8E321847C1C00F6B1E2 /* XCMusicManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCMusicManagerViewController.m; sourceTree = "<group>"; };
+		D865D8E521847C2C00F6B1E2 /* MusicManager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicManager.storyboard; sourceTree = "<group>"; };
+		D865D8E721847C8400F6B1E2 /* XCMusicManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCMusicManager.h; sourceTree = "<group>"; };
+		D865D8E821847C8400F6B1E2 /* XCMusicManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCMusicManager.m; sourceTree = "<group>"; };
 		D86A9E24218293A200BD30EF /* ObjcUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86A9E27218293A200BD30EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86A9E28218293A200BD30EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +107,18 @@
 				D865D8DF2184765F00F6B1E2 /* XCReplicatorLayerViewController.m */,
 			);
 			path = XCReplicatorLayer;
+			sourceTree = "<group>";
+		};
+		D865D8E121847BF300F6B1E2 /* XCMuiscManage */ = {
+			isa = PBXGroup;
+			children = (
+				D865D8E221847C1C00F6B1E2 /* XCMusicManagerViewController.h */,
+				D865D8E321847C1C00F6B1E2 /* XCMusicManagerViewController.m */,
+				D865D8E521847C2C00F6B1E2 /* MusicManager.storyboard */,
+				D865D8E721847C8400F6B1E2 /* XCMusicManager.h */,
+				D865D8E821847C8400F6B1E2 /* XCMusicManager.m */,
+			);
+			path = XCMuiscManage;
 			sourceTree = "<group>";
 		};
 		D86A9E1B218293A200BD30EF = {
@@ -164,6 +184,7 @@
 		D86A9E4D218294C200BD30EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D865D8E121847BF300F6B1E2 /* XCMuiscManage */,
 				D865D8DB218475F400F6B1E2 /* XCReplicatorLayer */,
 				D86A9E4E218294CD00BD30EF /* UICollectionViewFlowLayout */,
 			);
@@ -263,6 +284,7 @@
 			files = (
 				D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */,
 				D86A9E34218293A300BD30EF /* LaunchScreen.storyboard in Resources */,
+				D865D8E621847C2C00F6B1E2 /* MusicManager.storyboard in Resources */,
 				D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */,
 				D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */,
 				D86A9E532182951E00BD30EF /* XCFlowLayout.storyboard in Resources */,
@@ -305,8 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D865D8E02184765F00F6B1E2 /* XCReplicatorLayerViewController.m in Sources */,
+				D865D8E421847C1C00F6B1E2 /* XCMusicManagerViewController.m in Sources */,
 				D86A9E37218293A300BD30EF /* main.m in Sources */,
 				D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */,
+				D865D8E921847C8400F6B1E2 /* XCMusicManager.m in Sources */,
 				D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
