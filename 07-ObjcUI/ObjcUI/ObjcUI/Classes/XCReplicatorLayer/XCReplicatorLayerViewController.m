@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+}
+
+- (void)replicatorLayerDemo{
     /** 创建拷贝图层*/
     CAReplicatorLayer *repLayer = [CAReplicatorLayer layer];
     repLayer.position = CGPointMake(10, 150);
@@ -25,15 +29,15 @@
     childrenLayer.bounds = CGRectMake(0, 0, 20, 20);
     childrenLayer.backgroundColor = UIColor.redColor.CGColor;
     [repLayer addSublayer:childrenLayer];
-
+    
     /** 复制内容图层副本 */
     repLayer.instanceCount = 10;
+    //    repLayer.instanceRedOffset = 90;
+    //    repLayer.instanceDelay = 30;
     repLayer.instanceTransform = CATransform3DMakeTranslation(30, 0, 0);
-     
-     
-     [self.view.layer addSublayer:repLayer];
+    
+    
+    [self.view.layer addSublayer:repLayer];
 }
-
-
 
 @end
