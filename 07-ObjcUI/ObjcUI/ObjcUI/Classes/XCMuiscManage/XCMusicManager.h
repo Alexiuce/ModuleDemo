@@ -12,6 +12,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XCMusicManager : NSObject
 
+/**
+ 类方法: 快速创建一个单利实力
+
+ @return 创建好的单利对象
+ */
++ (instancetype)shareManager;
+
+
+/**
+ 开始播放背景音乐
+ */
+- (void)playBackgroundMusic;
+
+/**
+ 停止播放背景音乐
+ */
+- (void)stopBackgroundMusic;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

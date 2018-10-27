@@ -10,4 +10,13 @@
 
 @implementation XCMusicManager
 
++ (instancetype)shareManager{
+    static dispatch_once_t onceToken;
+    static XCMusicManager *__instance;
+    dispatch_once(&onceToken, ^{
+        __instance =  [[self alloc]init];
+    });
+    return __instance;
+}
+
 @end
