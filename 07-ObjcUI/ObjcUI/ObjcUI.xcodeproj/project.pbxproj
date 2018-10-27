@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		61922D50548995F5621ED65F /* libPods-ObjcUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C30D09AEAB2058676E579C /* libPods-ObjcUI.a */; };
+		D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */; };
+		D865D8E02184765F00F6B1E2 /* XCReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865D8DF2184765F00F6B1E2 /* XCReplicatorLayerViewController.m */; };
 		D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E28218293A200BD30EF /* AppDelegate.m */; };
 		D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E2D218293A200BD30EF /* Main.storyboard */; };
 		D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E30218293A300BD30EF /* Assets.xcassets */; };
@@ -32,6 +34,9 @@
 		08AC835F56D1AB5A8B0F2F5D /* Pods-ObjcUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcUI/Pods-ObjcUI.debug.xcconfig"; sourceTree = "<group>"; };
 		3C3497181E933147B7FB1C10 /* libPods-ObjcUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C30D09AEAB2058676E579C /* libPods-ObjcUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReplicatorLayer.storyboard; sourceTree = "<group>"; };
+		D865D8DE2184765F00F6B1E2 /* XCReplicatorLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCReplicatorLayerViewController.h; sourceTree = "<group>"; };
+		D865D8DF2184765F00F6B1E2 /* XCReplicatorLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCReplicatorLayerViewController.m; sourceTree = "<group>"; };
 		D86A9E24218293A200BD30EF /* ObjcUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86A9E27218293A200BD30EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86A9E28218293A200BD30EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +89,16 @@
 				3C3497181E933147B7FB1C10 /* libPods-ObjcUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D865D8DB218475F400F6B1E2 /* XCReplicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */,
+				D865D8DE2184765F00F6B1E2 /* XCReplicatorLayerViewController.h */,
+				D865D8DF2184765F00F6B1E2 /* XCReplicatorLayerViewController.m */,
+			);
+			path = XCReplicatorLayer;
 			sourceTree = "<group>";
 		};
 		D86A9E1B218293A200BD30EF = {
@@ -149,6 +164,7 @@
 		D86A9E4D218294C200BD30EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D865D8DB218475F400F6B1E2 /* XCReplicatorLayer */,
 				D86A9E4E218294CD00BD30EF /* UICollectionViewFlowLayout */,
 			);
 			path = Classes;
@@ -245,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */,
 				D86A9E34218293A300BD30EF /* LaunchScreen.storyboard in Resources */,
 				D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */,
 				D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */,
@@ -287,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D865D8E02184765F00F6B1E2 /* XCReplicatorLayerViewController.m in Sources */,
 				D86A9E37218293A300BD30EF /* main.m in Sources */,
 				D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */,
 				D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */,
