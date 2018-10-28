@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  开始播放背景音乐
  */
-- (void)playBackgroundMusic;
+- (void)playBackgroundMusic:(NSString *)musicName;
 
 /**
  停止播放背景音乐
