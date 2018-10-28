@@ -12,7 +12,6 @@
 
 @interface XCMusicManager ()<AVAudioPlayerDelegate>
 
-@property (nonatomic, copy) NSString *m_name;
 @property (nonatomic, strong)AVAudioPlayer *m_player;
 
 @end
@@ -49,7 +48,9 @@
 
 
 - (void)stopBackgroundMusic{
-    
+    if (self.m_player.isPlaying) {
+        [self.m_player stop];
+    }
 }
 
 
