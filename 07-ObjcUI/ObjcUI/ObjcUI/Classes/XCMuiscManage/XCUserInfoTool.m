@@ -8,6 +8,22 @@
 
 #import "XCUserInfoTool.h"
 
+@interface XCUserInfoTool ()
+
+
+
+@end
+
+
 @implementation XCUserInfoTool
+
++ (instancetype)shareTool{
+    static dispatch_once_t onceToken;
+    static XCUserInfoTool *__instance;
+    dispatch_once(&onceToken, ^{
+        __instance = [[self alloc]init];
+    });
+    return __instance;
+}
 
 @end

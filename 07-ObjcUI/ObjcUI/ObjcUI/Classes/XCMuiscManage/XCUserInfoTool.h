@@ -12,7 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XCUserInfoTool : NSObject
 
-+ (instanceType)shareTool;
++ (instancetype)shareTool;
+
+
+
 
 @end
 
