@@ -27,6 +27,10 @@
 		D86A9E41218293A300BD30EF /* ObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E40218293A300BD30EF /* ObjcUITests.m */; };
 		D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E502182950C00BD30EF /* XCFlowLayoutViewController.m */; };
 		D86A9E532182951E00BD30EF /* XCFlowLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */; };
+		D8C955E02186E1180093B39E /* DataModel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C955DF2186E1180093B39E /* DataModel.storyboard */; };
+		D8C955E32186E1300093B39E /* XCDataModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C955E22186E1300093B39E /* XCDataModelViewController.m */; };
+		D8C955E62186E18E0093B39E /* XCDataModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C955E52186E18E0093B39E /* XCDataModelManager.m */; };
+		D8C955E92186E1A00093B39E /* XCDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C955E82186E1A00093B39E /* XCDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,13 @@
 		D86A9E4F2182950C00BD30EF /* XCFlowLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCFlowLayoutViewController.h; sourceTree = "<group>"; };
 		D86A9E502182950C00BD30EF /* XCFlowLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCFlowLayoutViewController.m; sourceTree = "<group>"; };
 		D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCFlowLayout.storyboard; sourceTree = "<group>"; };
+		D8C955DF2186E1180093B39E /* DataModel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataModel.storyboard; sourceTree = "<group>"; };
+		D8C955E12186E1300093B39E /* XCDataModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDataModelViewController.h; sourceTree = "<group>"; };
+		D8C955E22186E1300093B39E /* XCDataModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDataModelViewController.m; sourceTree = "<group>"; };
+		D8C955E42186E18E0093B39E /* XCDataModelManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDataModelManager.h; sourceTree = "<group>"; };
+		D8C955E52186E18E0093B39E /* XCDataModelManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDataModelManager.m; sourceTree = "<group>"; };
+		D8C955E72186E1A00093B39E /* XCDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDataModel.h; sourceTree = "<group>"; };
+		D8C955E82186E1A00093B39E /* XCDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDataModel.m; sourceTree = "<group>"; };
 		DBE99EA355EF211AB75D0005 /* Pods-ObjcUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcUI/Pods-ObjcUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +230,7 @@
 		D86A9E4D218294C200BD30EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D8C955DD2186E0F60093B39E /* XCDataModelTool */,
 				D830225821868BDB00AB47FB /* XCControllerLifeCycle */,
 				D865D8E121847BF300F6B1E2 /* XCMuiscManage */,
 				D865D8DB218475F400F6B1E2 /* XCReplicatorLayer */,
@@ -235,6 +247,20 @@
 				D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */,
 			);
 			path = UICollectionViewFlowLayout;
+			sourceTree = "<group>";
+		};
+		D8C955DD2186E0F60093B39E /* XCDataModelTool */ = {
+			isa = PBXGroup;
+			children = (
+				D8C955DF2186E1180093B39E /* DataModel.storyboard */,
+				D8C955E12186E1300093B39E /* XCDataModelViewController.h */,
+				D8C955E22186E1300093B39E /* XCDataModelViewController.m */,
+				D8C955E42186E18E0093B39E /* XCDataModelManager.h */,
+				D8C955E52186E18E0093B39E /* XCDataModelManager.m */,
+				D8C955E72186E1A00093B39E /* XCDataModel.h */,
+				D8C955E82186E1A00093B39E /* XCDataModel.m */,
+			);
+			path = XCDataModelTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +350,7 @@
 				D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */,
 				D830225D21868C3800AB47FB /* LifeCycle.storyboard in Resources */,
 				D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */,
+				D8C955E02186E1180093B39E /* DataModel.storyboard in Resources */,
 				D86A9E532182951E00BD30EF /* XCFlowLayout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C955E92186E1A00093B39E /* XCDataModel.m in Sources */,
 				D830226621868D4600AB47FB /* XCLifeThreeViewController.m in Sources */,
+				D8C955E62186E18E0093B39E /* XCDataModelManager.m in Sources */,
 				D830225B21868C0700AB47FB /* XCLifeCycleViewController.m in Sources */,
 				D81B9D062185D16F00066F8C /* XCUserInfoTool.m in Sources */,
 				D865D8E02184765F00F6B1E2 /* XCReplicatorLayerViewController.m in Sources */,
@@ -374,6 +403,7 @@
 				D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */,
 				D865D8E921847C8400F6B1E2 /* XCMusicManager.m in Sources */,
 				D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */,
+				D8C955E32186E1300093B39E /* XCDataModelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
