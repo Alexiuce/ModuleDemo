@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shareTool;
 
+- (void)saveInfo:(id)info forKey:(NSString *)infoKey;
 
+- (id)infoWithKey:(NSString *)infoKey;
 
 
 @end

@@ -26,4 +26,17 @@
     return __instance;
 }
 
+
+#pragma mark - pulib method
+- (void)saveInfo:(id)info forKey:(NSString *)infoKey{
+    [NSUserDefaults.standardUserDefaults setObject:info forKey:infoKey];
+    [NSUserDefaults.standardUserDefaults synchronize];
+}
+
+- (id)infoWithKey:(NSString *)infoKey{
+    return  [NSUserDefaults.standardUserDefaults valueForKey:infoKey];
+}
+#pragma mark - private method
+
+
 @end
