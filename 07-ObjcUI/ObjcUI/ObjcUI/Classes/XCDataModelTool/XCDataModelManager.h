@@ -28,6 +28,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSArray *)modelsWithJsonAarray:(NSArray *)dicts classInArray:(Class)cls;
 
+
+
+/**
+ 根据json 字典创建模型对象
+
+ @param dict json 字典
+ @param cls 指定返回的模型类
+ @return 返回创建好的模型对象
+ */
++ (id)modelWithJson:(NSDictionary *)dict modelClass:(Class)cls;
+
 @end
 
 NS_ASSUME_NONNULL_END

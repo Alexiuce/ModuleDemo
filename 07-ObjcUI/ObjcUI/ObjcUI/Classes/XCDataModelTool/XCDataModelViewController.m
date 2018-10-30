@@ -32,6 +32,9 @@
     NSArray *models = [XCDataModelManager modelsWithJsonAarray:data classInArray:XCDataModel.class];
     NSLog(@"%@",models);
     
+    XCDataModel *m = [XCDataModelManager modelWithJson:@{@"name":@"Hello",@"game":@"world",@"age": @(18)} modelClass:XCDataModel.class];
+    NSLog(@"name =%@ , game = %@ , age = %d",m.name,m.game,m.age);
+    
 }
 
 /*
