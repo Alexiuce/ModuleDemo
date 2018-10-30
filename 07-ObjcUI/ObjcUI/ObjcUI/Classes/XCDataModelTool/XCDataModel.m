@@ -7,17 +7,16 @@
 //
 
 #import "XCDataModel.h"
-#import "XCDataModelManager.h"
 
-@interface XCDataModel()<XCDataModelDataSource>
+@interface XCDataModel()
 
 @end
 
 @implementation XCDataModel
 
 
-+ (NSDictionary *)replacePropertyName{
-    return @{@"game":@"gameName"};
-}
+//+ (NSDictionary *)replacePropertyName{
+//    return @{@"game":@"gameName"};
+//}
 
 @end

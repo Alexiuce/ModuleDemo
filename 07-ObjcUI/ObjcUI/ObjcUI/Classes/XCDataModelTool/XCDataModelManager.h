@@ -10,6 +10,11 @@
 
 @protocol  XCDataModelDataSource <NSObject>
 
+/**
+ 键值映射
+
+ @return 返回的字典中,key代表新实例的属性名称 , value代表json字典中的字段名称 ,即关联 实例属性--> json字段之间的映射关系;
+ */
 + (NSDictionary *)replacePropertyName;
 
 @end

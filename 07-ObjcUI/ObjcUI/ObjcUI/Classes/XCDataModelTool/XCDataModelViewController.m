@@ -9,9 +9,7 @@
 #import "XCDataModelViewController.h"
 #import "XCDataModelManager.h"
 #import "XCDataModel.h"
-
-
-
+#import "XCOriginDataModel.h"
 
 
 @interface XCDataModelViewController ()
@@ -32,8 +30,17 @@
     NSArray *models = [XCDataModelManager modelsWithJsonAarray:data classInArray:XCDataModel.class];
     NSLog(@"%@",models);
     
-    XCDataModel *m = [XCDataModelManager modelWithJson:@{@"name":@"Hello",@"game":@"world",@"age": @(18)} modelClass:XCDataModel.class];
+    
+    NSDictionary *param = @{@"name":@"Hello",@"game":@"world",@"age": @(18)};
+    
+    XCDataModel *m = [XCDataModelManager modelWithJson:param modelClass:XCDataModel.class];
     NSLog(@"name =%@ , game = %@ , age = %d",m.name,m.game,m.age);
+    
+    
+    XCOriginDataModel *mo = [XCOriginDataModel modelWithJson:param];
+    NSArray *mos = [XCOriginDataModel modelsWithJsonArray:data];
+    NSLog(@"%@",mos);
+    NSLog(@"name =%@ , game = %@ , age = %d",mo.name,mo.game,mo.age);
     
 }
 

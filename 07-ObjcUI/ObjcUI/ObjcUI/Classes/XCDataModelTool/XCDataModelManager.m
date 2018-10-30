@@ -29,7 +29,7 @@ Class<XCDataModelDataSource> temp = cls;\
  */
 + (NSArray *)modelsWithJsonAarray:(NSArray *)dicts classInArray:(Class)cls {
     
-//    CheckReplaceProperty(cls)
+    CheckReplaceProperty(cls)
     return [cls mj_objectArrayWithKeyValuesArray:dicts];
     
 }
@@ -42,7 +42,7 @@ Class<XCDataModelDataSource> temp = cls;\
  @return 返回创建好的模型对象
  */
 + (id)modelWithJson:(NSDictionary *)dict modelClass:(Class)cls{
-    
+    CheckReplaceProperty(cls)
     return [cls mj_objectWithKeyValues:dict];
 }
 
