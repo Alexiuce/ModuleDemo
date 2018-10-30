@@ -14,7 +14,14 @@
 
 + (NSArray *)modelsWithJsonAarray:(NSArray *)dicts classInArray:(Class)cls {
     
+    if ([cls respondsToSelector:@selector(replacePropertyName)] ) {
+        Class<XCDataModelDataSource> temp = cls;
+        [cls mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+            return [temp replacePropertyName];
+        }];
+    }
     return [cls mj_objectArrayWithKeyValuesArray:dicts];
+    
 }
 
 

@@ -7,6 +7,12 @@
 //
 
 #import "XCDataModelViewController.h"
+#import "XCDataModelManager.h"
+#import "XCDataModel.h"
+
+
+
+
 
 @interface XCDataModelViewController ()
 
@@ -17,6 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSArray *data = @[@{@"name":@"Jobs",@"gameName":@"KingOfWin",@"age":@(20)},
+                    @{@"name":@"Alex",@"gameName":@"Flight",@"age":@(21)},
+                    @{@"name":@"Gates",@"gameName":@"King",@"age":@(22)}
+                      ];
+    
+    NSArray *models = [XCDataModelManager modelsWithJsonAarray:data classInArray:XCDataModel.class];
+    NSLog(@"%@",models);
+    
 }
 
 /*

@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol  XCDataModelDataSource <NSObject>
+
++ (NSDictionary *)replacePropertyName;
+
+@end
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XCDataModelManager : NSObject
