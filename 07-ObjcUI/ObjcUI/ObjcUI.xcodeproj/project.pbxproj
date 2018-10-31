@@ -14,6 +14,8 @@
 		D830226021868D2800AB47FB /* XCLifeOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830225F21868D2800AB47FB /* XCLifeOneViewController.m */; };
 		D830226321868D3600AB47FB /* XCLifeTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830226221868D3600AB47FB /* XCLifeTwoViewController.m */; };
 		D830226621868D4600AB47FB /* XCLifeThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830226521868D4600AB47FB /* XCLifeThreeViewController.m */; };
+		D864B88E218929EE00FDFB6D /* XCBlockStructViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D864B88D218929EE00FDFB6D /* XCBlockStructViewController.m */; };
+		D864B890218929FB00FDFB6D /* BlockStruct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D864B88F218929FB00FDFB6D /* BlockStruct.storyboard */; };
 		D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */; };
 		D865D8E02184765F00F6B1E2 /* XCReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865D8DF2184765F00F6B1E2 /* XCReplicatorLayerViewController.m */; };
 		D865D8E421847C1C00F6B1E2 /* XCMusicManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865D8E321847C1C00F6B1E2 /* XCMusicManagerViewController.m */; };
@@ -59,6 +61,9 @@
 		D830226221868D3600AB47FB /* XCLifeTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCLifeTwoViewController.m; sourceTree = "<group>"; };
 		D830226421868D4600AB47FB /* XCLifeThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCLifeThreeViewController.h; sourceTree = "<group>"; };
 		D830226521868D4600AB47FB /* XCLifeThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCLifeThreeViewController.m; sourceTree = "<group>"; };
+		D864B88C218929EE00FDFB6D /* XCBlockStructViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBlockStructViewController.h; sourceTree = "<group>"; };
+		D864B88D218929EE00FDFB6D /* XCBlockStructViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBlockStructViewController.m; sourceTree = "<group>"; };
+		D864B88F218929FB00FDFB6D /* BlockStruct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BlockStruct.storyboard; sourceTree = "<group>"; };
 		D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReplicatorLayer.storyboard; sourceTree = "<group>"; };
 		D865D8DE2184765F00F6B1E2 /* XCReplicatorLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCReplicatorLayerViewController.h; sourceTree = "<group>"; };
 		D865D8DF2184765F00F6B1E2 /* XCReplicatorLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCReplicatorLayerViewController.m; sourceTree = "<group>"; };
@@ -144,6 +149,16 @@
 				D830225C21868C3800AB47FB /* LifeCycle.storyboard */,
 			);
 			path = XCControllerLifeCycle;
+			sourceTree = "<group>";
+		};
+		D864B88B218929C200FDFB6D /* XCBlockStruct */ = {
+			isa = PBXGroup;
+			children = (
+				D864B88C218929EE00FDFB6D /* XCBlockStructViewController.h */,
+				D864B88D218929EE00FDFB6D /* XCBlockStructViewController.m */,
+				D864B88F218929FB00FDFB6D /* BlockStruct.storyboard */,
+			);
+			path = XCBlockStruct;
 			sourceTree = "<group>";
 		};
 		D865D8DB218475F400F6B1E2 /* XCReplicatorLayer */ = {
@@ -233,6 +248,7 @@
 		D86A9E4D218294C200BD30EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D864B88B218929C200FDFB6D /* XCBlockStruct */,
 				D8C955DD2186E0F60093B39E /* XCDataModelTool */,
 				D830225821868BDB00AB47FB /* XCControllerLifeCycle */,
 				D865D8E121847BF300F6B1E2 /* XCMuiscManage */,
@@ -349,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D864B890218929FB00FDFB6D /* BlockStruct.storyboard in Resources */,
 				D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */,
 				D86A9E34218293A300BD30EF /* LaunchScreen.storyboard in Resources */,
 				D865D8E621847C2C00F6B1E2 /* MusicManager.storyboard in Resources */,
@@ -397,6 +414,7 @@
 			files = (
 				D8C955E92186E1A00093B39E /* XCDataModel.m in Sources */,
 				D830226621868D4600AB47FB /* XCLifeThreeViewController.m in Sources */,
+				D864B88E218929EE00FDFB6D /* XCBlockStructViewController.m in Sources */,
 				D8C955E62186E18E0093B39E /* XCDataModelManager.m in Sources */,
 				D830225B21868C0700AB47FB /* XCLifeCycleViewController.m in Sources */,
 				D81B9D062185D16F00066F8C /* XCUserInfoTool.m in Sources */,
