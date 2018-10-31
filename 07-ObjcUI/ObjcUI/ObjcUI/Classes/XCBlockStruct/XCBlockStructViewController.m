@@ -8,6 +8,9 @@
 
 #import "XCBlockStructViewController.h"
 
+#define MYBolck  void(^MYblock)(void) = ^
+
+
 @interface XCBlockStructViewController ()
 
 @end
@@ -16,17 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    void(^myBlock)(void) = ^{
+        NSLog(@"this is a not param block func");
+    };
+    
+    
+    myBlock();
+    
+    MYBolck {
+        NSLog(@"this define block ");
+    };
+    MYblock();
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
