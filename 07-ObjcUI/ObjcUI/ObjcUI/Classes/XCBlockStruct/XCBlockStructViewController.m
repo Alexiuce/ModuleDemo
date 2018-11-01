@@ -11,6 +11,16 @@
 #define MYBolck  void(^MYblock)(void) = ^
 
 
+typedef struct {
+    int a;
+    int b;
+    void *func;
+}MYBlockStruck;
+
+void testFunc(){
+    NSLog(@"hello test Func");
+}
+
 @interface XCBlockStructViewController ()
 
 @end
@@ -19,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     void(^myBlock)(void) = ^{
         NSLog(@"this is a not param block func");
     };
@@ -31,8 +40,16 @@
         NSLog(@"this define block ");
     };
     MYblock();
+    
+    MYBlockStruck ms = {10,20,testFunc};
+    
+    NSLog(@"a =%d ,b = %d",ms.a,ms.b);
+    
+    
 }
 
-
+- (void)test{
+    NSLog(@"hello struce");
+}
 
 @end
