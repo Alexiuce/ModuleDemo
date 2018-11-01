@@ -14,6 +14,8 @@
 		D830226021868D2800AB47FB /* XCLifeOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830225F21868D2800AB47FB /* XCLifeOneViewController.m */; };
 		D830226321868D3600AB47FB /* XCLifeTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830226221868D3600AB47FB /* XCLifeTwoViewController.m */; };
 		D830226621868D4600AB47FB /* XCLifeThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830226521868D4600AB47FB /* XCLifeThreeViewController.m */; };
+		D8399373218A859F0044888A /* RedDot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8399372218A859F0044888A /* RedDot.storyboard */; };
+		D8399376218A85AD0044888A /* XCRedDotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8399375218A85AD0044888A /* XCRedDotViewController.m */; };
 		D864B88E218929EE00FDFB6D /* XCBlockStructViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D864B88D218929EE00FDFB6D /* XCBlockStructViewController.m */; };
 		D864B890218929FB00FDFB6D /* BlockStruct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D864B88F218929FB00FDFB6D /* BlockStruct.storyboard */; };
 		D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */; };
@@ -61,6 +63,9 @@
 		D830226221868D3600AB47FB /* XCLifeTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCLifeTwoViewController.m; sourceTree = "<group>"; };
 		D830226421868D4600AB47FB /* XCLifeThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCLifeThreeViewController.h; sourceTree = "<group>"; };
 		D830226521868D4600AB47FB /* XCLifeThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCLifeThreeViewController.m; sourceTree = "<group>"; };
+		D8399372218A859F0044888A /* RedDot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RedDot.storyboard; sourceTree = "<group>"; };
+		D8399374218A85AD0044888A /* XCRedDotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCRedDotViewController.h; sourceTree = "<group>"; };
+		D8399375218A85AD0044888A /* XCRedDotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCRedDotViewController.m; sourceTree = "<group>"; };
 		D864B88C218929EE00FDFB6D /* XCBlockStructViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBlockStructViewController.h; sourceTree = "<group>"; };
 		D864B88D218929EE00FDFB6D /* XCBlockStructViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBlockStructViewController.m; sourceTree = "<group>"; };
 		D864B88F218929FB00FDFB6D /* BlockStruct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BlockStruct.storyboard; sourceTree = "<group>"; };
@@ -149,6 +154,16 @@
 				D830225C21868C3800AB47FB /* LifeCycle.storyboard */,
 			);
 			path = XCControllerLifeCycle;
+			sourceTree = "<group>";
+		};
+		D8399371218A85880044888A /* XCRedDot */ = {
+			isa = PBXGroup;
+			children = (
+				D8399372218A859F0044888A /* RedDot.storyboard */,
+				D8399374218A85AD0044888A /* XCRedDotViewController.h */,
+				D8399375218A85AD0044888A /* XCRedDotViewController.m */,
+			);
+			path = XCRedDot;
 			sourceTree = "<group>";
 		};
 		D864B88B218929C200FDFB6D /* XCBlockStruct */ = {
@@ -248,6 +263,7 @@
 		D86A9E4D218294C200BD30EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D8399371218A85880044888A /* XCRedDot */,
 				D864B88B218929C200FDFB6D /* XCBlockStruct */,
 				D8C955DD2186E0F60093B39E /* XCDataModelTool */,
 				D830225821868BDB00AB47FB /* XCControllerLifeCycle */,
@@ -369,6 +385,7 @@
 				D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */,
 				D86A9E34218293A300BD30EF /* LaunchScreen.storyboard in Resources */,
 				D865D8E621847C2C00F6B1E2 /* MusicManager.storyboard in Resources */,
+				D8399373218A859F0044888A /* RedDot.storyboard in Resources */,
 				D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */,
 				D830225D21868C3800AB47FB /* LifeCycle.storyboard in Resources */,
 				D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */,
@@ -414,6 +431,7 @@
 			files = (
 				D8C955E92186E1A00093B39E /* XCDataModel.m in Sources */,
 				D830226621868D4600AB47FB /* XCLifeThreeViewController.m in Sources */,
+				D8399376218A85AD0044888A /* XCRedDotViewController.m in Sources */,
 				D864B88E218929EE00FDFB6D /* XCBlockStructViewController.m in Sources */,
 				D8C955E62186E18E0093B39E /* XCDataModelManager.m in Sources */,
 				D830225B21868C0700AB47FB /* XCLifeCycleViewController.m in Sources */,
