@@ -8,9 +8,7 @@
 
 #import "XCRedDotViewController.h"
 
-NS_INLINE NSString * fetchMyCustomText(){
-    return [NSString stringWithFormat:@"%@",NSDate.date.description];
-}
+
 
 
 @interface XCRedDotViewController ()
@@ -22,8 +20,7 @@ NS_INLINE NSString * fetchMyCustomText(){
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *a = fetchMyCustomText();
-    NSLog(@"%@",a);
+  
     // Do any additional setup after loading the view.
 }
 

@@ -32,6 +32,7 @@
 		D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E502182950C00BD30EF /* XCFlowLayoutViewController.m */; };
 		D86A9E532182951E00BD30EF /* XCFlowLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */; };
 		D891920F2187DED800F2F36D /* XCOriginDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D891920E2187DED800F2F36D /* XCOriginDataModel.m */; };
+		D8926B54218BD76800775246 /* XCInlineObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D8926B53218BD76800775246 /* XCInlineObj.m */; };
 		D8C955E02186E1180093B39E /* DataModel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C955DF2186E1180093B39E /* DataModel.storyboard */; };
 		D8C955E32186E1300093B39E /* XCDataModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C955E22186E1300093B39E /* XCDataModelViewController.m */; };
 		D8C955E62186E18E0093B39E /* XCDataModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C955E52186E18E0093B39E /* XCDataModelManager.m */; };
@@ -93,6 +94,8 @@
 		D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCFlowLayout.storyboard; sourceTree = "<group>"; };
 		D891920D2187DED800F2F36D /* XCOriginDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCOriginDataModel.h; sourceTree = "<group>"; };
 		D891920E2187DED800F2F36D /* XCOriginDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCOriginDataModel.m; sourceTree = "<group>"; };
+		D8926B52218BD76800775246 /* XCInlineObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCInlineObj.h; sourceTree = "<group>"; };
+		D8926B53218BD76800775246 /* XCInlineObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCInlineObj.m; sourceTree = "<group>"; };
 		D8C955DF2186E1180093B39E /* DataModel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataModel.storyboard; sourceTree = "<group>"; };
 		D8C955E12186E1300093B39E /* XCDataModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDataModelViewController.h; sourceTree = "<group>"; };
 		D8C955E22186E1300093B39E /* XCDataModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDataModelViewController.m; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				D8399372218A859F0044888A /* RedDot.storyboard */,
 				D8399374218A85AD0044888A /* XCRedDotViewController.h */,
 				D8399375218A85AD0044888A /* XCRedDotViewController.m */,
+				D8926B52218BD76800775246 /* XCInlineObj.h */,
+				D8926B53218BD76800775246 /* XCInlineObj.m */,
 			);
 			path = XCRedDot;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */,
 				D891920F2187DED800F2F36D /* XCOriginDataModel.m in Sources */,
 				D8C955E32186E1300093B39E /* XCDataModelViewController.m in Sources */,
+				D8926B54218BD76800775246 /* XCInlineObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
