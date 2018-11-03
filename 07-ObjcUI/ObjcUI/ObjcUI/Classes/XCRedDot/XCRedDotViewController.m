@@ -7,7 +7,7 @@
 //
 
 #import "XCRedDotViewController.h"
-
+#import "XCInlineObj.h"
 
 
 
@@ -19,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    XCInlineObj *obj = [XCInlineObj new];
+    obj.test;
   
     // Do any additional setup after loading the view.
 }

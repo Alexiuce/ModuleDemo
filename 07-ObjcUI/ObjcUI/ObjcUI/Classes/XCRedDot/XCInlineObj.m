@@ -8,6 +8,8 @@
 
 #import "XCInlineObj.h"
 
+#define XCCommentText fetchMyCustomText()
+
 FOUNDATION_STATIC_INLINE  NSString * fetchMyCustomText(){
     return [NSString stringWithFormat:@"%@",NSDate.date.description];
 }
@@ -16,7 +18,11 @@ FOUNDATION_STATIC_INLINE  NSString * fetchMyCustomText(){
 
 - (void)test{
     NSString *a = fetchMyCustomText();
-    NSLog(@"%@",a);
+    NSLog(@"a date == %@",a);
+    
+    NSString *b = XCCommentText;
+    NSLog(@"b date == %@",b);
+    
 }
 
 @end
