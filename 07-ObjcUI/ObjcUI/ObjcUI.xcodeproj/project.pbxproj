@@ -143,6 +143,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D816AF7A218EFD60007238CA /* XCCovariant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XCCovariant;
+			sourceTree = "<group>";
+		};
 		D830225821868BDB00AB47FB /* XCControllerLifeCycle */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +275,7 @@
 		D86A9E4D218294C200BD30EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D816AF7A218EFD60007238CA /* XCCovariant */,
 				D8399371218A85880044888A /* XCRedDot */,
 				D864B88B218929C200FDFB6D /* XCBlockStruct */,
 				D8C955DD2186E0F60093B39E /* XCDataModelTool */,
