@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		61922D50548995F5621ED65F /* libPods-ObjcUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C30D09AEAB2058676E579C /* libPods-ObjcUI.a */; };
+		D816AF81218EFEB8007238CA /* XCCovarantObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D816AF80218EFEB8007238CA /* XCCovarantObj.m */; };
 		D81B9D062185D16F00066F8C /* XCUserInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D81B9D052185D16F00066F8C /* XCUserInfoTool.m */; };
 		D830225B21868C0700AB47FB /* XCLifeCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830225A21868C0700AB47FB /* XCLifeCycleViewController.m */; };
 		D830225D21868C3800AB47FB /* LifeCycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D830225C21868C3800AB47FB /* LifeCycle.storyboard */; };
@@ -53,6 +54,8 @@
 		08AC835F56D1AB5A8B0F2F5D /* Pods-ObjcUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcUI/Pods-ObjcUI.debug.xcconfig"; sourceTree = "<group>"; };
 		3C3497181E933147B7FB1C10 /* libPods-ObjcUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C30D09AEAB2058676E579C /* libPods-ObjcUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D816AF7F218EFEB8007238CA /* XCCovarantObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCovarantObj.h; sourceTree = "<group>"; };
+		D816AF80218EFEB8007238CA /* XCCovarantObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCovarantObj.m; sourceTree = "<group>"; };
 		D81B9D042185D16F00066F8C /* XCUserInfoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCUserInfoTool.h; sourceTree = "<group>"; };
 		D81B9D052185D16F00066F8C /* XCUserInfoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCUserInfoTool.m; sourceTree = "<group>"; };
 		D830225921868C0700AB47FB /* XCLifeCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCLifeCycleViewController.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 		D816AF7A218EFD60007238CA /* XCCovariant */ = {
 			isa = PBXGroup;
 			children = (
+				D816AF7F218EFEB8007238CA /* XCCovarantObj.h */,
+				D816AF80218EFEB8007238CA /* XCCovarantObj.m */,
 			);
 			path = XCCovariant;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				D81B9D062185D16F00066F8C /* XCUserInfoTool.m in Sources */,
 				D865D8E02184765F00F6B1E2 /* XCReplicatorLayerViewController.m in Sources */,
 				D865D8E421847C1C00F6B1E2 /* XCMusicManagerViewController.m in Sources */,
+				D816AF81218EFEB8007238CA /* XCCovarantObj.m in Sources */,
 				D830226321868D3600AB47FB /* XCLifeTwoViewController.m in Sources */,
 				D830226021868D2800AB47FB /* XCLifeOneViewController.m in Sources */,
 				D86A9E37218293A300BD30EF /* main.m in Sources */,
