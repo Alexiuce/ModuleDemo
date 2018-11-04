@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		61922D50548995F5621ED65F /* libPods-ObjcUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C30D09AEAB2058676E579C /* libPods-ObjcUI.a */; };
 		D816AF81218EFEB8007238CA /* XCCovarantObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D816AF80218EFEB8007238CA /* XCCovarantObj.m */; };
+		D816AF84218EFEED007238CA /* XCCorvarantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D816AF83218EFEED007238CA /* XCCorvarantViewController.m */; };
 		D81B9D062185D16F00066F8C /* XCUserInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D81B9D052185D16F00066F8C /* XCUserInfoTool.m */; };
 		D830225B21868C0700AB47FB /* XCLifeCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830225A21868C0700AB47FB /* XCLifeCycleViewController.m */; };
 		D830225D21868C3800AB47FB /* LifeCycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D830225C21868C3800AB47FB /* LifeCycle.storyboard */; };
@@ -56,6 +57,8 @@
 		A3C30D09AEAB2058676E579C /* libPods-ObjcUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D816AF7F218EFEB8007238CA /* XCCovarantObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCovarantObj.h; sourceTree = "<group>"; };
 		D816AF80218EFEB8007238CA /* XCCovarantObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCovarantObj.m; sourceTree = "<group>"; };
+		D816AF82218EFEED007238CA /* XCCorvarantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCorvarantViewController.h; sourceTree = "<group>"; };
+		D816AF83218EFEED007238CA /* XCCorvarantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCorvarantViewController.m; sourceTree = "<group>"; };
 		D81B9D042185D16F00066F8C /* XCUserInfoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCUserInfoTool.h; sourceTree = "<group>"; };
 		D81B9D052185D16F00066F8C /* XCUserInfoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCUserInfoTool.m; sourceTree = "<group>"; };
 		D830225921868C0700AB47FB /* XCLifeCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCLifeCycleViewController.h; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 			children = (
 				D816AF7F218EFEB8007238CA /* XCCovarantObj.h */,
 				D816AF80218EFEB8007238CA /* XCCovarantObj.m */,
+				D816AF82218EFEED007238CA /* XCCorvarantViewController.h */,
+				D816AF83218EFEED007238CA /* XCCorvarantViewController.m */,
 			);
 			path = XCCovariant;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D816AF84218EFEED007238CA /* XCCorvarantViewController.m in Sources */,
 				D8C955E92186E1A00093B39E /* XCDataModel.m in Sources */,
 				D830226621868D4600AB47FB /* XCLifeThreeViewController.m in Sources */,
 				D8399376218A85AD0044888A /* XCRedDotViewController.m in Sources */,
