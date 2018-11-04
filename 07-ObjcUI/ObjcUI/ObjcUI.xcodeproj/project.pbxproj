@@ -10,6 +10,7 @@
 		61922D50548995F5621ED65F /* libPods-ObjcUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C30D09AEAB2058676E579C /* libPods-ObjcUI.a */; };
 		D816AF81218EFEB8007238CA /* XCCovarantObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D816AF80218EFEB8007238CA /* XCCovarantObj.m */; };
 		D816AF84218EFEED007238CA /* XCCorvarantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D816AF83218EFEED007238CA /* XCCorvarantViewController.m */; };
+		D816AF86218F005F007238CA /* Covarant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D816AF85218F005F007238CA /* Covarant.storyboard */; };
 		D81B9D062185D16F00066F8C /* XCUserInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D81B9D052185D16F00066F8C /* XCUserInfoTool.m */; };
 		D830225B21868C0700AB47FB /* XCLifeCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830225A21868C0700AB47FB /* XCLifeCycleViewController.m */; };
 		D830225D21868C3800AB47FB /* LifeCycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D830225C21868C3800AB47FB /* LifeCycle.storyboard */; };
@@ -59,6 +60,7 @@
 		D816AF80218EFEB8007238CA /* XCCovarantObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCovarantObj.m; sourceTree = "<group>"; };
 		D816AF82218EFEED007238CA /* XCCorvarantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCorvarantViewController.h; sourceTree = "<group>"; };
 		D816AF83218EFEED007238CA /* XCCorvarantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCorvarantViewController.m; sourceTree = "<group>"; };
+		D816AF85218F005F007238CA /* Covarant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Covarant.storyboard; sourceTree = "<group>"; };
 		D81B9D042185D16F00066F8C /* XCUserInfoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCUserInfoTool.h; sourceTree = "<group>"; };
 		D81B9D052185D16F00066F8C /* XCUserInfoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCUserInfoTool.m; sourceTree = "<group>"; };
 		D830225921868C0700AB47FB /* XCLifeCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCLifeCycleViewController.h; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				D816AF80218EFEB8007238CA /* XCCovarantObj.m */,
 				D816AF82218EFEED007238CA /* XCCorvarantViewController.h */,
 				D816AF83218EFEED007238CA /* XCCorvarantViewController.m */,
+				D816AF85218F005F007238CA /* Covarant.storyboard */,
 			);
 			path = XCCovariant;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			files = (
 				D864B890218929FB00FDFB6D /* BlockStruct.storyboard in Resources */,
 				D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */,
+				D816AF86218F005F007238CA /* Covarant.storyboard in Resources */,
 				D86A9E34218293A300BD30EF /* LaunchScreen.storyboard in Resources */,
 				D865D8E621847C2C00F6B1E2 /* MusicManager.storyboard in Resources */,
 				D8399373218A859F0044888A /* RedDot.storyboard in Resources */,
