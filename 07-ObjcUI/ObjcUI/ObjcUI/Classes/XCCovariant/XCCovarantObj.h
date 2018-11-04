@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XCCovarantObj : NSObject
+@interface XCCovarantObj<__covariant T > : NSObject
+
+@property (nonatomic, strong) T obj;
 
 @end
 

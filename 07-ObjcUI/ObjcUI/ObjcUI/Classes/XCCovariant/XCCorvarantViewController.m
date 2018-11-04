@@ -7,6 +7,7 @@
 //
 
 #import "XCCorvarantViewController.h"
+#import "XCCovarantObj.h"
 
 @interface XCCorvarantViewController ()
 
@@ -16,17 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    XCCovarantObj<NSString *> *obj = [XCCovarantObj new];
+    obj.obj = @"Hello covariant string";
+    
+    XCCovarantObj<NSDictionary *> *obj2 = [XCCovarantObj new];
+    obj2.obj = @{@"hello":@"convariant"};
+    
+    
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
