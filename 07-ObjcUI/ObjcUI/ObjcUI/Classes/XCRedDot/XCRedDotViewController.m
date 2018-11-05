@@ -21,8 +21,6 @@
     [super viewDidLoad];
     XCInlineObj *obj = [XCInlineObj new];
     [obj test];
-    NSDictionary
-  
     // Do any additional setup after loading the view.
 }
 
