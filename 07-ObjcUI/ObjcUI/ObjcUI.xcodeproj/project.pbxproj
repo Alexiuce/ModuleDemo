@@ -38,6 +38,7 @@
 		D88FB6D92191128500A80076 /* XCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88FB6D82191128500A80076 /* XCHomeViewController.m */; };
 		D88FB6DC2191129D00A80076 /* XCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88FB6DB2191129D00A80076 /* XCTabBarViewController.m */; };
 		D88FB6DF219112B700A80076 /* XCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88FB6DE219112B700A80076 /* XCNavigationViewController.m */; };
+		D88FB6E2219117DC00A80076 /* XCIphoneXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D88FB6E1219117DC00A80076 /* XCIphoneXTabBar.m */; };
 		D891920F2187DED800F2F36D /* XCOriginDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D891920E2187DED800F2F36D /* XCOriginDataModel.m */; };
 		D8926B54218BD76800775246 /* XCInlineObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D8926B53218BD76800775246 /* XCInlineObj.m */; };
 		D8C955E02186E1180093B39E /* DataModel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C955DF2186E1180093B39E /* DataModel.storyboard */; };
@@ -111,6 +112,8 @@
 		D88FB6DB2191129D00A80076 /* XCTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTabBarViewController.m; sourceTree = "<group>"; };
 		D88FB6DD219112B700A80076 /* XCNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCNavigationViewController.h; sourceTree = "<group>"; };
 		D88FB6DE219112B700A80076 /* XCNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCNavigationViewController.m; sourceTree = "<group>"; };
+		D88FB6E0219117DC00A80076 /* XCIphoneXTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCIphoneXTabBar.h; sourceTree = "<group>"; };
+		D88FB6E1219117DC00A80076 /* XCIphoneXTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCIphoneXTabBar.m; sourceTree = "<group>"; };
 		D891920D2187DED800F2F36D /* XCOriginDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCOriginDataModel.h; sourceTree = "<group>"; };
 		D891920E2187DED800F2F36D /* XCOriginDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCOriginDataModel.m; sourceTree = "<group>"; };
 		D8926B52218BD76800775246 /* XCInlineObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCInlineObj.h; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 				D88FB6D82191128500A80076 /* XCHomeViewController.m */,
 				D88FB6DA2191129D00A80076 /* XCTabBarViewController.h */,
 				D88FB6DB2191129D00A80076 /* XCTabBarViewController.m */,
+				D88FB6E0219117DC00A80076 /* XCIphoneXTabBar.h */,
+				D88FB6E1219117DC00A80076 /* XCIphoneXTabBar.m */,
 				D88FB6DD219112B700A80076 /* XCNavigationViewController.h */,
 				D88FB6DE219112B700A80076 /* XCNavigationViewController.m */,
 			);
@@ -505,6 +510,7 @@
 				D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */,
 				D891920F2187DED800F2F36D /* XCOriginDataModel.m in Sources */,
 				D8C955E32186E1300093B39E /* XCDataModelViewController.m in Sources */,
+				D88FB6E2219117DC00A80076 /* XCIphoneXTabBar.m in Sources */,
 				D8926B54218BD76800775246 /* XCInlineObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
