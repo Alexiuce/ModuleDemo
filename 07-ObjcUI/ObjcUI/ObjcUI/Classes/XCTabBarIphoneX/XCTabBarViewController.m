@@ -18,9 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    XCIphoneXTabBar *tb = [XCIphoneXTabBar new];
-    [self setValue:tb forKey:@"tabBar"];
-    self.view.backgroundColor = UIColor.whiteColor;
+    [UITabBar.appearance setTranslucent:NO];
 }
 
 
