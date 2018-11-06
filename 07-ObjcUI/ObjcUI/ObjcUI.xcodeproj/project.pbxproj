@@ -34,6 +34,10 @@
 		D86A9E41218293A300BD30EF /* ObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E40218293A300BD30EF /* ObjcUITests.m */; };
 		D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A9E502182950C00BD30EF /* XCFlowLayoutViewController.m */; };
 		D86A9E532182951E00BD30EF /* XCFlowLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */; };
+		D88FB6D62191126200A80076 /* TabBarIphoneX.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88FB6D52191126200A80076 /* TabBarIphoneX.storyboard */; };
+		D88FB6D92191128500A80076 /* XCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88FB6D82191128500A80076 /* XCHomeViewController.m */; };
+		D88FB6DC2191129D00A80076 /* XCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88FB6DB2191129D00A80076 /* XCTabBarViewController.m */; };
+		D88FB6DF219112B700A80076 /* XCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88FB6DE219112B700A80076 /* XCNavigationViewController.m */; };
 		D891920F2187DED800F2F36D /* XCOriginDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D891920E2187DED800F2F36D /* XCOriginDataModel.m */; };
 		D8926B54218BD76800775246 /* XCInlineObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D8926B53218BD76800775246 /* XCInlineObj.m */; };
 		D8C955E02186E1180093B39E /* DataModel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C955DF2186E1180093B39E /* DataModel.storyboard */; };
@@ -100,6 +104,13 @@
 		D86A9E4F2182950C00BD30EF /* XCFlowLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCFlowLayoutViewController.h; sourceTree = "<group>"; };
 		D86A9E502182950C00BD30EF /* XCFlowLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCFlowLayoutViewController.m; sourceTree = "<group>"; };
 		D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XCFlowLayout.storyboard; sourceTree = "<group>"; };
+		D88FB6D52191126200A80076 /* TabBarIphoneX.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarIphoneX.storyboard; sourceTree = "<group>"; };
+		D88FB6D72191128500A80076 /* XCHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCHomeViewController.h; sourceTree = "<group>"; };
+		D88FB6D82191128500A80076 /* XCHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCHomeViewController.m; sourceTree = "<group>"; };
+		D88FB6DA2191129D00A80076 /* XCTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarViewController.h; sourceTree = "<group>"; };
+		D88FB6DB2191129D00A80076 /* XCTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTabBarViewController.m; sourceTree = "<group>"; };
+		D88FB6DD219112B700A80076 /* XCNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCNavigationViewController.h; sourceTree = "<group>"; };
+		D88FB6DE219112B700A80076 /* XCNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCNavigationViewController.m; sourceTree = "<group>"; };
 		D891920D2187DED800F2F36D /* XCOriginDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCOriginDataModel.h; sourceTree = "<group>"; };
 		D891920E2187DED800F2F36D /* XCOriginDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCOriginDataModel.m; sourceTree = "<group>"; };
 		D8926B52218BD76800775246 /* XCInlineObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCInlineObj.h; sourceTree = "<group>"; };
@@ -288,6 +299,7 @@
 		D86A9E4D218294C200BD30EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D88FB6D42191124000A80076 /* XCTabBarIphoneX */,
 				D816AF7A218EFD60007238CA /* XCCovariant */,
 				D8399371218A85880044888A /* XCRedDot */,
 				D864B88B218929C200FDFB6D /* XCBlockStruct */,
@@ -308,6 +320,20 @@
 				D86A9E522182951E00BD30EF /* XCFlowLayout.storyboard */,
 			);
 			path = UICollectionViewFlowLayout;
+			sourceTree = "<group>";
+		};
+		D88FB6D42191124000A80076 /* XCTabBarIphoneX */ = {
+			isa = PBXGroup;
+			children = (
+				D88FB6D52191126200A80076 /* TabBarIphoneX.storyboard */,
+				D88FB6D72191128500A80076 /* XCHomeViewController.h */,
+				D88FB6D82191128500A80076 /* XCHomeViewController.m */,
+				D88FB6DA2191129D00A80076 /* XCTabBarViewController.h */,
+				D88FB6DB2191129D00A80076 /* XCTabBarViewController.m */,
+				D88FB6DD219112B700A80076 /* XCNavigationViewController.h */,
+				D88FB6DE219112B700A80076 /* XCNavigationViewController.m */,
+			);
+			path = XCTabBarIphoneX;
 			sourceTree = "<group>";
 		};
 		D8C955DD2186E0F60093B39E /* XCDataModelTool */ = {
@@ -417,6 +443,7 @@
 				D830225D21868C3800AB47FB /* LifeCycle.storyboard in Resources */,
 				D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */,
 				D8C955E02186E1180093B39E /* DataModel.storyboard in Resources */,
+				D88FB6D62191126200A80076 /* TabBarIphoneX.storyboard in Resources */,
 				D86A9E532182951E00BD30EF /* XCFlowLayout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,10 +495,13 @@
 				D865D8E421847C1C00F6B1E2 /* XCMusicManagerViewController.m in Sources */,
 				D816AF81218EFEB8007238CA /* XCCovarantObj.m in Sources */,
 				D830226321868D3600AB47FB /* XCLifeTwoViewController.m in Sources */,
+				D88FB6DF219112B700A80076 /* XCNavigationViewController.m in Sources */,
 				D830226021868D2800AB47FB /* XCLifeOneViewController.m in Sources */,
 				D86A9E37218293A300BD30EF /* main.m in Sources */,
+				D88FB6D92191128500A80076 /* XCHomeViewController.m in Sources */,
 				D86A9E512182950C00BD30EF /* XCFlowLayoutViewController.m in Sources */,
 				D865D8E921847C8400F6B1E2 /* XCMusicManager.m in Sources */,
+				D88FB6DC2191129D00A80076 /* XCTabBarViewController.m in Sources */,
 				D86A9E29218293A200BD30EF /* AppDelegate.m in Sources */,
 				D891920F2187DED800F2F36D /* XCOriginDataModel.m in Sources */,
 				D8C955E32186E1300093B39E /* XCDataModelViewController.m in Sources */,
