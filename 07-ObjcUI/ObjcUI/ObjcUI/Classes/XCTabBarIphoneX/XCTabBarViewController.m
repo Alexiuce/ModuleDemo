@@ -20,6 +20,7 @@
    
     XCIphoneXTabBar *tb = [XCIphoneXTabBar new];
     [self setValue:tb forKey:@"tabBar"];
+    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 

@@ -8,10 +8,14 @@
 
 #import "XCIphoneXTabBar.h"
 
+@interface XCIphoneXTabBar ()
+
+@property (nonatomic,assign) UIEdgeInsets oldSafeAreaInsets;
+
+@end
+
+
 @implementation XCIphoneXTabBar
-{
-    UIEdgeInsets _oldSafeAreaInsets;
-}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -28,31 +32,7 @@
     _oldSafeAreaInsets = UIEdgeInsetsZero;
 }
 
-- (void)safeAreaInsetsDidChange {
-    [super safeAreaInsetsDidChange];
-    
-    if (!UIEdgeInsetsEqualToEdgeInsets(_oldSafeAreaInsets, self.safeAreaInsets)) {
-        [self invalidateIntrinsicContentSize];
-        
-        if (self.superview) {
-            [self.superview setNeedsLayout];
-            [self.superview layoutSubviews];
-        }
-    }
-}
 
-- (CGSize)sizeThatFits:(CGSize)size {
-    size = [super sizeThatFits:size];
-    
-    if (@available(iOS 11.0, *)) {
-        float bottomInset = self.safeAreaInsets.bottom;
-        if (bottomInset > 0 && size.height < 50 && (size.height + bottomInset < 90)) {
-            size.height += bottomInset;
-        }
-    }
-    
-    return size;
-}
 
 
 - (void)setFrame:(CGRect)frame {
@@ -63,5 +43,39 @@
     }
     [super setFrame:frame];
 }
+
+
+
+
+
+- (void) safeAreaInsetsDidChange
+{
+    [super safeAreaInsetsDidChange];
+    if(self.oldSafeAreaInsets.left != self.safeAreaInsets.left ||
+       self.oldSafeAreaInsets.right != self.safeAreaInsets.right ||
+       self.oldSafeAreaInsets.top != self.safeAreaInsets.top ||
+       self.oldSafeAreaInsets.bottom != self.safeAreaInsets.bottom)
+    {
+        self.oldSafeAreaInsets = self.safeAreaInsets;
+        [self invalidateIntrinsicContentSize];
+        [self.superview setNeedsLayout];
+        [self.superview layoutSubviews];
+    }
+    
+}
+
+- (CGSize) sizeThatFits:(CGSize) size
+{
+    CGSize s = [super sizeThatFits:size];
+    if(@available(iOS 11.0, *))
+    {
+        CGFloat bottomInset = self.safeAreaInsets.bottom;
+        if( bottomInset > 0 && s.height < 50) {
+            s.height += bottomInset;
+        }
+    }
+    return s;
+}
+
 
 @end
