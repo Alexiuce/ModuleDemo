@@ -10,6 +10,8 @@
 
 @interface XCLifeCycleViewController ()
 
+@property (nonatomic, strong) UIViewController *destinationController;
+
 @end
 
 @implementation XCLifeCycleViewController
@@ -28,6 +30,11 @@
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"%@",segue.destinationViewController);
+    self.destinationController = segue.destinationViewController;
 }
 
 @end
