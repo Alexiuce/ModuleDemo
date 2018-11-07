@@ -19,6 +19,15 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"%s",__FUNCTION__);
+}
 
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSLog(@"%s",__FUNCTION__);
+}
 
 @end
