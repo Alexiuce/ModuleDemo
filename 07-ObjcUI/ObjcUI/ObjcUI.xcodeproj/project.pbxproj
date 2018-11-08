@@ -17,6 +17,8 @@
 		D830226021868D2800AB47FB /* XCLifeOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830225F21868D2800AB47FB /* XCLifeOneViewController.m */; };
 		D830226321868D3600AB47FB /* XCLifeTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830226221868D3600AB47FB /* XCLifeTwoViewController.m */; };
 		D830226621868D4600AB47FB /* XCLifeThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D830226521868D4600AB47FB /* XCLifeThreeViewController.m */; };
+		D835A2862193B7E200881A53 /* XCConfuseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D835A2852193B7E200881A53 /* XCConfuseViewController.m */; };
+		D835A2882193B82700881A53 /* XCConfuseFunc.plist in Resources */ = {isa = PBXBuildFile; fileRef = D835A2872193B82700881A53 /* XCConfuseFunc.plist */; };
 		D8399373218A859F0044888A /* RedDot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8399372218A859F0044888A /* RedDot.storyboard */; };
 		D8399376218A85AD0044888A /* XCRedDotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8399375218A85AD0044888A /* XCRedDotViewController.m */; };
 		D864B88E218929EE00FDFB6D /* XCBlockStructViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D864B88D218929EE00FDFB6D /* XCBlockStructViewController.m */; };
@@ -77,6 +79,10 @@
 		D830226221868D3600AB47FB /* XCLifeTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCLifeTwoViewController.m; sourceTree = "<group>"; };
 		D830226421868D4600AB47FB /* XCLifeThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCLifeThreeViewController.h; sourceTree = "<group>"; };
 		D830226521868D4600AB47FB /* XCLifeThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCLifeThreeViewController.m; sourceTree = "<group>"; };
+		D835A2842193B7E200881A53 /* XCConfuseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCConfuseViewController.h; sourceTree = "<group>"; };
+		D835A2852193B7E200881A53 /* XCConfuseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCConfuseViewController.m; sourceTree = "<group>"; };
+		D835A2872193B82700881A53 /* XCConfuseFunc.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = XCConfuseFunc.plist; sourceTree = "<group>"; };
+		D835A2892193B84300881A53 /* XCConfuseRun.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCConfuseRun.sh; sourceTree = "<group>"; };
 		D8399372218A859F0044888A /* RedDot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RedDot.storyboard; sourceTree = "<group>"; };
 		D8399374218A85AD0044888A /* XCRedDotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCRedDotViewController.h; sourceTree = "<group>"; };
 		D8399375218A85AD0044888A /* XCRedDotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCRedDotViewController.m; sourceTree = "<group>"; };
@@ -193,6 +199,17 @@
 			path = XCControllerLifeCycle;
 			sourceTree = "<group>";
 		};
+		D835A2832193B59600881A53 /* XCConfuse */ = {
+			isa = PBXGroup;
+			children = (
+				D835A2842193B7E200881A53 /* XCConfuseViewController.h */,
+				D835A2852193B7E200881A53 /* XCConfuseViewController.m */,
+				D835A2872193B82700881A53 /* XCConfuseFunc.plist */,
+				D835A2892193B84300881A53 /* XCConfuseRun.sh */,
+			);
+			path = XCConfuse;
+			sourceTree = "<group>";
+		};
 		D8399371218A85880044888A /* XCRedDot */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +319,7 @@
 		D86A9E4D218294C200BD30EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D835A2832193B59600881A53 /* XCConfuse */,
 				D88FB6D42191124000A80076 /* XCTabBarIphoneX */,
 				D816AF7A218EFD60007238CA /* XCCovariant */,
 				D8399371218A85880044888A /* XCRedDot */,
@@ -446,6 +464,7 @@
 				D8399373218A859F0044888A /* RedDot.storyboard in Resources */,
 				D86A9E31218293A300BD30EF /* Assets.xcassets in Resources */,
 				D830225D21868C3800AB47FB /* LifeCycle.storyboard in Resources */,
+				D835A2882193B82700881A53 /* XCConfuseFunc.plist in Resources */,
 				D86A9E2F218293A200BD30EF /* Main.storyboard in Resources */,
 				D8C955E02186E1180093B39E /* DataModel.storyboard in Resources */,
 				D88FB6D62191126200A80076 /* TabBarIphoneX.storyboard in Resources */,
@@ -495,6 +514,7 @@
 				D864B88E218929EE00FDFB6D /* XCBlockStructViewController.m in Sources */,
 				D8C955E62186E18E0093B39E /* XCDataModelManager.m in Sources */,
 				D830225B21868C0700AB47FB /* XCLifeCycleViewController.m in Sources */,
+				D835A2862193B7E200881A53 /* XCConfuseViewController.m in Sources */,
 				D81B9D062185D16F00066F8C /* XCUserInfoTool.m in Sources */,
 				D865D8E02184765F00F6B1E2 /* XCReplicatorLayerViewController.m in Sources */,
 				D865D8E421847C1C00F6B1E2 /* XCMusicManagerViewController.m in Sources */,
