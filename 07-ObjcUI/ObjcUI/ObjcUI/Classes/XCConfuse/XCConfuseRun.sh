@@ -11,4 +11,15 @@ echo "<<<< XCConfuseRun.sh >>>>"
 path=$(pwd)
 echo $path
 cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
+a=100
+echo $a
+
+function myTest(){
+# 函数内容定义的变量默认是全局变量
+  b=23
+# 
+}
+myTest
+echo $b
+
 
