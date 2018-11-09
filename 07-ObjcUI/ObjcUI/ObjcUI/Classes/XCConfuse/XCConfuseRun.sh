@@ -11,6 +11,11 @@ echo "<<<< XCConfuseRun.sh >>>>"
 path=$(pwd)
 echo $path
 cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
+#cat ${SRCROOT}/ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
+echo "=================="
+cat ./ObjcUI/SupportFiles/Info.plist
+echo "=================="
+
 a=100
 echo $a
 
