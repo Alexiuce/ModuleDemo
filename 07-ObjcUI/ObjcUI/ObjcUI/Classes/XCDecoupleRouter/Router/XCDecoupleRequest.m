@@ -8,6 +8,25 @@
 
 #import "XCDecoupleRequest.h"
 
+@interface XCDecoupleRequest ()
+
+/**
+ 业务请求的url
+ */
+@property (nonatomic, strong) NSURL *m_url;
+
+@end
+
 @implementation XCDecoupleRequest
+
++ (instancetype)decoupleRequestWithURL:(NSURL *)url{
+    return [[self alloc] initWithXCDecoupleURL:url];
+}
+- (instancetype)initWithXCDecoupleURL:(NSURL *)requestURL{
+    if (self = [super init]) {
+        _m_url = requestURL;
+    }
+    return self;
+}
 
 @end

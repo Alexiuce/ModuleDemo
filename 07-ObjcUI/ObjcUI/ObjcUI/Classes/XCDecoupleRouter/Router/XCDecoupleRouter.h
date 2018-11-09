@@ -12,6 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XCDecoupleRouter : NSObject
 
+/**
+ 单利方法
+
+ @return 返回一个路由单利对象
+ */
++ (instancetype)defaultRouter;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

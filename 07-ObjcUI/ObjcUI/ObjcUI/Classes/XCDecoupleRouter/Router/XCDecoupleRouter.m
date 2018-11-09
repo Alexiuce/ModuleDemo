@@ -8,6 +8,22 @@
 
 #import "XCDecoupleRouter.h"
 
+@interface XCDecoupleRouter ()
+
+
+
+@end
+
 @implementation XCDecoupleRouter
+
++ (instancetype)defaultRouter{
+    static dispatch_once_t onceToken;
+    XCDecoupleRouter *m_instance = nil;
+    dispatch_once(&onceToken, ^{
+        m_instance = [self new];
+    });
+    return m_instance;
+}
+
 
 @end
