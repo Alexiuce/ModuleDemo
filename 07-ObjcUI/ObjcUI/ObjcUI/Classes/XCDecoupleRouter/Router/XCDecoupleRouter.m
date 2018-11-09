@@ -10,7 +10,10 @@
 
 @interface XCDecoupleRouter ()
 
-
+/**
+ 业务请求回调代理
+ */
+@property (nonatomic, weak) id <XCDecoupleRequestDelegate> m_delegate;
 
 @end
 
@@ -25,5 +28,17 @@
     return m_instance;
 }
 
+/**  根据业务请求进行路由分发 */
+- (void)routerForRequest:(NSURLRequest *)request callback:(id<XCDecoupleRequestDelegate>)handle{
+    
+    
+    if ([handle respondsToSelector:@selector(decoupleRouter:didFinishedRequest:)]) {
+        [handle decoupleRouter:self didFinishedRequest:request];
+    }
+    if ([handle respondsToSelector:@selector(decoupleRouter:didFailureRequest:)]) {
+        NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey:@"error message"}];
+        [handle decoupleRouter:self didFailureRequest:error];
+    }
+}
 
 @end

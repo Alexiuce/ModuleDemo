@@ -8,6 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
+
+@class XCDecoupleRouter;
+
+
+@protocol XCDecoupleRequestDelegate <NSObject>
+
+@optional
+
+/**
+ 路由分发完成
+
+ @param router 业务路由
+ @param req 业务请求
+ */
+- (void)decoupleRouter:(XCDecoupleRouter *)router didFinishedRequest:(NSURLRequest *)req;
+
+/**
+ 路由分发业务失败
+
+ @param router 业务路由
+ @param err 错误信息
+ */
+- (void)decoupleRouter:(XCDecoupleRouter *)router didFailureRequest:(NSError *)err;
+
+@end
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XCDecoupleRouter : NSObject
@@ -20,6 +47,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)defaultRouter;
 
 
+/**
+ 根据业务请求进行路由分发
+
+ @param request 业务请求
+ @param handle 分发请求事件回调响应对象
+ */
+- (void)routerForRequest:(NSURLRequest *)request callback:(id <XCDecoupleRequestDelegate>)handle;
 
 @end
 
