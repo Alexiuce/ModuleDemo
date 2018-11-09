@@ -18,7 +18,7 @@
 
 + (instancetype)defaultRouter{
     static dispatch_once_t onceToken;
-    XCDecoupleRouter *m_instance = nil;
+    static XCDecoupleRouter *m_instance = nil;
     dispatch_once(&onceToken, ^{
         m_instance = [self new];
     });

@@ -10,13 +10,14 @@
 
 @interface XCDecoupleTableViewController ()
 
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation XCDecoupleTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     
 }
 
@@ -80,5 +81,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (void)startTimer{
+   NSTimer *t =  [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(outputNumberSring) userInfo:nil repeats:YES];
+    [t fire];
+    
+}
+
+- (void)outputNumberSring{
+    static int i = 0;
+    NSLog(@"i = %d",++i);
+}
 
 @end
