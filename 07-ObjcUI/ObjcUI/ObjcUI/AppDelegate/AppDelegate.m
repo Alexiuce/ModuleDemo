@@ -19,12 +19,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = UIColor.whiteColor;
     
-    if (@available(iOS 11.0, *)) {
-        NSLog(@"top = %f,",self.window.safeAreaInsets.top);
-        NSLog(@"left = %f,",self.window.safeAreaInsets.left);
-        NSLog(@"bottom = %f,",self.window.safeAreaInsets.bottom);
-        NSLog(@"right = %f,",self.window.safeAreaInsets.right);
-    }
+//    if (@available(iOS 11.0, *)) {
+//        NSLog(@"top = %f,",self.window.safeAreaInsets.top);
+//        NSLog(@"left = %f,",self.window.safeAreaInsets.left);
+//        NSLog(@"bottom = %f,",self.window.safeAreaInsets.bottom);
+//        NSLog(@"right = %f,",self.window.safeAreaInsets.right);
+//    }
     
     return YES;
 }

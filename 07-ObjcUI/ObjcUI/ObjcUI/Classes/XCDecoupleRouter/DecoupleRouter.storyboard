@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--XCDecoupleController-->
         <scene sceneID="fAx-LQ-QwB">
             <objects>
                 <tableViewController id="bga-WF-cwD" customClass="XCDecoupleTableViewController" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="bga-WF-cwD" id="43s-HZ-4dv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="QPn-v7-yQG"/>
+                    <navigationItem key="navigationItem" title="XCDecoupleController" id="QPn-v7-yQG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoq-YO-Hd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
