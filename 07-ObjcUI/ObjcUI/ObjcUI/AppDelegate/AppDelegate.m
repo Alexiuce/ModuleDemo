@@ -24,7 +24,6 @@
         NSLog(@"left = %f,",self.window.safeAreaInsets.left);
         NSLog(@"bottom = %f,",self.window.safeAreaInsets.bottom);
         NSLog(@"right = %f,",self.window.safeAreaInsets.right);
-        
     }
     
     return YES;
