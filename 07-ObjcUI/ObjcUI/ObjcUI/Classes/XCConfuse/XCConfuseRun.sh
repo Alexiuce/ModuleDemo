@@ -10,32 +10,43 @@
 echo "<<<< XCConfuseRun.sh >>>>"
 path=$(pwd)
 echo $path
-cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
+date_01=`date`
+echo $date_01
+echo "=======ls -l==========="
+
+LS1=`ls -l`
+echo $LS1
+
+echo "======================="
+echo "$LS1"
+
+
+#cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
 #cat ${SRCROOT}/ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
-echo "=================="
-cat ./ObjcUI/SupportFiles/Info.plist
-echo "=================="
+#echo "=================="
+#cat ./ObjcUI/SupportFiles/Info.plist
+#echo "=================="
 
-a=100
-echo $a
+#a=100
+#echo $a
 
-function myTest(){
+#function myTest(){
 # 函数内容定义的变量默认是全局变量
-b=23
+#b=23
 # 函数内部定义局部变量 需要使用local
-local c=33
-echo $c
+#local c=33
+#echo $c
 # $* 表示所有参数
-echo $*
+#echo $*
 # $# 表示参数个数
-echo "args count = $#"
+#echo "args count = $#"
 # $0 表示当前脚本的文件名
-echo "current fun name $0"
-}
-echo "current script name = $0"
-myTest 'hello' 'good' 'alex'
-echo $b
-echo $c
+#echo "current fun name $0"
+#}
+#echo "current script name = $0"
+#myTest 'hello' 'good' 'alex'
+#echo $b
+#echo $c
 
 
 
