@@ -17,9 +17,17 @@ echo "=======ls -l==========="
 LS1=`ls -l`
 echo $LS1
 
-echo "======================="
+echo "=======双引号变量================"
 echo "$LS1"
 
+echo =======String==========
+n=23
+# 双引号中的$n会先解析变量n的值后再替换到对应位置
+echo "n = $n"
+# 直接输出时不能有空格,否则会被当作另外的一个字符串
+echo $n
+# 使用单引号的字符串中的变量引用无效,即$n不会被解析,直接原样输出
+echo 'n = $n'
 
 #cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
 #cat ${SRCROOT}/ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
