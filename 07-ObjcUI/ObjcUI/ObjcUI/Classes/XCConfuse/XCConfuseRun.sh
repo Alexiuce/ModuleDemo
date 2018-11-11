@@ -33,9 +33,10 @@ str1="this is a string for shell"
 echo "str1 length = ${#str1}"
 #  =======字符串截取==================
 # 指定位置和长度进行截取
-echo ${str1:8}
-# 指定字符截取
-echo ${str1}
+echo ${str1:8:3}  # 从str第八个索引位置,截取长度为3的一段
+# 指定字符截取  使用%截取字符串左边的内容 ;
+#Xcode 不支持使用#截取字符串右边的内容
+echo ${str1%or*}
 
 #cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
 #cat ${SRCROOT}/ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
