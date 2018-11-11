@@ -35,7 +35,7 @@ echo "str1 length = ${#str1}"
 # 指定位置和长度进行截取
 echo ${str1:8}
 # 指定字符截取
-
+echo ${str1}
 
 #cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
 #cat ${SRCROOT}/ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
