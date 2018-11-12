@@ -12,31 +12,31 @@ path=$(pwd)
 echo $path
 date_01=`date`
 echo $date_01
-echo "=======ls -l==========="
+#echo "=======ls -l==========="
 
-LS1=`ls -l`
-echo $LS1
+#LS1=`ls -l`
+#echo $LS1
 
-echo "=======双引号变量================"
-echo "$LS1"
+#echo "=======双引号变量================"
+#echo "$LS1"
 
 #echo =======String==========
-n=23
+#n=23
 # 双引号中的$n会先解析变量n的值后再替换到对应位置
-echo "n = $n"
+#echo "n = $n"
 # 直接输出时不能有空格,否则会被当作另外的一个字符串
-echo $n
+#echo $n
 # 使用单引号的字符串中的变量引用无效,即$n不会被解析,直接原样输出
-echo 'n = $n'
+#echo 'n = $n'
 # 获取字符串长度 : ${#字符串名称}
-str1="this is a string for shell"
-echo "str1 length = ${#str1}"
+#str1="this is a string for shell"
+#echo "str1 length = ${#str1}"
 #  =======字符串截取==================
 # 指定位置和长度进行截取
-echo ${str1:8:3}  # 从str第八个索引位置,截取长度为3的一段
+#echo ${str1:8:3}  # 从str第八个索引位置,截取长度为3的一段
 # 指定字符截取  使用%截取字符串左边的内容 ;
 #Xcode 不支持使用#截取字符串右边的内容,但在shell命令模式中支持#截取字符串右边的内容
-echo ${str1%or*}
+#echo ${str1%or*}
 #echo -e "\033[32m ============================\033[0m"
 #echo ${str1#*for}
 
@@ -66,6 +66,17 @@ echo ${str1%or*}
 #myTest 'hello' 'good' 'alex'
 #echo $b
 #echo $c
+
+echo ================= Shell 数组 ====================
+array_name=(1 2 3 4)   #使用()定义数组;数组内元素可以不必相同
+echo ${array_name[2]}  # 使用下标获取数组内容
+echo ${array_name[@]}  # 使用@获取数组内所有内容
+echo ${array_name[*]}  # 使用*获取数组内所有内容
+
+
+
+
+
 
 
 
