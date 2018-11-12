@@ -24,7 +24,6 @@
 		D85A449C21950E6300F2DB9F /* DecoupleRouter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85A449B21950E6300F2DB9F /* DecoupleRouter.storyboard */; };
 		D85A449F21950EE300F2DB9F /* XCDecoupleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85A449E21950EE300F2DB9F /* XCDecoupleTableViewController.m */; };
 		D85A44A32195106E00F2DB9F /* XCDecoupleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = D85A44A22195106E00F2DB9F /* XCDecoupleRouter.m */; };
-		D85A44A6219510B000F2DB9F /* XCDecoupleRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D85A44A5219510B000F2DB9F /* XCDecoupleRequest.m */; };
 		D864B88E218929EE00FDFB6D /* XCBlockStructViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D864B88D218929EE00FDFB6D /* XCBlockStructViewController.m */; };
 		D864B890218929FB00FDFB6D /* BlockStruct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D864B88F218929FB00FDFB6D /* BlockStruct.storyboard */; };
 		D865D8DD2184762A00F6B1E2 /* ReplicatorLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D865D8DC2184762A00F6B1E2 /* ReplicatorLayer.storyboard */; };
@@ -95,8 +94,6 @@
 		D85A449E21950EE300F2DB9F /* XCDecoupleTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDecoupleTableViewController.m; sourceTree = "<group>"; };
 		D85A44A12195106E00F2DB9F /* XCDecoupleRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDecoupleRouter.h; sourceTree = "<group>"; };
 		D85A44A22195106E00F2DB9F /* XCDecoupleRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDecoupleRouter.m; sourceTree = "<group>"; };
-		D85A44A4219510B000F2DB9F /* XCDecoupleRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDecoupleRequest.h; sourceTree = "<group>"; };
-		D85A44A5219510B000F2DB9F /* XCDecoupleRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDecoupleRequest.m; sourceTree = "<group>"; };
 		D85A44A7219510CF00F2DB9F /* XCDecoupleProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDecoupleProtocol.h; sourceTree = "<group>"; };
 		D864B88C218929EE00FDFB6D /* XCBlockStructViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBlockStructViewController.h; sourceTree = "<group>"; };
 		D864B88D218929EE00FDFB6D /* XCBlockStructViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBlockStructViewController.m; sourceTree = "<group>"; };
@@ -250,8 +247,6 @@
 			children = (
 				D85A44A12195106E00F2DB9F /* XCDecoupleRouter.h */,
 				D85A44A22195106E00F2DB9F /* XCDecoupleRouter.m */,
-				D85A44A4219510B000F2DB9F /* XCDecoupleRequest.h */,
-				D85A44A5219510B000F2DB9F /* XCDecoupleRequest.m */,
 				D85A44A7219510CF00F2DB9F /* XCDecoupleProtocol.h */,
 			);
 			path = Router;
@@ -574,7 +569,6 @@
 				D864B88E218929EE00FDFB6D /* XCBlockStructViewController.m in Sources */,
 				D8C955E62186E18E0093B39E /* XCDataModelManager.m in Sources */,
 				D830225B21868C0700AB47FB /* XCLifeCycleViewController.m in Sources */,
-				D85A44A6219510B000F2DB9F /* XCDecoupleRequest.m in Sources */,
 				D85A449F21950EE300F2DB9F /* XCDecoupleTableViewController.m in Sources */,
 				D835A2862193B7E200881A53 /* XCConfuseViewController.m in Sources */,
 				D81B9D062185D16F00066F8C /* XCUserInfoTool.m in Sources */,
