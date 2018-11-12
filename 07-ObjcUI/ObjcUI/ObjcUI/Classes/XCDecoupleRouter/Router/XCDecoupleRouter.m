@@ -31,6 +31,8 @@
 /**  根据业务请求进行路由分发 */
 - (void)routerForRequest:(NSURLRequest *)request callback:(id<XCDecoupleRequestDelegate>)handle{
     
+    /** 1. 根据request 获取业务目标 */
+    /** 2. 分发request 业务到目标 */
     
     if ([handle respondsToSelector:@selector(decoupleRouter:didFinishedRequest:)]) {
         [handle decoupleRouter:self didFinishedRequest:request];
