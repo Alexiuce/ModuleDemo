@@ -29,16 +29,16 @@ echo $date_01
 # 使用单引号的字符串中的变量引用无效,即$n不会被解析,直接原样输出
 #echo 'n = $n'
 # 获取字符串长度 : ${#字符串名称}
-#str1="this is a string for shell"
-#echo "str1 length = ${#str1}"
+str1="this is a string for shell"
+echo "str1 length = ${#str1}"
 #  =======字符串截取==================
 # 指定位置和长度进行截取
-#echo ${str1:8:3}  # 从str第八个索引位置,截取长度为3的一段
+echo ${str1:8:3}  # 从str第八个索引位置,截取长度为3的一段
 # 指定字符截取  使用%截取字符串左边的内容 ;
-#Xcode 不支持使用#截取字符串右边的内容,但在shell命令模式中支持#截取字符串右边的内容
+#Xcode 使用#截取字符串右边的内容需要使用""包裹输出内容,但在shell命令模式中可以直接使用#截取字符串右边的内容
 #echo ${str1%or*}
 #echo -e "\033[32m ============================\033[0m"
-#echo ${str1#*for}
+echo "${str1#*for}"
 
 #cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
 #cat ${SRCROOT}/ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
