@@ -74,6 +74,13 @@ echo ${array_name[@]}  # 使用@获取数组内所有内容
 echo ${array_name[*]}  # 使用*获取数组内所有内容
 
 
+echo =================== 数组拼接 =============================
+# 思路: 先使用@或者* 将数组展开后,再添加到一个数组中
+array_one=(1 2)
+array_two=(4 5)
+array_new=(${array_one[@]} ${array_two[@]})
+echo ${array_new[*]}
+
 
 
 
