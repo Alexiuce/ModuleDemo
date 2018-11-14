@@ -67,22 +67,26 @@ echo "${str1#*for}"
 #echo $b
 #echo $c
 
-echo ================= Shell 数组 ====================
-array_name=(1 2 3 4)   #使用()定义数组;数组内元素可以不必相同
-echo ${array_name[2]}  # 使用下标获取数组内容
-echo ${array_name[@]}  # 使用@获取数组内所有内容
-echo ${array_name[*]}  # 使用*获取数组内所有内容
+#echo ================= Shell 数组 ====================
+#array_name=(1 2 3 4)   #使用()定义数组;数组内元素可以不必相同
+#echo ${array_name[2]}  # 使用下标获取数组内容
+#echo ${array_name[@]}  # 使用@获取数组内所有内容
+#echo ${array_name[*]}  # 使用*获取数组内所有内容
+#
+#
+#echo =================== 数组拼接 =============================
+## 思路: 先使用@或者* 将数组展开后,再添加到一个数组中
+#array_one=(1 2)
+#array_two=(4 5)
+#array_new=(${array_one[@]} ${array_two[@]})
+#echo ${array_new[*]}
+echo ================== 內建命令 ========================
+# 输出当前路径
+echo $PWD
+# 输出当前用户id
+echo $UID
 
-
-echo =================== 数组拼接 =============================
-# 思路: 先使用@或者* 将数组展开后,再添加到一个数组中
-array_one=(1 2)
-array_two=(4 5)
-array_new=(${array_one[@]} ${array_two[@]})
-echo ${array_new[*]}
-
-
-
+echo $PATH
 
 
 
