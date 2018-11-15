@@ -106,10 +106,10 @@ path=./ObjcUI/Classes/XCConfuse/XCConfuseViewController.m
 #echo "$XCConfuseViewController"
 
 # 下面两句与上面效果相同
-cat $path   # 执行cat 指令
-echo $?     # 使用$? 获取上一个命令的执行结果
+#cat $path   # 执行cat 指令
+#echo $?     # 使用$? 获取上一个命令的执行结果
 
-
+awk '{print $1}' $path
 
 ##  ================ TODO FIXMI
 KEYWORDS="TODO:|FIXME:|\?\?\?:|\!\!\!:"
