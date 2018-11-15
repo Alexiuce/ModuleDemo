@@ -101,9 +101,16 @@ echo "<<<< XCConfuseRun.sh >>>>"
 #exit 0
 echo ================= = AWK 命令 ==========================
 path=./ObjcUI/Classes/XCConfuse/XCConfuseViewController.m
-#cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
-XCConfuseViewController=`cat $path`
-echo "$XCConfuseViewController"
+
+#XCConfuseViewController=`cat $path`
+#echo "$XCConfuseViewController"
+
+# 下面两句与上面效果相同
+cat $path   # 执行cat 指令
+echo $?     # 使用$? 获取上一个命令的执行结果
+
+
+
 ##  ================ TODO FIXMI
 KEYWORDS="TODO:|FIXME:|\?\?\?:|\!\!\!:"
 find "${SRCROOT}" \( -name "*.h" -or -name "*.m" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($KEYWORDS).*\$" | perl -p -e "s/($KEYWORDS)/ warning: \$1/"
