@@ -7,10 +7,13 @@
 //
 
 #import "XCDecoupleTableViewController.h"
+#import "XCRouterListManager.h"
 
 @interface XCDecoupleTableViewController ()
 
 @property (nonatomic, strong) NSTimer *timer;
+
+@property (nonatomic, strong) XCRouterListManager *manager;
 
 @end
 
@@ -18,6 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.manager = [XCRouterListManager new];
+    NSURL *url = [NSURL URLWithString:@"push://XCTest1ViewController"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    UIViewController *controller = [self.manager fetchControllerWithRequest:request];
+    NSLog(@"%@",controller);
     
 }
 
