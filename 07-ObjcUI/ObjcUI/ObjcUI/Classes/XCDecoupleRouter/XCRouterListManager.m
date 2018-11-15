@@ -15,6 +15,7 @@
 
     NSURL *url = req.URL;
     NSLog(@"host =%@",url.host);
+    NSLog(@"scheme =%@",url.scheme);
     return [UIViewController new];
     
 }
