@@ -5,18 +5,18 @@
 #
 #  Created by Alexcai on 2018/11/8.
 #  Copyright © 2018 dongjiu. All rights reserved.
+
 #  编译执行脚本文件  Builds Phases  -- > Run Script  -- > 添加此角本的路径信息 $PROJECT_DIR/+ 脚本在项目中的路径
 #  以下角本命令会在编译时执行
 echo "<<<< XCConfuseRun.sh >>>>"
-path=$(pwd)
-echo $path
-date_01=`date`
-echo $date_01
+#path=$(pwd)
+#echo $path
+#date_01=`date`
+#echo $date_01
 #echo "=======ls -l==========="
 
 #LS1=`ls -l`
 #echo $LS1
-
 #echo "=======双引号变量================"
 #echo "$LS1"
 
@@ -29,16 +29,17 @@ echo $date_01
 # 使用单引号的字符串中的变量引用无效,即$n不会被解析,直接原样输出
 #echo 'n = $n'
 # 获取字符串长度 : ${#字符串名称}
-str1="this is a string for shell"
-echo "str1 length = ${#str1}"
+#str1="this is a string for shell"
+#echo "str1 length = ${#str1}"
+
 #  =======字符串截取==================
 # 指定位置和长度进行截取
-echo ${str1:8:3}  # 从str第八个索引位置,截取长度为3的一段
+#echo ${str1:8:3}  # 从str第八个索引位置,截取长度为3的一段
 # 指定字符截取  使用%截取字符串左边的内容 ;
 #Xcode 使用#截取字符串右边的内容需要使用""包裹输出内容,但在shell命令模式中可以直接使用#截取字符串右边的内容
 #echo ${str1%or*}
 #echo -e "\033[32m ============================\033[0m"
-echo "${str1#*for}"
+#echo "${str1#*for}"
 
 #cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
 #cat ${SRCROOT}/ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
@@ -80,26 +81,29 @@ echo "${str1#*for}"
 #array_two=(4 5)
 #array_new=(${array_one[@]} ${array_two[@]})
 #echo ${array_new[*]}
-echo ================== 內建命令 ========================
+#echo ================== 內建命令 ========================
 # 输出当前路径
-echo $PWD
+#echo $PWD
 # 输出当前用户id
-echo $UID
+#echo $UID
 # 输出脚本命令执行环境
-echo $PATH
+#echo $PATH
 
-echo ================ echo 命令 ===========================
+#echo ================ echo 命令 ===========================
 # 默认echo 输出内容后会自动换行
-echo "默认会换行"
-echo "第二行"
+#echo "默认会换行"
+#echo "第二行"
 # 使用 -n 参数 会关闭自动换行 (命令模式)
-echo -n "第一句"
-echo -n "第二句"
-echo =====================退出命令 =========================
+#echo -n "第一句"
+#echo -n "第二句"
+#echo ================== 退出命令 ============================
 # 在Xcode 编译脚本中,如果exit 返回的是非0值,会报错,无法进行工程编译
-exit 0
-
-
+#exit 0
+echo ================= = AWK 命令 ==========================
+path=./ObjcUI/Classes/XCConfuse/XCConfuseViewController.m
+#cat ./ObjcUI/Classes/XCConfuse/XCConfuseFunc.plist
+XCConfuseViewController=`cat $path`
+echo "$XCConfuseViewController"
 ##  ================ TODO FIXMI
 KEYWORDS="TODO:|FIXME:|\?\?\?:|\!\!\!:"
 find "${SRCROOT}" \( -name "*.h" -or -name "*.m" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($KEYWORDS).*\$" | perl -p -e "s/($KEYWORDS)/ warning: \$1/"
