@@ -10,4 +10,15 @@
 
 @implementation XCRouterListManager
 
+
+- (UIViewController *)fetchControllerWithRequest:(NSURLRequest *)req{
+
+    NSURL *url = req.URL;
+    NSLog(@"host =%@",url.host);
+    return [UIViewController new];
+    
+}
+
+    
+
 @end

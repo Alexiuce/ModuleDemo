@@ -13,6 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XCRouterListManager : NSObject
 
     
+/**
+ 根据请求获取一个业务控制器
+
+ @param req 业务请求
+ @return 返回一个响应此业务请求的控制器
+ */
 - (UIViewController *)fetchControllerWithRequest:(NSURLRequest *)req;
     
 @end
