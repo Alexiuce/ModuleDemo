@@ -7,6 +7,7 @@
 //
 
 #import "XCRouterListManager.h"
+#import <objc/runtime.h>
 
 @implementation XCRouterListManager
 
@@ -16,6 +17,18 @@
     NSURL *url = req.URL;
     NSLog(@"host =%@",url.host);
     NSLog(@"scheme =%@",url.scheme);
+    
+    
+    
+    int classCount = objc_getClassList(NULL, 0);
+    NSLog(@"clss count = %d",classCount);
+    
+    Class *cls = (Class*)malloc(sizeof(Class)*classCount);
+    objc_getClassList(cls, classCount);
+    for (int i = 0; i < classCount; ++i) {
+        NSString * clsName =  NSStringFromClass(cls[i]);
+        NSLog(@"%@",clsName);
+    }
     return [UIViewController new];
     
 }
