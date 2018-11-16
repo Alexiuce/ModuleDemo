@@ -27,7 +27,9 @@
     objc_getClassList(cls, classCount);
     for (int i = 0; i < classCount; ++i) {
         NSString * clsName =  NSStringFromClass(cls[i]);
-        NSLog(@"%@",clsName);
+        if ([clsName hasPrefix:@"XC"] && [clsName hasSuffix:@"Controller"]) {
+            NSLog(@"%@",clsName);
+        }
     }
     return [UIViewController new];
     
