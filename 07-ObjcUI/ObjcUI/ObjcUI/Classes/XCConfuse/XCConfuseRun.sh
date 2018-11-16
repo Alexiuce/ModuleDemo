@@ -112,7 +112,8 @@ path=./ObjcUI/Classes/XCConfuse/XCConfuseViewController.m
 # $0 代表整个当前行
 #awk '{print $0}' $path
 # $1 代表当前行的第一个字段 (默认以空白字符为分隔)
-awk '{print $1}' $path
+awk '{print NR $1}' $path    # NR 表示输出行号
+
 ##  ================ TODO FIXMI
 KEYWORDS="TODO:|FIXME:|\?\?\?:|\!\!\!:"
 find "${SRCROOT}" \( -name "*.h" -or -name "*.m" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($KEYWORDS).*\$" | perl -p -e "s/($KEYWORDS)/ warning: \$1/"
